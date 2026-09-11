@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirada Estructural: Fricción atómica y amperios — Grado 8°</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado8.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+    <h1 style="margin-top: 0.6rem;">🧱 Fricción atómica y amperios</h1>
+    <div class="sub">
+      Estructura de la materia, choque de electrones y definición del amperio
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card purple">
+    <h2>🧱 La red cristalina y los choques atómicos</h2>
+    <p>
+      El interior de un cable de cobre no es un tubo vacío. Es una
+      <strong>red cristalina ordenada de átomos</strong>. Cuando la batería empuja
+      a los electrones, estos no avanzan en línea recta: van esquivando y chocando
+      contra los átomos del metal.
+    </p>
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f0f9ff;">
+      <p>
+        <strong>💡 Resistencia por choque:</strong> a mayor número de choques dentro
+        del material, mayor es la <strong>resistencia</strong> que se opone al paso
+        de la energía, generando calor por fricción atómica.
+      </p>
+    </div>
+    <p>
+      Ese calor no es un detalle menor: es la razón por la que un componente
+      electrónico se calienta cuando trabaja mucho. Y también es la razón por la
+      que los cables de una ciudad no pueden ser infinitamente delgados.
+    </p>
+    <p>
+      <strong>¿Por qué el cobre conduce y el caucho no?</strong> En los metales
+      como el cobre, algunos electrones están <em>libres</em> dentro de la red
+      cristalina: pueden saltar de átomo en átomo. En los aislantes como el
+      caucho, el vidrio o el plástico, los electrones están <em>fuertemente
+      unidos</em> a sus átomos y no pueden desplazarse. Por eso el cobre deja
+      pasar la carga y el caucho la bloquea. Este contraste será clave cuando
+      construyas tu electroscopio.
+    </p>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>⏱️ La medida de la corriente: el amperio (A)</h2>
+    <p>
+      En este nivel definimos la corriente eléctrica (<em>I</em>) como la cantidad
+      de carga (<em>Q</em>) que cruza una sección del cable en un tiempo determinado
+      (<em>t</em>):
+    </p>
+    <div class="formula">I = Q / t</div>
+    <ul>
+      <li><strong>I (corriente):</strong> se mide en amperios (A).</li>
+      <li><strong>Q (carga total):</strong> paquete de electrones que transitan.</li>
+      <li><strong>t (tiempo):</strong> medido en segundos (s).</li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🔎 Ejemplo simple:</strong> si por un punto del cable cruza
+        <strong>1 coulomb</strong> de carga en <strong>1 segundo</strong>, entonces
+        la corriente es de <strong>1 amperio</strong>. Un LED típico consume
+        alrededor de <strong>0.02 amperios</strong> (20 miliamperios).
+      </p>
+    </div>
+
+    <p>
+      <strong>Cada electrón aporta una cantidad mínima de carga, siempre la misma.</strong>
+      No importa de qué material sea el cable: la carga del electrón es una constante
+      del universo. Eso significa que la corriente se puede contar: es la suma de
+      muchísimos electrones cruzando por segundo.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/circuito_basico_led.png" target="_blank" rel="noopener">
+        <img src="img/circuito_basico_led.png"
+             alt="Batería CR2032 conectada con cables a un LED verde" />
+      </a>
+      <figcaption>
+        Fig. 1: Un circuito real y sencillo: batería, cables y LED.
+        Aquí es donde queremos medir cuánta carga cruza por segundo.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🧭 ¿Hacia dónde viaja la corriente?</h3>
+    <p>
+      Los electrones, físicamente, viajan del polo negativo al positivo.
+      Pero por convención histórica, dibujamos la flecha al revés.
+    </p>
+    <p>
+      <strong>¿Por qué esa contradicción?</strong> Cuando Benjamin Franklin propuso
+      la primera convención (siglo XVIII), todavía no se había descubierto el
+      electrón. Franklin eligió el sentido positivo → negativo como referencia, y
+      los ingenieros lo mantuvieron porque ya todos los planos del mundo estaban
+      dibujados así. Hoy seguimos esa convención por costumbre y claridad.
+    </p>
+
+    <div class="figura-doble">
+      <figure>
+        <img src="img/flecha-positivo-negativo.png"
+             alt="Flecha del polo positivo al negativo, etiquetada Flujo convencional (lo que dibujamos)" />
+        <figcaption>Fig. 2a: Flujo convencional — como se dibuja.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/flecha-negativo-positivo.png"
+             alt="Flecha del polo negativo al positivo, etiquetada Flujo de electrones (lo que realmente ocurre)" />
+        <figcaption>Fig. 2b: Flujo real de electrones — lo que ocurre.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Card 3: PhET -->
+  <section class="card slate">
+    <h2>💻 Laboratorio virtual: PhET "Resistencia en un alambre"</h2>
+    <p>
+      Abre la simulación <strong>"Resistencia en un alambre"</strong> de PhET y
+      observa los <strong>puntos negros</strong> dentro del alambre: representan
+      impurezas de la red cristalina. A mayor número de puntos, más choques
+      posibles entre electrones y átomos.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🔎 De la idea al nombre:</strong> en la primera sección viste que
+        los choques generan resistencia. Ahora pongámosle nombre preciso a esas
+        magnitudes.
+      </p>
+      <ul style="margin: 0.6rem 0 0 0;">
+        <li>
+          La <strong>resistividad</strong> es una propiedad del <em>material</em>:
+          el cobre tiene baja resistividad; el nicromo, alta.
+        </li>
+        <li>
+          La <strong>resistencia</strong> es una propiedad del <em>objeto</em>:
+          depende del material, pero también del largo y del grosor del alambre.
+        </li>
+      </ul>
+      <p style="margin-top: 0.7rem; margin-bottom: 0;">
+        En la simulación vas a poder cambiar las tres cosas por separado.
+      </p>
+      <p style="margin-top: 0.7rem; margin-bottom: 0;">
+        <strong>🔥 ¿Para qué se usa el nicromo?</strong> Precisamente por su alta
+        resistividad, el nicromo se usa en <strong>resistencias de calefacción</strong>:
+        tostadoras, hornos eléctricos, secadores de cabello, calentadores de
+        ambiente. En todos ellos la idea es la misma que viste en la primera
+        sección: la corriente choca mucho contra los átomos del material y libera
+        calor útil. También se usa en el hilo caliente de los cortadores de icopor
+        y en las resistencias de frenado de trenes eléctricos.
+      </p>
+    </div>
+
+    <p style="text-align: center; margin: 1.5rem 0;">
+      <a href="https://phet.colorado.edu/es/simulation/resistance-in-a-wire"
+         target="_blank"
+         rel="noopener"
+         class="btn-navegacion"
+         style="background-color: var(--c-g8); color: white; padding: 0.8rem 1.5rem; font-size: 1rem; display: inline-block;">
+        🔬 Abrir simulación PhET ↗
+      </a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--text-soft); text-align: center; margin-top: -0.5rem;">
+      <em>Se abre en una pestaña nueva. Disponible en español y en otros idiomas.</em>
+    </p>
+
+    <div class="reto-box" style="border-left-color: var(--c-g8);">
+      <ol>
+        <li>Aumenta la resistividad y observa qué ocurre con los choques.</li>
+        <li>Cambia el grosor (área) y el largo del alambre. ¿Cuándo hay más
+            espacio para que los electrones esquiven los obstáculos?</li>
+        <li>
+          <strong>Anota en tu bitácora:</strong> ¿Por qué un alambre más delgado
+          y más largo ofrece más "fricción" al paso de la corriente?
+        </li>
+      </ol>
+    </div>
+    <p style="font-size: 0.9rem; color: var(--text-soft);">
+      <em>Nota: esta simulación muestra el fenómeno de los choques. La medición
+      exacta de cuánta carga fluye por segundo (amperios) la calculamos con la
+      fórmula <strong>I = Q / t</strong>.</em>
+    </p>
+  </section>
+
+  <!-- Taller del electroscopio -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller de Cargas: Construye tu propio electroscopio</h2>
+    <p>
+      En este nivel ya sabemos que la materia está hecha de átomos, y que los
+      electrones son las partículas que se mueven. Ahora vamos a verlos en acción
+      a través de un detector muy simple.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Frasco de vidrio transparente y seco, con tapa.</li>
+      <li>Alambre de cobre grueso o clip metálico estirado.</li>
+      <li>Un trozo pequeño de <strong>caucho, goma o corcho</strong> para hacer el aislante.</li>
+      <li>Papel aluminio.</li>
+      <li>Un globo o tubo de plástico.</li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <p>
+      Observa el diagrama: cada parte del electroscopio tiene una función.
+      Fíjate especialmente en dos piezas clave: el <strong>aislante de caucho</strong>
+      y el <strong>gancho</strong> del alambre.
+    </p>
+
+    <!-- ====== SVG DEL ELECTROSCOPIO ====== -->
+    <svg class="svg-ruta" viewBox="0 0 340 500"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Esquema de un electroscopio casero: esfera de aluminio arriba, alambre de cobre que atraviesa un aislante de caucho y la tapa, y termina en un gancho del que cuelgan dos láminas de aluminio separadas por repulsión">
+      <title>Electroscopio casero</title>
+
+      <!-- Fondo -->
+      <rect x="0" y="0" width="340" height="500" fill="#f8fcff" rx="12" />
+
+      <!-- Frasco de vidrio -->
+      <rect x="60" y="150" width="220" height="310" rx="16"
+            fill="#e6f4fb" stroke="#7ba7b8" stroke-width="2.5" />
+      <rect x="72" y="170" width="18" height="250" rx="9"
+            fill="#ffffff" opacity="0.55" />
+
+      <!-- Láminas de aluminio (separadas por repulsión) -->
+      <line x1="170" y1="272" x2="140" y2="380"
+            stroke="#9aa4ad" stroke-width="9" stroke-linecap="round" />
+      <line x1="170" y1="272" x2="200" y2="380"
+            stroke="#9aa4ad" stroke-width="9" stroke-linecap="round" />
+
+      <!-- Alambre de cobre -->
+      <line x1="170" y1="60" x2="170" y2="250"
+            stroke="#b87333" stroke-width="5" stroke-linecap="round" />
+
+      <!-- Gancho en la punta inferior del alambre -->
+      <path d="M 170 250 Q 182 262 170 272"
+            fill="none" stroke="#b87333" stroke-width="4.5"
+            stroke-linecap="round" />
+
+      <!-- Tapa del frasco -->
+      <rect x="40" y="128" width="260" height="26" rx="8"
+            fill="#8b6f47" stroke="#5a4730" stroke-width="2" />
+      <line x1="55" y1="141" x2="285" y2="141"
+            stroke="#6b5435" stroke-width="1" opacity="0.6" />
+
+      <!-- Aislante de caucho -->
+      <rect x="158" y="122" width="24" height="38" rx="5"
+            fill="#2c2c2c" stroke="#000000" stroke-width="1" />
+      <rect x="162" y="126" width="4" height="30" rx="2"
+            fill="#555555" opacity="0.6" />
+
+      <!-- Esfera de aluminio -->
+      <circle cx="170" cy="48" r="24"
+              fill="#c9cfd4" stroke="#7a8590" stroke-width="2.5" />
+      <circle cx="162" cy="40" r="6" fill="#ffffff" opacity="0.7" />
+
+      <!-- Indicación de repulsión -->
+      <path d="M 140 400 Q 170 415 200 400"
+            fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3" />
+      <text x="170" y="430" text-anchor="middle"
+            font-family="system-ui, sans-serif" font-size="11"
+            fill="#92400e" font-style="italic">
+        Se repelen al tener la misma carga
+      </text>
+
+      <!-- Etiquetas -->
+      <g font-family="system-ui, sans-serif" font-size="12" fill="#1f2937">
+        <line x1="196" y1="48" x2="238" y2="48" stroke="#7a8590" stroke-width="1" />
+        <text x="242" y="52">Esfera</text>
+
+        <line x1="170" y1="95" x2="100" y2="80" stroke="#7a8590" stroke-width="1" />
+        <text x="48" y="76">Alambre</text>
+
+        <line x1="180" y1="123" x2="240" y2="100" stroke="#7a8590" stroke-width="1" />
+        <text x="244" y="100">Aislante</text>
+
+        <line x1="290" y1="148" x2="310" y2="165" stroke="#7a8590" stroke-width="1" />
+        <text x="290" y="175">Tapa</text>
+
+        <line x1="175" y1="264" x2="110" y2="264" stroke="#7a8590" stroke-width="1" />
+        <text x="65" y="268">Gancho</text>
+
+        <text x="10" y="320">Frasco</text>
+        <text x="10" y="336">de vidrio</text>
+
+        <line x1="200" y1="320" x2="248" y2="320" stroke="#7a8590" stroke-width="1" />
+        <text x="252" y="316">Dos láminas</text>
+        <text x="252" y="332">de aluminio</text>
+      </g>
+    </svg>
+    <!-- ====== FIN SVG ====== -->
+
+    <ol>
+      <li>Haz un orificio en el centro de la tapa.</li>
+      <li>
+        Coloca el <strong>aislante de caucho</strong> alrededor del alambre,
+        justo donde va a atravesar la tapa. Sin él, los electrones que llegan
+        desde la esfera podrían escaparse por la tapa metálica antes de llegar
+        a las láminas, y el electroscopio perdería sensibilidad.
+      </li>
+      <li>Atraviesa el alambre (ya con el aislante) por el orificio de la tapa:
+          una punta afuera, otra dentro del frasco.</li>
+      <li>Con la punta de adentro del alambre, forma un pequeño <strong>gancho</strong>.</li>
+      <li>En la punta de afuera, pon una esfera pequeña de aluminio.</li>
+      <li>Del gancho, cuelga dos láminas delgadas de aluminio, una al lado de la otra,
+          sin que se toquen.</li>
+      <li>Cierra el frasco.</li>
+    </ol>
+
+    <h3>🔍 El experimento</h3>
+    <ol>
+      <li>
+        Frota el globo contra tu cabello durante unos segundos. Al hacerlo,
+        <strong>le estás arrebatando electrones al cabello</strong>: el globo queda
+        cargado negativamente y tu cabello positivamente.
+      </li>
+      <li>
+        <strong>¿Cuántos electrones se transfieren?</strong> Al frotar un globo
+        contra el cabello se transfieren del orden de <strong>billones de
+        electrones</strong> (10¹² o más). Cada uno lleva una carga minúscula
+        (1.6 × 10⁻¹⁹ coulombs), pero la suma de todos ellos ya es suficiente para
+        que el electroscopio lo detecte.
+      </li>
+      <li>Acércalo a la esfera de aluminio, sin tocarla.</li>
+      <li>
+        La carga del globo <strong>empuja o atrae electrones</strong> dentro de la
+        esfera y el alambre. Esos electrones viajan hasta las láminas.
+      </li>
+      <li>
+        Como ambas láminas quedan con la <strong>misma carga</strong>, se repelen
+        y se separan.
+      </li>
+      <li>Retira el globo: los electrones se redistribuyen y las láminas vuelven
+          a juntarse.</li>
+    </ol>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/analogia_carga.png" target="_blank" rel="noopener">
+        <img src="img/analogia_carga.png"
+             alt="Izquierda: repulsión entre dos protones (mayor fuerza). Derecha: atracción entre electrón y protón (menor fuerza)" />
+      </a>
+      <figcaption>
+        Fig. 3: La repulsión y la atracción entre cargas son las fuerzas
+        que separan o acercan las láminas del electroscopio.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Al frotar el globo, ¿qué partícula subatómica se transfiere?
+      ¿Qué tipo de carga queda en el globo y qué tipo en tu cabello?
+      ¿Por qué las dos láminas del electroscopio se repelen?
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la corriente:</strong> cuando las láminas se separan,
+      estamos viendo en acción la ley más elemental de la electricidad: cargas
+      del mismo signo se repelen. Pero esas cargas están <em>quietas</em>.
+      La corriente es lo que ocurre cuando esas cargas, además, tienen un camino
+      continuo por donde avanzar. Y ese flujo, dentro del cobre, atraviesa una
+      red cristalina: de ahí nacen los choques que llamamos resistencia.
+    </div>
+  </section>
+
+  <!-- Cápsula Edison -->
+  <section class="capsula-edison">
+    <h2>📜 Edison y el filamento de alta resistencia</h2>
+    <p>
+      El filamento de Edison tenía <strong>alta resistencia</strong>: sus átomos
+      chocaban contra los electrones justo lo suficiente para calentarse y brillar.
+      Joseph Swan, en Inglaterra, usaba baja resistencia; eso exigía cables gruesos
+      y costosos.
+    </p>
+    <p>
+      Edison, en cambio, podía iluminar una ciudad con cables delgados. Combinó
+      esto con un vacío casi perfecto (bomba de Sprengel) y con
+      <strong>bambú carbonizado de Kioto, Japón</strong>, un material que dio a sus
+      bombillas más de 1.000 horas de vida útil.
+    </p>
+    <span class="fuente">Fuente: archivo de aula "El éxito comercial y práctico de Thomas Alva Edison".</span>
+  </section>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g8">
+    <div class="podcast-header">
+      <h3>🎧 Podcast: Choques atómicos y amperios</h3>
+    </div>
+    <p>Escucha este audio explicativo sobre la definición aritmética de la corriente.</p>
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado8.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: reporte breve en bitácora</h3>
+    <ul>
+      <li>¿Qué ocurre dentro del alambre cuando aumenta la resistividad?</li>
+      <li>
+        ¿Por qué la fórmula <strong>I = Q / t</strong> describe un promedio y no
+        un instante? (Pista: piensa en el tráfico de una avenida: ¿cómo lo mides
+        sin contar carro por carro?)
+      </li>
+      <li>
+        ¿Por qué es importante distinguir entre el flujo real de electrones y la
+        convención de dibujo?
+      </li>
+      <li>
+        ¿Qué diferencia hay entre un material conductor como el cobre y un
+        aislante como el caucho?
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🔌 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🚰 Mirada comparativa (Grado 7°)</a>
+      <a href="grado10.html" class="btn-estacion">🧠 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

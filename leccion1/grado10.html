@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirada Analítica: Campo eléctrico y chips de IA — Grado 10°</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🧠 Campo eléctrico y chips de IA</h1>
+    <div class="sub">
+      Análisis cuantitativo de la carga, velocidad de deriva y disipación térmica
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>⚡ Campo eléctrico vs. velocidad de deriva ($v_d$)</h2>
+    <p>
+      Los electrones ya están dentro del conductor. Cuando cerramos un circuito,
+      algo les da la orden de moverse a todos casi al mismo tiempo. Ese "algo"
+      es el <strong>campo eléctrico</strong>. Pero conviene no confundir dos
+      velocidades que son radicalmente distintas.
+    </p>
+    <ul>
+      <li>
+        <strong>Onda guiada (campo $E$):</strong> se establece a una fracción
+        importante de la velocidad de la luz ($v_p$ típicamente entre $1/3$ y
+        $2/3$ de $c$ en un conductor real). La velocidad exacta depende del
+        material y del aislamiento, pero siempre es enormemente mayor que la
+        velocidad de deriva de los electrones.
+      </li>
+      <li>
+        <strong>Velocidad de deriva ($v_d$):</strong> el avance neto real de los
+        electrones es extremadamente lento, aproximadamente
+        $v_d \approx 10^{-4}\ \text{m/s}$ (menos de un milímetro por segundo).
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🔎 El "mito de los 3 metros":</strong> un electrón individual
+        tarda aproximadamente <strong>8 horas</strong> en recorrer 3 metros de
+        cable. Pero el LED se enciende en <strong>nanosegundos</strong>. ¿Por qué?
+        Porque la señal (el campo) viaja casi a la velocidad de la luz, empujando
+        a todos los electrones al mismo tiempo.
+      </p>
+    </div>
+
+    <p>
+      <strong>Del conductor al semiconductor:</strong> los conductores como el
+      cobre dejan pasar la carga con facilidad; los aislantes como el caucho la
+      bloquean. Existe un tercer tipo de material, los <strong>semiconductores</strong>
+      (silicio, germanio), que no son ni lo uno ni lo otro: su comportamiento se
+      puede <em>controlar</em> con voltaje, luz o temperatura. De ahí nacen los
+      LEDs, los diodos, los transistores y —en última instancia— los chips que
+      entrenan modelos de Inteligencia Artificial.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/el_viaje_de_la_electricidad.png" target="_blank" rel="noopener">
+        <img src="img/el_viaje_de_la_electricidad.png"
+             alt="Infografía que compara la velocidad de la señal (300.000 km/s) con la velocidad de los electrones (0,1 mm/s) dentro de un cable" />
+      </a>
+      <figcaption>
+        Fig. 1: El contraste central. Mientras la señal viaja casi a la velocidad
+        de la luz, los electrones físicos apenas se arrastran. La analogía de la
+        tubería refuerza la idea del "efecto en cadena".
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>📐 Modelo cuantitativo y disipación térmica</h2>
+    <p>
+      La corriente eléctrica ($I$) está cuantizada por la carga del electrón
+      ($e \approx 1.6 \times 10^{-19}\ \text{C}$):
+    </p>
+    <div class="formula">
+      $$I = \frac{Q}{t} \qquad \text{donde} \qquad Q = n \cdot e$$
+    </div>
+    <p>
+      Y la potencia disipada en forma de calor (efecto Joule), donde $R$ se mide
+      en ohmios (Ω):
+    </p>
+    <div class="formula">
+      $$P = I^2 \cdot R$$
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/campo-electrico.png" target="_blank" rel="noopener">
+        <img src="img/campo-electrico.png"
+             alt="Diagrama que muestra el campo eléctrico propagándose a casi la velocidad de la luz por todo el circuito, mientras los electrones avanzan lentamente" />
+      </a>
+      <figcaption>
+        Fig. 2: El campo eléctrico ($E$) se propaga por todo el circuito a una
+        fracción de $c$, ordenando el movimiento de todos los electrones casi
+        al instante.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🔥 Conexión con la industria:</strong> cuando un componente
+        electrónico se calienta en exceso, ocurre por la fricción atómica de los
+        electrones disipada en forma de calor ($P = I^2 R$). Este mismo fenómeno
+        es el principal obstáculo técnico al enfriar los servidores que entrenan
+        modelos de Inteligencia Artificial.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>📝 Reporte de ingeniería en bitácora</h2>
+    <p>Realiza los siguientes cálculos en tu bitácora:</p>
+    <div class="reto-box" style="border-left-color: var(--c-g10);">
+      <ol>
+        <li>
+          <strong>Cálculo de electrones:</strong> si por un LED circula una
+          corriente constante de $I = 20\ \text{mA}$ ($0.02\ \text{A}$) durante
+          $t = 1\ \text{s}$, calcula la cantidad total de electrones ($n$) que
+          cruzaron el semiconductor. <em>Pista: despeja $n$ de $Q = n \cdot e$
+          con $Q = I \cdot t$.</em>
+        </li>
+        <li>
+          <strong>Análisis de disipación:</strong> si la resistencia interna del
+          componente es $R = 15\ \Omega$, determina la potencia disipada en forma
+          de calor ($P$).
+        </li>
+        <li>
+          <strong>Reflexión técnica:</strong> explica cómo afecta la disipación
+          térmica la vida útil de los componentes y qué soluciones (disipadores,
+          ventiladores o refrigeración líquida) se emplean tanto en el taller como
+          en los centros de datos.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Taller del electroscopio -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller de Cargas: El electroscopio como instrumento de medida</h2>
+    <p>
+      El electroscopio es un instrumento sencillo que permite hacer visible un
+      fenómeno invisible: la carga eléctrica. Vamos a construirlo y, más
+      importante aún, a analizarlo como <strong>instrumento de inferencia</strong>:
+      ¿cómo obtenemos información de un sistema invisible a partir de un efecto
+      visible?
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Frasco de vidrio transparente y seco, con tapa.</li>
+      <li>Alambre de cobre grueso o clip metálico estirado.</li>
+      <li>Un trozo pequeño de <strong>caucho, goma o corcho</strong> para hacer el aislante.</li>
+      <li>Papel aluminio.</li>
+      <li>Un globo o tubo de plástico (PVC).</li>
+      <li>Un trozo de lana (opcional, mejora el efecto del frotamiento).</li>
+      <li>
+        Un par de <strong>guantes de nitrilo</strong> (los mismos que se usan
+        en laboratorios y hospitales). También sirven guantes de caucho delgados.
+      </li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <p>
+      Observa el diagrama. La clave del electroscopio es que el alambre
+      conductor esté <em>aislado</em> de la tapa y que las láminas cuelguen
+      libres dentro del frasco.
+    </p>
+
+    <!-- ====== SVG DEL ELECTROSCOPIO ====== -->
+    <svg class="svg-ruta" viewBox="0 0 340 500"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Esquema de un electroscopio casero: esfera de aluminio arriba, alambre de cobre que atraviesa un aislante de caucho y la tapa, y termina en un gancho del que cuelgan dos láminas de aluminio separadas por repulsión">
+      <title>Electroscopio casero</title>
+
+      <rect x="0" y="0" width="340" height="500" fill="#f8fcff" rx="12" />
+
+      <rect x="60" y="150" width="220" height="310" rx="16"
+            fill="#e6f4fb" stroke="#7ba7b8" stroke-width="2.5" />
+      <rect x="72" y="170" width="18" height="250" rx="9"
+            fill="#ffffff" opacity="0.55" />
+
+      <line x1="170" y1="272" x2="140" y2="380"
+            stroke="#9aa4ad" stroke-width="9" stroke-linecap="round" />
+      <line x1="170" y1="272" x2="200" y2="380"
+            stroke="#9aa4ad" stroke-width="9" stroke-linecap="round" />
+
+      <line x1="170" y1="60" x2="170" y2="250"
+            stroke="#b87333" stroke-width="5" stroke-linecap="round" />
+
+      <path d="M 170 250 Q 182 262 170 272"
+            fill="none" stroke="#b87333" stroke-width="4.5"
+            stroke-linecap="round" />
+
+      <rect x="40" y="128" width="260" height="26" rx="8"
+            fill="#8b6f47" stroke="#5a4730" stroke-width="2" />
+      <line x1="55" y1="141" x2="285" y2="141"
+            stroke="#6b5435" stroke-width="1" opacity="0.6" />
+
+      <rect x="158" y="122" width="24" height="38" rx="5"
+            fill="#2c2c2c" stroke="#000000" stroke-width="1" />
+      <rect x="162" y="126" width="4" height="30" rx="2"
+            fill="#555555" opacity="0.6" />
+
+      <circle cx="170" cy="48" r="24"
+              fill="#c9cfd4" stroke="#7a8590" stroke-width="2.5" />
+      <circle cx="162" cy="40" r="6" fill="#ffffff" opacity="0.7" />
+
+      <path d="M 140 400 Q 170 415 200 400"
+            fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3" />
+      <text x="170" y="430" text-anchor="middle"
+            font-family="system-ui, sans-serif" font-size="11"
+            fill="#92400e" font-style="italic">
+        Se repelen al tener la misma carga
+      </text>
+
+      <g font-family="system-ui, sans-serif" font-size="12" fill="#1f2937">
+        <line x1="196" y1="48" x2="238" y2="48" stroke="#7a8590" stroke-width="1" />
+        <text x="242" y="52">Esfera</text>
+
+        <line x1="170" y1="95" x2="100" y2="80" stroke="#7a8590" stroke-width="1" />
+        <text x="48" y="76">Alambre</text>
+
+        <line x1="180" y1="123" x2="240" y2="100" stroke="#7a8590" stroke-width="1" />
+        <text x="244" y="100">Aislante</text>
+
+        <line x1="290" y1="148" x2="310" y2="165" stroke="#7a8590" stroke-width="1" />
+        <text x="290" y="175">Tapa</text>
+
+        <line x1="175" y1="264" x2="110" y2="264" stroke="#7a8590" stroke-width="1" />
+        <text x="65" y="268">Gancho</text>
+
+        <text x="10" y="320">Frasco</text>
+        <text x="10" y="336">de vidrio</text>
+
+        <line x1="200" y1="320" x2="248" y2="320" stroke="#7a8590" stroke-width="1" />
+        <text x="252" y="316">Dos láminas</text>
+        <text x="252" y="332">de aluminio</text>
+      </g>
+    </svg>
+    <!-- ====== FIN SVG ====== -->
+
+    <ol>
+      <li>Haz un orificio en el centro de la tapa.</li>
+      <li>
+        Coloca el <strong>aislante de caucho</strong> alrededor del alambre,
+        justo donde va a atravesar la tapa.
+      </li>
+      <li>Atraviesa el alambre por el orificio de la tapa.</li>
+      <li>Con la punta interior del alambre, forma un pequeño <strong>gancho</strong>.</li>
+      <li>En la punta exterior, coloca una esfera de aluminio.</li>
+      <li>Del gancho cuelga dos láminas delgadas de aluminio, sin que se toquen.</li>
+      <li>Cierra el frasco.</li>
+    </ol>
+
+    <h3>🔍 Fase 1: Análisis del instrumento</h3>
+    <p>
+      El electroscopio <strong>no mide carga directamente</strong>: mide un
+      <em>efecto</em> de la carga (la separación de las láminas). La pregunta
+      de ingeniería es: ¿cómo pasamos de un efecto visible a una cantidad que
+      no podemos ver?
+    </p>
+    <ol>
+      <li>
+        <strong>Relación proporcional:</strong> a mayor carga acumulada, mayor
+        separación entre las láminas. Esta relación es aproximadamente lineal
+        dentro de cierto rango.
+      </li>
+      <li>
+        <strong>Calibración:</strong> para usar el electroscopio como medidor,
+        habría que calibrarlo contra una fuente de carga conocida. Sin
+        calibración, solo podemos decir "más" o "menos", no "cuánto".
+      </li>
+      <li>
+        <strong>Límite de saturación:</strong> si se acumula demasiada carga,
+        el aire mismo entre las láminas se ioniza (se vuelve conductor) y la
+        carga se escapa en una pequeña chispa. Este fenómeno se llama
+        <strong>descarga disruptiva</strong> y es el mismo que ocurre en un rayo,
+        pero a escala minúscula.
+      </li>
+    </ol>
+
+    <h3>🔬 Fase 2: Experimento básico (carga por frotamiento)</h3>
+    <ol>
+      <li>Frota el globo contra tu cabello durante unos segundos.</li>
+      <li>Acércalo a la esfera de aluminio, sin tocarla.</li>
+      <li>Observa la separación de las láminas.</li>
+      <li>
+        Retira el globo. Las láminas vuelven a juntarse: la carga era
+        <em>temporal</em>, inducida por proximidad.
+      </li>
+    </ol>
+
+    <h3>⚡ Fase 3: Experimento avanzado (carga permanente por inducción)</h3>
+    <p>
+      Este experimento parece desafiar la intuición. Vamos a usar la
+      <strong>tierra</strong> (el planeta) como depósito de carga.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🌍 Aclaración sobre "tierra":</strong> en este experimento,
+        "tierra" significa el planeta, un depósito gigantesco de carga que
+        puede ceder o recibir electrones sin alterar su estado global. Es un
+        concepto distinto del "GND" o "Tierra Común" que se usa en circuitos
+        electrónicos como punto de referencia.
+      </p>
+    </div>
+
+    <p>
+      <strong>¿Qué es el "potencial"?</strong> Es una forma de comparar cuán
+      cargado está un objeto respecto a otro. Los electrones siempre fluyen
+      desde el potencial más bajo hacia el más alto (o, dicho de otro modo,
+      desde donde hay exceso de electrones hacia donde hay déficit). Cuando
+      dos objetos están al mismo potencial, no hay flujo entre ellos.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🧤 ¿Por qué guantes de nitrilo?</strong> El nitrilo es un
+        aislante. Si sostienes el tubo con las manos desnudas, tu cuerpo actúa
+        como un conductor hacia la tierra y parte de la carga se pierde antes
+        de acercar el tubo al electroscopio. Los guantes <em>atrapan</em> la
+        carga en el tubo y hacen que el experimento sea mucho más visible.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        <strong>⚠️ No frotes el PVC con el guante.</strong> El guante es para
+        <em>sostener</em> el tubo, no para frotarlo. El nitrilo y el PVC tienen
+        una tendencia similar a retener electrones, así que entre ellos se
+        transfiere muy poca carga. El frotamiento debe hacerse contra un
+        material del lado opuesto: tu <strong>cabello</strong> o un trozo de
+        <strong>lana</strong>.
+      </p>
+    </div>
+
+    <p><strong>Procedimiento:</strong></p>
+    <ol>
+      <li>
+        Ponte los <strong>guantes de nitrilo</strong>. Frota el tubo de PVC
+        contra tu cabello (o contra la lana) durante unos segundos. El tubo
+        queda cargado negativamente.
+      </li>
+      <li>Acércalo a la esfera del electroscopio, <strong>sin tocarla</strong>. Observa cómo las láminas se separan.</li>
+      <li>
+        <strong>Sin retirar el tubo</strong>, toca brevemente la esfera del
+        electroscopio con tu dedo. Estás conectando el electroscopio a tierra
+        a través de tu cuerpo.
+      </li>
+      <li>Retira el dedo (el tubo sigue cerca).</li>
+      <li>Ahora retira el tubo.</li>
+    </ol>
+
+    <p><strong>Observación:</strong></p>
+    <p>
+      Las láminas permanecen separadas incluso después de retirar el tubo. El
+      electroscopio quedó con una <strong>carga permanente</strong>, y su signo
+      es <strong>opuesto al del tubo</strong>. Si el tubo quedó negativo, el
+      electroscopio quedó positivo.
+    </p>
+
+    <p><strong>Explicación paso a paso:</strong></p>
+    <ol>
+      <li>
+        Cuando el tubo (negativo) está cerca, empuja los electrones del
+        electroscopio hacia las láminas. Las láminas quedan cargadas
+        negativamente y se repelen. La esfera queda con un déficit de electrones
+        (carga positiva).
+      </li>
+      <li>
+        Al tocar la esfera con el dedo, conectas el electroscopio a la
+        <strong>tierra</strong>. La influencia del tubo negativo hace que el
+        electroscopio tenga un potencial más bajo que la tierra.
+      </li>
+      <li>
+        Al conectarlos, la tierra <em>extrae</em> electrones del electroscopio.
+        Los electrones de las láminas escapan hacia la tierra a través de tu
+        cuerpo. El electroscopio queda con un <strong>déficit neto de
+        electrones</strong>, es decir, con carga positiva.
+      </li>
+      <li>
+        Al retirar el dedo, esa carga positiva queda atrapada en el
+        electroscopio: ya no hay camino hacia tierra.
+      </li>
+      <li>
+        Al retirar el tubo, la carga positiva se redistribuye por toda la
+        superficie del electroscopio. Las láminas siguen con carga (ahora
+        positiva), siguen repeliéndose, siguen separadas.
+      </li>
+    </ol>
+
+    <p><strong>Tres conceptos que aparecen en este experimento:</strong></p>
+    <ul>
+      <li>
+        <strong>Frotamiento:</strong> transferencia de electrones por contacto
+        entre dos materiales. Es lo que ocurre al frotar el tubo contra tu
+        cabello.
+      </li>
+      <li>
+        <strong>Inducción:</strong> redistribución de carga por proximidad,
+        sin contacto. Es lo que ocurre cuando acercas el tubo al electroscopio.
+      </li>
+      <li>
+        <strong>Carga permanente por inducción:</strong> la combinación de
+        inducción + conexión temporal a tierra + retiro del tubo. Es lo que
+        ocurre al final del procedimiento.
+      </li>
+    </ul>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/analogia_carga.png" target="_blank" rel="noopener">
+        <img src="img/analogia_carga.png"
+             alt="Izquierda: repulsión entre dos protones (mayor fuerza). Derecha: atracción entre electrón y protón (menor fuerza)" />
+      </a>
+      <figcaption>
+        Fig. 3: La repulsión y la atracción entre cargas son las fuerzas
+        que separan o acercan las láminas del electroscopio.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      El electroscopio no mide carga directamente: mide un <em>efecto</em> de
+      la carga. ¿Cómo inferimos una cantidad invisible a partir de un efecto
+      visible? ¿Qué límites tiene esa inferencia? ¿Por qué el experimento de
+      inducción parece contradecir la intuición?
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la corriente:</strong> en el electroscopio las cargas
+      están <em>acumuladas</em>. La corriente es el régimen en el que esas cargas,
+      además, encuentran un camino continuo. Cuando ese camino es un conductor
+      real, la velocidad de la señal y la velocidad de deriva son fenómenos
+      distintos: la primera establece el campo eléctrico; la segunda es el lento
+      avance neto de las partículas.
+    </div>
+  </section>
+
+  <!-- Cápsula Edison -->
+  <section class="capsula-edison">
+    <h2>📜 Edison, la alta resistencia y el sistema completo</h2>
+    <p>
+      Detrás del éxito de Edison hay una decisión técnica precisa: eligió un
+      filamento de <strong>alta resistencia</strong> para reducir la corriente
+      necesaria. Con $I$ pequeña, la pérdida en los cables de transmisión se
+      vuelve manejable, porque $P = I^2 R$: reducir $I$ a la mitad reduce la
+      potencia disipada a la cuarta parte.
+    </p>
+    <p>
+      Junto con la bomba de Sprengel para el vacío y el
+      <strong>bambú carbonizado de Kioto, Japón</strong>, esto le permitió
+      construir el primer sistema eléctrico urbano completo: dínamos, cables
+      subterráneos, medidores y la rosca Edison. En 1883 se unió con Joseph Swan
+      en la compañía Ediswan.
+    </p>
+    <p>
+      La lección para ingeniería: <strong>no gana quien inventa primero, sino
+      quien diseña el sistema completo</strong>.
+    </p>
+    <span class="fuente">Fuente: archivo de aula "El éxito comercial y práctico de Thomas Alva Edison".</span>
+  </section>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+    <div class="podcast-header">
+      <h3>🎧 Podcast: De la carga atómica a los chips de IA</h3>
+    </div>
+    <p>Escucha este análisis avanzado sobre física de campos y el reto térmico en la computación moderna.</p>
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: el costo energético de pensar</h3>
+    <ul>
+      <li>
+        ¿Por qué la distinción entre velocidad de la señal y velocidad de deriva
+        es crucial para entender cómo funciona un circuito?
+      </li>
+      <li>
+        Si pudieras reducir a la mitad la resistencia interna de un componente,
+        ¿cómo cambiaría la potencia disipada? Justifica con la fórmula
+        $P = I^2 R$.
+      </li>
+      <li>
+        ¿Qué conexión encuentras entre el calor en un componente de taller y el
+        desafío de enfriar los grandes centros de datos de IA?
+      </li>
+      <li>
+        El electroscopio mide un efecto, no la carga directamente. ¿Qué otros
+        instrumentos conoces que funcionen de la misma manera (inferir una
+        cantidad a partir de un efecto)?
+      </li>
+      <li>
+        ¿Por qué el experimento de inducción con tierra contradice la intuición
+        de que "tocar con el dedo descarga"?
+      </li>
+      <li>
+        ¿Qué diferencia hay entre un conductor, un aislante y un semiconductor?
+        Da un ejemplo de cada uno.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🔌 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🚰 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🧱 Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
