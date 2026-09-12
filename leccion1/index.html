@@ -6,7 +6,7 @@
   <title>La Energía y la Corriente — Cuatro Miradas</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body id="top">
 <div class="container">
 
   <header class="header">
@@ -26,8 +26,109 @@
       <strong>No hay un orden obligatorio de lectura.</strong> Puedes comenzar por
       cualquier mirada, y cada una se sostiene por sí sola.
     </p>
+    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.25);">
+      <strong>🧠 ¿Y qué tiene que ver esto con la Inteligencia Artificial?</strong>
+      Mucho más de lo que parece. Cada uno de los cuatro recorridos termina con una
+      conexión a la tecnología actual. Cuando hayas recorrido las cuatro miradas,
+      comprenderás por qué los ingenieros dicen que <em>toda IA comienza en un cable</em>.
+    </p>
   </div>
 
+  <!-- ======================================================================
+       Cómo usar esta ruta
+       ====================================================================== -->
+  <section class="card slate">
+    <h2>🧭 ¿Cómo usar esta ruta?</h2>
+    <p>Tres pasos sencillos para sacarle el máximo provecho:</p>
+    <ol>
+      <li>
+        <strong>Empieza por tu grado.</strong> Cada mirada se sostiene por sí sola.
+        Si estás en grado 8°, entra directamente a la <em>Mirada Estructural</em>.
+        No necesitas leer las otras para entender la tuya.
+      </li>
+      <li>
+        <strong>Escucha el audio al terminar de leer.</strong> Cada mirada tiene un
+        podcast que resume los cuatro temas de la página. Sirve para repasar y fijar
+        lo aprendido. Dura entre 5 y 9 minutos.
+      </li>
+      <li>
+        <strong>Descarga la infografía.</strong> Es un mapa visual que sintetiza todo
+        en una sola imagen. Te sirve para repasar antes de un examen o para
+        consultarla cuando lo necesites.
+      </li>
+    </ol>
+    <p style="margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed var(--border); font-size: 0.92rem; color: var(--text-mid);">
+      <strong>🎁 Bonus:</strong> si te da curiosidad, explora las otras tres miradas.
+      Cada una cuenta el mismo fenómeno de otra manera. No hay respuestas repetidas:
+      cada enfoque revela algo que los otros no.
+    </p>
+
+    <h3 style="margin-top: 1.5rem;">📦 ¿Qué encontrarás en cada mirada?</h3>
+    <ul style="list-style: none; padding: 0; margin-top: 0.6rem; display: grid; gap: 0.5rem;">
+      <li>
+        <strong>📄 Guía PDF:</strong> la versión imprimible de la mirada, con espacio
+        para anotaciones. Útil si prefieres estudiar en papel.
+      </li>
+      <li>
+        <strong>🎧 Podcast:</strong> un resumen narrado que refuerza los cuatro temas
+        principales. Ideal para escuchar en familia o mientras viajas.
+      </li>
+      <li>
+        <strong>🗺️ Infografía:</strong> un mapa visual que sintetiza todo en una sola
+        imagen. Perfecta para repasar antes de un examen.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======================================================================
+       Las cuatro miradas (glosario de arquetipos)
+       ====================================================================== -->
+  <section class="card">
+    <h2>🎭 Las cuatro miradas: ¿por qué se llaman así?</h2>
+    <p>
+      Cada mirada tiene un nombre que describe <em>cómo</em> se acerca al fenómeno
+      de la electricidad. No son niveles de dificultad, ni unas son mejores que otras:
+      son <strong>formas distintas de pensar</strong>.
+    </p>
+
+    <div class="tabla-scroll" style="margin-top: 1rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>Mirada</th>
+            <th>Se pregunta…</th>
+            <th>Pensada para</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color: var(--c-g6);">🔌 Curiosa</strong></td>
+            <td>¿Cómo funciona esto? ¿Qué pasa si lo toco?</td>
+            <td>Grado 6° — primer acercamiento, sin fórmulas</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g7);">🚰 Comparativa</strong></td>
+            <td>¿A qué se parece? ¿Qué ya conozco que funcione igual?</td>
+            <td>Grado 7° — se entiende por analogía</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g8);">🧱 Estructural</strong></td>
+            <td>¿Qué pasa por dentro? ¿De qué está hecho?</td>
+            <td>Grado 8° — átomos, choques, primeras fórmulas</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g10);">🧠 Analítica</strong></td>
+            <td>¿Cómo se calcula? ¿Dónde se aplica en la tecnología real?</td>
+            <td>Grado 10° — cuantificación y conexión con IA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Grid de tarjetas
+       ====================================================================== -->
   <div class="grid-portal">
 
     <!-- Mirada Curiosa -->
@@ -42,6 +143,7 @@
       <div class="recursos-descarga">
         <a href="pdf/grado6.pdf" download class="btn-res-mini">📄 Guía PDF</a>
         <a href="audio/grado6.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado6.png" download class="btn-res-mini">🗺️ Infografía</a>
       </div>
     </div>
 
@@ -57,6 +159,7 @@
       <div class="recursos-descarga">
         <a href="pdf/grado7.pdf" download class="btn-res-mini">📄 Guía PDF</a>
         <a href="audio/grado7.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado7.png" download class="btn-res-mini">🗺️ Infografía</a>
       </div>
     </div>
 
@@ -72,6 +175,7 @@
       <div class="recursos-descarga">
         <a href="pdf/grado8.pdf" download class="btn-res-mini">📄 Guía PDF</a>
         <a href="audio/grado8.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado8.png" download class="btn-res-mini">🗺️ Infografía</a>
       </div>
     </div>
 
@@ -87,6 +191,7 @@
       <div class="recursos-descarga">
         <a href="pdf/grado10.pdf" download class="btn-res-mini">📄 Guía PDF</a>
         <a href="audio/grado10.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado10.png" download class="btn-res-mini">🗺️ Infografía</a>
       </div>
     </div>
 
@@ -269,16 +374,29 @@
     <p>
       Esta ruta está diseñada para que sus hijos puedan avanzar tanto en el aula
       como desde el hogar. Cada mirada incluye audios explicativos para escuchar
-      juntos y guías en formato PDF descargables para imprimir o trabajar de
-      manera autónoma. El taller del electroscopio puede realizarse en familia
-      con materiales sencillos.
+      juntos, guías en formato PDF descargables e infografías de repaso para
+      imprimir o consultar en el teléfono. El taller del electroscopio puede
+      realizarse en familia con materiales sencillos.
     </p>
   </div>
+
+  <!-- ======================================================================
+       Volver arriba
+       ====================================================================== -->
+  <p style="text-align: center; margin: 2.5rem 0 0.5rem;">
+    <a href="#top"
+       style="display: inline-block; padding: 0.6rem 1.2rem; background: #fff; color: var(--text-dark); border: 1px solid var(--border); border-radius: 999px; font-size: 0.88rem; font-weight: 600; text-decoration: none;">
+      ↑ Volver arriba
+    </a>
+  </p>
 
   <footer class="footer">
     <p>
       I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
       Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+    <p style="font-size: 0.78rem; color: var(--text-soft); margin-top: 0.8rem;">
+      Versión 1.0 — Septiembre de 2026
     </p>
   </footer>
 
