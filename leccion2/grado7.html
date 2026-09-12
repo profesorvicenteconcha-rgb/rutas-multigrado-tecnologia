@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El control del flujo — Grado 7°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado7.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g7);">Grado 7° • Mirada Comparativa</span>
+    <h1 style="margin-top: 0.6rem;">🔵 El control del flujo</h1>
+    <div class="sub">
+      Presión, caudal y freno en un circuito
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card blue">
+    <h2>🚰 El tubo estrecho</h2>
+    <p>
+      Imagina un sistema hidráulico en el que una bomba empuja el agua por una
+      tubería. Todo funciona bien. Pero un día alguien cambia un tramo de la
+      tubería por uno <strong>mucho más estrecho</strong>.
+    </p>
+    <p>
+      ¿Qué pasa? La presión de la bomba sigue siendo la misma. La tubería sigue
+      conectada. Pero el agua tarda más en pasar, porque <strong>el camino es
+      más difícil</strong>. El freno que acabamos de añadir se llama, en
+      electrónica, <strong>resistencia</strong>.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/tuberia-agua.png" target="_blank" rel="noopener">
+        <img src="img/tuberia-agua.png"
+             alt="Manguera de jardín con agua saliendo a presión por el extremo" />
+      </a>
+      <figcaption>
+        Fig. 1: La manguera llena de agua es la mejor analogía para un circuito.
+        Cuando estrechamos el camino, frenamos el flujo.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>💡 Idea clave:</strong> el freno no elimina el flujo. Solo lo
+        <em>regula</em>. La energía sigue llegando, pero pasa más despacio.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>📐 La relación entre presión, caudal y freno</h2>
+    <p>
+      En un circuito eléctrico, las tres magnitudes se relacionan de una forma
+      muy parecida a la del sistema hidráulico:
+    </p>
+    <ul>
+      <li>
+        <strong>Voltaje (V):</strong> la presión que empuja. Equivale a la bomba
+        de agua. Se mide en <strong>voltios</strong>.
+      </li>
+      <li>
+        <strong>Corriente (I):</strong> el caudal que circula. Equivale a la
+        cantidad de agua que pasa por segundo. Se mide en <strong>amperios</strong>.
+      </li>
+      <li>
+        <strong>Resistencia (R):</strong> el freno al paso. Equivale a lo estrecho
+        que sea el tubo. Se mide en <strong>ohmios (Ω)</strong>.
+      </li>
+    </ul>
+
+    <p>
+      Los ingenieros usan tres letras para abreviar estas magnitudes:
+      <strong>V</strong> para el voltaje, <strong>I</strong> para la corriente,
+      <strong>R</strong> para la resistencia. Memorizar estas tres letras te
+      servirá para el resto del curso, porque aparecen en todas las fórmulas
+      y en todos los esquemáticos.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>🔎 Regla de proporcionalidad:</strong>
+      </p>
+      <ul style="margin-bottom: 0;">
+        <li>Si <strong>aumentas la presión</strong> (más voltaje), pasa más agua (más corriente).</li>
+        <li>Si <strong>aumentas el freno</strong> (más resistencia), pasa menos agua (menos corriente).</li>
+        <li>Si <strong>aumentas ambos</strong> en la misma proporción, el caudal no cambia.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🔺 El triángulo de Ohm</h2>
+    <p>
+      Esta relación entre las tres magnitudes es tan perfecta que el científico
+      alemán <strong>Georg Ohm</strong> la describió con una fórmula matemática.
+      Pero antes de ver la fórmula, vale la pena conocer el truco visual con el
+      que los ingenieros la recuerdan.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/triangulo_ohm.png" target="_blank" rel="noopener">
+        <img src="img/triangulo_ohm.png"
+             alt="Triángulo de la Ley de Ohm: V arriba, I a la izquierda, R a la derecha" />
+      </a>
+      <figcaption>
+        Fig. 2: El triángulo de Ohm. <strong>V</strong> (voltaje) arriba,
+        <strong>I</strong> (corriente) a la izquierda, <strong>R</strong>
+        (resistencia) a la derecha.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li>
+        <strong>Si quieres el voltaje (V):</strong> tapa la V con el dedo.
+        Lo que queda es <strong>I × R</strong> (I multiplicado por R).
+      </li>
+      <li>
+        <strong>Si quieres la corriente (I):</strong> tapa la I. Lo que queda es
+        <strong>V ÷ R</strong> (V dividido entre R).
+      </li>
+      <li>
+        <strong>Si quieres la resistencia (R):</strong> tapa la R. Lo que queda
+        es <strong>V ÷ I</strong> (V dividido entre I).
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Truco para recordar:</strong> la <strong>V está arriba</strong>,
+        como un rey. Las otras dos (I y R) están abajo, lado a lado. La raya del
+        medio es la línea de la fracción.
+      </p>
+    </div>
+
+    <h3>🌍 Aplicación real: el divisor de voltaje</h3>
+    <p>
+      ¿Para qué sirve la ley de Ohm en la vida real? Imagina que tienes una
+      fuente de 5V y necesitas alimentar un sensor que solo funciona con 3.3V.
+      Si lo conectas directo a los 5V, podrías dañarlo. La solución es
+      <strong>repartir el voltaje</strong>.
+    </p>
+    <p>
+      Con dos resistencias en serie, puedes crear un <strong>divisor de
+      voltaje</strong>: la resistencia más grande se queda con más tensión, y
+      la más pequeña con menos. Es una de las aplicaciones más comunes de la ley
+      de Ohm.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/figura_circuito_completo.png" target="_blank" rel="noopener">
+        <img src="img/figura_circuito_completo.png"
+             alt="Circuito con fuente de 5V, resistencia de 220 ohmios, LED y tierra; comparación entre símbolo europeo y americano" />
+      </a>
+      <figcaption>
+        Fig. 3: Un circuito real con fuente, resistencia, LED y tierra. Arriba,
+        el símbolo <strong>americano</strong> (zigzag). Abajo, el símbolo
+        <strong>europeo</strong> (rectángulo). En este curso usamos principalmente
+        el europeo.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Taller del lápiz -->
+  <section class="taller-electroscopio">
+    <h2>✏️ Taller: El lápiz que controla la luz</h2>
+    <p>
+      Vamos a poner en práctica la ley de Ohm con un experimento sencillo. El
+      grafito del lápiz conduce la electricidad, pero con cierta dificultad: es
+      una <strong>resistencia variable</strong> que puedes modificar a tu antojo.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/cadena-cuentas.png" target="_blank" rel="noopener">
+        <img src="img/cadena-cuentas.png"
+             alt="Cadena de cuentas verdes metálicas, cada una unida a la siguiente" />
+      </a>
+      <figcaption>
+        Fig. 4: Las partículas de grafito están conectadas como una cadena.
+        Cuanto más largo el trazo, más difícil es que la corriente lo recorra.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+    <p>
+      Recuerda: un LED es una pequeña luz que se enciende al paso de la corriente.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Una hoja de papel blanco.</li>
+      <li>Un lápiz blando (2B o más blando).</li>
+      <li>Una pila de 3V (CR2032) o una fuente de 5V.</li>
+      <li>Un LED rojo.</li>
+      <li>Una resistencia de 220Ω o 330Ω.</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva:</strong> de enmascarar, transparente o aislante.
+        Sirve para fijar la resistencia al papel.
+      </li>
+      <li>Una regla.</li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <ol>
+      <li>
+        <strong>Dibuja tres trazos</strong> con el lápiz:
+        <ul style="margin-top: 0.4rem;">
+          <li><strong>Trazo A:</strong> 3 cm de largo, grueso (repasa 5 veces).</li>
+          <li><strong>Trazo B:</strong> 6 cm de largo, grueso.</li>
+          <li><strong>Trazo C:</strong> 6 cm de largo, delgado (un solo trazo).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fija la resistencia con cinta</strong> sobre el papel, cerca de
+        los trazos.
+      </li>
+      <li>
+        <strong>Conecta el circuito:</strong> pila → resistencia → LED → trazo
+        de lápiz → pila. Pide ayuda a un adulto para sujetar los cables.
+      </li>
+      <li>
+        <strong>Observa el brillo</strong> en cada trazo. Compara con lo que
+        sabes del sistema hidráulico:
+        <ul style="margin-top: 0.4rem;">
+          <li>¿Cuál trazo sería como un tubo ancho y corto?</li>
+          <li>¿Cuál sería como un tubo estrecho y largo?</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala marcando
+        con una X el brillo que observes:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Trazo</th>
+                <th>Largo</th>
+                <th>Grosor</th>
+                <th>😃 Brillante</th>
+                <th>😐 Medio</th>
+                <th>😞 Apagado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A</strong></td>
+                <td>3 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>B</strong></td>
+                <td>6 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>C</strong></td>
+                <td>6 cm</td>
+                <td>Delgado</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      ¿Por qué el trazo largo y delgado apaga más el LED? Explícalo usando las
+      palabras <em>bomba</em>, <em>caudal</em> y <em>tubo estrecho</em>.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> Las redes de inteligencia artificial
+        funcionan con millones de conexiones que controlan cuánta información
+        pasa de una neurona a otra. Esas conexiones se llaman <em>pesos</em>. Un
+        peso alto deja pasar mucha señal; un peso bajo la bloquea. ¿Te suena
+        familiar? Es exactamente lo que hace una resistencia con la corriente:
+        controlar cuánto pasa.
+      </p>
+    </div>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la ley de Ohm:</strong> el trazo de lápiz es una
+      resistencia variable. Al alargarlo, aumentas el freno y disminuyes el
+      caudal. Esa relación entre presión, flujo y freno es tan perfecta que
+      Georg Ohm la describió con una fórmula matemática. La ley de Ohm es una
+      de las herramientas más importantes de toda la electrónica. La ley de Ohm es una
+      de las herramientas más importantes de toda la electrónica.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> en este taller no necesitas
+      instrumentos especiales. La comparación visual entre trazos es suficiente
+      para descubrir la relación.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). No olvides la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Tres personajes que no se rindieron</h2>
+    <p>
+      La ley que estás estudiando no la descubrió una sola persona. Tres científicos
+      de tres países aportaron piezas clave, y cada uno enfrentó dificultades para
+      que su trabajo fuera reconocido. Sus historias tienen mucho que enseñarnos.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚡ Georg Ohm — El profesor al que no le creyeron
+    </h3>
+    <p>
+      Ohm nació en Erlangen, Baviera (actual Alemania), en 1789, hijo de un
+      cerrajero. Trabajó durante años como profesor de secundaria en condiciones
+      modestas. En sus ratos libres experimentaba con cables y pilas. En 1827
+      publicó su descubrimiento, pero <strong>la comunidad científica no lo
+      aceptó de inmediato</strong>. Se sintió tan decepcionado que se retiró de
+      la investigación durante varios años. Solo en 1841, cuando la Royal Society
+      de Londres le otorgó la Medalla Copley, su trabajo empezó a ser reconocido.
+      A los 60 años, finalmente, fue nombrado profesor de universidad.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔥 James Joule — El cervecero científico
+    </h3>
+    <p>
+      Joule nació en Salford, Inglaterra, en 1818, en una familia rica de
+      cerveceros. Durante la mayor parte de su vida trabajó en la cervecería
+      familiar, y aprovechaba las noches para experimentar con electricidad y
+      calor. En 1840 formuló la ley que lleva su nombre: la corriente eléctrica
+      produce calor en proporción a su intensidad. Sus contemporáneos
+      <strong>dudaban de sus resultados</strong> porque venía del mundo industrial,
+      no del académico. Fue otro científico importante quien lo apoyó
+      públicamente en 1847. Hoy la unidad de energía lleva su nombre.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚙️ James Watt — El ingeniero que le dio nombre a la potencia
+    </h3>
+    <p>
+      Watt era un fabricante de instrumentos en Escocia. Su gran aporte fue
+      rediseñar la máquina de vapor para que no perdiera energía en cada ciclo,
+      lo que cambió la industria para siempre. A diferencia de Ohm, Watt vivió
+      para ver su invento reconocido.
+    </p>
+    <p>
+      En 1882, mucho después de su muerte, se decidió que la unidad de potencia
+      se llamara <strong>watt</strong> en su honor. Por eso, cuando hoy hablamos
+      del consumo de un aparato (una bombilla de 60 W, un cargador de 20 W, un
+      centro de datos que consume millones de vatios), estamos usando el nombre
+      de Watt sin darnos cuenta.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los tres tuvieron algo en común: <strong>no se rindieron cuando otros
+      dudaron de ellos</strong>. Su trabajo es la base de toda la electrónica
+      moderna.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Royal Society, la Enciclopedia Británica y archivos históricos de ingeniería.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado7.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado7.png"
+           alt="Infografía: El control del flujo. Muestra la analogía del tubo estrecho, la relación entre presión, caudal y freno, el triángulo de Ohm y la tabla de equivalencias" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: el tubo estrecho,
+      la relación presión-caudal-freno, el triángulo de Ohm y el circuito con
+      símbolos. ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g7">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 2
+      </span>
+      <h3>Presión, caudal y freno</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 6 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🚰</span>
+        <span><strong>El tubo estrecho:</strong> por qué frenar el agua es exactamente lo que hace una resistencia.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔺</span>
+        <span><strong>El triángulo de Ohm:</strong> el truco visual que usan los ingenieros para no memorizar tres fórmulas.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">✏️</span>
+        <span><strong>El trazo de lápiz:</strong> cómo verificar la ley de Ohm con algo que ya tienes en casa.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚡</span>
+        <span><strong>El profesor ignorado:</strong> la historia de Ohm y por qué tardaron 14 años en creerle.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado7.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchalo en familia y comenta cuál de los cuatro temas te resultó más claro.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: presión, caudal y freno</h3>
+    <ul>
+      <li>
+        Explica con tus palabras la relación entre voltaje, corriente y
+        resistencia usando la analogía del agua.
+      </li>
+      <li>
+        ¿Cómo usarías el triángulo de Ohm para recordar la fórmula de la
+        resistencia? Descríbelo paso a paso.
+      </li>
+      <li>
+        En el taller del lápiz, ¿cuál de los tres trazos era como un "tubo
+        estrecho y largo"? ¿Cómo lo supiste?
+      </li>
+      <li>
+        ¿Qué relación encuentras entre la ley de Ohm y el trabajo de James Joule
+        sobre el calor?
+      </li>
+      <li>
+        ¿Dónde has visto un divisor de voltaje en acción, aunque no supieras que
+        se llamaba así? (Pista: piensa en los reguladores de brillo de lámparas,
+        los controles de volumen antiguos, o los cargadores que reducen el
+        voltaje).
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

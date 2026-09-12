@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los números del control — Grado 8°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado8.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+    <h1 style="margin-top: 0.6rem;">🟣 Los números del control</h1>
+    <div class="sub">
+      Ohmios, ley de Ohm y el calor de la corriente
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card purple">
+    <h2>⚙️ El ohmio: la unidad del freno</h2>
+    <p>
+      En la mirada anterior vimos que la resistencia es un freno. Ahora necesitamos
+      <strong>medirla con números</strong>. Para eso existe una unidad: el
+      <strong>ohmio</strong>, abreviado con la letra griega <strong>Ω</strong>
+      (omega).
+    </p>
+    <p>
+      La resistencia se mide en ohmios. Igual que la distancia se mide en metros
+      o el peso en kilogramos. Una resistencia de <strong>220 Ω</strong> significa
+      "220 ohmios de oposición al paso de la corriente".
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🔎 ¿Cómo se identifica físicamente?</strong> Una resistencia es
+        un pequeño cilindro con rayitas de colores. Cada color representa un
+        número, y juntos forman el valor del componente. En este curso aprenderás
+        a leer esas rayitas cuando llegue el momento. Por ahora, basta con saber
+        que toda resistencia tiene un valor y que se mide en ohmios.
+      </p>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/simbolo-resistencias.png" target="_blank" rel="noopener">
+        <img src="img/simbolo-resistencias.png"
+             alt="Símbolos de resistencia: zigzag (americano) y rectángulo (europeo)" />
+      </a>
+      <figcaption>
+        Fig. 1: Los dos estilos para dibujar una resistencia en un esquemático.
+        Usamos el <strong>rectángulo</strong> (estilo europeo) por ser el estándar
+        internacional.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🔎 ¿De qué depende el valor de una resistencia?</h3>
+    <p>
+      No todas las resistencias valen lo mismo. Su valor depende de tres cosas:
+    </p>
+    <ul>
+      <li>
+        <strong>El material:</strong> el carbón, el metal y el grafito tienen
+        distinta resistividad. Cada material se opone al paso de la corriente
+        de manera diferente.
+      </li>
+      <li>
+        <strong>El largo:</strong> cuanto más largo el camino, más resistencia.
+        Como un pasillo largo que hay que recorrer.
+      </li>
+      <li>
+        <strong>El grosor:</strong> cuanto más delgado el camino, más resistencia.
+        Como un tubo estrecho que deja pasar menos agua.
+      </li>
+    </ul>
+    <p>
+      En el taller del lápiz vas a comprobar estos tres factores con tus propias
+      manos.
+    </p>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>📐 La ley de Ohm</h2>
+    <p>
+      Con la unidad definida, el científico alemán <strong>Georg Ohm</strong>
+      descubrió que existe una relación matemática exacta entre las tres magnitudes
+      de un circuito:
+    </p>
+
+    <div class="formula" style="font-size: 1.3em; padding: 1.2rem;">
+      V = I × R
+    </div>
+
+    <ul>
+      <li><strong>V</strong> es el voltaje, medido en voltios (V).</li>
+      <li><strong>I</strong> es la corriente, medida en amperios (A).</li>
+      <li><strong>R</strong> es la resistencia, medida en ohmios (Ω).</li>
+    </ul>
+
+    <p>
+      La fórmula se puede despejar de tres maneras según lo que quieras averiguar.
+      El triángulo de Ohm te ayuda a recordarlo:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/triangulo_ohm.png" target="_blank" rel="noopener">
+        <img src="img/triangulo_ohm.png"
+             alt="Triángulo de la Ley de Ohm: V arriba, I a la izquierda, R a la derecha" />
+      </a>
+      <figcaption>
+        Fig. 2: El triángulo de Ohm. Tapa con el dedo lo que buscas y verás la
+        fórmula.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li><strong>Voltaje:</strong> V = I × R</li>
+      <li><strong>Corriente:</strong> I = V ÷ R</li>
+      <li><strong>Resistencia:</strong> R = V ÷ I</li>
+    </ul>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🧮 Cálculo paso a paso: proteger un LED</h2>
+    <p>
+      Este es el cálculo más común en electrónica. Vamos a hacerlo con mucho
+      cuidado, porque es la base de toda la protección de componentes.
+    </p>
+
+    <div class="reto-box" style="border-left-color: var(--c-g8);">
+      <p><strong>📌 Datos del problema:</strong></p>
+      <ul style="margin-bottom: 0;">
+        <li>Fuente de alimentación: <strong>5V</strong></li>
+        <li>LED rojo: necesita aproximadamente <strong>2V</strong> para brillar</li>
+        <li>Corriente que queremos que pase por el LED: <strong>20 mA</strong> = 0,02 A</li>
+      </ul>
+    </div>
+
+    <p><strong>Paso 1 — ¿Cuánto voltaje debe caer en la resistencia?</strong></p>
+    <p>
+      La fuente entrega 5V. El LED consume 2V. La diferencia es lo que la
+      resistencia debe "quedarse":
+    </p>
+    <div class="formula">
+      V<sub>resistencia</sub> = 5V − 2V = <strong>3V</strong>
+    </div>
+
+    <p><strong>Paso 2 — Aplicar la ley de Ohm</strong></p>
+    <p>
+      Ya sabemos el voltaje que debe manejar la resistencia (3V) y la corriente
+      que queremos que pase (0,02 A). Usamos la versión del triángulo para
+      resistencia:
+    </p>
+    <div class="formula">
+      R = V ÷ I = 3V ÷ 0,02 A = <strong>150 Ω</strong>
+    </div>
+
+    <p><strong>Paso 3 — Buscar el valor comercial</strong></p>
+    <p>
+      El valor exacto de 150 Ω no siempre se encuentra en las tiendas. Los
+      fabricantes producen resistencias en valores específicos. Como no queremos
+      exceder la corriente, <strong>elegimos el siguiente valor mayor</strong>:
+    </p>
+    <ul>
+      <li><strong>150 Ω</strong> (ideal, si lo encuentras)</li>
+      <li><strong>220 Ω</strong> (común, hace que el LED brille un poco menos)</li>
+      <li><strong>330 Ω</strong> (muy común, el LED brilla más tenue)</li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🎯 Regla de oro:</strong> siempre elegimos una resistencia
+        <em>igual o mayor</em> al valor calculado. Nunca menor, porque
+        sobrepasaríamos al LED.
+      </p>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/figura_circuito_completo.png" target="_blank" rel="noopener">
+        <img src="img/figura_circuito_completo.png"
+             alt="Circuito con fuente de 5V, resistencia de 220 ohmios, LED y tierra" />
+      </a>
+      <figcaption>
+        Fig. 3: El circuito completo con los símbolos que usamos. Observa la pila,
+        la resistencia y la tierra. El LED está protegido por la resistencia.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🔄 Ahora al revés: calcular la corriente</h3>
+    <p>
+      La ley de Ohm también sirve para calcular la corriente cuando ya conoces
+      la resistencia. Imagina que en el mismo circuito reemplazas la resistencia
+      por una de <strong>330 Ω</strong> en lugar de 150 Ω:
+    </p>
+    <div class="formula">
+      I = V ÷ R = 3V ÷ 330 Ω ≈ <strong>0,009 A</strong> (9 mA)
+    </div>
+    <p>
+      Observa: al aumentar la resistencia, la corriente disminuye. Esa es la
+      relación inversa que ya conocías de la mirada comparativa. Con 220 Ω
+      pasarían unos 13 mA, y con 100 Ω pasarían 30 mA. El LED brilla distinto
+      en cada caso: más resistencia, menos corriente, menos brillo.
+    </p>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card">
+    <h2>🔥 El calor de la corriente (potencia)</h2>
+    <p>
+      Cuando la corriente circula por una resistencia, parte de la energía se
+      convierte en calor. Ese fenómeno se llama <strong>efecto Joule</strong>, en
+      honor al científico inglés James Joule. La potencia disipada se calcula así:
+    </p>
+
+    <div class="formula" style="font-size: 1.2em; padding: 1.2rem;">
+      P = V × I
+    </div>
+
+    <ul>
+      <li><strong>P</strong> es la potencia, medida en vatios (W).</li>
+      <li><strong>V</strong> es el voltaje sobre el componente (V).</li>
+      <li><strong>I</strong> es la corriente que lo atraviesa (A).</li>
+    </ul>
+
+    <p>Volvamos al ejemplo del LED:</p>
+    <div class="formula">
+      P = 3V × 0,02 A = <strong>0,06 W</strong>
+    </div>
+
+    <p>
+      Las resistencias más comunes soportan <strong>0,25 W</strong> (un cuarto
+      de vatio). Como nuestro cálculo (0,06 W) es mucho menor, la resistencia
+      trabajará cómoda y fría.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🔥 ¿Cuándo se quema una resistencia?</strong> Cuando la potencia
+        que debe disipar supera su límite. Por ejemplo, si calculáramos 0,6 W
+        para una resistencia de 0,25 W, se sobrecalentaría y se quemaría. En ese
+        caso tendríamos que comprar una resistencia "más gorda", capaz de
+        disipar 1 W o más.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 5 -->
+  <section class="card slate">
+    <h2>📄 El datasheet: la ficha técnica del componente</h2>
+    <p>
+      Cada componente electrónico viene con un documento llamado
+      <strong>datasheet</strong> (hoja de datos). Es como el manual de instrucciones
+      del componente: dice cuánto voltaje soporta, cuánta corriente aguanta, a
+      qué temperatura funciona, y mucho más.
+    </p>
+    <p>
+      Por ejemplo, en el datasheet de un LED rojo típico encontrarás que su
+      <strong>voltaje directo</strong> (<em>V<sub>f</sub></em>) es de
+      aproximadamente 2V, y que su corriente máxima es de 20 mA.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>🎯 Regla de oro del ingeniero:</strong> nunca diseñes un circuito
+        sin consultar el datasheet. El datasheet te da los <em>números reales</em>,
+        y la ley de Ohm solo te dice cómo usarlos.
+      </p>
+    </div>
+
+    <h3>🔍 ¿Cómo encontrar un datasheet?</h3>
+    <ol>
+      <li>
+        Identifica el <strong>número de parte</strong> del componente (por
+        ejemplo, "LED rojo 5mm" o "resistencia 220Ω 1/4W").
+      </li>
+      <li>
+        Busca en internet: <code>[número de parte] datasheet PDF</code>.
+      </li>
+      <li>
+        Descarga el PDF desde el sitio del fabricante (Vishay, Fairchild,
+        Texas Instruments, etc.).
+      </li>
+      <li>
+        Lee especialmente la sección <strong>Absolute Maximum Ratings</strong>,
+        donde están los valores que nunca debes exceder.
+      </li>
+    </ol>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #e8f5e9;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> Los chips que entrenan modelos de
+        inteligencia artificial contienen miles de millones de
+        <strong>transistores</strong> (pequeños interruptores microscópicos
+        que se encienden y apagan millones de veces por segundo). Cada
+        transistor, al hacerlo, disipa una cantidad minúscula de calor, pero
+        sumados son millones los que trabajan a la vez.
+        Cada transistor es, en esencia, un interruptor microscópico que se
+        enciende y se apaga millones de veces por segundo. Al hacerlo, cada uno
+        disipa una cantidad minúscula de calor, pero sumados son millones los
+        que trabajan a la vez. Controlar ese calor es uno de los mayores desafíos
+        de la industria. La ley de Ohm que acabas de aprender es la misma que
+        usan los ingenieros para calcular cuánta energía se disipa en cada uno
+        de esos componentes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Taller del lápiz -->
+  <section class="taller-electroscopio">
+    <h2>✏️ Taller: El lápiz que controla la luz</h2>
+    <p>
+      Ya conoces la ley de Ohm. Ahora vamos a <strong>aplicarla</strong> con el
+      experimento del trazo de lápiz. El grafito es una resistencia variable:
+      puedes modificar su valor solo cambiando el largo o el grosor del trazo.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Una hoja de papel blanco.</li>
+      <li>Un lápiz blando (2B o más blando).</li>
+      <li>Una pila de 3V (CR2032) o fuente de 5V.</li>
+      <li>Un LED rojo.</li>
+      <li>Una resistencia de 220Ω o 330Ω.</li>
+      <li>Cables caimán.</li>
+      <li>Cinta adhesiva (de enmascarar, transparente o aislante).</li>
+      <li>Una regla.</li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <ol>
+      <li>
+        <strong>Dibuja cuatro trazos</strong> con el lápiz:
+        <ul style="margin-top: 0.4rem;">
+          <li><strong>Trazo A:</strong> 3 cm de largo, grueso (repasa 5 veces).</li>
+          <li><strong>Trazo B:</strong> 6 cm de largo, grueso.</li>
+          <li><strong>Trazo C:</strong> 6 cm de largo, delgado (un solo trazo).</li>
+          <li><strong>Trazo D:</strong> 12 cm de largo, grueso.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fija la resistencia con cinta</strong> sobre el papel, cerca de
+        los trazos.
+      </li>
+      <li>
+        <strong>Conecta el circuito:</strong> pila → resistencia → LED → trazo
+        de lápiz → pila.
+      </li>
+      <li>
+        <strong>Observa el brillo</strong> de cada trazo. Anótalo en tu bitácora.
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala marcando
+        con una X el brillo que observes:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Trazo</th>
+                <th>Largo</th>
+                <th>Grosor</th>
+                <th>😃 Brillante</th>
+                <th>😐 Medio</th>
+                <th>😞 Apagado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A</strong></td>
+                <td>3 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>B</strong></td>
+                <td>6 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>C</strong></td>
+                <td>6 cm</td>
+                <td>Delgado</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>D</strong></td>
+                <td>12 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Ordena los trazos</strong> de mayor a menor resistencia, según
+        lo que observes. ¿Cuál crees que ofrece más ohmios? ¿Cuál menos?
+      </li>
+      <li>
+        <strong>Compara con la ley de Ohm:</strong> aunque no conocemos el valor
+        exacto de cada trazo, sabemos que la corriente es inversamente
+        proporcional a la resistencia. Un trazo con más ohmios deja pasar menos
+        corriente, y por eso el LED brilla menos.
+      </li>
+    </ol>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Si duplicaras la longitud de un trazo, ¿qué esperarías que pasara con su
+      resistencia? ¿Y con el brillo del LED? Justifica usando la ley de Ohm.
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la potencia:</strong> cada trazo de lápiz también se
+      calienta un poco cuando pasa la corriente. Ese calor es el efecto Joule en
+      acción. Cuanto más larga sea la resistencia y más corriente la atraviese,
+      más calor producirá. Ese principio es el que obliga a los ingenieros a
+      calcular la potencia que cada componente puede soportar antes de conectarlo.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> en este taller no necesitas
+      instrumentos especiales. La comparación de brillos te permite estimar la
+      resistencia relativa de cada trazo.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Tres personajes que no se rindieron</h2>
+    <p>
+      La ley que estás estudiando no la descubrió una sola persona. Tres científicos
+      de tres países aportaron piezas clave, y cada uno enfrentó dificultades para
+      que su trabajo fuera reconocido.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚡ Georg Simon Ohm (1789–1854) — El descubridor olvidado
+    </h3>
+    <p>
+      Ohm nació en Erlangen, Baviera (actual Alemania), hijo de un cerrajero
+      autodidacta en matemáticas. Trabajó durante años como profesor de secundaria
+      en condiciones modestas. En 1825, usando el galvanómetro de Schweigger,
+      empezó a experimentar con la relación entre la corriente que circulaba por
+      un alambre y la diferencia de potencial aplicada.
+    </p>
+    <p>
+      En 1827 publicó su obra <em>"La cadena galvánica, tratada matemáticamente"</em>,
+      donde formuló la ley que hoy lleva su nombre. La comunidad científica de su
+      tiempo <strong>no la aceptó de inmediato</strong>. Se sintió tan decepcionado
+      que se retiró de la investigación durante años. En 1841, la Royal Society de
+      Londres le otorgó la Medalla Copley, y en 1849 —ya con 60 años— fue nombrado
+      profesor en la Universidad de Múnich. Murió cinco años después.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔥 James Prescott Joule (1818–1889) — El cervecero físico
+    </h3>
+    <p>
+      Joule nació en Salford, Inglaterra, en una familia rica de cerveceros. Fue
+      educado en casa y recibió lecciones del químico John Dalton. Durante la mayor
+      parte de su vida trabajó en la cervecería familiar, y aprovechaba las noches
+      para experimentar con electricidad y calor.
+    </p>
+    <p>
+      En 1840 formuló la ley que lleva su nombre: la cantidad de calor producida
+      por una corriente eléctrica es proporcional al cuadrado de la corriente y a
+      la resistencia del conductor. Sus contemporáneos <strong>dudaban de sus
+      resultados</strong> porque venía del mundo industrial, no del académico. Fue
+      William Thomson (Lord Kelvin) quien lo apoyó públicamente en 1847. Hoy la
+      unidad de energía lleva su nombre.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚙️ James Watt (1736–1819) — El ingeniero del vapor
+    </h3>
+    <p>
+      Watt nació en Greenock, Escocia. Trabajó como fabricante de instrumentos
+      matemáticos en la Universidad de Glasgow. En 1764, al reparar una máquina
+      de vapor de Newcomen, notó su enorme ineficiencia: perdía vapor en cada
+      ciclo. En 1769 patentó una mejora clave —un condensador separado— que
+      cambió la historia de la industria.
+    </p>
+    <p>
+      A diferencia de Ohm, Watt vivió para ver su invento adoptado en todo el
+      mundo. En 1882, 63 años después de su muerte, la Asociación Británica de
+      Ingenieros propuso el <strong>watt</strong> como unidad de potencia en su
+      honor. Su nombre aparece cada vez que hablamos del "costo energético" de
+      cualquier aparato: desde una bombilla hasta los grandes centros de datos
+      de IA.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los tres aportaron piezas distintas: Ohm describió la <strong>relación</strong>
+      entre voltaje, corriente y resistencia; Joule describió el <strong>calor</strong>
+      que esa corriente produce; Watt dio nombre a la <strong>potencia</strong> que
+      se consume. Juntos son la base de toda la electrónica moderna.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Royal Society, la Enciclopedia Británica y archivos históricos de ingeniería.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado8.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado8.png"
+           alt="Infografía: Los números del control. Muestra el ohmio como unidad, la fórmula V = I × R, el cálculo de una resistencia para un LED, la potencia P = V × I y el efecto Joule" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: el ohmio, la
+      ley de Ohm, el cálculo paso a paso, la potencia y el efecto Joule.
+      ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g8">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 3
+      </span>
+      <h3>Los ohmios y el calor</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      ¿Qué pasaría si conectas un LED directamente a una pila de 5V sin resistencia?
+      <strong>Se quema en segundos.</strong> Dale play y descubre cómo la ley de Ohm
+      te permite calcular exactamente qué resistencia necesita cada componente.
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 1rem 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚙️</span>
+        <span><strong>El ohmio:</strong> la unidad que mide el freno y por qué existe.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧮</span>
+        <span><strong>El cálculo del LED:</strong> cómo pasar de la fórmula a un número real en tres pasos.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔥</span>
+        <span><strong>El efecto Joule:</strong> por qué la corriente calienta los componentes y cuándo se queman.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📄</span>
+        <span><strong>El datasheet:</strong> el documento que todo ingeniero consulta antes de conectar nada.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado8.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu calculadora o tu cuaderno a mano: hay cuentas que querrás hacer tú mismo.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: números concretos</h3>
+    <ul>
+      <li>
+        ¿Qué significa que una resistencia valga 220 Ω? Explícalo con tus
+        palabras.
+      </li>
+      <li>
+        Calcula la resistencia necesaria para un LED azul (V<sub>f</sub> ≈ 3V) con
+        una fuente de 5V y una corriente deseada de 20 mA.
+      </li>
+      <li>
+        ¿Por qué elegimos siempre un valor comercial <em>mayor</em> al calculado
+        y no menor?
+      </li>
+      <li>
+        Si una resistencia trabaja con 5V y 0,1 A, ¿qué potencia disipa? ¿Podría
+        ser una resistencia de 0,25 W o necesitaríamos una más grande?
+      </li>
+      <li>
+        Nombra los tres factores físicos que determinan el valor de una resistencia.
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

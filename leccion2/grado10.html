@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El costo de la energía — Grado 10°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🟢 El costo de la energía</h1>
+    <div class="sub">
+      Potencia, disipación y el puente hacia la IA
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>🧮 La ley de Ohm como herramienta de diseño</h2>
+    <p>
+      La ley de Ohm también es una <strong>herramienta de diseño</strong>. Antes
+      de conectar un componente, los ingenieros calculan la resistencia que
+      necesitan para que el circuito funcione sin dañarse.
+    </p>
+
+    <div class="formula" style="font-size: 1.2em; padding: 1.2rem;">
+      $$V = I \cdot R \qquad \Longleftrightarrow \qquad I = \frac{V}{R} \qquad \Longleftrightarrow \qquad R = \frac{V}{I}$$
+    </div>
+
+    <p>
+      Las tres formas son la misma ley, solo despejada de manera distinta. El
+      triángulo de Ohm te ayuda a recordarlas:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/triangulo_ohm.png" target="_blank" rel="noopener">
+        <img src="img/triangulo_ohm.png"
+             alt="Triángulo de la Ley de Ohm: V arriba, I a la izquierda, R a la derecha" />
+      </a>
+      <figcaption>
+        Fig. 1: El triángulo de Ohm. Tapa con el dedo lo que buscas y verás la
+        fórmula que debes usar. <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Ejemplo de diseño:</strong> quieres alimentar un LED azul
+        (V<sub>f</sub> ≈ 3.2V) con una fuente de 5V, limitando la corriente a
+        20 mA. La resistencia necesita manejar la diferencia de voltaje:
+      </p>
+      <p style="margin-top: 0.5rem; margin-bottom: 0;">
+        $$R = \frac{V_{\text{fuente}} - V_f}{I} = \frac{5 - 3.2}{0.02} = 90\ \Omega$$
+      </p>
+      <p style="margin-top: 0.5rem; margin-bottom: 0;">
+        El valor comercial más cercano por encima es <strong>100 Ω</strong>.
+        Ese es el que usarías.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔥 Potencia y disipación</h2>
+    <p>
+      La corriente que circula por una resistencia no desaparece: se convierte
+      en calor. Ese fenómeno se llama <strong>efecto Joule</strong> y es la razón
+      por la que algunos componentes se calientan. La potencia disipada se calcula
+      con dos fórmulas equivalentes:
+    </p>
+
+    <div class="formula" style="font-size: 1.15em; padding: 1.2rem;">
+      $$P = V \cdot I \qquad \text{y también} \qquad P = I^2 \cdot R$$
+    </div>
+
+    <h3>🔎 ¿Por qué las dos fórmulas dan lo mismo?</h3>
+    <p>
+      No son dos fórmulas distintas: son la misma expresión escrita de dos
+      maneras. Podemos demostrarlo con álgebra simple:
+    </p>
+    <ol>
+      <li>Partimos de la primera fórmula: <strong>P = V · I</strong></li>
+      <li>Sustituimos V por su equivalente según la ley de Ohm: <strong>V = I · R</strong></li>
+      <li>Reemplazamos: <strong>P = (I · R) · I = I² · R</strong></li>
+    </ol>
+    <p>
+      Las dos versiones son idénticas. La primera es útil cuando conoces el
+      voltaje; la segunda cuando conoces la resistencia. Los ingenieros usan la
+      que les resulte más cómoda en cada caso.
+    </p>
+
+    <h3>🔎 Principio de conservación de la energía</h3>
+    <p>
+      La energía que entrega la fuente no se crea ni se destruye: <strong>se
+      transforma</strong>. En un circuito, esa energía se reparte entre los
+      componentes. Parte se convierte en luz (en el LED), parte en calor (en la
+      resistencia). La suma de las energías transformadas por cada componente es
+      igual a la energía que entregó la fuente.
+    </p>
+    <p>
+      Este principio es el que permite calcular la resistencia que necesita cada
+      componente: sabemos cuánto voltaje debe "quedarse" con cada uno porque la
+      suma tiene que cuadrar con el voltaje total de la fuente.
+    </p>
+
+    <!-- ====== SVG A: Curva de P = I²R ====== -->
+    <figure class="figura-ruta figura-ruta--amplia">
+      <svg viewBox="0 0 500 340"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Gráfica que muestra cómo la potencia aumenta con el cuadrado de la corriente, formando una parábola"
+           style="width: 100%; height: auto; display: block;">
+        <title>Curva de la potencia: P = I²R</title>
+
+        <rect x="0" y="0" width="500" height="340" fill="#f8fcff" rx="12" />
+
+        <line x1="80" y1="40" x2="80" y2="270" stroke="#374151" stroke-width="2" />
+        <line x1="80" y1="270" x2="440" y2="270" stroke="#374151" stroke-width="2" />
+
+        <polygon points="80,35 74,47 86,47" fill="#374151" />
+        <polygon points="445,270 433,264 433,276" fill="#374151" />
+
+        <text x="60" y="32" font-family="system-ui, sans-serif"
+              font-size="16" font-weight="bold" fill="#374151">P</text>
+        <text x="452" y="278" font-family="system-ui, sans-serif"
+              font-size="16" font-weight="bold" fill="#374151">I</text>
+
+        <path d="M 80 270
+                 Q 130 260 170 240
+                 T 240 190
+                 T 300 120
+                 T 360 60
+                 T 420 20"
+              fill="none" stroke="#10b981" stroke-width="3.5"
+              stroke-linecap="round" />
+
+        <line x1="160" y1="270" x2="160" y2="245"
+              stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" />
+        <line x1="260" y1="270" x2="260" y2="175"
+              stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" />
+        <line x1="360" y1="270" x2="360" y2="60"
+              stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" />
+
+        <circle cx="160" cy="245" r="6" fill="#10b981" />
+        <circle cx="260" cy="175" r="6" fill="#10b981" />
+        <circle cx="360" cy="60"  r="6" fill="#10b981" />
+
+        <text x="160" y="290" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14"
+              fill="#374151">1×</text>
+        <text x="260" y="290" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14"
+              fill="#374151">2×</text>
+        <text x="360" y="290" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14"
+              fill="#374151">3×</text>
+
+        <text x="170" y="238" font-family="system-ui, sans-serif"
+              font-size="13" font-weight="bold" fill="#10b981">P</text>
+        <text x="270" y="168" font-family="system-ui, sans-serif"
+              font-size="13" font-weight="bold" fill="#10b981">4P</text>
+        <text x="370" y="53"  font-family="system-ui, sans-serif"
+              font-size="13" font-weight="bold" fill="#10b981">9P</text>
+
+        <text x="260" y="322" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="13"
+              font-style="italic" fill="#4b5563">
+          Si duplicas la corriente, la potencia se cuadruplica.
+        </text>
+      </svg>
+      <figcaption>
+        Fig. 2: La potencia crece con el <strong>cuadrado</strong> de la corriente.
+        Pasar de 1× a 2× la corriente cuadruplica el calor generado.
+      </figcaption>
+    </figure>
+
+    <h3>📊 Ejemplo numérico</h3>
+    <p>
+      Volvamos al LED del ejemplo anterior. La resistencia de 100 Ω tiene una
+      caída de voltaje de 1.8V (5V − 3.2V) y pasa una corriente de 20 mA:
+    </p>
+    <div class="formula">
+      $$P = 1.8\ \text{V} \cdot 0.02\ \text{A} = 0.036\ \text{W}$$
+    </div>
+    <p>
+      Las resistencias comerciales estándar soportan <strong>0.25 W</strong>
+      (un cuarto de vatio). Como 0.036 W es mucho menor, esta resistencia
+      trabajará fría y durará años.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>⚠️ ¿Cuándo se quema una resistencia?</strong> Cuando la potencia
+        que debe disipar excede su límite. Con la fórmula $P = I^2 R$ se ve
+        claramente por qué: <em>la potencia crece con el cuadrado de la
+        corriente</em>. Si duplicas la corriente, la potencia se cuadruplica. Por
+        eso los ingenieros prefieren siempre corrientes bajas cuando diseñan
+        circuitos de potencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>📄 El datasheet: los límites del componente</h2>
+    <p>
+      Cada componente electrónico viene acompañado de un documento llamado
+      <strong>datasheet</strong> (hoja de datos). Es el manual técnico del
+      componente y contiene los valores que <em>nunca</em> debes exceder.
+    </p>
+
+    <p>
+      En un datasheet típico encontrarás tres secciones críticas:
+    </p>
+    <ul>
+      <li>
+        <strong>Absolute Maximum Ratings:</strong> los valores máximos absolutos
+        (voltaje, corriente, temperatura). Superarlos destruye el componente.
+      </li>
+      <li>
+        <strong>Electrical Characteristics:</strong> las características normales
+        de funcionamiento: voltaje directo del LED, corriente recomendada,
+        resistencia interna.
+      </li>
+      <li>
+        <strong>Thermal Characteristics:</strong> cómo se comporta el componente
+        respecto al calor: temperatura máxima de operación, resistencia térmica,
+        necesidad de disipadores.
+      </li>
+    </ul>
+
+    <h3>📊 Cómo interpretar un datasheet de LED rojo</h3>
+    <p>
+      Imagina que abres el datasheet de un LED rojo. Encuentras esta tabla:
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Parámetro</th>
+            <th>Valor</th>
+            <th>Significado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>V<sub>f</sub> (voltaje directo)</td>
+            <td>2.0 V</td>
+            <td>Voltaje que necesita para encender</td>
+          </tr>
+          <tr>
+            <td>I<sub>f</sub> (corriente directa)</td>
+            <td>20 mA</td>
+            <td>Corriente recomendada para brillar</td>
+          </tr>
+          <tr>
+            <td>I<sub>max</sub> (corriente máxima)</td>
+            <td>30 mA</td>
+            <td>Límite que nunca debes exceder</td>
+          </tr>
+          <tr>
+            <td>T<sub>max</sub> (temperatura máxima)</td>
+            <td>85 °C</td>
+            <td>Temperatura máxima de operación segura</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Con estos cuatro datos, puedes calcular la resistencia que necesita el
+      LED para cualquier fuente de voltaje. Y puedes verificar que la corriente
+      que vas a hacer pasar por él esté por debajo de I<sub>max</sub>.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🎯 Regla de oro del ingeniero:</strong> diseña siempre con un
+        margen de seguridad. Si el datasheet dice que la corriente máxima es
+        30 mA, diseña para 20 mA. Así el componente trabajará cómodo y durará
+        más.
+      </p>
+    </div>
+
+    <h3>🔍 ¿Cómo encontrar un datasheet?</h3>
+    <ol>
+      <li>
+        Identifica el <strong>número de parte</strong> del componente (por
+        ejemplo, "LED rojo 5mm" o "resistencia 220Ω 1/4W").
+      </li>
+      <li>
+        Busca en internet: <code>[número de parte] datasheet PDF</code>.
+      </li>
+      <li>
+        Descarga el PDF desde el sitio del fabricante (Vishay, Fairchild,
+        Texas Instruments, etc.).
+      </li>
+      <li>
+        Lee especialmente la sección <strong>Absolute Maximum Ratings</strong>,
+        donde están los valores que nunca debes exceder.
+      </li>
+    </ol>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>🧠 Los pesos de la IA: resistencias virtuales</h2>
+    <p>
+      En una red neuronal, la información viaja de una neurona a otra a través
+      de conexiones con diferentes "fuerzas". A esas fuerzas se les llama
+      <strong>weights</strong> (pesos). Un weight decide cuánta señal pasa de una
+      neurona a otra.
+    </p>
+    <p>
+      ¿Te suena familiar? <strong>Un weight hace exactamente lo mismo que una
+      resistencia</strong>: controla cuánto flujo pasa. Un weight alto deja pasar
+      mucha señal; un weight bajo la bloquea casi por completo.
+    </p>
+
+    <!-- ====== SVG B: Weights como resistencias ====== -->
+    <figure class="figura-ruta figura-ruta--amplia">
+      <svg viewBox="0 0 600 240"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Esquema de tres neuronas conectadas por resistencias variables que representan los weights de una red neuronal"
+           style="width: 100%; height: auto; display: block;">
+        <title>Weights como resistencias</title>
+
+        <rect x="0" y="0" width="600" height="240" fill="#f8fcff" rx="12" />
+
+        <circle cx="90" cy="120" r="38"
+                fill="#dcfce7" stroke="#10b981" stroke-width="2.5" />
+        <text x="90" y="126" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14" font-weight="bold"
+              fill="#065f46">Neurona</text>
+        <text x="90" y="142" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12"
+              fill="#065f46">1</text>
+
+        <line x1="130" y1="120" x2="250" y2="120"
+              stroke="#9ca3af" stroke-width="2" />
+        <rect x="160" y="108" width="60" height="24" rx="3"
+              fill="#ffffff" stroke="#4b5563" stroke-width="2" />
+        <text x="190" y="100" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12" font-weight="bold"
+              fill="#4b5563">weight alto</text>
+
+        <circle cx="300" cy="120" r="38"
+                fill="#dcfce7" stroke="#10b981" stroke-width="2.5" />
+        <text x="300" y="126" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14" font-weight="bold"
+              fill="#065f46">Neurona</text>
+        <text x="300" y="142" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12"
+              fill="#065f46">2</text>
+
+        <line x1="340" y1="120" x2="460" y2="120"
+              stroke="#9ca3af" stroke-width="2" />
+        <rect x="370" y="108" width="60" height="24" rx="3"
+              fill="#ffffff" stroke="#4b5563" stroke-width="2" />
+        <text x="400" y="100" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12" font-weight="bold"
+              fill="#4b5563">weight bajo</text>
+
+        <circle cx="510" cy="120" r="38"
+                fill="#dcfce7" stroke="#10b981" stroke-width="2.5" />
+        <text x="510" y="126" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14" font-weight="bold"
+              fill="#065f46">Neurona</text>
+        <text x="510" y="142" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12"
+              fill="#065f46">3</text>
+
+        <text x="300" y="215" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="13"
+              font-style="italic" fill="#4b5563">
+          Cada conexión funciona como una resistencia que controla cuánta señal pasa.
+        </text>
+      </svg>
+      <figcaption>
+        Fig. 3: Los <em>weights</em> de una red neuronal funcionan como resistencias
+        virtuales. Controlan cuánta señal llega de una neurona a la siguiente.
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🎯 La conexión:</strong> la ley de Ohm describe cómo se comporta
+        la electricidad en un cable. Los <em>weights</em> describen cómo se
+        comporta la información en una red neuronal. Matemáticamente, las dos
+        relaciones son muy parecidas: hay una entrada, un factor de control, y
+        una salida.
+      </p>
+    </div>
+
+    <p>
+      Cuando un ingeniero de IA "entrena" un modelo, está ajustando millones
+      de <em>weights</em> hasta que la red responde correctamente. Es como si
+      ajustara millones de resistencias virtuales al mismo tiempo.
+    </p>
+  </section>
+
+  <!-- Card 5 -->
+  <section class="card">
+    <h2>🔥 El costo energético de la inteligencia</h2>
+    <p>
+      Toda esta información viaja dentro de chips que consumen energía. Cuando
+      se entrena un modelo de IA grande, los procesadores (GPUs) trabajan a
+      máxima capacidad durante semanas o meses. La potencia disipada es enorme,
+      y la mayor parte se convierte en calor.
+    </p>
+
+    <!-- ====== SVG C: Chip y disipación ====== -->
+    <figure class="figura-ruta figura-ruta--amplia">
+      <svg viewBox="0 0 500 280"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Esquema de un chip de IA generando calor en su interior y siendo enfriado por disipadores externos"
+           style="width: 100%; height: auto; display: block;">
+        <title>El costo térmico de la IA</title>
+
+        <rect x="0" y="0" width="500" height="280" fill="#f8fcff" rx="12" />
+
+        <rect x="180" y="90" width="140" height="110" rx="10"
+              fill="#1e293b" stroke="#0f172a" stroke-width="2.5" />
+        <text x="250" y="150" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="28" font-weight="bold"
+              fill="#10b981">IA</text>
+
+        <g stroke="#4b5563" stroke-width="2.5">
+          <line x1="200" y1="90" x2="200" y2="78" />
+          <line x1="220" y1="90" x2="220" y2="78" />
+          <line x1="240" y1="90" x2="240" y2="78" />
+          <line x1="260" y1="90" x2="260" y2="78" />
+          <line x1="280" y1="90" x2="280" y2="78" />
+          <line x1="300" y1="90" x2="300" y2="78" />
+
+          <line x1="200" y1="200" x2="200" y2="212" />
+          <line x1="220" y1="200" x2="220" y2="212" />
+          <line x1="240" y1="200" x2="240" y2="212" />
+          <line x1="260" y1="200" x2="260" y2="212" />
+          <line x1="280" y1="200" x2="280" y2="212" />
+          <line x1="300" y1="200" x2="300" y2="212" />
+        </g>
+
+        <g stroke="#dc2626" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M 210 78 Q 205 60 215 45" />
+          <path d="M 250 78 Q 245 55 255 40" />
+          <path d="M 290 78 Q 285 60 295 45" />
+        </g>
+        <g fill="#dc2626">
+          <polygon points="215,45 208,50 220,52" />
+          <polygon points="255,40 248,45 260,47" />
+          <polygon points="295,45 288,50 300,52" />
+        </g>
+        <text x="250" y="30" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="14" font-weight="bold"
+              fill="#dc2626">calor</text>
+
+        <g stroke="#2563eb" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M 60 145 L 175 145" />
+          <path d="M 440 145 L 325 145" />
+        </g>
+        <g fill="#2563eb">
+          <polygon points="175,145 165,140 165,150" />
+          <polygon points="325,145 335,140 335,150" />
+        </g>
+        <text x="60" y="135" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="13" font-weight="bold"
+              fill="#2563eb">refrigeración</text>
+        <text x="440" y="135" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="13" font-weight="bold"
+              fill="#2563eb">refrigeración</text>
+
+        <text x="250" y="250" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="16" font-weight="bold"
+              fill="#374151">P = I² · R</text>
+        <text x="250" y="270" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="12"
+              font-style="italic" fill="#4b5563">
+          Cada operación de la IA también disipa calor.
+        </text>
+      </svg>
+      <figcaption>
+        Fig. 4: Los chips de IA generan calor por efecto Joule. La refrigeración
+        industrial es uno de los mayores costos de la computación moderna.
+      </figcaption>
+    </figure>
+
+    <p>
+      Los centros de datos que entrenan modelos como GPT necesitan sistemas de
+      refrigeración industrial: ventiladores gigantes, torres de enfriamiento,
+      a veces incluso lagos artificiales. Todo eso se hace para mantener los
+      chips dentro de temperaturas seguras.
+    </p>
+
+    <h3>🔎 Eficiencia: la relación entre lo útil y lo perdido</h3>
+    <p>
+      No toda la energía que consume un sistema se convierte en trabajo útil.
+      La <strong>eficiencia</strong> es la fracción de la energía total que
+      efectivamente realiza el trabajo deseado.
+    </p>
+    <ul>
+      <li>
+        Un <strong>LED rojo</strong> convierte aproximadamente un 20% de la
+        energía eléctrica en luz. El 80% restante se disipa como calor.
+      </li>
+      <li>
+        Una <strong>bombilla incandescente</strong> convierte solo un 5% en luz.
+        El 95% es calor. Por eso se calienta tanto y consume tanta energía.
+      </li>
+      <li>
+        En un <strong>chip de IA</strong>, la eficiencia es aún más baja: la
+        mayor parte de la energía termina como calor que hay que evacuar.
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>📊 Un dato para reflexionar:</strong> entrenar un modelo de IA
+        grande puede consumir tanta electricidad como <strong>cientos de hogares
+        durante un año</strong>. Ese consumo viene de la misma física que estás
+        estudiando: corriente que circula, resistencia que se opone, calor que
+        se disipa. Mejorar la eficiencia energética se ha convertido en uno de
+        los mayores retos de la industria de IA.
+      </p>
+    </div>
+
+    <p>
+      Los ingenieros buscan constantemente formas de reducir el consumo: usar
+      voltajes más bajos, corrientes más pequeñas, materiales con menos pérdidas.
+      Cada vatio que se ahorra en un chip se multiplica por millones en un centro
+      de datos. La ley de Ohm, que parece una fórmula sencilla, está detrás de
+      cada decisión de diseño.
+    </p>
+  </section>
+
+  <!-- Taller del lápiz -->
+  <section class="taller-electroscopio">
+    <h2>✏️ Taller: Midiendo la resistencia del grafito</h2>
+    <p>
+      Vamos a llevar el taller del lápiz a su versión analítica. Ahora no basta
+      con observar el brillo del LED: vas a <strong>predecir</strong> lo que
+      ocurrirá y a <strong>razonar</strong> sobre la potencia que se disipa en
+      cada trazo.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Una hoja de papel blanco.</li>
+      <li>Un lápiz blando (2B o más blando).</li>
+      <li>Una pila de 3V (CR2032) o fuente de 5V.</li>
+      <li>Un LED rojo.</li>
+      <li>Una resistencia de 220Ω o 330Ω.</li>
+      <li>Cables caimán.</li>
+      <li>Cinta adhesiva (de enmascarar, transparente o aislante).</li>
+      <li>Una regla.</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Dibuja cuatro trazos</strong> con el lápiz, siguiendo esta tabla:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Trazo</th>
+                <th>Largo</th>
+                <th>Grosor</th>
+                <th>Resistencia esperada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>3 cm</td>
+                <td>Grueso (5 pasadas)</td>
+                <td>Baja</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>6 cm</td>
+                <td>Grueso (5 pasadas)</td>
+                <td>Media</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>6 cm</td>
+                <td>Delgado (1 pasada)</td>
+                <td>Alta</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>12 cm</td>
+                <td>Grueso (5 pasadas)</td>
+                <td>Muy alta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Fija la resistencia con cinta</strong> al papel, cerca de los
+        trazos.
+      </li>
+      <li>
+        <strong>Conecta el circuito:</strong> pila → resistencia → LED → trazo
+        → pila.
+      </li>
+      <li>
+        <strong>Antes de conectar cada trazo, predice:</strong> ¿el LED brillará
+        mucho, poco o nada? Anota tu predicción.
+      </li>
+      <li>
+        <strong>Conecta y observa.</strong> ¿Coincidió con tu predicción?
+        Anota el resultado real.
+      </li>
+      <li>
+        <strong>Ordena los trazos</strong> de menor a mayor resistencia, según
+        lo que observaste.
+      </li>
+      <li>
+        <strong>Calcula la potencia disipada en el trazo con más corriente.</strong>
+        Aunque no conocemos el valor exacto de la resistencia, sí sabemos que la
+        corriente es alta. Usando P = I²·R con un valor estimado, puedes hacerte
+        una idea de cuánta energía se convierte en calor. Pasa el dedo por el
+        trazo después de un minuto de encendido: ¿notas que está tibio?
+      </li>
+    </ol>
+
+    <h3>📐 Aplicación de la ley de Ohm</h3>
+    <p>
+      Aunque no conocemos el valor exacto de cada trazo, podemos razonar sobre
+      él. Si el trazo A tiene baja resistencia, la corriente que pasa por el LED
+      es alta, y el LED brilla mucho. Si el trazo D tiene alta resistencia, la
+      corriente es baja y el LED brilla poco.
+    </p>
+
+    <p>
+      Para el trazo con más resistencia, la corriente es tan pequeña que quizás
+      el LED ni encienda. La ley de Ohm lo explica:
+    </p>
+
+    <div class="formula">
+      $$I = \frac{V_{\text{disponible}}}{R_{\text{total}}}$$
+    </div>
+
+    <p>
+      Si $R_{\text{total}}$ es muy grande, $I$ se vuelve muy pequeña. Y si $I$
+      cae por debajo del umbral mínimo del LED, el componente no brilla.
+    </p>
+
+    <h3>🔥 Razonando sobre la potencia disipada</h3>
+    <p>
+      Para el trazo con más corriente, la potencia disipada en el trazo también
+      es mayor. La fórmula $P = I^2 R$ muestra que la potencia crece con el
+      cuadrado de la corriente. Por eso los trazos que dejan pasar más corriente
+      se calientan un poco más que los demás.
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la tecnología real:</strong> cada componente electrónico
+      está diseñado para manejar una cantidad específica de potencia. Cuando se
+      supera ese límite, el componente se sobrecalienta y falla. En un chip de
+      IA con millones de transistores, este mismo principio se aplica a escala
+      microscópica: la gestión térmica es el mayor desafío de la industria.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> si tienes acceso a un
+      multímetro en el colegio, puedes medir la resistencia real de cada trazo
+      y compararla con tus predicciones. No es obligatorio: la observación y el
+      razonamiento ya te dan una comprensión sólida del fenómeno.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Tres mentes que cambiaron la ingeniería</h2>
+    <p>
+      Detrás de la ley que gobierna los circuitos hay tres científicos cuyas
+      contribuciones, juntas, forman la base de toda la electrónica moderna.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚡ Georg Simon Ohm (1789–1854) — El profesor al que no le creyeron
+    </h3>
+    <p>
+      Ohm nació en Erlangen, Baviera, hijo de un cerrajero autodidacta en
+      matemáticas. Fue profesor de secundaria durante años, con recursos
+      limitados para investigar. Usando el galvanómetro de Schweigger, hacia
+      1825 empezó a medir con precisión la relación entre la corriente y el
+      voltaje aplicado.
+    </p>
+    <p>
+      Publicó su ley en 1827 en el tratado <em>"La cadena galvánica, tratada
+      matemáticamente"</em>. La comunidad científica alemana <strong>rechazó su
+      trabajo</strong>, en parte porque sus métodos matemáticos eran poco
+      convencionales para la época. Ohm se retiró temporalmente de la
+      investigación. En 1841, la Royal Society de Londres le otorgó la Medalla
+      Copley, y finalmente en 1849 obtuvo una cátedra universitaria. Murió cinco
+      años después, reconocido pero con una carrera marcada por el rechazo
+      inicial.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔥 James Prescott Joule (1818–1889) — El experimentador sin universidad
+    </h3>
+    <p>
+      Joule nació en Salford, Inglaterra, en una familia de cerveceros. Fue
+      educado en casa y tomó lecciones del químico John Dalton. Trabajó durante
+      toda su vida en la cervecería familiar y realizaba sus experimentos en el
+      tiempo libre. Esto le valió el desprecio de muchos académicos.
+    </p>
+    <p>
+      En 1840 formuló la ley del calentamiento eléctrico que hoy lleva su nombre:
+      $P = I^2 R$. Sus resultados <strong>fueron cuestionados durante años</strong>
+      porque no venía de la academia. Fue William Thomson (Lord Kelvin) quien
+      validó públicamente sus mediciones en 1847. La unidad de energía del
+      Sistema Internacional lleva su nombre.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚙️ James Watt (1736–1819) — El ingeniero que rediseñó la industria
+    </h3>
+    <p>
+      Watt nació en Greenock, Escocia, y trabajó como fabricante de instrumentos
+      científicos en la Universidad de Glasgow. En 1764, al reparar una máquina
+      de vapor de Newcomen, identificó su principal ineficiencia: el cilindro
+      se enfriaba y se calentaba en cada ciclo, perdiendo enormes cantidades de
+      energía. Diseñó un condensador separado que resolvió el problema.
+    </p>
+    <p>
+      Su patente de 1769 transformó la industria británica. A diferencia de Ohm,
+      Watt vivió para ver su invento adoptado en todo el mundo. En 1882, la
+      Asociación Británica de Ingenieros propuso el <strong>watt</strong> como
+      unidad de potencia en su honor.
+    </p>
+    <p>
+      Cuando hoy hablamos del consumo de un centro de datos (que se mide en
+      megavatios, es decir, millones de vatios), estamos usando el nombre de
+      Watt para hablar del mayor desafío energético de la era digital.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los tres comparten un rasgo común: <strong>insistieron en sus
+      observaciones</strong> incluso cuando la comunidad no las aceptaba. Ohm
+      aportó la relación entre las tres magnitudes, Joule describió la
+      disipación de energía en forma de calor, y Watt dio nombre a la magnitud
+      que hoy medimos en cada aparato eléctrico.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Royal Society, la Enciclopedia Británica y archivos históricos de ingeniería.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado10.png"
+           alt="Infografía: El costo de la energía. Muestra la ley de Ohm como herramienta de diseño, la potencia P = I²R, el datasheet, los weights de la IA y el costo energético del entrenamiento" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: la ley de Ohm
+      como herramienta, la potencia disipada, los límites del datasheet, los
+      weights de la IA y el costo energético. ¿Reconoces cada parte? ¿Cuál te
+      resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 4
+      </span>
+      <h3>El costo energético de la inteligencia</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      ¿Cuánta electricidad consume entrenar un modelo de IA? La respuesta te
+      sorprenderá. <strong>Dale play</strong> y descubre cómo la ley de Ohm está
+      detrás de uno de los mayores desafíos tecnológicos del siglo XXI.
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 1rem 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧮</span>
+        <span><strong>Diseño con Ohm:</strong> cómo calcular una resistencia sin adivinar, aplicando la ley en tres pasos.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔥</span>
+        <span><strong>La fórmula del calor:</strong> por qué P = I²R explica el 90% de las fallas en electrónica.</span>
+      </li>
+      <details class="math-breakdown">
+        <summary><strong>📐 Ver la demostración matemática: ¿Por qué filamentos de ALTA resistencia?</strong></summary>
+        
+        <div class="math-content">
+            <p>El gran reto de Edison y Swan no era solo encender una bombilla, sino transmitir energía a toda una ciudad sin perderla en el camino:</p>
+            
+            <ul>
+            <li><strong>El problema ($I^2$):</strong> La pérdida de energía en los cables urbanos se rige por la Ley de Joule: 
+                <code>P_pérdida = I² · R_cable</code>. A mayor corriente (<code>I</code>), las pérdidas se quadruplican.</li>
+            
+            <li><strong>La paradoja:</strong> Las primeras bombillas eran de <em>baja resistencia</em>, lo que exigía corrientes (<code>I</code>) enormes para brillar, derritiendo los cables de la calle.</li>
+            
+            <li><strong>La solución ($R = V² / P$):</strong> Para mantener la red en ~110V con corrientes bajas, despejamos la resistencia del filamento combinando la Ley de Ohm y la de Potencia: 
+                <code>R_filamento = V² / P</code>.</li>
+            </ul>
+
+            <p class="highlight-note">
+            💡 <strong>Conclusión:</strong> Diseñar un filamento de <strong>alta resistencia</strong> (como el bambú carbonizado) permitió operar con corrientes pequeñas, reduciendo casi a cero las pérdidas en el cableado y haciendo viable la primera red eléctrica comercial.
+            </p>
+        </div>
+        </details>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧠</span>
+        <span><strong>Los pesos de la IA:</strong> por qué los <em>weights</em> de una red neuronal son resistencias virtuales.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌍</span>
+        <span><strong>El costo de pensar:</strong> cuánta energía consume realmente entrenar un modelo como GPT.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu cuaderno a mano: hay fórmulas y reflexiones que querrás anotar.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar en términos de energía</h3>
+    <ul>
+      <li>
+        ¿Cómo usarías el triángulo de Ohm para calcular la resistencia de un
+        LED azul (V<sub>f</sub> = 3.2V) con una fuente de 9V y una corriente
+        deseada de 20 mA?
+      </li>
+      <li>
+        Si una resistencia tiene un valor de 220 Ω y por ella circula una
+        corriente de 50 mA, ¿cuál es la potencia que disipa? ¿Es segura para una
+        resistencia de 0.25 W?
+      </li>
+      <li>
+        Explica con tus palabras por qué $P = I^2 R$ crece tan rápido cuando
+        aumenta la corriente. ¿Qué implica esto para el diseño de circuitos?
+      </li>
+      <li>
+        ¿Qué paralelo encuentras entre una resistencia en un circuito y un
+        <em>weight</em> en una red neuronal? ¿Por qué son tan importantes?
+      </li>
+      <li>
+        ¿Por qué el calor es el principal obstáculo técnico para entrenar modelos
+        de IA cada vez más grandes?
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+      <li>
+        <strong>Cálculo completo:</strong> tienes un LED azul
+        (V<sub>f</sub> = 3.2V) y una fuente de 9V. Necesitas que circule una
+        corriente de 20 mA. Calcula:
+        <ul style="margin-top: 0.4rem;">
+          <li>a) El voltaje que debe caer en la resistencia</li>
+          <li>b) El valor de la resistencia necesaria (R = V ÷ I)</li>
+          <li>c) El valor comercial más cercano por encima</li>
+          <li>d) La potencia que disipará la resistencia (P = V × I)</li>
+          <li>e) Si una resistencia de 0.25 W es suficiente para este circuito</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

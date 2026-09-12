@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El control del flujo — Cuatro Miradas</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body id="top">
+<div class="container">
+
+  <header class="header">
+    <h1 style="color: var(--c-portal);">⚡ El control del flujo</h1>
+    <div class="sub">
+      <strong>I.E. Escuela Normal Superior Miguel de Cervantes Saavedra</strong><br />
+      Área de Tecnología e Informática • Guacarí, Valle del Cauca
+    </div>
+  </header>
+
+  <div class="panel-bienvenida">
+    <h2>💧 Cuatro miradas, un mismo control</h2>
+    <p>
+      La corriente eléctrica es un flujo. Pero un flujo sin control no sirve para
+      nada: puede quemar un LED o dejar un circuito sin energía.
+      En esta ruta vamos a aprender a <strong>dominarlo</strong>. Existen tres
+      magnitudes que trabajan juntas en todo circuito: la presión que empuja, el
+      flujo que circula y el freno que se opone.
+      Esta ruta ofrece <strong>cuatro aproximaciones al mismo fenómeno</strong>: cada mirada
+      está adaptada a una edad y a una forma de pensar.
+      <strong>No hay un orden obligatorio de lectura.</strong> Cada una se sostiene por sí sola.
+    </p>
+    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.25);">
+      <strong>🧠 ¿Y qué tiene que ver esto con la Inteligencia Artificial?</strong>
+      Las redes neuronales están llenas de <em>weights</em> (pesos) que deciden cuánta
+      señal pasa de una neurona a otra. Un weight es, en el fondo, una forma de
+      <strong>resistencia virtual</strong>. Entender cómo se controla el flujo eléctrico
+      es entender cómo se controla la información en una IA.
+    </p>
+  </div>
+
+  <!-- ======================================================================
+       Cómo usar esta ruta
+       ====================================================================== -->
+  <section class="card slate">
+    <h2>🧭 ¿Cómo usar esta ruta?</h2>
+    <p>Tres pasos sencillos para sacarle el máximo provecho:</p>
+    <ol>
+      <li>
+        <strong>Empieza por tu grado.</strong> Cada mirada se sostiene por sí sola.
+        Si estás en grado 8°, entra directamente a la <em>Mirada Estructural</em>.
+      </li>
+      <li>
+        <strong>Escucha el audio al terminar de leer.</strong> Cada mirada tiene un
+        podcast que resume los cuatro temas de la página. Dura entre 5 y 9 minutos.
+      </li>
+      <li>
+        <strong>Descarga la infografía.</strong> Es un mapa visual que sintetiza todo
+        en una sola imagen. Te sirve para repasar antes de un examen.
+      </li>
+    </ol>
+    <p style="margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed var(--border); font-size: 0.92rem; color: var(--text-mid);">
+      <strong>🎁 Bonus:</strong> si te da curiosidad, explora las otras tres miradas.
+      Cada una cuenta el mismo fenómeno de otra manera.
+    </p>
+
+    <h3 style="margin-top: 1.5rem;">📦 ¿Qué encontrarás en cada mirada?</h3>
+    <ul style="list-style: none; padding: 0; margin-top: 0.6rem; display: grid; gap: 0.5rem;">
+      <li>
+        <strong>📄 Guía PDF:</strong> la versión imprimible de la mirada, con espacio
+        para anotaciones.
+      </li>
+      <li>
+        <strong>🎧 Podcast:</strong> un resumen narrado que refuerza los temas principales.
+      </li>
+      <li>
+        <strong>🗺️ Infografía:</strong> un mapa visual que sintetiza todo en una sola
+        imagen.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======================================================================
+       Tres unidades que verás todo el tiempo
+       ====================================================================== -->
+  <section class="card">
+    <h2>📏 Tres unidades que verás todo el tiempo</h2>
+    <p>
+      A lo largo de esta ruta vas a encontrarte con tres unidades de medida. Vale
+      la pena conocerlas desde el principio:
+    </p>
+    <ul>
+      <li>
+        <strong>Voltio (V):</strong> mide el <em>voltaje</em>, es decir, la presión
+        que empuja la corriente. Una pila AA tiene 1,5 V.
+      </li>
+      <li>
+        <strong>Amperio (A):</strong> mide la <em>corriente</em>, es decir, cuánta
+        carga pasa por segundo. Un LED típico consume 20 mA (0,02 A).
+      </li>
+      <li>
+        <strong>Vatio (W):</strong> mide la <em>potencia</em>, es decir, cuánta
+        energía se transforma en cada segundo. Una bombilla incandescente consume
+        entre 40 W y 100 W.
+      </li>
+    </ul>
+    <p>
+      El <strong>ohmio (Ω)</strong>, la unidad de la resistencia, la verás aparecer
+      en cada mirada. Todas estas unidades se conectan entre sí mediante la ley
+      de Ohm.
+    </p>
+  </section>
+
+  <!-- ======================================================================
+       Las cuatro miradas (glosario de arquetipos)
+       ====================================================================== -->
+  <section class="card">
+    <h2>🎭 Las cuatro miradas: ¿por qué se llaman así?</h2>
+    <p>
+      Cada mirada tiene un nombre que describe <em>cómo</em> se acerca al fenómeno
+      del control de la corriente. No son niveles de dificultad, ni unas son mejores
+      que otras: son <strong>formas distintas de pensar</strong>.
+    </p>
+
+    <div class="tabla-scroll" style="margin-top: 1rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>Mirada</th>
+            <th>Se pregunta…</th>
+            <th>Pensada para</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color: var(--c-g6);">🔌 Curiosa</strong></td>
+            <td>¿Qué pasa si el camino es más estrecho o más largo?</td>
+            <td>Grado 6° — experimentar con el freno antes de nombrarlo</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g7);">🚰 Comparativa</strong></td>
+            <td>¿A qué se parece el freno en un sistema hidráulico?</td>
+            <td>Grado 7° — relacionar presión, caudal y freno</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g8);">🧱 Estructural</strong></td>
+            <td>¿Cómo se calcula? ¿Qué unidad tiene el freno?</td>
+            <td>Grado 8° — la ley de Ohm con números concretos</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g10);">🧠 Analítica</strong></td>
+            <td>¿Cuánta energía se convierte en calor? ¿Dónde se aplica?</td>
+            <td>Grado 10° — potencia, disipación y conexión con IA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Grid de tarjetas
+       ====================================================================== -->
+  <div class="grid-portal">
+
+    <!-- Mirada Curiosa -->
+    <div class="card orange">
+      <span class="badge-grado" style="background: var(--c-g6);">Grado 6° • Mirada Curiosa</span>
+      <h3 style="margin-bottom: 0.4rem;">🟠 El freno de la energía</h3>
+      <p style="font-size: 0.9rem;">
+        El pisón sobre la manguera, el símbolo de la resistencia y por qué el LED
+        necesita protección. Un primer acercamiento al control del flujo, sin fórmulas.
+      </p>
+      <a href="grado6.html" class="btn-ingresar" style="background: var(--c-g6);">🚀 Explorar mirada curiosa</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado6.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado6.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado6.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Comparativa -->
+    <div class="card blue">
+      <span class="badge-grado" style="background: var(--c-g7);">Grado 7° • Mirada Comparativa</span>
+      <h3 style="margin-bottom: 0.4rem;">🔵 El control del flujo</h3>
+      <p style="font-size: 0.9rem;">
+        Presión, caudal y freno. La ley de Ohm como una relación hidráulica y
+        el triángulo de Ohm como regla visual. La electricidad como un río controlado.
+      </p>
+      <a href="grado7.html" class="btn-ingresar" style="background: var(--c-g7);">🚀 Explorar mirada comparativa</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado7.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado7.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado7.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Estructural -->
+    <div class="card purple">
+      <span class="badge-grado" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+      <h3 style="margin-bottom: 0.4rem;">🟣 Los números del control</h3>
+      <p style="font-size: 0.9rem;">
+        El ohmio, la fórmula V = I × R, el cálculo de una resistencia para un LED
+        y el calor que genera la corriente. La ley de Ohm en números concretos.
+      </p>
+      <a href="grado8.html" class="btn-ingresar" style="background: var(--c-g8);">🚀 Explorar mirada estructural</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado8.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado8.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado8.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Analítica -->
+    <div class="card green">
+      <span class="badge-grado" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+      <h3 style="margin-bottom: 0.4rem;">🟢 El costo de la energía</h3>
+      <p style="font-size: 0.9rem;">
+        Potencia, efecto Joule y disipación térmica. Los datasheets, los límites
+        físicos de los componentes y el peso de la energía en la IA moderna.
+      </p>
+      <a href="grado10.html" class="btn-ingresar" style="background: var(--c-g10);">🚀 Explorar mirada analítica</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado10.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado10.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado10.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ======================================================================
+       Taller compartido: El lápiz que controla la luz
+       ====================================================================== -->
+  <section class="taller-electroscopio">
+    <h2>✏️ Taller: El lápiz que controla la luz</h2>
+    <p>
+      Antes de explorar cualquier mirada, te proponemos un experimento que atraviesa
+      toda la ruta: <strong>convertir un trazo de lápiz en una resistencia variable</strong>.
+      El grafito del lápiz conduce la electricidad (con cierta dificultad), y esa
+      dificultad se puede <em>ver</em> en el brillo de un LED.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Una hoja de papel blanco (tamaño carta o A4).</li>
+      <li>Un lápiz de grafito blando (2B, 4B o 6B). Los lápices duros funcionan peor.</li>
+      <li>Una pila de 3V (CR2032) o una fuente de 5V (cable USB cortado).</li>
+      <li>Un LED rojo.</li>
+      <li>Una resistencia de 220Ω o 330Ω (para proteger el LED).</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva.</strong> En Colombia la encuentras con varios
+        nombres según su uso: <em>cinta de enmascarar</em> (también llamada cinta
+        de papel o cinta beige), <em>cinta transparente</em> (o cinta pegante), o
+        <em>cinta aislante</em> (conocida popularmente como cinta negra). Cualquiera
+        de las tres sirve para fijar la resistencia al papel.
+      </li>
+      <li>Una regla (para medir los trazos).</li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <p>
+      Dibuja sobre la hoja varios trazos de grafito. Cuanto más grueso y largo sea
+      el trazo, más resistencia ofrecerá al paso de la corriente.
+    </p>
+
+    <ol>
+      <li>
+        <strong>Dibuja cuatro trazos</strong> con el lápiz:
+        <ul style="margin-top: 0.4rem;">
+          <li><strong>Trazo A:</strong> 3 cm de largo, grueso (repasa la línea 5 veces).</li>
+          <li><strong>Trazo B:</strong> 6 cm de largo, grueso.</li>
+          <li><strong>Trazo C:</strong> 6 cm de largo, delgado (un solo trazo).</li>
+          <li><strong>Trazo D:</strong> 12 cm de largo, grueso.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fija la resistencia con cinta.</strong> Pega la resistencia sobre
+        el papel, cerca de los trazos de lápiz, con un pequeño trozo de cinta.
+        Esto evita que se mueva cuando conectes los cables y deja tus dos manos
+        libres para trabajar.
+      </li>
+      <li>
+        <strong>Conecta el circuito.</strong> Une con un cable caimán el polo
+        positivo de la pila a la resistencia, y la resistencia al ánodo del LED.
+        El cátodo del LED va a un extremo del trazo de lápiz. El otro extremo del
+        trazo se conecta al polo negativo de la pila.
+      </li>
+      <li>
+        <strong>Observa</strong> el brillo del LED en cada trazo. ¿En cuál brilla
+        más? ¿En cuál brilla menos?
+      </li>
+      <li>
+        <strong>Compara (grados 8 y 10):</strong> el brillo del LED te dice qué
+        trazo ofrece más resistencia. Anota en tu bitácora qué trazo brilla más
+        y cuál brilla menos.
+      </li>
+      <li>
+        <strong>Concluye:</strong> ¿Qué relación encuentras entre el largo del
+        trazo y la dificultad que ofrece al paso de la corriente? ¿Y entre el
+        grosor y la resistencia?
+      </li>
+    </ol>
+
+    <h3>🔍 Adaptación por grado</h3>
+    <ul>
+      <li><strong>Grado 6°:</strong> solo observa el brillo. Sin mediciones, sin fórmulas.</li>
+      <li><strong>Grado 7°:</strong> relaciona el trazo con el tubo estrecho de la analogía hidráulica.</li>
+      <li><strong>Grado 8°:</strong> compara el brillo entre trazos y ordena de mayor a menor resistencia, según lo que observas.</li>
+      <li><strong>Grado 10°:</strong> usa la ley de Ohm para predecir el brillo de cada trazo y verifica tus predicciones observando el LED.</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      ¿Por qué un trazo más largo ilumina menos el LED? ¿Qué está ocurriendo dentro
+      del grafito del lápiz?
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la ley de Ohm:</strong> el trazo de lápiz es una resistencia
+      casera y variable. Al alargarlo, aumentamos el freno al paso de la corriente.
+      Al acortarlo, lo disminuimos. Esa relación entre freno, presión y caudal es
+      exactamente lo que la ley de Ohm describe con números. Cada una de las cuatro
+      miradas te dará una pieza del rompecabezas.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> en este taller no necesitas
+      instrumentos especiales. Tu ojo, entrenado para comparar brillos, es tu
+      mejor herramienta. Más adelante conocerás instrumentos que permiten cuantificar
+      lo que aquí solo podemos observar. Por ahora, basta con confiar en lo que ves.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> este taller funciona con 3V o 5V. Nunca lo
+      realices con voltajes de pared (110V o 220V). Siempre usa la resistencia de
+      protección con el LED.
+    </p>
+  </section>
+
+  <!-- ======================================================================
+       Cápsula histórica: Ohm, Joule y Watt
+       ====================================================================== -->
+  <section class="capsula-edison">
+    <h2>📜 Tres personajes detrás de la ley</h2>
+
+    <p>
+      La ley que vamos a estudiar no fue descubierta por una sola persona. Tres
+      científicos de tres países distintos aportaron piezas clave, y cada uno
+      enfrentó obstáculos para que su trabajo fuera reconocido.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚡ Georg Simon Ohm (1789–1854) — El descubridor olvidado
+    </h3>
+    <p>
+      Ohm nació en Erlangen, Baviera (actual Alemania), hijo de un cerrajero que
+      era autodidacta en matemáticas. Trabajó durante años como profesor de
+      secundaria en condiciones modestas. En 1825, usando el galvanómetro de
+      Schweigger, empezó a experimentar con la relación entre la corriente que
+      circulaba por un alambre y la diferencia de potencial aplicada.
+    </p>
+    <p>
+      En 1827 publicó su obra <em>"La cadena galvánica, tratada matemáticamente"</em>,
+      donde formuló la ley que hoy lleva su nombre. La comunidad científica de su
+      tiempo <strong>no la aceptó de inmediato</strong>. Se sintió tan decepcionado
+      que se retiró de la investigación durante años. En 1841, la Royal Society de
+      Londres le otorgó la Medalla Copley, y en 1849 —ya con 60 años— fue nombrado
+      profesor en la Universidad de Múnich. Murió cinco años después.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔥 James Prescott Joule (1818–1889) — El cervecero físico
+    </h3>
+    <p>
+      Joule nació en Salford, Inglaterra, en una familia rica de cerveceros. Fue
+      educado en casa y recibió lecciones del químico John Dalton. Durante la mayor
+      parte de su vida trabajó en la cervecería familiar, y aprovechaba las noches
+      para experimentar con electricidad y calor.
+    </p>
+    <p>
+      En 1840 formuló la ley que lleva su nombre: la cantidad de calor producida
+      por una corriente eléctrica es proporcional al cuadrado de la corriente y a
+      la resistencia del conductor. Sus contemporáneos <strong>dudaban de sus
+      resultados</strong> porque venía del mundo industrial, no del académico. Fue
+      William Thomson (Lord Kelvin) quien lo apoyó públicamente en 1847. Hoy la
+      unidad de energía lleva su nombre.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚙️ James Watt (1736–1819) — El ingeniero del vapor
+    </h3>
+    <p>
+      Watt nació en Greenock, Escocia. Trabajó como fabricante de instrumentos
+      matemáticos en la Universidad de Glasgow. En 1764, al reparar una máquina de
+      vapor de Newcomen, notó su enorme ineficiencia: perdía vapor en cada ciclo.
+      En 1769 patentó una mejora clave —un condensador separado— que cambió la
+      historia de la industria.
+    </p>
+    <p>
+      A diferencia de Ohm, Watt vivió para ver su invento adoptado en todo el mundo.
+      En 1882, 63 años después de su muerte, la Asociación Británica de Ingenieros
+      propuso el <strong>watt</strong> como unidad de potencia en su honor. Su
+      nombre aparece cada vez que hablamos del "costo energético" de cualquier
+      aparato: desde una bombilla hasta los grandes centros de datos de IA.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los tres aportaron piezas distintas: Ohm describió la <strong>relación</strong>
+      entre voltaje, corriente y resistencia; Joule describió el <strong>calor</strong>
+      que esa corriente produce; Watt dio nombre a la <strong>potencia</strong> que
+      se consume. Juntos son la base de toda la electrónica moderna.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Royal Society, la Enciclopedia Británica y archivos históricos de ingeniería.</span>
+  </section>
+
+  <!-- ======================================================================
+       Acompañamiento familiar
+       ====================================================================== -->
+  <div class="info-familia">
+    <h3>🏡 Orientación para padres y cuidadores</h3>
+    <p>
+      Esta ruta está diseñada para que sus hijos puedan avanzar tanto en el aula
+      como desde el hogar. Cada mirada incluye audios explicativos para escuchar
+      juntos, guías en formato PDF descargables e infografías de repaso para
+      imprimir o consultar en el teléfono. El taller del lápiz puede realizarse
+      en familia con materiales sencillos y seguros (3V o 5V).
+    </p>
+  </div>
+
+  <!-- ======================================================================
+       Volver arriba
+       ====================================================================== -->
+  <p style="text-align: center; margin: 2.5rem 0 0.5rem;">
+    <a href="#top"
+       style="display: inline-block; padding: 0.6rem 1.2rem; background: #fff; color: var(--text-dark); border: 1px solid var(--border); border-radius: 999px; font-size: 0.88rem; font-weight: 600; text-decoration: none;">
+      ↑ Volver arriba
+    </a>
+  </p>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+    <p style="font-size: 0.78rem; color: var(--text-soft); margin-top: 0.8rem;">
+      Versión 1.0 — Septiembre de 2026
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

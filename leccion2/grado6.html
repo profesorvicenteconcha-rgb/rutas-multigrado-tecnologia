@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El freno de la energía — Grado 6°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado6.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g6);">Grado 6° • Mirada Curiosa</span>
+    <h1 style="margin-top: 0.6rem;">🟠 El freno de la energía</h1>
+    <div class="sub">
+      Cómo una resistencia controla el paso de la corriente
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card orange">
+    <h2>🚿 El pisón sobre la manguera</h2>
+    <p>
+      Imagina que estás regando el jardín con una manguera y sale demasiada agua.
+      ¿Qué haces? <strong>Pisas la manguera un poco.</strong> Al estrechar el camino,
+      pasa menos agua. El chorro se vuelve más suave y controlado.
+    </p>
+    <p>
+      En electrónica pasa exactamente lo mismo. Existe un componente que funciona
+      como ese "pisón": se llama <strong>resistencia</strong>. Su trabajo es
+      <em>frenar</em> el paso de la corriente para que nada se queme.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/analogia_tubo.png" target="_blank" rel="noopener">
+        <img src="img/analogia_tubo.png"
+             alt="Tubo transparente con esferas azules dentro y una flecha roja indicando el empuje" />
+      </a>
+      <figcaption>
+        Fig. 1: El empuje de la corriente viaja por todo el circuito. La resistencia
+        es el punto donde el camino se estrecha y el flujo se controla.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Idea clave:</strong> la resistencia no apaga la corriente.
+        Solo <em>regula cuánta</em> pasa. Es el control de volumen del circuito.
+      </p>
+    </div>
+
+    <p>
+      La resistencia se mide en <strong>ohmios</strong>, y su símbolo es la letra
+      griega <strong>Ω</strong> (omega). Es una unidad de medida, igual que el
+      metro sirve para medir distancias o el kilogramo para medir peso. Por ahora
+      basta con saber que existe una unidad para medir el freno.
+    </p>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔲 ¿Cómo se dibuja y cómo es por dentro?</h2>
+    <p>
+      En los planos eléctricos, la resistencia se dibuja de dos formas: con una
+      línea en zigzag (estilo americano) o con un rectángulo pequeño (estilo
+      europeo). En este curso usamos el <strong>rectángulo</strong>, porque es
+      el estándar internacional.
+    </p>
+    <p>
+      Pero ojo: el rectángulo <strong>no es la resistencia física</strong>. Es
+      solo un dibujo. La resistencia real es un pequeño cilindro con rayitas de
+      colores en el cuerpo. Cada rayita representa un número, y juntas indican
+      su valor.
+    </p>
+
+    <div class="figura-doble">
+      <figure>
+        <a href="img/simbolo-resistencias.png" target="_blank" rel="noopener">
+          <img src="img/simbolo-resistencias.png"
+               alt="Símbolos de una resistencia: zigzag (americano) y rectángulo (europeo)" />
+        </a>
+        <figcaption>Fig. 2a: Así se dibuja la resistencia en un plano.</figcaption>
+      </figure>
+      <figure>
+        <a href="img/resistencias_reales.png" target="_blank" rel="noopener">
+          <img src="img/resistencias_reales.png"
+               alt="Fotografía de dos resistencias reales de color azul con bandas de colores" />
+        </a>
+        <figcaption>Fig. 2b: Así se ve una resistencia real.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🛡️ El guardaespaldas del LED</h2>
+
+    <p>
+      <strong>Antes de empezar: ¿qué es un LED?</strong> Un LED es una pequeña
+      luz que se enciende cuando pasa corriente por él. Es muy usado en electrónica
+      porque gasta poca energía, pero también es delicado: si recibe demasiada
+      corriente, se quema en segundos.
+    </p>
+
+    <p>
+      Los LEDs son componentes muy sensibles. Si les llega toda la corriente de la
+      pila sin control, se queman en segundos. Por eso siempre los conectamos
+      <strong>con una resistencia al lado</strong>: es su guardaespaldas.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <svg viewBox="0 0 700 300"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Circuito simple con una pila de 5 voltios, una resistencia y un LED conectados en serie"
+           style="width: 100%; height: auto; display: block;">
+        <title>Circuito simple: pila, resistencia y LED</title>
+
+        <rect x="0" y="0" width="700" height="300" fill="#f8fcff" rx="12" />
+
+        <path d="M 130 205 L 130 90 L 220 90"
+              stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" />
+
+        <rect x="220" y="75" width="110" height="30" rx="3"
+              fill="#ffffff" stroke="#374151" stroke-width="2.5" />
+        <text x="275" y="65" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="16" font-weight="bold"
+              fill="#374151">220 Ω</text>
+
+        <line x1="330" y1="90" x2="420" y2="90"
+              stroke="#dc2626" stroke-width="3" stroke-linecap="round" />
+
+        <polygon points="420,70 420,110 460,90"
+                 fill="#ffffff" stroke="#374151" stroke-width="2.5" />
+        <line x1="460" y1="70" x2="460" y2="110"
+              stroke="#374151" stroke-width="2.5" />
+
+        <line x1="445" y1="60" x2="465" y2="40"
+              stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" />
+        <polygon points="465,40 458,43 464,49" fill="#f59e0b" />
+
+        <line x1="460" y1="65" x2="480" y2="45"
+              stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" />
+        <polygon points="480,45 473,48 479,54" fill="#f59e0b" />
+
+        <text x="440" y="135" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="16" font-weight="bold"
+              fill="#374151">LED</text>
+
+        <path d="M 460 90 L 590 90 L 590 205 L 420 205"
+              stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" />
+
+        <rect x="280" y="175" width="140" height="60" rx="8"
+              fill="#fef3c7" stroke="#d97706" stroke-width="2.5" />
+        <text x="350" y="213" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="24" font-weight="bold"
+              fill="#92400e">5V</text>
+
+        <text x="350" y="168" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="22" font-weight="bold"
+              fill="#dc2626">+</text>
+
+        <text x="350" y="258" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="22" font-weight="bold"
+              fill="#2563eb">−</text>
+
+        <line x1="280" y1="205" x2="130" y2="205"
+              stroke="#dc2626" stroke-width="3" stroke-linecap="round" />
+
+        <line x1="170" y1="140" x2="380" y2="140"
+              stroke="#16a34a" stroke-width="1.8"
+              stroke-dasharray="6,4" />
+        <polygon points="380,140 370,135 370,145" fill="#16a34a" />
+        <text x="275" y="130" text-anchor="middle"
+              font-family="system-ui, sans-serif" font-size="13" font-style="italic"
+              fill="#16a34a">corriente (de + a −)</text>
+
+      </svg>
+      <figcaption>
+        Fig. 3: Un circuito bien armado: la pila empuja la corriente, la resistencia
+        la controla, el LED brilla y la corriente regresa a la pila. El símbolo
+        del LED es un <strong>triángulo con una barra y flechas amarillas</strong>;
+        las flechas indican que emite luz.
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🔍 ¿Qué pasa si quitamos la resistencia?</strong> El LED recibe
+        toda la corriente de golpe. Se sobrecalienta, se quema y deja de funcionar.
+        Los ingenieros dicen que "se escapó el humo mágico".
+      </p>
+    </div>
+
+    <h3>🏠 ¿Dónde hay resistencias en tu casa?</h3>
+    <p>
+      Aunque no las veas directamente, casi todos los aparatos eléctricos
+      contienen resistencias: el cargador de tu celular, el control del volumen
+      de un radio, el regulador de brillo de una lámpara. Están escondidas dentro
+      de los aparatos, controlando la corriente para que todo funcione sin
+      quemarse.
+    </p>
+  </section>
+
+  <!-- Taller del lápiz -->
+  <section class="taller-electroscopio">
+    <h2>✏️ Taller: El lápiz que controla la luz</h2>
+    <p>
+      Vamos a fabricar nuestra propia resistencia casera usando un truco muy
+      sencillo: <strong>un trazo de lápiz sobre el papel conduce la
+      electricidad</strong>. Y como no todos los trazos son iguales, podemos ver
+      cómo cambia el brillo de un LED según el trazo que usemos.
+    </p>
+
+    <p>
+      El <strong>grafito</strong> es el material oscuro que forma la mina del
+      lápiz. Es un tipo de carbón que conduce la electricidad, aunque con cierta
+      dificultad.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/cadena-cuentas.png" target="_blank" rel="noopener">
+        <img src="img/cadena-cuentas.png"
+             alt="Cadena de cuentas verdes metálicas, cada una unida a la siguiente" />
+      </a>
+      <figcaption>
+        Fig. 4: En un trazo de lápiz, las partículas de grafito están conectadas
+        como una cadena. Cuanto más largo el trazo, más difícil es que la corriente
+        lo recorra.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Una hoja de papel blanco.</li>
+      <li>Un lápiz blando (2B o más blando).</li>
+      <li>Una pila de 3V (CR2032) o una fuente de 5V.</li>
+      <li>Un LED rojo.</li>
+      <li>Una resistencia de 220Ω o 330Ω.</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva.</strong> En Colombia la encuentras como
+        <em>cinta de enmascarar</em>, <em>cinta transparente</em> o
+        <em>cinta aislante</em> (cinta negra). Cualquiera sirve.
+      </li>
+      <li>Una regla.</li>
+    </ul>
+
+    <h3>🛠️ Construcción paso a paso</h3>
+    <ol>
+      <li>
+        <strong>Dibuja tres trazos</strong> con el lápiz:
+        <ul style="margin-top: 0.4rem;">
+          <li><strong>Trazo A:</strong> 3 cm de largo, grueso (repasa la línea 5 veces).</li>
+          <li><strong>Trazo B:</strong> 6 cm de largo, grueso.</li>
+          <li><strong>Trazo C:</strong> 12 cm de largo, grueso.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fija la resistencia con cinta</strong> sobre el papel, cerca de los
+        trazos. Esto evita que se mueva y deja tus manos libres para trabajar.
+      </li>
+      <li>
+        <strong>Conecta el circuito:</strong> pila → resistencia → LED → trazo de
+        lápiz → pila. Pide ayuda a un adulto para sujetar los cables.
+      </li>
+      <li>
+        <strong>Observa</strong> el brillo del LED en cada trazo.
+        ¿En cuál brilla más? ¿En cuál brilla menos?
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala marcando
+        con una X el brillo que observes en cada caso:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Trazo</th>
+                <th>Largo</th>
+                <th>Grosor</th>
+                <th>😃 Brillante</th>
+                <th>😐 Medio</th>
+                <th>😞 Apagado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A</strong></td>
+                <td>3 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>B</strong></td>
+                <td>6 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>C</strong></td>
+                <td>12 cm</td>
+                <td>Grueso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      ¿Por qué un trazo más largo apaga más el LED? ¿Qué está pasando dentro del
+      grafito para que la corriente llegue más débil?
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g6); background: #fff8e1;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> Las computadoras que aprenden solas
+        (las que usan inteligencia artificial) funcionan con millones de
+        pequeñas conexiones que controlan cuánta información pasa de una parte
+        a otra. Esas conexiones hacen algo muy parecido a lo que hace una
+        resistencia: deciden cuánto pasa y cuánto se queda. Tú acabas de
+        construir una con un lápiz.
+      </p>
+    </div>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la ley de Ohm:</strong> el trazo de lápiz es una
+      resistencia que tú mismo puedes controlar: cuanto más largo, más frena la
+      corriente. Esa relación entre <em>freno</em>, <em>presión</em> y <em>flujo</em>
+      es tan perfecta que el científico Georg Ohm la describió con una fórmula
+      matemática. La ley de Ohm es una de las herramientas más importantes de
+      toda la electrónica.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> en este taller no necesitas
+      instrumentos especiales. Tu ojo, entrenado para comparar brillos, es tu
+      mejor herramienta.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Y no olvides la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Tres personajes que no se rindieron</h2>
+    <p>
+      La ley que vamos a estudiar no la descubrió una sola persona. Tres científicos
+      de tres países distintos aportaron piezas clave, y cada uno enfrentó dificultades
+      para que su trabajo fuera reconocido.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚡ Georg Ohm — El profesor al que no le creyeron
+    </h3>
+    <p>
+      Ohm era profesor de secundaria en Alemania. En sus ratos libres hacía
+      experimentos con cables y pilas. Cuando publicó su descubrimiento, en 1827,
+      <strong>los científicos no le creyeron</strong>. Se desanimó tanto que dejó
+      de investigar durante varios años. Solo 14 años después, en 1841, recibió
+      una medalla de la Royal Society de Londres. Y a los 60 años, finalmente, lo
+      nombraron profesor de universidad. Su nombre hoy es una de las unidades más
+      usadas en electrónica.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔥 James Joule — El cervecero científico
+    </h3>
+    <p>
+      Joule vivía en Inglaterra y trabajaba en la fábrica de cerveza de su familia.
+      Nadie lo tomaba en serio como científico porque no venía de la universidad.
+      Pero él estudiaba de noche y experimentaba en sus ratos libres. Descubrió que
+      la corriente eléctrica produce calor. Durante años, sus colegas dudaron de
+      sus resultados. Solo cuando otro científico importante lo apoyó públicamente,
+      su trabajo fue reconocido. Hoy la unidad de energía lleva su nombre.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      ⚙️ James Watt — El que arregló una máquina vieja
+    </h3>
+    <p>
+      Watt era un fabricante de instrumentos en Escocia. Un día le pidieron
+      reparar una máquina de vapor que funcionaba muy mal. Watt se dio cuenta
+      de que la máquina perdía mucha energía en cada vuelta, y con paciencia la
+      rediseñó para que funcionara mejor. Su invento cambió la industria para
+      siempre. Cuando hoy hablamos del "costo energético" de un aparato, usamos
+      el nombre de Watt sin darnos cuenta.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los tres tuvieron algo en común: <strong>no se rindieron cuando otros dudaron
+      de ellos</strong>. Su trabajo es la base de toda la electrónica moderna.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Royal Society, la Enciclopedia Británica y archivos históricos de ingeniería.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado6.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado6.png"
+           alt="Infografía: El freno de la energía. Muestra la analogía del pisón sobre la manguera, el símbolo de la resistencia, por qué el LED necesita protección y el taller del lápiz" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: el freno, el
+      símbolo, la protección del LED y el taller del lápiz. ¿Reconoces cada parte?
+      ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g6">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 1
+      </span>
+      <h3>El freno invisible</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en menos de 5 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🚿</span>
+        <span><strong>El pisón de la manguera:</strong> por qué frenar el agua es lo mismo que frenar la corriente.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🛡️</span>
+        <span><strong>El guardaespaldas del LED:</strong> qué pasa si quitamos la resistencia.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">✏️</span>
+        <span><strong>El truco del lápiz:</strong> cómo fabricar tu propia resistencia con grafito.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚡</span>
+        <span><strong>El secreto de Ohm:</strong> el profesor al que no le creyeron y que hoy es una ley universal.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado6.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchalo en familia y comenta lo que más te sorprendió.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: ¿Qué descubriste hoy?</h3>
+    <ul>
+      <li>¿Qué hace una resistencia? Descríbelo con tus palabras.</li>
+      <li>¿Por qué el LED necesita un "guardaespaldas"?</li>
+      <li>En el taller del lápiz, ¿qué trazo hizo brillar menos al LED? ¿Por qué?</li>
+      <li>¿En qué aparatos de tu casa crees que hay resistencias escondidas? ¿Para qué sirven?</li>
+      <li>¿Cuál de los tres científicos (Ohm, Joule o Watt) te pareció más interesante? ¿Por qué?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
