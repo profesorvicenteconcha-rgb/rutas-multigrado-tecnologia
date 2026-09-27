@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El detective del LED — Grado 6°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado6.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g6);">Grado 6° • Mirada Curiosa</span>
+    <h1 style="margin-top: 0.6rem;">🔵 El detective del LED</h1>
+    <div class="sub">
+      Cómo saber cuál pata va al positivo
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card orange">
+    <h2>📱 ¿Alguna vez has mirado una pantalla de cerca?</h2>
+    <p>
+      Toma tu celular y acércalo mucho a los ojos. ¿Qué ves? Si tienes buena vista
+      (o usas una lupa), verás unos puntos diminutos de colores: rojos, verdes y azules. Esos puntitos son LEDs. Y no son unos pocos: un teléfono moderno tiene aproximadamente <strong>2 millones de píxeles,</strong> y cada píxel está formado por <strong>tres LEDs</strong> (rojo, verde y azul). Eso significa que llevas en el bolsillo unos <strong>6 millones de LEDs</strong> funcionando al mismo tiempo.
+    </p>
+    <div class="highlight-box">
+      <p>
+        <strong>👆 ¿Sabías que…?</strong> Esos mismos LEDs de la pantalla
+        también sirven para leer tu huella dactilar. Cuando pones el dedo sobre
+        el sensor, los LEDs de esa zona se encienden con mucha intensidad. La
+        luz rebota en las crestas y los valles de tu huella, y una pequeña
+        cámara escondida debajo de la pantalla capta la imagen y verifica quién
+        eres.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        <strong>🔍 Pruébalo:</strong> si tu celular tiene lector de huella en
+        la pantalla, fíjate la próxima vez que lo desbloquees. Vas a ver un
+        destello de luz justo donde pones el dedo. Ahí están trabajando los
+        LEDs, iluminando tu huella para que el celular te reconozca.
+      </p>
+    </div>
+    <p>
+      Un LED es una pequeña luz que se enciende cuando pasa corriente por él.
+      La palabra viene del inglés <em>Light Emitting Diode</em>, que significa
+      "diodo emisor de luz". Pero no te preocupes por el nombre: lo importante es
+      lo que hace.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Idea clave:</strong> los LEDs están en tu celular, en el flash
+        de la cámara, en la linterna, en los controles del televisor, en los
+        semáforos, en las luces de los juguetes. Los usas todo el tiempo sin
+        darte cuenta.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔌 ¿Por qué un juguete deja de encender?</h2>
+    <p>
+      Imagina que tienes un juguete con una lucecita roja. Un día la lucecita
+      deja de funcionar. Tú sabes que la pila está bien, que los cables están
+      conectados. Pero nada. ¿Qué pasó?
+    </p>
+    <p>
+      Muy probablemente, alguien conectó el LED <strong>al revés</strong>. A diferencia de una <strong>resistencia</strong> (que funciona en cualquier dirección) o de un <strong>cable</strong> (que conduce por igual en ambos sentidos), el LED solo funciona si la corriente entra por un lado específico.
+      Si entra al revés, el LED no enciende. No se quema, no explota: simplemente
+      se queda apagado, como si estuviera desconectado.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/circuito_basico_completo.png" target="_blank" rel="noopener">
+        <img src="img/circuito_basico_completo.png"
+             alt="Circuito simple con batería, LED verde y resistencia" />
+      </a>
+      <figcaption>
+        Fig. 1: Un LED conectado correctamente. La corriente entra por la pata
+        larga (ánodo) y sale por la pata corta (cátodo).
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 El LED es una calle de un solo sentido.</strong> Si caminas
+        por la dirección permitida, llegas al final. Si caminas al revés, te
+        bloqueas y no pasa nada.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🛡️ El guardaespaldas del LED</h2>
+    <p>
+      Los LEDs son resistentes en un sentido, pero delicados en otro: si les llega
+      <strong>demasiada corriente</strong> de golpe, se queman en segundos. Por
+      eso siempre se conectan con una <strong>resistencia al lado</strong>. Es su
+      guardaespaldas.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/led_quemado.png" target="_blank" rel="noopener">
+        <img src="img/led_quemado.png"
+             alt="LED verde con una X negra y humo saliendo, indicando que se quemó" />
+      </a>
+      <figcaption>
+        Fig. 2: El triste final de un LED sin protección.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <p>
+      Cuando un LED se quema, deja de funcionar para siempre. Los ingenieros
+      dicen, con humor, que "se escapó el humo mágico". Por eso la regla es clara:
+      <strong>nunca conectes un LED sin una resistencia</strong>.
+    </p>
+  </section>
+
+  <!-- Taller del detective -->
+  <section class="taller-electroscopio">
+    <h2>🔍 Taller: El detective de polaridad</h2>
+    <p>
+      ¿Alguna vez has mirado un LED a contraluz? Si lo sostienes contra el sol o una lámpara, puedes ver su interior a través del plástico. En este taller vas a aprender a leer lo que ves ahí dentro. Pero si tomas uno de esos LEDs que se
+      quemaron en un juguete o en una linterna vieja, verás que tiene dos patas
+      y un lado plano.
+    </p>
+    <p>
+      En este taller vas a descubrir qué significan. Y lo más interesante:
+      <strong>vas a poder identificarlo incluso si las patas están cortadas al
+      mismo largo</strong>, como suele pasar con los LEDs reciclados.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/tres_pistas_led.png" target="_blank" rel="noopener">
+        <img src="img/tres_pistas_led.png"
+             alt="Infografía con las tres pistas para identificar el ánodo y el cátodo de un LED: pata larga, muesca lateral e interior con yunque y poste" />
+      </a>
+      <figcaption>
+        Fig. 3: Las tres pistas del detective. Cuando las patas están cortadas,
+        las pistas 2 y 3 son las más confiables.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+        <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Tres o cuatro LEDs (pueden ser reciclados de juguetes viejos).</li>
+      <li>Una pila de 3V (CR2032) con su portapilas.</li>
+      <li>Una resistencia de 220 Ω o 330 Ω.</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva</strong> (de papel o negra aislante). Sirve para
+        sostener las patas del LED y los cables si no tienes cables caimán, o
+        si las conexiones se sueltan con facilidad.
+      </li>
+      <li>Una lupa (opcional, pero ayuda mucho).</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Reúne los LEDs.</strong> Si tienes LEDs nuevos, mira la pata más
+        larga. Si tienes LEDs reciclados, revisa las tres pistas con atención.
+      </li>
+      <li>
+        <strong>Pista 1 — Pata larga.</strong> En un LED nuevo, la pata más larga
+        es el <strong>ánodo (+)</strong>. La más corta es el <strong>cátodo (−)</strong>.
+      </li>
+      <li>
+        <strong>Pista 2 — Muesca lateral.</strong> Mira el borde de plástico del
+        LED. Uno de los lados es plano, no redondo. Ese lado plano siempre marca
+        el <strong>cátodo (−)</strong>. Esta pista funciona incluso si las patas
+        están cortadas al mismo largo.
+      </li>
+      <li>
+        <strong>Pista 3 — El interior del LED.</strong> Sostén el LED contra una
+        luz y mira a través del plástico. Verás dos piezas metálicas dentro. La
+        más grande (el yunque) es el <strong>cátodo (−)</strong>. La más pequeña
+        (el poste) es el <strong>ánodo (+)</strong>.
+      </li>
+      <li>
+        <strong>Verifica con el circuito.</strong> Monta el circuito: pila →
+        resistencia → LED → pila. Prueba con el LED en una dirección y luego en
+        la otra. ¿En cuál enciende?
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala para cada
+        LED que tengas:
+
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>LED</th>
+                <th>Pata larga</th>
+                <th>Muesca</th>
+                <th>Interior</th>
+                <th>¿Encendió?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🔍 ¿Qué descubriste?</strong> Comparando tus tres LEDs, ¿cuál
+        pista coincidió siempre con el resultado del circuito? Esa es tu pista
+        más confiable. Cuando encuentres un LED reciclado con patas cortadas,
+        puedes empezar por ahí.
+      </p>
+    </div>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      ¿Por qué crees que el LED solo funciona en una dirección? ¿Qué crees que
+      pasaría si pudieras ver los electrones moverse por dentro?
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g6); background: #fff8e1;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> Los LEDs infrarrojos de los controles
+        remotos emiten luz que nuestros ojos <em>no pueden ver</em>. Pero la
+        cámara del celular <em>sí</em> la capta. Si apuntas el control del
+        televisor hacia la cámara del celular y presionas cualquier botón, verás
+        un punto violeta parpadeando en la pantalla. ¡Acabas de descubrir una
+        luz invisible!
+      </p>
+    </div>
+
+        <div class="puente-corriente">
+      <strong>Puente hacia el semiconductor:</strong> la razón por la que el
+      LED solo funciona en una dirección está dentro del material semiconductor.
+      Los electrones solo pueden cruzar una "frontera invisible" en un sentido.
+      Si lo conectas al revés, la frontera se cierra y no pasa nada. Esa frontera
+      es lo que hace único al LED: no es un simple bombillo, es una puerta que
+      solo se abre en una dirección.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>💡 Sobre instrumentos de medida:</strong> si tienes acceso a un
+      multímetro en el colegio, tiene un "modo diodo" que identifica la polaridad
+      sin montar el circuito. No es obligatorio.
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 0.6rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 El hombre al que se rieron por inventar una luz</h2>
+    <p>
+      La pantalla que tienes en tu celular, el flash de una cámara, la linterna
+      de tu casa. Todos usan LEDs. Pero el LED no apareció de la nada. Hace
+      sesenta años, nadie sabía cómo hacer uno. Un hombre lo logró, y sus
+      colegas se rieron de él.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      💡 Nick Holonyak Jr. (1928–2022) — El padre del LED visible
+    </h3>
+    <p>
+      Nick Holonyak nació en 1928, hijo de inmigrantes ucranianos que trabajaban
+      en una mina de carbón en Estados Unidos. Creció en una familia humilde y
+      llegó a la universidad gracias a su esfuerzo.
+    </p>
+    <p>
+      En 1962, mientras trabajaba en el laboratorio de General Electric, logró
+      algo que nadie había conseguido: <strong>construir un LED que emitía luz
+      visible</strong>. No era un punto de luz microscópico como los de antes;
+      era un LED rojo brillante que se podía ver a simple vista.
+    </p>
+    <p>
+      Cuando lo presentó, <strong>muchos colegas se rieron</strong>. Decían que
+      el LED era un "juguete de laboratorio", incapaz de reemplazar a las
+      bombillas incandescentes. Que nunca serviría para nada práctico.
+    </p>
+    <p>
+      Holonyak no se rindió. Siguió investigando y predijo: <em>"Algún día, los
+      LEDs reemplazarán a las bombillas"</em>. Y tenía razón. Murió en 2022,
+      habiendo visto su predicción cumplirse: los LEDs están en semáforos,
+      pantallas, linternas y en casi cualquier dispositivo moderno. La próxima
+      vez que mires la pantalla de tu celular, acuérdate de él.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Holonyak tuvo algo en común con otros grandes científicos: <strong>no se
+      rindió cuando otros dudaron de él</strong>. Su trabajo cambió la forma en
+      que iluminamos el mundo.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de General Electric y biografías de la Universidad de Illinois.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado6.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado6.png"
+           alt="Infografía: El detective del LED. Muestra las tres pistas de polaridad, el circuito básico, el LED quemado y el truco del control remoto" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: las tres pistas,
+      el circuito, el guardaespaldas y el truco del control remoto. ¿Reconoces
+      cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g6">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 1
+      </span>
+      <h3>El detective del LED</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en menos de 5 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📱</span>
+        <span><strong>La pantalla de tu celular:</strong> cómo millones de LEDs diminutos forman las imágenes que ves.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔍</span>
+        <span><strong>Las tres pistas:</strong> cómo identificar el ánodo y el cátodo de un LED, incluso si las patas están cortadas.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">👁️</span>
+        <span><strong>La luz invisible:</strong> cómo usar la cámara del celular para ver el LED infrarrojo de un control remoto.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">💡</span>
+        <span><strong>Holonyak y el LED:</strong> el hombre al que se rieron por inventar una luz.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📱</span>
+        <span><strong>La pantalla que te conoce:</strong> cómo millones de LEDs forman las imágenes… y también leen tu huella.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado6.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchenlo en familia y comenten lo que más los sorprendió.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: ¿Qué descubriste hoy?</h3>
+    <ul>
+      <li>¿Qué es un LED y dónde lo has visto en tu vida cotidiana?</li>
+      <li>¿Por qué el LED solo funciona en una dirección?</li>
+      <li>¿Cuál de las tres pistas del detective te parece más confiable? ¿Por qué?</li>
+      <li>¿Qué pasa si conectas un LED sin resistencia? ¿Por qué?</li>
+      <li>¿Qué descubriste con el truco de la cámara del celular y el control remoto?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado7.html" class="btn-estacion">🚪 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">⚛️ Mirada estructural (Grado 8°)</a>
+      <a href="grado10.html" class="btn-estacion">🌈 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

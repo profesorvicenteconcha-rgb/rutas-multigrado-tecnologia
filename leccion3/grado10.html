@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El lenguaje de la luz — Grado 10°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🌈 El lenguaje de la luz</h1>
+    <div class="sub">
+      Longitud de onda, eficiencia y la voz visual de la IA
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>🌈 Del voltaje al color: la longitud de onda</h2>
+    <p>
+      Cada color de luz que emite un LED tiene una <strong>energía distinta</strong>.
+      Esa energía determina el voltaje directo (V<sub>f</sub>) del componente. A
+      mayor energía del fotón, mayor V<sub>f</sub>.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Longitud de onda</th>
+            <th>Energía del fotón</th>
+            <th>V<sub>f</sub> típico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="background-color: #d32f2f; color: white; font-weight: bold;">Rojo</td>
+            <td>~650 nm</td>
+            <td>Baja</td>
+            <td>~2.0 V</td>
+          </tr>
+          <tr>
+            <td style="background-color: #fbc02d; color: black; font-weight: bold;">Amarillo</td>
+            <td>~590 nm</td>
+            <td>Media-baja</td>
+            <td>~2.2 V</td>
+          </tr>
+          <tr>
+            <td style="background-color: #388e3c; color: white; font-weight: bold;">Verde</td>
+            <td>~530 nm</td>
+            <td>Media</td>
+            <td>~2.4 V</td>
+          </tr>
+          <tr>
+            <td style="background-color: #1976d2; color: white; font-weight: bold;">Azul</td>
+            <td>~450 nm</td>
+            <td>Alta</td>
+            <td>~3.0 V</td>
+          </tr>
+          <tr>
+            <td style="background-color: #7b1fa2; color: white; font-weight: bold;">Violeta</td>
+            <td>~410 nm</td>
+            <td>Muy alta</td>
+            <td>~3.3 V</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/espectro_visible.png" target="_blank" rel="noopener">
+        <img src="img/espectro_visible.png"
+             alt="Espectro electromagnético visible, desde el rojo (650 nm) hasta el violeta (410 nm)" />
+      </a>
+      <figcaption>
+        Fig. 1: El espectro de luz visible. A medida que la longitud de onda
+        disminuye, la energía del fotón aumenta. Por eso los LEDs azules y
+        violetas necesitan más voltaje.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La relación fundamental:</strong> cuando un electrón cae
+        desde un nivel de energía alto a uno bajo dentro del semiconductor,
+        libera un fotón. La energía de ese fotón (y por lo tanto el color de la
+        luz) está determinada por la <strong>distancia entre esos niveles</strong>.
+        Los LEDs azules necesitan un semiconductor con niveles más separados
+        que los rojos. De ahí que requieran más voltaje.
+      </p>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🔬 ¿Sabes cómo se llama todo esto?</strong> La
+        <strong>optoelectrónica</strong> es el campo de la ingeniería que estudia
+        los dispositivos que convierten electricidad en luz (como los LEDs) y
+        luz en electricidad (como los sensores de las cámaras). Los LEDs, los
+        láseres, las pantallas, los sensores de huella y las cámaras digitales
+        son dispositivos optoelectrónicos. Es uno de los campos más activos de
+        la ingeniería moderna.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>⚡ Luz y energía: dos conceptos distintos</h2>
+    <p>
+      Cuando hablamos de "eficiencia" de un LED, es fácil confundir dos cosas
+      que son diferentes: <strong>cuánta energía consume</strong> y
+      <strong>qué fracción de esa energía se convierte en luz</strong>. Vamos a
+      separar los dos conceptos.
+    </p>
+
+    <h3>📊 Comparación general de tecnologías</h3>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Tecnología</th>
+            <th>Eficiencia luminosa</th>
+            <th>Vida útil</th>
+            <th>Luz por vatio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bombilla incandescente</strong></td>
+            <td>5–10%</td>
+            <td>1,000 h</td>
+            <td>~15 lm/W</td>
+          </tr>
+          <tr>
+            <td><strong>Bombilla halógena</strong></td>
+            <td>10–15%</td>
+            <td>2,000 h</td>
+            <td>~25 lm/W</td>
+          </tr>
+          <tr>
+            <td><strong>Lámpara fluorescente</strong></td>
+            <td>20–25%</td>
+            <td>8,000 h</td>
+            <td>~60 lm/W</td>
+          </tr>
+          <tr>
+            <td><strong>LED</strong></td>
+            <td>40–60%</td>
+            <td>50,000 h</td>
+            <td>~120 lm/W</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🔋 Relación de consumo: cuánta energía usa cada uno</h3>
+    <p>
+      Un LED típico de 5 mm consume aproximadamente <strong>60 mW</strong>
+      (0.06 W) para producir una cantidad de luz determinada. Una bombilla
+      incandescente que produce la misma luz consume aproximadamente
+      <strong>1 W</strong>. Calcula la relación:
+    </p>
+
+    <div class="formula">
+      Relación de consumo = 0.06 W ÷ 1 W = <strong>6%</strong>
+    </div>
+
+    <p>
+      El LED necesita apenas el <strong>6% de la energía</strong> que consume la
+      bombilla para producir una cantidad de luz comparable. A gran escala,
+      multiplicado por millones de luces en una ciudad, esa diferencia es
+      gigantesca.
+    </p>
+
+    <h3>💡 Eficiencia: qué fracción se convierte en luz</h3>
+    <p>
+      Ahora bien, la <strong>eficiencia</strong> es otra cosa: mide qué fracción
+      de la energía eléctrica se convierte en luz, y qué fracción se pierde
+      como calor.
+    </p>
+    <ul>
+      <li>
+        Un <strong>LED</strong> convierte aproximadamente un <strong>40%</strong>
+        de la energía en luz. El 60% restante se disipa como calor, pero el LED
+        se calienta poco porque disipa poca potencia total.
+      </li>
+      <li>
+        Una <strong>bombilla incandescente</strong> convierte solo un
+        <strong>5%</strong> de la energía en luz. El 95% se pierde como calor.
+        Por eso se calienta tanto.
+      </li>
+    </ul>
+
+    <p>
+      Comparando eficiencias:
+    </p>
+    <div class="formula">
+      Factor de eficiencia = 40% ÷ 5% = <strong>8 veces más eficiente</strong>
+    </div>
+
+    <p>
+      Un LED convierte <strong>ocho veces más energía en luz</strong> que una
+      bombilla incandescente. Esa diferencia, multiplicada por millones de
+      luces, explica por qué el mundo está reemplazando las bombillas con LEDs.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🌍 Impacto global:</strong> según estudios internacionales, la
+        transición mundial de bombillas incandescentes a LEDs ha reducido el
+        consumo eléctrico global de iluminación en más de un 40% en la última
+        década. Es uno de los cambios tecnológicos más eficientes en energía
+        de la historia reciente.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🌐 Fibra óptica: cuando la luz reemplaza al cobre</h2>
+    <p>
+      Los cables de cobre condujeron electricidad durante más de un siglo. Pero
+      tienen un límite: a distancias muy largas, las señales eléctricas se
+      debilitan y el ancho de banda se satura. Por eso los centros de datos
+      modernos están reemplazando el cobre por <strong>fibra óptica</strong>:
+      hilos de vidrio que transportan datos como pulsos de luz.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/fibra_optica.png" target="_blank" rel="noopener">
+        <img src="img/fibra_optica.png"
+             alt="Comparación entre cable de cobre y fibra óptica, mostrando cómo la señal se debilita en el cobre y viaja nítida como luz en la fibra" />
+      </a>
+      <figcaption>
+        Fig. 2: Fibra óptica vs. cobre. En el cobre, la señal se debilita con
+        la distancia. En la fibra, la luz viaja por reflexión interna total,
+        sin debilitarse.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>📊 La magnitud del cambio</h3>
+    <p>
+      Con cable de cobre, un sistema puede conectar un número limitado de chips
+      (por ejemplo, hasta 72 en algunos supercomputadores actuales). Con fibra
+      óptica, ese número se multiplica: un solo sistema puede conectar más de
+      300 chips trabajando en paralelo, usando miles de conexiones ópticas.
+    </p>
+
+    <h3>⚖️ Ventajas y costos</h3>
+    <p>
+      La fibra óptica no es una tecnología sin problemas. Tiene ventajas claras,
+      pero también desafíos que la industria está aprendiendo a manejar.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Ventajas</th>
+            <th>Costos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mayor velocidad y ancho de banda</td>
+            <td>Los transceptores ópticos consumen energía constantemente</td>
+          </tr>
+          <tr>
+            <td>Distancias mucho más largas sin pérdida</td>
+            <td>Requiere conversión de electricidad a luz y viceversa</td>
+          </tr>
+          <tr>
+            <td>Inmune a interferencias electromagnéticas</td>
+            <td>Los módulos ópticos pueden fallar bajo trabajo intensivo</td>
+          </tr>
+          <tr>
+            <td>Permite conectar más chips</td>
+            <td>Requiere mantenimiento constante</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Lección de ingeniería:</strong> ninguna tecnología es
+        perfecta. Cada avance trae ventajas y nuevos problemas. Los ingenieros
+        eligen el equilibrio que mejor se adapte a cada caso, sin dejar de
+        buscar mejores soluciones.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>📱 Los LEDs que usas todos los días</h2>
+    <p>
+      Ya sabes que la pantalla de tu celular está hecha de millones de LEDs.
+      Pero hay otras aplicaciones sorprendentes que usas casi sin darte cuenta.
+    </p>
+
+    <h3>🎨 Sub-píxeles RGB: cómo se crean los colores</h3>
+    <p>
+      Cada píxel de la pantalla de tu celular no es una sola luz, sino
+      <strong>tres LEDs diminutos</strong>: uno rojo, uno verde y uno azul.
+      Combinando la intensidad de cada uno, la pantalla puede mostrar cualquier
+      color del espectro.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/subpixeles_rgb.png" target="_blank" rel="noopener">
+        <img src="img/subpixeles_rgb.png"
+             alt="Fotografía macro de una pantalla mostrando los sub-píxeles rojos, verdes y azules que forman cada píxel" />
+      </a>
+      <figcaption>
+        Fig. 3: Fotografía macro de una pantalla. Cada punto de color es un
+        sub-píxel RGB. Si miras la pantalla muy de cerca (o con una gota de
+        agua como lupa), puedes verlos.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🔍 Experimento en casa:</strong> pon una gota de agua sobre la
+        pantalla blanca de tu celular y mira a través de ella como si fuera una
+        lupa. Vas a ver los sub-píxeles rojos, verdes y azules. Si la pantalla
+        está apagada y la luz del ambiente es tenue, se ven aún mejor.
+      </p>
+    </div>
+
+    <h3>👆 El lector de huellas: cuando los LEDs te reconocen</h3>
+    <p>
+      Muchos celulares actuales tienen un lector de huellas integrado en la
+      pantalla. La tecnología funciona así:
+    </p>
+    <ol>
+      <li>
+        Cuando pones el dedo, los LEDs de esa zona se encienden con máxima
+        intensidad.
+      </li>
+      <li>
+        La luz rebota en las crestas y los valles de tu huella dactilar.
+      </li>
+      <li>
+        Una pequeña cámara escondida debajo de la pantalla capta la imagen
+        reflejada.
+      </li>
+      <li>
+        Un algoritmo compara esa imagen con la que tienes registrada y decide
+        si eres tú.
+      </li>
+    </ol>
+    <p>
+      Los LEDs no solo te muestran información: también <strong>reconocen tu
+      identidad</strong>. Es una de las aplicaciones más ingeniosas de la
+      optoelectrónica moderna.
+    </p>
+  </section>
+
+  <!-- Card 5 -->
+  <section class="card slate">
+    <h2>👁️ Los LEDs que no vemos: el infrarrojo</h2>
+    <p>
+      No toda la luz que emite un LED es visible para el ojo humano. Los LEDs
+      <strong>infrarrojos</strong> emiten luz con una longitud de onda mayor
+      que la del rojo (por encima de 700 nm). Nuestros ojos no la captan, pero
+      algunos dispositivos sí.
+    </p>
+
+    <h3>📺 El control remoto</h3>
+    <p>
+      Cuando presionas un botón del control del televisor, el LED infrarrojo
+      emite una ráfaga de pulsos de luz invisible. El televisor tiene un sensor
+      que los interpreta y ejecuta la acción: subir el volumen, cambiar de canal,
+      apagar.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>🔍 Experimento en casa:</strong> apunta el control del
+        televisor hacia la cámara de tu celular. Presiona cualquier botón
+        mientras miras la pantalla del celular. Vas a ver un punto violeta o
+        blanco parpadeando: es el LED infrarrojo. Tus ojos no lo ven, pero la
+        cámara del celular sí.
+      </p>
+    </div>
+
+    <h3>🌐 Aplicaciones industriales</h3>
+    <p>
+      Los LEDs infrarrojos no solo están en los controles remotos. También se
+      usan en:
+    </p>
+    <ul>
+      <li>
+        <strong>Sensores de movimiento:</strong> los detectores de presencia en
+        alarmas y luces automáticas.
+      </li>
+      <li>
+        <strong>Cámaras de seguridad con visión nocturna:</strong> iluminan la
+        escena con luz infrarroja que la cámara puede captar, aunque el ojo
+        humano no vea nada.
+      </li>
+      <li>
+        <strong>Comunicación por fibra óptica:</strong> las fibras que cruzan
+        los océanos transmiten datos usando luz infrarroja, no visible. La razón
+        es que el vidrio absorbe menos la luz infrarroja que la luz visible, y
+        por eso la señal puede viajar miles de kilómetros sin debilitarse.
+      </li>
+      <li>
+        <strong>Sensores médicos:</strong> los oxímetros de dedo usan LEDs
+        infrarrojos y rojos para medir el oxígeno en la sangre.
+      </li>
+    </ul>
+
+    <p>
+      La luz invisible también es parte del lenguaje de los LEDs. El espectro
+      electromagnético es mucho más amplio que lo que nuestros ojos pueden
+      percibir.
+    </p>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: El costo energético de la luz</h2>
+    <p>
+      Vamos a medir el <strong>V<sub>f</sub></strong> y la <strong>corriente</strong>
+      de diferentes LEDs, calcular su <strong>potencia eléctrica</strong> y
+      compararla con la de una bombilla incandescente. Así descubrirás por qué
+      el LED cambió la historia de la iluminación.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/tres_pistas_led.png" target="_blank" rel="noopener">
+        <img src="img/tres_pistas_led.png"
+             alt="Infografía con las tres pistas para identificar el ánodo y el cátodo de un LED" />
+      </a>
+      <figcaption>
+        Fig. 4: Las tres pistas del detective. Úsalas para identificar la
+        polaridad antes de medir con el multímetro.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Cuatro o cinco LEDs de distintos colores (rojo, verde, azul, blanco).</li>
+      <li>Un multímetro con modo diodo y modo amperímetro.</li>
+      <li>Una pila de 3V (CR2032) o una fuente de 5V.</li>
+      <li>Resistencias de 100 Ω, 220 Ω y 330 Ω.</li>
+      <li>Cables caimán.</li>
+      <li>Cinta adhesiva (de papel o negra aislante).</li>
+      <li>Una tarjeta (cartulina), para el taller del lápiz.</li>
+      <li>Un lápiz de grafito (2B o más blando).</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Mide el V<sub>f</sub></strong> de cada LED con el multímetro en
+        modo diodo. Anota los valores.
+      </li>
+      <li>
+        <strong>Calcula la corriente</strong> con una resistencia de 220 Ω y una
+        fuente de 3V:
+        <div class="formula" style="margin: 0.6rem 0;">
+          I = (V<sub>fuente</sub> − V<sub>f</sub>) ÷ R
+        </div>
+      </li>
+      <li>
+        <strong>Calcula la potencia eléctrica</strong> de cada LED:
+        <div class="formula" style="margin: 0.6rem 0;">
+          P = V<sub>f</sub> × I
+        </div>
+      </li>
+      <li>
+        <strong>Completa la tabla:</strong>
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>LED</th>
+                <th>Color</th>
+                <th>V<sub>f</sub> medido</th>
+                <th>I calculada</th>
+                <th>P calculada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Compara con una bombilla.</strong> Una bombilla incandescente
+        típica consume 60 W para producir la luz equivalente a 10 LEDs de 5 mm
+        conectados en paralelo.
+      </li>
+      <li>
+        <strong>Reflexiona:</strong> ¿qué pasaría si todas las luces del colegio
+        se cambiaran por LEDs? ¿Cuánta energía se ahorraría?
+      </li>
+    </ol>
+
+    <h3>📐 Cálculo de eficiencia</h3>
+    <p>
+      Ahora puedes calcular la eficiencia aproximada de un LED. Si un LED
+      convierte el 40% de la energía eléctrica en luz (y el 60% en calor), y una
+      bombilla incandescente convierte solo el 5% (y el 95% en calor), la
+      diferencia es enorme:
+    </p>
+
+    <div class="formula" style="margin: 0.6rem 0;">
+      Eficiencia relativa = 40% ÷ 5% = <strong>8 veces más eficiente</strong>
+    </div>
+
+    <p>
+      Un LED convierte <strong>ocho veces más energía en luz</strong> que una
+      bombilla incandescente. Esa diferencia, multiplicada por millones de
+      luces, explica por qué el mundo está reemplazando las bombillas con LEDs.
+    </p>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Si los LEDs son tan eficientes, ¿por qué las bombillas incandescentes
+      siguieron usándose durante casi un siglo? Piensa en el costo inicial, la
+      disponibilidad, la tradición y otros factores que influyen en las
+      decisiones tecnológicas.
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la IA:</strong> los LEDs son la <strong>voz
+      visual</strong> de las máquinas. Las pantallas, los indicadores, los
+      sensores, las cámaras, todo depende de ellos. Y los datos que entrenan
+      a las inteligencias artificiales viajan como pulsos de luz por cables de
+      fibra óptica. Entender el LED es entender el canal por el que fluye la
+      inteligencia del mundo moderno.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección
+      con el LED.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Los cuatro jinetes de la luz (y un precursor olvidado)</h2>
+    <p>
+      El LED que hoy ilumina tu pantalla no lo inventó una sola persona. Fueron
+      cuatro científicos, en tres países, durante casi un siglo. Y antes que
+      ellos hubo un precursor al que nadie escuchó.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🕯️ Oleg Losev (1903–1942) — El precursor olvidado
+    </h3>
+    <p>
+      Mucho antes de que nadie supiera qué era un semiconductor, un joven
+      científico soviético observó algo extraño: ciertos cristales emitían luz
+      al paso de la corriente. Era 1927. Oleg Losev tenía solo 24 años.
+    </p>
+    <p>
+      Publicó 16 artículos sobre el fenómeno, pero <strong>nadie le hizo
+      caso</strong>. La tecnología de la época no permitía aprovechar el
+      descubrimiento. Losev murió durante el sitio de Leningrado, en 1942, con
+      solo 38 años, sin haber visto el reconocimiento de su trabajo.
+    </p>
+    <p>
+      Hoy se le reconoce como el verdadero descubridor del fenómeno del LED. Su
+      historia cierra el círculo: desde un laboratorio soviético en 1927, hasta
+      la pantalla del celular que tienes en la mano.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      💡 Nick Holonyak Jr. (1928–2022) — El padre del LED visible
+    </h3>
+    <p>
+      Holonyak inventó el primer LED visible en 1962, mientras trabajaba en
+      General Electric. Era hijo de inmigrantes ucranianos y creció en una
+      familia humilde. Cuando presentó su invento, <strong>muchos colegas se
+      rieron</strong>: decían que el LED era un "juguete de laboratorio",
+      incapaz de reemplazar a las bombillas incandescentes.
+    </p>
+    <p>
+      Holonyak no se rindió. Predijo que algún día los LEDs reemplazarían a las
+      bombillas. Murió en 2022, habiendo visto su predicción cumplirse.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔵 Isamu Akasaki (1929–2021) y Hiroshi Amano (1960) — Los pioneros del LED azul
+    </h3>
+    <p>
+      Durante décadas, los científicos intentaron crear un LED azul. Era
+      considerado <strong>imposible</strong>. Los grandes laboratorios de
+      Japón, Estados Unidos y Europa habían fracasado.
+    </p>
+    <p>
+      Pero Akasaki y Amano, trabajando en la Universidad de Nagoya, lograron el
+      primer LED azul brillante en 1989, usando nitruro de galio. Su trabajo
+      inspiró a otros científicos y abrió el camino hacia la iluminación
+      moderna.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔷 Shuji Nakamura (1954) — El que no tenía el currículum esperado
+    </h3>
+    <p>
+      Nakamura trabajaba en una pequeña empresa desconocida (Nichia) y no tenía
+      doctorado. Mientras los grandes laboratorios gastaban millones en
+      investigaciones complicadas, él probó métodos poco convencionales. En
+      1993, <strong>logró el LED azul comercial</strong>, permitiendo la
+      creación de LEDs blancos y la iluminación moderna.
+    </p>
+    <p>
+      En 2014, los tres —Akasaki, Amano y Nakamura— recibieron el
+      <strong>Premio Nobel de Física</strong> por su trabajo. Gracias a ellos
+      hoy podemos tener pantallas LED, luces eficientes y todo lo que usa luz
+      blanca brillante.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los cinco comparten un rasgo común: <strong>insistieron cuando otros
+      decían que era imposible</strong>. Losev murió sin reconocimiento.
+      Holonyak fue ridiculizado. Akasaki y Amano trabajaron en un campo que
+      nadie creía posible. Nakamura no tenía el currículum esperado. Juntos
+      cambiaron la historia de la luz.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos del Premio Nobel de Física, biografías de General Electric, Nichia Corporation y archivos soviéticos de investigación.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado10.png"
+           alt="Infografía: El lenguaje de la luz. Muestra la relación entre Vf y color, la eficiencia del LED, la fibra óptica, los sub-píxeles RGB y los LEDs infrarrojos" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: la relación
+      entre V<sub>f</sub> y color, la eficiencia del LED, la fibra óptica, los
+      sub-píxeles RGB y los LEDs infrarrojos. ¿Reconoces cada parte? ¿Cuál te
+      resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 4
+      </span>
+      <h3>El lenguaje de la luz</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      La luz no es solo iluminación: es <strong>información</strong>. Dale play
+      y descubre cómo los LEDs hablan el idioma de la inteligencia artificial.
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 1rem 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌈</span>
+        <span><strong>Color y energía:</strong> por qué el LED azul necesita más voltaje que el rojo.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚡</span>
+        <span><strong>Eficiencia revolucionaria:</strong> cómo el LED reemplazó a la bombilla y transformó el mundo.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌐</span>
+        <span><strong>Fibra óptica:</strong> los cables de luz que sostienen la internet moderna.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🕯️</span>
+        <span><strong>El precursor olvidado:</strong> Oleg Losev y la historia del descubrimiento sin reconocimiento.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu cuaderno a mano: hay cálculos y conceptos que querrás anotar.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar en luz y energía</h3>
+    <ul>
+      <li>
+        ¿Por qué el LED azul necesita más voltaje que el rojo? Explica usando
+        los conceptos de longitud de onda y energía del fotón.
+      </li>
+      <li>
+        Si un LED convierte 40% de la energía en luz y una bombilla convierte
+        5%, ¿cuántas veces más eficiente es el LED?
+      </li>
+      <li>
+        Menciona al menos dos ventajas y dos costos de la fibra óptica frente
+        al cable de cobre.
+      </li>
+      <li>
+        Explica cómo funciona el lector de huellas bajo la pantalla de un
+        celular. ¿Qué papel cumplen los LEDs?
+      </li>
+      <li>
+        ¿Por qué la luz infrarroja de un control remoto es invisible para
+        nuestros ojos pero visible para una cámara de celular?
+      </li>
+      <li>
+        <strong>Cálculo completo:</strong> tienes un LED rojo con
+        V<sub>f</sub> = 2.0V y quieres que circule una corriente de 15 mA
+        usando una fuente de 5V. Calcula:
+        <ul style="margin-top: 0.4rem;">
+          <li>a) El voltaje que debe caer en la resistencia</li>
+          <li>b) El valor de la resistencia necesaria</li>
+          <li>c) El valor comercial más cercano por encima</li>
+          <li>d) La potencia que disipará la resistencia</li>
+          <li>e) La potencia que consumirá el LED</li>
+        </ul>
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+    </ul>
+
+    <h4 style="margin-top: 1.5rem; color: var(--color-primario);">🎓 El viaje completo</h4>
+    <p>
+      Si has recorrido las tres rutas, has completado un viaje notable:
+    </p>
+    <ul>
+      <li><strong>Ruta 1:</strong> aprendiste qué es la corriente y cómo fluye.</li>
+      <li><strong>Ruta 2:</strong> aprendiste a controlarla con resistencias y a calcular el calor que disipa.</li>
+      <li><strong>Ruta 3:</strong> aprendiste cómo un LED convierte esa corriente en luz y cómo esa luz se convierte en información.</li>
+    </ul>
+    <p>
+      De la electricidad a la luz, y de la luz a la inteligencia artificial.
+      Ese es el camino que has recorrido.
+    </p>
+
+    <h4 style="margin-top: 2rem; color: var(--color-primario);">📖 Tu vocabulario visual de ingeniería</h4>
+    <p>
+      A lo largo de las tres rutas has aprendido los símbolos de los
+      componentes básicos. Estos cuatro símbolos son el <strong>alfabeto visual
+      de la electrónica</strong>: con ellos puedes leer cualquier circuito básico.
+    </p>
+    <p>
+      Existen <strong>dos normas internacionales</strong> para dibujarlos:
+      la <strong>europea</strong> (IEC/ISO) y la <strong>americana</strong> (ANSI).
+      En este curso usamos la europea, pero conviene que reconozcas ambas,
+      porque aparecen mezcladas en manuales, planos y tutoriales de todo el
+      mundo.
+    </p>
+
+    <div class="tabla-scroll" style="margin-top: 1rem;">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 22%;">Componente</th>
+            <th style="width: 26%;">Estilo europeo (IEC/ISO)</th>
+            <th style="width: 26%;">Estilo americano (ANSI)</th>
+            <th>Dónde se aprende</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pila</strong></td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="8" y1="15" x2="30" y2="15" stroke="#374151" stroke-width="2"/>
+                <line x1="30" y1="5" x2="30" y2="25" stroke="#374151" stroke-width="3"/>
+                <line x1="38" y1="11" x2="38" y2="19" stroke="#374151" stroke-width="2"/>
+                <line x1="38" y1="15" x2="72" y2="15" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="8" y1="15" x2="30" y2="15" stroke="#374151" stroke-width="2"/>
+                <line x1="30" y1="5" x2="30" y2="25" stroke="#374151" stroke-width="3"/>
+                <line x1="38" y1="11" x2="38" y2="19" stroke="#374151" stroke-width="2"/>
+                <line x1="38" y1="15" x2="72" y2="15" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td>Ruta 1 y Ruta 2</td>
+          </tr>
+          <tr>
+            <td><strong>Resistencia</strong></td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="8" y1="15" x2="25" y2="15" stroke="#374151" stroke-width="2"/>
+                <rect x="25" y="8" width="30" height="14" fill="white" stroke="#374151" stroke-width="2"/>
+                <line x1="55" y1="15" x2="72" y2="15" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="8" y1="15" x2="20" y2="15" stroke="#374151" stroke-width="2"/>
+                <polyline points="20,15 24,6 28,24 32,6 36,24 40,6 44,24 48,6 52,24 56,15 60,15"
+                          fill="none" stroke="#374151" stroke-width="2"/>
+                <line x1="60" y1="15" x2="72" y2="15" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td>Ruta 1 y Ruta 2</td>
+          </tr>
+          <tr>
+            <td><strong>Tierra</strong></td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="40" y1="3" x2="40" y2="12" stroke="#374151" stroke-width="2"/>
+                <line x1="20" y1="12" x2="60" y2="12" stroke="#374151" stroke-width="2.5"/>
+                <line x1="28" y1="18" x2="52" y2="18" stroke="#374151" stroke-width="2"/>
+                <line x1="34" y1="24" x2="46" y2="24" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 26px; vertical-align: middle;">
+                <line x1="40" y1="3" x2="40" y2="12" stroke="#374151" stroke-width="2"/>
+                <line x1="20" y1="12" x2="60" y2="12" stroke="#374151" stroke-width="2.5"/>
+                <line x1="28" y1="18" x2="52" y2="18" stroke="#374151" stroke-width="2"/>
+                <line x1="34" y1="24" x2="46" y2="24" stroke="#374151" stroke-width="2"/>
+              </svg>
+            </td>
+            <td>Ruta 1 y Ruta 2</td>
+          </tr>
+          <tr>
+            <td><strong>LED</strong></td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 34px; vertical-align: middle;">
+                <line x1="5" y1="25" x2="22" y2="25" stroke="#374151" stroke-width="2"/>
+                <polygon points="22,15 22,35 42,25" fill="white" stroke="#374151" stroke-width="2"/>
+                <line x1="42" y1="15" x2="42" y2="35" stroke="#374151" stroke-width="2.5"/>
+                <line x1="42" y1="25" x2="75" y2="25" stroke="#374151" stroke-width="2"/>
+                <line x1="32" y1="12" x2="38" y2="4" stroke="#f59e0b" stroke-width="2"/>
+                <polygon points="38,4 35,9 40,9" fill="#f59e0b"/>
+                <line x1="40" y1="14" x2="46" y2="6" stroke="#f59e0b" stroke-width="2"/>
+                <polygon points="46,6 43,11 48,11" fill="#f59e0b"/>
+              </svg>
+            </td>
+            <td style="text-align: center;">
+              <svg viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 34px; vertical-align: middle;">
+                <line x1="5" y1="25" x2="22" y2="25" stroke="#374151" stroke-width="2"/>
+                <polygon points="22,15 22,35 42,25" fill="white" stroke="#374151" stroke-width="2"/>
+                <line x1="42" y1="15" x2="42" y2="35" stroke="#374151" stroke-width="2.5"/>
+                <line x1="42" y1="25" x2="75" y2="25" stroke="#374151" stroke-width="2"/>
+                <line x1="32" y1="12" x2="38" y2="4" stroke="#f59e0b" stroke-width="2"/>
+                <polygon points="38,4 35,9 40,9" fill="#f59e0b"/>
+                <line x1="40" y1="14" x2="46" y2="6" stroke="#f59e0b" stroke-width="2"/>
+                <polygon points="46,6 43,11 48,11" fill="#f59e0b"/>
+              </svg>
+            </td>
+            <td>Ruta 3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 1rem;">
+      <p>
+        <strong>💡 Lo que cambia entre normas:</strong> en realidad, la
+        <strong>resistencia</strong> es el componente donde más se nota la
+        diferencia. Los símbolos de la pila, la tierra y el LED son
+        prácticamente idénticos en ambas normas. Por eso, cuando veas un
+        esquemático en un libro en inglés, ya sabrás qué buscar.
+      </p>
+    </div>
+
+    <p style="margin-top: 1.5rem; font-style: italic; text-align: center; color: var(--text-mid);">
+      Con estos cuatro símbolos, puedes leer y dibujar cualquier circuito básico.
+      Es el alfabeto con el que los ingenieros escribimos.
+    </p>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🔵 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🚪 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">⚛️ Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,4 +1,19 @@
 /* ==========================================================================
+   Subíndices y superíndices
+   ========================================================================== */
+
+sub {
+  font-size: 0.75em;
+  vertical-align: sub;
+  line-height: 0;
+}
+
+sup {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+}
+/* ==========================================================================
    Ruta Multigrado: La Energía y la Corriente
    Hoja de estilos exclusiva de la ruta (independiente del curso amplio)
    ========================================================================== */

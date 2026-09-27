@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El control del flujo — Grado 7°</title>
+  <title>Presión, caudal y freno — Grado 7°</title>
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -16,9 +16,9 @@
 
   <header class="header">
     <span class="badge" style="background: var(--c-g7);">Grado 7° • Mirada Comparativa</span>
-    <h1 style="margin-top: 0.6rem;">🔵 El control del flujo</h1>
+    <h1 style="margin-top: 0.6rem;">🔵 Presión, caudal y freno</h1>
     <div class="sub">
-      Presión, caudal y freno en un circuito
+      La ley de Ohm vista como un sistema hidráulico
     </div>
   </header>
 
@@ -198,20 +198,97 @@
       Recuerda: un LED es una pequeña luz que se enciende al paso de la corriente.
     </p>
 
+    <!-- Imagen de materiales del taller -->
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/materiales_taller.png" target="_blank" rel="noopener">
+        <img src="img/materiales_taller.png"
+             alt="Los ocho materiales del taller: LED rojo, pila 3V, lápiz de grafito, resistencia, cinta adhesiva, 4 cables caimán, tarjeta de cartulina y regla; con el diagrama de cómo funciona el circuito" />
+      </a>
+      <figcaption>
+        Fig. 5: Los ocho materiales del taller y el recorrido completo de la corriente.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
     <h3>🧰 Materiales</h3>
-    <ul>
-      <li>Una hoja de papel blanco.</li>
-      <li>Un lápiz blando (2B o más blando).</li>
-      <li>Una pila de 3V (CR2032) o una fuente de 5V.</li>
-      <li>Un LED rojo.</li>
-      <li>Una resistencia de 220Ω o 330Ω.</li>
-      <li>Cables caimán (o cables comunes).</li>
-      <li>
-        <strong>Cinta adhesiva:</strong> de enmascarar, transparente o aislante.
-        Sirve para fijar la resistencia al papel.
-      </li>
-      <li>Una regla.</li>
-    </ul>
+    <p>
+      Antes de comenzar, reúne los ocho materiales. Si alguno te falta, puedes
+      buscarlo en casa o pedirlo prestado en el colegio.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 8%;">#</th>
+            <th style="width: 30%;">Material</th>
+            <th>Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: center;"><strong>1</strong></td>
+            <td><strong>LED rojo</strong></td>
+            <td>Pata larga = positivo (+), pata corta = negativo (−)</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>2</strong></td>
+            <td><strong>Pila (3 V)</strong></td>
+            <td>Con su portapilas, para conectar los cables</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>3</strong></td>
+            <td><strong>Lápiz de grafito</strong></td>
+            <td>Preferiblemente blando (2B o más blando)</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>4</strong></td>
+            <td><strong>Resistencia</strong></td>
+            <td>De 220 Ω o 330 Ω, para proteger el LED</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>5</strong></td>
+            <td><strong>Cinta adhesiva</strong></td>
+            <td>De enmascarar, transparente o aislante (cinta negra)</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>6</strong></td>
+            <td><strong>4 cables caimán</strong></td>
+            <td>De colores distintos, para identificar cada conexión</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>7</strong></td>
+            <td><strong>Tarjeta (cartulina)</strong></td>
+            <td>Tamaño carta o A4, para dibujar el trazo</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;"><strong>8</strong></td>
+            <td><strong>Regla</strong></td>
+            <td>Para medir los trazos con precisión</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🔌 ¿Cómo funciona el circuito?</h3>
+    <p>
+      El recorrido de la corriente es siempre el mismo:
+    </p>
+    <ol>
+      <li>Sale de la pila (+) y pasa por la resistencia.</li>
+      <li>Llega al LED y lo enciende.</li>
+      <li>Continúa por el cable hasta el trazo de grafito.</li>
+      <li>El trazo ofrece resistencia: cuanto más largo, más frena la corriente.</li>
+      <li>Regresa por el cable al polo negativo (−) de la pila, cerrando el circuito.</li>
+    </ol>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Recuerda:</strong> el trazo de grafito es tu resistencia
+        variable. Cuanto más largo y delgado sea, más frenará la corriente y
+        menos brillará el LED.
+      </p>
+    </div>
 
     <h3>🛠️ Construcción paso a paso</h3>
     <ol>
@@ -307,7 +384,6 @@
       resistencia variable. Al alargarlo, aumentas el freno y disminuyes el
       caudal. Esa relación entre presión, flujo y freno es tan perfecta que
       Georg Ohm la describió con una fórmula matemática. La ley de Ohm es una
-      de las herramientas más importantes de toda la electrónica. La ley de Ohm es una
       de las herramientas más importantes de toda la electrónica.
     </div>
 
@@ -397,6 +473,13 @@
       <img src="img/infografia_grado7.png"
            alt="Infografía: El control del flujo. Muestra la analogía del tubo estrecho, la relación entre presión, caudal y freno, el triángulo de Ohm y la tabla de equivalencias" />
     </a>
+        <figcaption>
+      Fig. 6: El control del flujo. Infografía que sintetiza la analogía
+      hidráulica (bomba, caudal y freno), el triángulo de Ohm, los pioneros
+      de la electrónica (Ohm, Joule y Watt) y el taller del lápiz con sus
+      tres trazos.
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
     <figcaption>
       <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
       esta infografía. Resume los temas que acabas de recorrer: el tubo estrecho,

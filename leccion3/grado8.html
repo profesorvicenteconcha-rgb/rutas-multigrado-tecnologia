@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El secreto del semiconductor — Grado 8°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado8.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+    <h1 style="margin-top: 0.6rem;">⚛️ El secreto del semiconductor</h1>
+    <div class="sub">
+      La unión P-N y el voltaje directo
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card purple">
+    <h2>⚛️ Un material que no es ni conductor ni aislante</h2>
+    <p>
+      Los conductores como el cobre dejan pasar la carga con facilidad. Los
+      aislantes como el caucho la bloquean. Pero existe un tercer tipo de
+      material, los <strong>semiconductores</strong> (como el silicio y el
+      germanio), que no son ni lo uno ni lo otro: su comportamiento se puede
+      <em>controlar</em> con voltaje, luz o temperatura.
+    </p>
+    <p>
+      Los LEDs están hechos de semiconductores. Y esa es la clave de todo: en
+      lugar de conducir siempre (como el cobre) o nunca (como el caucho), los
+      semiconductores pueden conducir <strong>solo en ciertas condiciones</strong>.
+      De ahí nace la "puerta de un solo sentido".
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Idea clave:</strong> los LEDs, los diodos, los transistores y
+        los chips que entrenan modelos de inteligencia artificial están hechos
+        del mismo tipo de material semiconductor. Entender cómo se comporta un
+        semiconductor es entender el material del que están hechas las
+        computadoras modernas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔬 La unión P-N: la frontera invisible</h2>
+    <p>
+      Un LED está formado por la unión de dos zonas de semiconductor con
+      propiedades opuestas:
+    </p>
+    <ul>
+      <li>
+        <strong>La zona P</strong> (positiva): un semiconductor al que se le han
+        agregado impurezas que crean "huecos", espacios donde faltan electrones.
+      </li>
+      <li>
+        <strong>La zona N</strong> (negativa): un semiconductor al que se le han
+        agregado impurezas que aportan electrones libres.
+      </li>
+    </ul>
+    <p>
+      En la frontera entre las dos zonas se forma una <strong>unión P-N</strong>.
+      Esta unión actúa como una "barrera de energía": los electrones de la zona
+      N quieren pasar a la zona P, pero encuentran una barrera que se los impide.
+    </p>
+    <p>
+      Cuando conectas el LED en la dirección correcta, la fuente empuja a los
+      electrones con suficiente fuerza para <strong>superar la barrera</strong>.
+      Los electrones cruzan la unión, se recombinan con los huecos, y en ese
+      proceso liberan energía... <em>en forma de luz</em>.
+    </p>
+    <p>
+      Cuando lo conectas al revés, la fuente empuja los electrones en sentido
+      contrario, y la barrera se vuelve aún más alta. La corriente no puede
+      pasar. El LED queda apagado.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/corte_transversal_led.png" target="_blank" rel="noopener">
+        <img src="img/corte_transversal_led.png"
+             alt="Corte transversal de un LED mostrando el encapsulamiento, el material semiconductor, el yunque, el poste y las patas" />
+      </a>
+      <figcaption>
+        Fig. 1: Corte transversal de un LED. En el centro está la unión P-N, la
+        frontera donde ocurre la conversión de electricidad en luz.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>⚡ El voltaje directo (V<sub>f</sub>)</h2>
+    <p>
+      Para superar la barrera de energía de la unión P-N, hace falta una cantidad
+      mínima de voltaje. Ese voltaje se llama <strong>voltaje directo</strong>
+      (V<sub>f</sub>, del inglés <em>forward voltage</em>). Sin él, el LED no
+      enciende, sin importar cuánta corriente le ofrezcas.
+    </p>
+    <p>
+      El V<sub>f</sub> depende del <strong>color del LED</strong>, porque cada
+      color tiene una energía distinta. Los LEDs rojos necesitan menos voltaje
+      que los azules o los blancos.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Color del LED</th>
+            <th>V<sub>f</sub> típico</th>
+            <th>Rango común</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #d32f2f; margin-right: 8px; vertical-align: middle;"></span><strong>Rojo</strong></td>
+            <td>~2.0 V</td>
+            <td>1.8 – 2.2 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #f57c00; margin-right: 8px; vertical-align: middle;"></span><strong>Naranja / Ámbar</strong></td>
+            <td>~2.1 V</td>
+            <td>2.0 – 2.2 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #fbc02d; margin-right: 8px; vertical-align: middle;"></span><strong>Amarillo</strong></td>
+            <td>~2.2 V</td>
+            <td>2.0 – 2.4 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #388e3c; margin-right: 8px; vertical-align: middle;"></span><strong>Verde</strong></td>
+            <td>~2.4 V</td>
+            <td>2.2 – 3.0 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #1976d2; margin-right: 8px; vertical-align: middle;"></span><strong>Azul</strong></td>
+            <td>~3.0 V</td>
+            <td>2.8 – 3.5 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #7b1fa2; margin-right: 8px; vertical-align: middle;"></span><strong>Violeta</strong></td>
+            <td>~3.3 V</td>
+            <td>3.0 – 3.6 V</td>
+          </tr>
+          <tr>
+            <td><span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(90deg, #8a8aff, #ffffff, #ff8a8a); border: 1px solid #ccc; margin-right: 8px; vertical-align: middle;"></span><strong>Blanco</strong></td>
+            <td>~3.2 V</td>
+            <td>3.0 – 3.5 V</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 ¿Por qué varía con el color?</strong> El color de la luz
+        depende de la energía del fotón que se libera. Los fotones azules tienen
+        más energía que los rojos. Por eso los LEDs azules necesitan más voltaje
+        para encender. El V<sub>f</sub> es, literalmente, la energía del fotón
+        expresada en voltios.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <strong>⚡ ¿Y la corriente?</strong> El V<sub>f</sub> no es lo único que importa. El LED también necesita una <strong>corriente mínima</strong> para brillar con claridad. Por debajo de aproximadamente <strong>5 mA</strong>, el LED está encendido pero muy tenue, casi imperceptible. Y por encima de <strong>30 mA</strong>, el LED se sobrecalienta y puede quemarse. Los datasheets siempre indican un rango seguro: la corriente recomendada (típicamente 20 mA) y la corriente máxima (típicamente 30 mA). Los ingenieros diseñan siempre con un margen de seguridad.
+      </p>
+    </div>
+
+        <h3>📈 La curva I-V: una imagen vale más que mil palabras</h3>
+    <p>
+      El LED tiene un comportamiento muy distinto al de una resistencia común.
+      La siguiente gráfica muestra la diferencia:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/curva_iv_led.png" target="_blank" rel="noopener">
+        <img src="img/curva_iv_led.png"
+             alt="Gráfico que compara la curva I-V de un LED con la de una resistencia óhmica, mostrando que el LED no sigue la ley de Ohm" />
+      </a>
+      <figcaption>
+        Fig. 2: Curva I-V de un LED comparada con la de una resistencia común.
+        La resistencia sigue la ley de Ohm (línea recta). El LED no: necesita
+        superar un voltaje umbral (V<sub>f</sub>) antes de conducir.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>⚠️ Una aclaración importante:</strong> el LED <strong>no es un
+        componente óhmico</strong>. Es decir, <strong>no sigue la ley de
+        Ohm</strong> como una resistencia común. Una resistencia de 100 Ω
+        siempre tiene 100 Ω, sin importar el voltaje que le apliques. Pero el
+        LED cambia su comportamiento según el voltaje: por debajo del
+        V<sub>f</sub> casi no pasa corriente, y por encima del V<sub>f</sub> la
+        corriente aumenta muy rápidamente.
+      </p>
+      <p style="margin-top: 0.6rem; margin-bottom: 0;">
+        Por eso, cuando calculamos la resistencia de protección, <strong>no
+        estamos calculando la resistencia del LED</strong>, sino la del
+        componente externo que lo acompaña. El LED tiene su propio
+        comportamiento, que se describe mejor con la curva I-V que con un valor
+        único de resistencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card">
+    <h2>🧮 Cómo calcular la resistencia con el V<sub>f</sub> conocido</h2>
+    <p>
+      Ahora que conocemos el V<sub>f</sub> de cada LED, podemos calcular la
+      resistencia que necesita para protegerse. El cálculo es el mismo que
+      vimos antes, pero ahora conocemos el V<sub>f</sub> exacto del LED.
+    </p>
+
+    <div class="reto-box" style="border-left-color: var(--c-g8);">
+      <p><strong>📌 Ejemplo 1: LED rojo</strong></p>
+      <ul style="margin-bottom: 0;">
+        <li>Fuente: <strong>5V</strong></li>
+        <li>LED rojo: V<sub>f</sub> = <strong>2.0 V</strong></li>
+        <li>Corriente deseada: <strong>20 mA</strong> = 0,02 A</li>
+      </ul>
+    </div>
+
+    <p><strong>Paso 1 — ¿Cuánto voltaje debe caer en la resistencia?</strong></p>
+    <div class="formula">
+      V<sub>R</sub> = 5V − 2.0V = <strong>3.0V</strong>
+    </div>
+
+    <p><strong>Paso 2 — Aplicar la ley de Ohm</strong></p>
+    <div class="formula">
+      R = V<sub>R</sub> ÷ I = 3.0V ÷ 0.02A = <strong>150 Ω</strong>
+    </div>
+
+    <p>
+      El valor comercial más cercano por encima es <strong>220 Ω</strong>. Con
+      esa resistencia, el LED brillará un poco menos pero estará protegido.
+    </p>
+
+    <div class="reto-box" style="border-left-color: var(--c-g8); margin-top: 1.5rem;">
+      <p><strong>📌 Ejemplo 2: LED azul</strong></p>
+      <ul style="margin-bottom: 0;">
+        <li>Fuente: <strong>5V</strong></li>
+        <li>LED azul: V<sub>f</sub> = <strong>3.0 V</strong></li>
+        <li>Corriente deseada: <strong>20 mA</strong> = 0,02 A</li>
+      </ul>
+    </div>
+
+    <p><strong>Paso 1 — Voltaje para la resistencia:</strong></p>
+    <div class="formula">
+      V<sub>R</sub> = 5V − 3.0V = <strong>2.0V</strong>
+    </div>
+
+    <p><strong>Paso 2 — Resistencia:</strong></p>
+    <div class="formula">
+      R = 2.0V ÷ 0.02A = <strong>100 Ω</strong>
+    </div>
+
+    <p>
+      El valor comercial más cercano por encima es <strong>100 Ω</strong>
+      (existe en las tiendas). Observa: el LED azul necesita <em>menos
+      resistencia</em> que el rojo, porque su V<sub>f</sub> es más alto y deja
+      menos voltaje para la resistencia.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🎯 Regla de oro:</strong> cuanto más alto el V<sub>f</sub> del
+        LED, menos voltaje queda para la resistencia, y por lo tanto menor debe
+        ser su valor. Siempre se elige el valor comercial <em>igual o mayor</em>
+        al calculado.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <strong>⚠️ Una aclaración importante:</strong> el LED no es un componente óhmico. Es decir, no sigue la ley de Ohm como una resistencia común. Una resistencia de 100 Ω siempre tiene 100 Ω, sin importar el voltaje que le apliques. Pero el LED cambia su comportamiento según el voltaje: por debajo del V<sub>f</sub> casi no pasa corriente, y por encima del V<sub>f</sub> la corriente aumenta muy rápidamente. Por eso, cuando calculamos la resistencia de protección, no estamos calculando la resistencia del LED, sino la del componente externo que lo acompaña. El LED tiene su propio comportamiento, que se describe mejor con una curva característica que con un valor único de resistencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 5 -->
+  <section class="card slate">
+    <h2>⏳ ¿Por qué el LED reemplazó a la bombilla?</h2>
+    <p>
+      Los LEDs no solo son más eficientes que las bombillas incandescentes:
+      también duran muchísimo más. Y eso, en un mundo donde la energía importa,
+      marca una diferencia enorme.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>LED</th>
+            <th>Bombilla incandescente</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vida útil</strong></td>
+            <td>50,000 – 100,000 horas</td>
+            <td>1,000 – 2,000 horas</td>
+          </tr>
+          <tr>
+            <td><strong>Eficiencia (luz/energía)</strong></td>
+            <td>80 – 90%</td>
+            <td>5 – 10%</td>
+          </tr>
+          <tr>
+            <td><strong>Consumo para misma luz</strong></td>
+            <td>10 W</td>
+            <td>60 W</td>
+          </tr>
+          <tr>
+            <td><strong>Calor disipado</strong></td>
+            <td>Muy poco</td>
+            <td>Mucho (casi todo es calor)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Un LED dura <strong>hasta 100 veces más</strong> que una bombilla y
+      consume <strong>6 veces menos</strong> para dar la misma luz. Esa es la
+      razón por la que hoy todo funciona con LEDs: semáforos, pantallas,
+      linternas, luces de las casas, y hasta las pantallas gigantes de los
+      centros de datos.
+    </p>
+
+    <h3>🌐 El LED y la fibra óptica: una alianza para la IA</h3>
+    <p>
+      En las redes modernas, el cable de cobre empieza a quedarse corto: a
+      distancias muy largas, las señales se degradan y el ancho de banda se
+      satura. Por eso los centros de datos están reemplazando el cobre por
+      <strong>fibra óptica</strong>: hilos de vidrio que transportan datos como
+      pulsos de luz generados por LEDs o láseres.
+    </p>
+    <p>
+      La fibra permite conectar muchos más chips y mover más información. Es la
+      razón por la que una IA en un centro de datos puede hablar con miles de
+      usuarios al mismo tiempo. Pero la fibra también tiene costos: los
+      transceptores ópticos consumen energía de manera constante, incluso cuando
+      no están transmitiendo datos. Es un ejemplo de que <strong>toda tecnología
+      tiene ventajas y desventajas</strong>. La ingeniería consiste en elegir el
+      mejor equilibrio.
+    </p>
+  </section>
+
+  <!-- Taller del detective -->
+  <section class="taller-electroscopio">
+    <h2>🔍 Taller: Midiendo el V<sub>f</sub> con el multímetro</h2>
+    <p>
+      En esta versión del taller vas a usar el <strong>modo diodo del
+      multímetro</strong> para medir directamente el V<sub>f</sub> de cada LED.
+      Así podrás comparar los valores reales con los que aparecen en la tabla de
+      colores.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/tres_pistas_led.png" target="_blank" rel="noopener">
+        <img src="img/tres_pistas_led.png"
+             alt="Infografía con las tres pistas para identificar el ánodo y el cátodo de un LED" />
+      </a>
+      <figcaption>
+        Fig. 3: Las tres pistas del detective. Úsalas para identificar la
+        polaridad antes de medir con el multímetro.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Cuatro o cinco LEDs de distintos colores (rojo, verde, azul, blanco).</li>
+      <li>Un multímetro con modo diodo.</li>
+      <li>Una pila de 3V (CR2032) con su portapilas.</li>
+      <li>Una resistencia de 220 Ω o 330 Ω.</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva</strong> (de papel o negra aislante), para
+        sostener las patas y los cables si es necesario.
+      </li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Identifica la polaridad con las tres pistas.</strong> Antes de
+        medir, anota en tu bitácora qué crees que es cada pata (ánodo o cátodo).
+      </li>
+      <li>
+        <strong>Gira la perilla del multímetro al modo diodo</strong> (símbolo
+        de un triángulo con una barra, parecido al símbolo del LED).
+      </li>
+      <li>
+        <strong>Mide el V<sub>f</sub>.</strong> Toca con la punta roja el ánodo
+        (pata larga o la que crees que es positiva) y con la punta negra el
+        cátodo. Si el LED enciende débilmente y el multímetro muestra un valor
+        entre 1.5 V y 3.5 V, esa es la dirección correcta.
+      </li>
+      <div class="highlight-box">
+      <p>
+        <strong>💡Nota importante:</strong> el multímetro en modo diodo envía una corriente muy pequeña (del orden de 1 mA). A veces el LED no enciende visiblemente durante la medición, pero el multímetro igual muestra el V<sub>f</sub>. No te preocupes: eso es normal. Confía en el número que aparece en la pantalla, no en el brillo del LED.
+      </p>
+    </div>
+      <li>
+        <strong>Anota el valor</strong> que muestra el multímetro en tu
+        bitácora.
+      </li>
+      <li>
+        <strong>Invierte las puntas.</strong> ¿Qué muestra el multímetro ahora?
+        (Debería mostrar cero o un valor muy alto, indicando que la corriente
+        no puede pasar.)
+      </li>
+      <li>
+        <strong>Repite con todos los LEDs</strong> y completa la siguiente
+        tabla:
+
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>LED</th>
+                <th>Color</th>
+                <th>V<sub>f</sub> medido</th>
+                <th>V<sub>f</sub> tabla</th>
+                <th>¿Coincide?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🔍 ¿Qué descubriste?</strong> ¿Los V<sub>f</sub> medidos
+        coinciden con los valores de la tabla? Si hay pequeñas diferencias
+        (0.1V o 0.2V), es normal: los LEDs reales varían de un fabricante a
+        otro. Si hay diferencias grandes, revisa si estás midiendo bien la
+        polaridad.
+      </p>
+    </div>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      El V<sub>f</sub> del LED azul es más alto que el del rojo. ¿Qué implica
+      eso para la energía del fotón que se libera? ¿Qué color de luz tiene más
+      energía?
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia la mirada analítica:</strong> el V<sub>f</sub> no es
+      solo un dato técnico: está directamente conectado con la energía del
+      fotón que se emite. Un LED azul requiere más voltaje porque sus fotones
+      tienen más energía. Esa relación entre voltaje y color es la base de toda
+      la optoelectrónica moderna.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección
+      cuando montes el circuito con la pila.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Cuatro científicos, una luz</h2>
+    <p>
+      El LED que hoy ilumina tu pantalla no lo inventó una sola persona. Fueron
+      cuatro científicos, en tres países, durante casi treinta años. Cada uno
+      aportó una pieza, y cada uno enfrentó obstáculos que casi los detienen.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      💡 Nick Holonyak Jr. (1928–2022) — El inventor ridiculizado
+    </h3>
+    <p>
+      Holonyak inventó el primer LED visible en 1962, mientras trabajaba en
+      General Electric. Era hijo de inmigrantes ucranianos y creció en una
+      familia humilde. Cuando presentó su invento, <strong>muchos colegas se
+      rieron</strong>: decían que el LED era un "juguete de laboratorio".
+    </p>
+    <p>
+      Holonyak no se rindió. Predijo que algún día los LEDs reemplazarían a las
+      bombillas. Murió en 2022, habiendo visto su predicción cumplirse.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔵 Isamu Akasaki (1929–2021) y Hiroshi Amano (1960) — Los pioneros del LED azul
+    </h3>
+    <p>
+      Durante décadas, los científicos habían intentado crear un LED azul. Era
+      considerado <strong>imposible</strong>. Los grandes laboratorios de Japón,
+      Estados Unidos y Europa habían fracasado.
+    </p>
+    <p>
+      Pero Akasaki y Amano, trabajando en la Universidad de Nagoya (Japón),
+      lograron el primer LED azul brillante en 1989, usando nitruro de galio.
+      Su trabajo inspiró a otros científicos y abrió el camino hacia la
+      iluminación moderna.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔷 Shuji Nakamura (1954) — El que no tenía el currículum esperado
+    </h3>
+    <p>
+      Nakamura trabajaba en una pequeña empresa desconocida (Nichia) y no tenía
+      doctorado. Mientras los grandes laboratorios gastaban millones, él probó
+      métodos poco convencionales. En 1993, <strong>logró el LED azul
+      comercial</strong>, permitiendo la creación de LEDs blancos y la
+      iluminación moderna.
+    </p>
+    <p>
+      En 2014, los tres —Akasaki, Amano y Nakamura— recibieron el
+      <strong>Premio Nobel de Física</strong> por su trabajo. Gracias a ellos
+      hoy podemos tener pantallas LED, luces eficientes y todo lo que usa luz
+      blanca brillante.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los cuatro comparten un rasgo común: <strong>insistieron cuando otros
+      decían que era imposible</strong>. Holonyak fue ridiculizado. Akasaki y
+      Amano trabajaron en un campo que nadie creía posible. Nakamura no tenía
+      el currículum que se esperaba. Juntos cambiaron la historia de la luz.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos del Premio Nobel de Física, biografías de General Electric y Nichia Corporation.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado8.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado8.png"
+           alt="Infografía: El secreto del semiconductor. Muestra la unión P-N, el voltaje directo por color, el cálculo de resistencia y la vida útil del LED" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: la unión P-N, el
+      voltaje directo, el cálculo de resistencia y la eficiencia del LED.
+      ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g8">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 3
+      </span>
+      <h3>El secreto del semiconductor</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      ¿Cómo puede un material <strong>decidir</strong> si deja pasar la corriente
+      o no? Dale play y descubre la física que hace posible el LED, los chips de
+      IA y toda la electrónica moderna.
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 1rem 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚛️</span>
+        <span><strong>La unión P-N:</strong> la frontera invisible que permite el paso en un solo sentido.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚡</span>
+        <span><strong>El voltaje directo:</strong> por qué los LEDs azules necesitan más voltaje que los rojos.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧮</span>
+        <span><strong>El cálculo con V<sub>f</sub>:</strong> cómo elegir la resistencia correcta para cada LED.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🏆</span>
+        <span><strong>Los cuatro Nobel:</strong> la historia de Holonyak, Akasaki, Amano y Nakamura.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado8.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu calculadora o tu cuaderno a mano: hay cuentas y conceptos que querrás anotar.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero</h3>
+    <ul>
+      <li>
+        ¿Qué diferencia hay entre un conductor, un aislante y un semiconductor?
+        Da un ejemplo de cada uno.
+      </li>
+      <li>
+        Explica con tus palabras cómo funciona la unión P-N y por qué permite
+        el paso de la corriente en un solo sentido.
+      </li>
+      <li>
+        ¿Por qué el V<sub>f</sub> del LED azul es más alto que el del rojo? ¿Qué
+        relación tiene esto con la energía de la luz?
+      </li>
+      <li>
+        Calcula la resistencia necesaria para un LED verde (V<sub>f</sub> = 2.4V)
+        con una fuente de 9V y una corriente deseada de 20 mA.
+      </li>
+      <li>
+        ¿Por qué el LED reemplazó a la bombilla incandescente? Menciona al menos
+        dos razones.
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🔵 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🚪 Mirada comparativa (Grado 7°)</a>
+      <a href="grado10.html" class="btn-estacion">🌈 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

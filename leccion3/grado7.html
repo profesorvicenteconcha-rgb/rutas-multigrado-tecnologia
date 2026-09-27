@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La puerta de un solo sentido — Grado 7°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado7.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g7);">Grado 7° • Mirada Comparativa</span>
+    <h1 style="margin-top: 0.6rem;">🚪 La puerta de un solo sentido</h1>
+    <div class="sub">
+      Por qué el LED solo funciona en una dirección
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card blue">
+    <h2>🚪 Una puerta que solo abre hacia un lado</h2>
+    <p>
+      Imagina una puerta que solo puedes empujar hacia un lado. Si intentas
+      abrirla en el sentido contrario, se bloquea y no pasa nada. Puedes empujar
+      todo lo que quieras, pero la puerta no cede.
+    </p>
+    <p>
+      Esa es la idea central del LED. A diferencia de una resistencia o un cable,
+      que funcionan en cualquier dirección, el LED tiene una <strong>puerta de un
+      solo sentido</strong>. Solo deja pasar la corriente si entra por donde debe.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>💡 Un nombre con historia:</strong> la palabra LED viene del
+        inglés <em>Light Emitting Diode</em> (Diodo Emisor de Luz). "Diodo"
+        significa "dos caminos" en griego, pero paradójicamente describe un
+        componente con <strong>un solo camino permitido</strong>. El LED es un
+        tipo especial de diodo: uno que, al dejar pasar la corriente, emite luz.
+      </p>
+    </div>
+
+    <h3>📍 ¿Dónde hay LEDs a tu alrededor?</h3>
+    <p>
+      Antes de seguir, mira a tu alrededor. Es muy probable que estés rodeado de
+      LEDs sin darte cuenta:
+    </p>
+    <ul>
+      <li>El indicador de encendido del televisor (ese puntito rojo).</li>
+      <li>El flash de la cámara de tu celular.</li>
+      <li>Las luces del árbol de Navidad.</li>
+      <li>El semáforo de la esquina.</li>
+      <li>La linterna de la bicicleta.</li>
+      <li>Los números luminosos del microondas.</li>
+      <li>El control del ventilador, cuando indica que está encendido.</li>
+      <li>Las luces de tu teclado o del mouse, si son de colores.</li>
+    </ul>
+    <p>
+      Todos ellos tienen la misma característica: una puerta que solo deja pasar
+      la corriente en una dirección.
+    </p>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🚰 Una válvula cheque</h2>
+    <p>
+      En las tuberías de agua existen unas piezas llamadas <strong>válvulas
+      de retención</strong>. Su función es permitir el paso del agua en un solo
+      sentido, y bloquearlo al revés. Así evitan que el agua que ya pasó regrese
+      por donde vino.
+    </p>
+    <p>
+      El LED funciona exactamente así, pero con electrones en lugar de agua. Si
+      los electrones vienen por el lado correcto, pasan y encienden la luz. Si
+      vienen por el lado incorrecto, la válvula se cierra y no pasa nada.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/circuito_basico_completo.png" target="_blank" rel="noopener">
+        <img src="img/circuito_basico_completo.png"
+             alt="Circuito con batería, LED verde y resistencia, mostrando la dirección de la corriente" />
+      </a>
+      <figcaption>
+        Fig. 1: Un circuito bien armado. La corriente entra por la pata larga
+        (ánodo) y sale por la pata corta (cátodo). Si se conecta al revés, el
+        LED no enciende.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>🔎 Comparación hidráulica:</strong> así como una válvula cheque
+        protege el agua de un sistema, el LED protege al circuito de una
+        conexión invertida. Y lo mejor: <strong>conectar el LED al revés no lo
+        quema</strong>. Simplemente no enciende, como si estuviera desconectado.
+        Si lo giras, funciona sin problemas. El único peligro real es
+        <strong>conectarlo sin resistencia</strong> en la dirección correcta.
+      </p>
+    </div>
+
+    <h3>🔎 Comparación con otros componentes</h3>
+    <p>
+      El LED es especial porque es el primer componente direccional que conoces.
+      Todos los demás componentes básicos funcionan igual en cualquier sentido:
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>¿Funciona en cualquier dirección?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cable</strong></td>
+            <td style="text-align: center; color: #16a34a; font-weight: bold;">✅ Sí</td>
+          </tr>
+          <tr>
+            <td><strong>Resistencia</strong></td>
+            <td style="text-align: center; color: #16a34a; font-weight: bold;">✅ Sí</td>
+          </tr>
+          <tr>
+            <td><strong>Interruptor</strong></td>
+            <td style="text-align: center; color: #16a34a; font-weight: bold;">✅ Sí</td>
+          </tr>
+          <tr>
+            <td><strong>LED</strong></td>
+            <td style="text-align: center; color: #dc2626; font-weight: bold;">❌ No, solo en una</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Esa dirección obligatoria es lo que hace único al LED. Y por eso vale la
+      pena estudiarlo con detalle.
+    </p>
+
+        <h3>🏠 ¿Dónde puedes ver una válvula cheque?</h3>
+    <p>
+      Las válvulas cheque están escondidas dentro de los aparatos y las tuberías
+      de tu casa. No las ves a simple vista, pero están ahí, trabajando en
+      silencio. Aquí van algunos lugares donde puedes encontrarlas:
+    </p>
+    <ul>
+      <li>
+        <strong>El tanque del inodoro.</strong> El mecanismo que deja salir el
+        agua tiene una válvula que evita que regrese al tanque.
+      </li>
+      <li>
+        <strong>La lavadora.</strong> En la manguera de desagüe hay una válvula
+        antirretorno para que el agua sucia no se devuelva al electrodoméstico.
+      </li>
+      <li>
+        <strong>El lavaplatos o lavadero.</strong> Igual que la lavadora: evita
+        que el agua de la tubería regrese.
+      </li>
+      <li>
+        <strong>La bomba de agua o el tanque en el techo.</strong> Si tu casa
+        tiene bomba, hay una válvula cheque para que el agua no se devuelva
+        cuando la bomba se apaga.
+      </li>
+      <li>
+        <strong>El calentador de agua.</strong> Muchos tienen una válvula de
+        seguridad en la entrada de agua fría.
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🔍 ¿Quieres ver una de verdad?</strong> Pídele a un adulto que
+        te muestre la manguera de desagüe de la lavadora. También puedes buscar
+        en internet fotos de <em>"válvula cheque lavadora"</em> o
+        <em>"válvula antirretorno piscina"</em>. Vas a reconocer la forma: un
+        cuerpo con dos extremos y, casi siempre, una <strong>flecha grabada</strong>
+        que indica la dirección permitida del flujo.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        <strong>💡 Detalle interesante:</strong> esa flecha grabada en la válvula
+        es la misma idea que el triángulo del símbolo del LED. Los ingenieros
+        siempre marcan la dirección de un componente que solo funciona en un
+        sentido. A continuación vas a ver cómo se hace con el LED.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>📐 El símbolo del LED: el mapa de la puerta</h2>
+    <p>
+      En los planos eléctricos, el LED se representa con un símbolo que cuenta
+      su historia. Cada parte del símbolo significa algo:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/explicacion_partes_led.png" target="_blank" rel="noopener">
+        <img src="img/explicacion_partes_led.png"
+             alt="Símbolo del LED con sus partes: triángulo, barra y flechas" />
+      </a>
+      <figcaption>
+        Fig. 2: El símbolo del LED con sus partes explicadas.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li>
+        <strong>El triángulo:</strong> indica la <em>dirección permitida</em>
+        de la corriente. La corriente solo puede fluir en el sentido que apunta
+        el triángulo (del ánodo al cátodo).
+      </li>
+      <li>
+        <strong>La barra vertical:</strong> representa la <em>pared</em> que
+        bloquea el paso al revés. Es como la puerta cerrada que no cede.
+      </li>
+      <li>
+        <strong>Las flechas hacia afuera:</strong> indican que el LED
+        <em>emite luz</em>. Son las "señales de salida" que dicen: "aquí sale
+        energía en forma de luz".
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Truco para recordar:</strong> el triángulo siempre apunta
+        hacia la barra. Eso significa que la corriente entra por el lado del
+        triángulo (ánodo) y sale por el lado de la barra (cátodo). Si lo
+        conectas al revés, el triángulo "choca" contra la barra y no pasa nada.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        Es la misma idea que la <strong>flecha grabada</strong> en las válvulas
+        cheque: una marca visual que indica la dirección permitida del flujo.
+        Los ingenieros siempre marcan la dirección de un componente que solo
+        funciona en un sentido.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>🌐 Luz viajando por el mundo</h2>
+    <p>
+      Los cables de cobre conducen la electricidad, pero tienen un límite: a
+      distancias muy largas, las señales se debilitan y se pierden. Por eso los
+      ingenieros inventaron la <strong>fibra óptica</strong>: en lugar de
+      conducir electricidad por cobre, conduce luz por hilos de vidrio del
+      grosor de un cabello.
+    </p>
+    <p>
+      Como la luz viaja más rápido que la electricidad por un cable de cobre,
+      se pueden enviar muchísimos más datos al mismo tiempo. Cada mensaje que
+      envías por WhatsApp, cada video que ves en YouTube, viaja como pulsos
+      de luz por cables submarinos que cruzan los océanos.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g7); background: #eaf4f8;">
+      <p>
+        <strong>🌐 Dato curioso:</strong> la luz que viaja por un cable de
+        fibra óptica va a casi 200,000 kilómetros por segundo. Eso significa
+        que en un segundo podría darle la vuelta al mundo cinco veces.
+      </p>
+    </div>
+  </section>
+
+  <!-- Taller del detective -->
+  <section class="taller-electroscopio">
+    <h2>🔍 Taller: El detective de polaridad</h2>
+    <p>
+      El LED tiene una puerta de un solo sentido, pero ¿cómo descubrir cuál es
+      el lado correcto? Aquí es donde entra el papel del detective. Vamos a
+      investigar varios LEDs para descubrir sus polaridades usando las tres
+      pistas clásicas y, si tienes acceso, una herramienta profesional: el
+      multímetro.
+    </p>
+    <p>
+      Lo más interesante: <strong>vas a poder identificarlo incluso si las
+      patas están cortadas al mismo largo</strong>, como suele pasar con los
+      LEDs reciclados de juguetes viejos.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/tres_pistas_led.png" target="_blank" rel="noopener">
+        <img src="img/tres_pistas_led.png"
+             alt="Infografía con las tres pistas para identificar el ánodo y el cátodo de un LED: pata larga, muesca lateral e interior con yunque y poste" />
+      </a>
+      <figcaption>
+        Fig. 3: Las tres pistas del detective. Cuando las patas están cortadas,
+        las pistas 2 y 3 son las más confiables.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Tres o cuatro LEDs (pueden ser reciclados de juguetes viejos).</li>
+      <li>Una pila de 3V (CR2032) con su portapilas.</li>
+      <li>Una resistencia de 220 Ω o 330 Ω.</li>
+      <li>Cables caimán (o cables comunes).</li>
+      <li>
+        <strong>Cinta adhesiva</strong> (de papel o negra aislante). Sirve para
+        sostener las patas del LED y los cables si no tienes cables caimán.
+      </li>
+      <li>Una lupa (opcional, pero ayuda mucho).</li>
+      <li>
+        <strong>Multímetro</strong> (opcional, si tienes acceso en el colegio).
+      </li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Reúne los LEDs.</strong> Si tienes LEDs nuevos, mira la pata
+        más larga. Si tienes LEDs reciclados, revisa las tres pistas.
+      </li>
+      <li>
+        <strong>Pista 1 — Pata larga.</strong> En un LED nuevo, la pata más
+        larga es el <strong>ánodo (+)</strong>. La más corta es el
+        <strong>cátodo (−)</strong>.
+      </li>
+      <li>
+        <strong>Pista 2 — Muesca lateral.</strong> Mira el borde de plástico
+        del LED. Uno de los lados es plano, no redondo. Ese lado plano siempre
+        marca el <strong>cátodo (−)</strong>.
+      </li>
+      <li>
+        <strong>Pista 3 — El interior del LED.</strong> Sostén el LED contra
+        una luz y mira a través del plástico. Verás dos piezas metálicas. La
+        más grande (el yunque) es el <strong>cátodo (−)</strong>. La más
+        pequeña (el poste) es el <strong>ánodo (+)</strong>.
+      </li>
+      <li>
+        <strong>Verifica con el circuito.</strong> Monta el circuito: pila →
+        resistencia → LED → pila. Prueba con el LED en una dirección y luego
+        en la otra.
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala para
+        cada LED:
+
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>LED</th>
+                <th>Pata larga</th>
+                <th>Muesca</th>
+                <th>Interior</th>
+                <th>¿Encendió?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <h3>🔬 Verificación con multímetro (opcional)</h3>
+    <p>
+      Si tienes acceso a un multímetro en el colegio, puedes hacer una
+      verificación más precisa. El multímetro tiene un <strong>modo diodo</strong>
+      que sirve exactamente para esto:
+    </p>
+    <ol>
+      <li>Gira la perilla del multímetro hasta el símbolo del diodo.</li>
+      <li>
+        Toca con la punta roja una pata del LED, y con la punta negra la otra.
+      </li>
+      <li>
+        Si el multímetro muestra un número pequeño (entre 1.5V y 3.5V), el
+        LED está en la dirección correcta: la punta roja toca el ánodo (+).
+      </li>
+      <li>
+        Si no muestra nada (o muestra un valor muy alto), el LED está al revés.
+      </li>
+    </ol>
+    <p>
+      Compara los resultados del multímetro con lo que las tres pistas te
+      dijeron. ¿Coinciden siempre?
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>🔍 ¿Qué descubriste?</strong> Comparando tus LEDs, ¿cuál pista
+        coincidió siempre con el resultado del circuito? Esa es tu pista más
+        confiable. Cuando encuentres un LED reciclado con patas cortadas,
+        empieza por ahí.
+      </p>
+    </div>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      El LED funciona como una puerta de un solo sentido. ¿Qué otras cosas de
+      tu vida diaria funcionan así? Piensa en puertas, torniquetes, válvulas o
+      cualquier objeto que solo permita el paso en una dirección.
+    </p>
+
+    <div class="puente-corriente">
+      <strong>Puente hacia el semiconductor:</strong> la puerta de un solo
+      sentido del LED no es una pieza mecánica. Está en el material
+      semiconductor, en una "frontera invisible" que solo se puede cruzar en un
+      sentido. Esa frontera es lo que hace único al LED: no es un simple
+      bombillo, es una puerta que solo se abre hacia un lado.
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3V o 5V. Nunca uses
+      voltajes de pared (110V o 220V). Siempre usa la resistencia de protección.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 De la risa al Premio Nobel</h2>
+    <p>
+      La pantalla de tu celular está iluminada por millones de LEDs. Detrás de
+      cada uno de ellos hay una historia de científicos que insistieron cuando
+      otros decían que era imposible. Aquí van dos de esos personajes.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      💡 Nick Holonyak Jr. (1928–2022) — El inventor ridiculizado
+    </h3>
+    <p>
+      Holonyak inventó el primer LED visible en 1962, mientras trabajaba en
+      General Electric. Era hijo de inmigrantes ucranianos y creció en una
+      familia humilde. Cuando presentó su invento, <strong>muchos colegas se
+      rieron</strong>: decían que el LED era un "juguete de laboratorio", incapaz
+      de reemplazar a las bombillas incandescentes.
+    </p>
+    <p>
+      Holonyak no se rindió. Predijo que algún día los LEDs reemplazarían a las
+      bombillas. Murió en 2022, habiendo visto su predicción cumplirse: los
+      LEDs están en semáforos, pantallas, linternas y en casi cualquier
+      dispositivo moderno.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔷 Shuji Nakamura — El que no tenía el currículum esperado
+    </h3>
+    <p>
+      Treinta años después de Holonyak, otro científico enfrentó un desafío
+      aún más grande: crear un LED azul. Durante décadas, los grandes
+      laboratorios de Japón, Estados Unidos y Europa habían fracasado. Era
+      considerado <strong>imposible</strong>.
+    </p>
+    <p>
+      Shuji Nakamura trabajaba en una pequeña empresa desconocida (Nichia) y
+      no tenía doctorado. Mientras los grandes laboratorios gastaban millones
+      en investigaciones complicadas, él probó métodos poco convencionales. En
+      1993, <strong>logró el LED azul comercial</strong>. Su descubrimiento
+      permitió crear LEDs blancos (combinando azul con fósforo amarillo), y con
+      ellos la iluminación moderna.
+    </p>
+    <p>
+      En 2014, Nakamura recibió el <strong>Premio Nobel de Física</strong> por
+      su trabajo. Su historia demuestra que no siempre gana quien tiene el
+      mejor currículum, sino quien insiste cuando otros se rinden.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      Los dos comparten un rasgo común: <strong>insistieron cuando otros
+      decían que era imposible</strong>. Holonyak fue ridiculizado. Nakamura
+      trabajaba en el anonimato. Juntos cambiaron la historia de la luz.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos del Premio Nobel de Física, biografías de General Electric y Nichia Corporation.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado7.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado7.png"
+           alt="Infografía: La puerta de un solo sentido. Muestra la analogía de la válvula de retención, el símbolo del LED, la fibra óptica y las tres pistas del detective" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: la puerta de un
+      solo sentido, el símbolo del LED, la fibra óptica y las tres pistas del
+      detective. ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g7">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 2
+      </span>
+      <h3>La puerta de un solo sentido</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 6 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🚪</span>
+        <span><strong>El torniquete:</strong> por qué la corriente solo puede pasar en una dirección.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📐</span>
+        <span><strong>El símbolo del LED:</strong> cómo leer el mapa de la puerta en un plano eléctrico.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌐</span>
+        <span><strong>Luz que viaja:</strong> cómo los datos de internet viajan por cables de fibra óptica.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔷</span>
+        <span><strong>Nakamura y el LED azul:</strong> la historia del científico que logró lo imposible.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado7.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchenlo en familia y comenten cuál de los cuatro temas les resultó más claro.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: puertas que solo abren hacia un lado</h3>
+    <ul>
+      <li>
+        Explica con tus palabras qué significa que el LED sea una "puerta de un
+        solo sentido".
+      </li>
+      <li>
+        ¿Qué analogía del mundo real te ayuda más a entender la polaridad del
+        LED? ¿La puerta, el torniquete o la válvula de retención?
+      </li>
+      <li>
+        ¿Qué representa cada parte del símbolo del LED (triángulo, barra,
+        flechas)?
+      </li>
+      <li>
+        ¿Por qué la fibra óptica permite enviar más datos que el cable de cobre?
+      </li>
+      <li>
+        ¿Qué relación encuentras entre la historia de Nakamura y la idea de "no
+        rendirse cuando otros dicen que es imposible"?
+      </li>
+      <li>
+        ¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?
+      </li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🔵 Mirada curiosa (Grado 6°)</a>
+      <a href="grado8.html" class="btn-estacion">⚛️ Mirada estructural (Grado 8°)</a>
+      <a href="grado10.html" class="btn-estacion">🌈 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
