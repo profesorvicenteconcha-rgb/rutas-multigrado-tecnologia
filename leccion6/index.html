@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El control del flujo — Cuatro Miradas</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body id="top">
+<div class="container">
+
+  <header class="header">
+    <h1 style="color: var(--c-portal);">🎛️ El control del flujo</h1>
+    <div class="sub">
+      <strong>I.E. Escuela Normal Superior Miguel de Cervantes Saavedra</strong><br />
+      Área de Tecnología e Informática • Guacarí, Valle del Cauca
+    </div>
+  </header>
+
+  <div class="panel-bienvenida">
+    <h2>🎛️ Cuatro miradas, un mismo control</h2>
+    <p>
+      La corriente eléctrica es poderosa, pero también peligrosa. Si fluye sin
+      control, puede quemar componentes o dejar un circuito inactivo. Por eso
+      los ingenieros inventaron un componente simple pero esencial: el
+      <strong>interruptor</strong>. Es el que decide cuándo la corriente pasa
+      y cuándo no.
+    </p>
+    <p style="margin-top: 0.8rem; padding: 0.6rem 0.9rem; background: rgba(255,255,255,0.15); border-left: 3px solid rgba(255,255,255,0.5); border-radius: 0 8px 8px 0; font-size: 0.95rem;">
+      <strong>💡 Dato curioso:</strong> el interruptor de la luz de tu casa se
+      ve casi igual desde hace más de 100 años. Su forma es tan simple y tan
+      efectiva que casi no ha cambiado.
+    </p>
+    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.25);">
+      <strong>🧠 ¿Y qué tiene que ver esto con la Inteligencia Artificial?</strong>
+      Mucho. Los chips que entrenan modelos de IA contienen <strong>miles de
+      millones de interruptores microscópicos</strong> llamados transistores,
+      que se encienden y se apagan millones de veces por segundo. Sin
+      interruptores, no habría computadoras, no habría IA. Es el componente
+      más simple y más importante de toda la electrónica.
+    </p>
+  </div>
+
+  <!-- ======================================================================
+       Cómo usar esta ruta
+       ====================================================================== -->
+  <section class="card slate">
+    <h2>🧭 ¿Cómo usar esta ruta?</h2>
+    <p>Tres pasos sencillos para sacarle el máximo provecho:</p>
+    <ol>
+      <li>
+        <strong>Empieza por tu grado.</strong> Cada mirada se sostiene por sí sola.
+        Si estás en grado 8°, entra directamente a la <em>Mirada Estructural</em>.
+      </li>
+      <li>
+        <strong>Escucha el audio al terminar de leer.</strong> Cada mirada tiene un
+        podcast que resume los temas de la página. Dura entre 5 y 7 minutos.
+      </li>
+      <li>
+        <strong>Descarga la infografía.</strong> Es un mapa visual que sintetiza todo
+        en una sola imagen.
+      </li>
+    </ol>
+    <p style="margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed var(--border); font-size: 0.92rem; color: var(--text-mid);">
+      <strong>🎁 Además:</strong> si te da curiosidad, explora las otras tres miradas.
+      Cada una cuenta el mismo fenómeno de otra manera.
+    </p>
+
+    <h3 style="margin-top: 1.5rem;">📦 ¿Qué encontrarás en cada mirada?</h3>
+    <ul style="list-style: none; padding: 0; margin-top: 0.6rem; display: grid; gap: 0.5rem;">
+      <li>
+        <strong>📄 Guía PDF:</strong> la versión imprimible, con el taller y el
+        espacio para anotaciones.
+      </li>
+      <li>
+        <strong>🎧 Podcast:</strong> un resumen narrado que refuerza los temas principales.
+      </li>
+      <li>
+        <strong>🗺️ Infografía:</strong> un mapa visual que sintetiza todo en una sola
+        imagen.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======================================================================
+       Conceptos que verás todo el tiempo
+       ====================================================================== -->
+  <section class="card">
+    <h2>📏 Seis conceptos que verás todo el tiempo</h2>
+    <p>
+      A lo largo de esta ruta vas a encontrarte con seis conceptos clave.
+      Vale la pena conocerlos desde el principio:
+    </p>
+    <ul>
+      <li>
+        <strong>Interruptor:</strong> componente que abre o cierra el paso de
+        la corriente. Es como un puente levadizo para los electrones.
+      </li>
+      <li>
+        <strong>Abierto / Cerrado:</strong> los dos estados del interruptor.
+        ¡Ojo! En electrónica, "abierto" significa apagado (el camino está
+        cortado) y "cerrado" significa encendido (el camino está completo).
+      </li>
+      <li>
+        <strong>Estado de reposo:</strong> el estado natural del interruptor,
+        sin que nadie lo esté accionando. Es la referencia para definir si un
+        interruptor es NO o NC.
+      </li>
+      <li>
+        <strong>Pulsador:</strong> interruptor momentáneo. Solo actúa mientras
+        se mantiene presionado. Como el timbre de una puerta.
+      </li>
+      <li>
+        <strong>Palanca:</strong> interruptor fijo. Mantiene su posición hasta
+        que alguien lo cambia. Como el interruptor de la luz.
+      </li>
+      <li>
+        <strong>NO / NC:</strong> Normalmente Abierto (empieza apagado) y
+        Normalmente Cerrado (empieza encendido). El "normalmente" se refiere
+        al estado de reposo, sin que nadie accione el interruptor.
+      </li>
+    </ul>
+    <p>
+      Con estos seis conceptos, entenderás todo lo que viene.
+    </p>
+  </section>
+
+  <!-- ======================================================================
+       Las cuatro miradas (glosario de arquetipos)
+       ====================================================================== -->
+  <section class="card">
+    <h2>🎭 Las cuatro miradas: ¿por qué se llaman así?</h2>
+    <p>
+      Cada mirada tiene un nombre que describe <em>cómo</em> se acerca al
+      interruptor. No son niveles de dificultad, ni unas son mejores que otras:
+      son <strong>formas distintas de pensar</strong>.
+    </p>
+
+    <div class="tabla-scroll" style="margin-top: 1rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>Mirada</th>
+            <th>Se pregunta…</th>
+            <th>Pensada para</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color: var(--c-g6);">🔌 Curiosa</strong></td>
+            <td>¿Cómo se prende y se apaga algo?</td>
+            <td>Grado 6° — tipos de interruptores y experimentación</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g7);">🚰 Comparativa</strong></td>
+            <td>¿A qué se parece un interruptor?</td>
+            <td>Grado 7° — analogías: portero, torniquete, puerta</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g8);">🧱 Estructural</strong></td>
+            <td>¿Cómo se dibuja y cómo se conecta?</td>
+            <td>Grado 8° — simbología, conexión de 4 patas, contactos</td>
+          </tr>
+          <tr>
+            <td><strong style="color: var(--c-g10);">🧠 Analítica</strong></td>
+            <td>¿Cómo se controla sin dedos?</td>
+            <td>Grado 10° — transistor, relé, automatización, a prueba de fallos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Grid de tarjetas
+       ====================================================================== -->
+  <div class="grid-portal">
+
+    <!-- Mirada Curiosa -->
+    <div class="card orange">
+      <span class="badge-grado" style="background: var(--c-g6);">Grado 6° • Mirada Curiosa</span>
+      <h3 style="margin-bottom: 0.4rem;">🟠 El puente levadizo</h3>
+      <p style="font-size: 0.9rem;">
+        ¿Cómo se prende y se apaga la corriente? Pulsadores, palancas y DIP
+        switches. Un primer acercamiento con actividades para el cuerpo.
+      </p>
+      <a href="grado6.html" class="btn-ingresar" style="background: var(--c-g6);">🚀 Explorar mirada curiosa</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado6.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado6.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado6.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Comparativa -->
+    <div class="card blue">
+      <span class="badge-grado" style="background: var(--c-g7);">Grado 7° • Mirada Comparativa</span>
+      <h3 style="margin-bottom: 0.4rem;">🔵 El portero del circuito</h3>
+      <p style="font-size: 0.9rem;">
+        Torniquetes, porteros y puertas. Las analogías que explican el
+        interruptor, la lógica NO/NC y el circuito de escalera.
+      </p>
+      <a href="grado7.html" class="btn-ingresar" style="background: var(--c-g7);">🚀 Explorar mirada comparativa</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado7.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado7.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado7.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Estructural -->
+    <div class="card purple">
+      <span class="badge-grado" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+      <h3 style="margin-bottom: 0.4rem;">🟣 El mapa del interruptor</h3>
+      <p style="font-size: 0.9rem;">
+        Simbología SPST y SPDT en ambos estilos (europeo y americano). La
+        conexión de 4 patas. Los contactos y el rebote mecánico.
+      </p>
+      <a href="grado8.html" class="btn-ingresar" style="background: var(--c-g8);">🚀 Explorar mirada estructural</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado8.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado8.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado8.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+    <!-- Mirada Analítica -->
+    <div class="card green">
+      <span class="badge-grado" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+      <h3 style="margin-bottom: 0.4rem;">🟢 El interruptor sin dedos</h3>
+      <p style="font-size: 0.9rem;">
+        Transistores, relés y automatización. Por qué los chips que entrenan
+        modelos de IA contienen miles de millones de interruptores.
+      </p>
+      <a href="grado10.html" class="btn-ingresar" style="background: var(--c-g10);">🚀 Explorar mirada analítica</a>
+      <div class="recursos-descarga">
+        <a href="pdf/grado10.pdf" download class="btn-res-mini">📄 Guía PDF</a>
+        <a href="audio/grado10.mp3" download class="btn-res-mini">🎧 Podcast</a>
+        <a href="img/infografia_grado10.png" download class="btn-res-mini">🗺️ Infografía</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ======================================================================
+       Mini-glosario
+       ====================================================================== -->
+  <section class="card slate">
+    <h2>📖 Mini-glosario de la ruta</h2>
+    <p>
+      Estos son los términos que encontrarás una y otra vez. Vale la pena
+      tenerlos a mano:
+    </p>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Término</th>
+            <th>Significado breve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Interruptor</strong></td>
+            <td>Componente que abre o cierra el paso de la corriente.</td>
+          </tr>
+          <tr>
+            <td><strong>Pulsador</strong></td>
+            <td>Interruptor momentáneo. Actúa solo mientras se mantiene presionado.</td>
+          </tr>
+          <tr>
+            <td><strong>Palanca</strong></td>
+            <td>Interruptor fijo. Mantiene su posición hasta que se cambia.</td>
+          </tr>
+          <tr>
+            <td><strong>NO / NC</strong></td>
+            <td>Normalmente Abierto (empieza apagado) / Normalmente Cerrado (empieza encendido).</td>
+          </tr>
+          <tr>
+            <td><strong>Contacto</strong></td>
+            <td>Cada uno de los puntos metálicos que se unen o separan al accionar el interruptor.</td>
+          </tr>
+          <tr>
+            <td><strong>SPST / SPDT</strong></td>
+            <td>Tipos de interruptor según sus contactos: un polo un tiro / un polo doble tiro.</td>
+          </tr>
+          <tr>
+            <td><strong>Conmutador</strong></td>
+            <td>Interruptor de tres terminales que permite elegir entre dos caminos. Es el componente que hace posible el circuito de escalera.</td>
+          </tr>
+          <tr>
+            <td><strong>Transistor</strong></td>
+            <td>Interruptor electrónico microscópico. Se acciona con corriente, no con el dedo.</td>
+          </tr>
+          <tr>
+            <td><strong>A prueba de fallos</strong></td>
+            <td>Principio de diseño: si algo falla, el sistema debe quedar en el estado más seguro.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Taller compartido: El puente levadizo humano
+       ====================================================================== -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: El puente levadizo humano</h2>
+    <p>
+      Antes de tocar cables, vas a representar con tu cuerpo cómo funciona un
+      interruptor. Después, construirás tu propio interruptor casero con
+      materiales sencillos.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en el
+        aula (con el kit del colegio) o llevarlo a casa si tienes acceso a los
+        materiales. Tu docente te dirá cuál elegir.
+      </p>
+    </div>
+
+    <h3>🎭 Actividad 1: El puente levadizo humano</h3>
+    <p>
+      En el patio o en un espacio amplio, forma una fila con tus compañeros,
+      tomados de las manos.
+    </p>
+    <ol>
+      <li>
+        El primero de la fila es la "pila" y empuja suavemente al segundo.
+      </li>
+      <li>
+        Cada estudiante pasa el empuje al siguiente hasta llegar al final.
+      </li>
+      <li>
+        Ahora, uno de los estudiantes de la fila <strong>suelta las
+        manos</strong>: el empuje se detiene.
+      </li>
+      <li>
+        Si el estudiante que soltó las manos <strong>vuelve a tomarlas</strong>:
+        el empuje continúa.
+      </li>
+    </ol>
+    <p>
+      <strong>Pregunta para reflexionar:</strong> ¿Qué representa el
+      estudiante que suelta las manos? ¿Y el que las vuelve a tomar?
+    </p>
+
+    <h3>🧰 Actividad 2: Construye tu propio interruptor</h3>
+    <p>
+      Vas a construir un interruptor casero con materiales que ya tienes en
+      casa. La idea es crear un "puente" que se pueda cerrar y abrir.
+    </p>
+
+    <h4>Materiales</h4>
+    <ul>
+      <li>Una pila de 3 V o 5 V.</li>
+      <li>Un LED.</li>
+      <li>Una resistencia de 330 Ω.</li>
+      <li>Cables caimán.</li>
+      <li>Un clip metálico.</li>
+      <li>Un trozo pequeño de cartón o cartulina.</li>
+      <li>Cinta adhesiva.</li>
+    </ul>
+
+    <h4>Procedimiento</h4>
+    <ol>
+      <li>
+        Fija el clip metálico a un extremo del cartón con cinta adhesiva, de
+        modo que pueda girar como una pequeña palanca.
+      </li>
+      <li>
+        Fija un extremo del cable caimán debajo del clip, y el otro extremo
+        del cable a la pila.
+      </li>
+      <li>
+        Conecta el LED y la resistencia en serie con la pila y el clip.
+      </li>
+      <li>
+        Cuando el clip <strong>toque</strong> el otro extremo del cable, el
+        circuito se cierra y el LED enciende.
+      </li>
+      <li>
+        Cuando el clip <strong>se levante</strong>, el circuito se abre y el
+        LED se apaga.
+      </li>
+    </ol>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      ¿Por qué el clip metálico funciona como interruptor? ¿Qué pasaría si
+      fuera de plástico en lugar de metal?
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3 V o 5 V. Nunca uses
+      voltajes de pared (110 V o 220 V). Siempre usa resistencias de protección
+      con los LEDs.
+    </p>
+  </section>
+
+  <!-- ======================================================================
+       Cápsula histórica
+       ====================================================================== -->
+  <section class="capsula-edison">
+    <h2>📜 El interruptor que salvó vidas</h2>
+    <p>
+      A finales del siglo XIX, los trenes eléctricos empezaron a reemplazar a
+      los de vapor. Eran más rápidos y limpios, pero también más peligrosos:
+      si el maquinista se desmayaba o soltaba los controles, el tren seguía
+      avanzando sin conductor.
+    </p>
+    <p>
+      En 1902, un inventor afroamericano llamado <strong>Granville Woods</strong>
+      (1856–1910) tuvo una idea revolucionaria: diseñó un sistema que
+      <strong>detenía el tren automáticamente si el maquinista dejaba de
+      presionar un interruptor</strong>. Era un interruptor que debía
+      mantenerse accionado todo el tiempo; si el maquinista lo soltaba, el
+      tren se detenía.
+    </p>
+    <p>
+      Ese invento, llamado <strong>"dead man's switch"</strong> (interruptor
+      del hombre muerto), se convirtió en un estándar de seguridad en trenes,
+      ascensores, cortadoras industriales y muchas otras máquinas. Hoy es un
+      principio básico de la ingeniería: <strong>los sistemas deben fallar de
+      forma segura</strong>.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🌍 El legado: a prueba de fallos en el mundo moderno
+    </h3>
+    <p>
+      El principio de Woods se aplica hoy en todas partes:
+    </p>
+    <ul>
+      <li>
+        <strong>Ascensores:</strong> si el cable se rompe, los frenos se
+        activan automáticamente.
+      </li>
+      <li>
+        <strong>Semáforos:</strong> si falla la energía, las luces se apagan
+        todas (en lugar de quedarse en verde).
+      </li>
+      <li>
+        <strong>Máquinas industriales:</strong> si alguien abre la puerta de
+        seguridad, la máquina se detiene.
+      </li>
+      <li>
+        <strong>Marcapasos:</strong> si la batería se agota, el dispositivo
+        pasa a un modo de seguridad.
+      </li>
+    </ul>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>los buenos ingenieros no diseñan para el éxito, sino
+      para el fracaso</strong>. Asumen que algo puede salir mal, y diseñan el
+      sistema para que, cuando eso ocurra, el resultado sea seguro.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de la patente de Granville Woods y biografías de la ingeniería ferroviaria.</span>
+  </section>
+
+  <!-- ======================================================================
+       Acompañamiento familiar
+       ====================================================================== -->
+  <div class="info-familia">
+    <h3>🏡 Orientación para padres y cuidadores</h3>
+    <p>
+      Esta ruta incluye varias actividades que pueden hacerse en familia, pero
+      <strong>ninguna requiere que usted firme nada</strong>. La idea no es
+      controlar, sino compartir. El estudiante puede:
+    </p>
+    <ul style="margin-top: 0.6rem;">
+      <li>
+        Buscar interruptores en la casa: el de la luz, el timbre, el del
+        microondas, el del computador.
+      </li>
+      <li>
+        Comparar cómo funcionan distintos interruptores: unos se presionan
+        (pulsador), otros se mueven (palanca).
+      </li>
+      <li>
+        Construir el interruptor casero con clip y cartón, y probarlo con un
+        LED.
+      </li>
+    </ul>
+    <p style="margin-top: 0.6rem;">
+      Después de cada actividad, el estudiante escribirá una <strong>nota
+      breve</strong> contando lo que descubrió. Le recomendamos leer esa nota,
+      pero no corregirla. Es su voz, no un examen.
+    </p>
+  </div>
+
+  <!-- ======================================================================
+       Volver arriba
+       ====================================================================== -->
+  <p style="text-align: center; margin: 2.5rem 0 0.5rem;">
+    <a href="#top"
+       style="display: inline-block; padding: 0.6rem 1.2rem; background: #fff; color: var(--text-dark); border: 1px solid var(--border); border-radius: 999px; font-size: 0.88rem; font-weight: 600; text-decoration: none;">
+      ↑ Volver arriba
+    </a>
+  </p>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+    <p style="font-size: 0.78rem; color: var(--text-soft); margin-top: 0.8rem;">
+      Versión 1.0 — Octubre de 2026
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

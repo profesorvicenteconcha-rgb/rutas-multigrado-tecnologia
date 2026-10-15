@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El interruptor sin dedos — Grado 10°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🟢 El interruptor sin dedos</h1>
+    <div class="sub">
+      Transistores, relés y el principio de seguridad
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>⚡ El límite de la velocidad humana</h2>
+    <p>
+      Un interruptor mecánico es una maravilla de la ingeniería: simple,
+      confiable, económico. Pero tiene un límite: <strong>necesita un dedo
+      humano para accionarlo</strong>. Y el ser humano más rápido del mundo
+      apenas puede pulsar un botón unas 10 veces por segundo.
+    </p>
+    <p>
+      Sin embargo, un chip moderno ejecuta <strong>miles de millones de
+      operaciones por segundo</strong>. ¿Cómo se controla un interruptor a esa
+      velocidad? La respuesta: con un interruptor que <strong>no necesita
+      dedos</strong>. Se acciona con corriente eléctrica.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Idea clave:</strong> para automatizar, hace falta un
+        interruptor que se accione con electricidad en lugar de con la mano.
+        Ese componente existe desde 1947 y se llama <strong>transistor</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔌 El transistor: una corriente que controla a otra</h2>
+    <p>
+      El <strong>transistor</strong> es un componente semiconductor con tres
+      terminales. Se comporta como un interruptor, pero con una diferencia
+      crucial:
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        En un interruptor mecánico, un <em>dedo</em> controla el paso de la
+        corriente. En un transistor, <strong>una pequeña corriente controla el
+        paso de una corriente mayor</strong>.
+      </p>
+    </div>
+
+    <h3>🧠 Los tres terminales del transistor</h3>
+    <p>
+      Un transistor bipolar (BJT) tiene tres terminales:
+    </p>
+    <ul>
+      <li>
+        <strong>Emisor:</strong> por aquí <em>entra</em> la corriente
+        principal.
+      </li>
+      <li>
+        <strong>Colector:</strong> por aquí <em>sale</em> la corriente
+        principal.
+      </li>
+      <li>
+        <strong>Base:</strong> este es el "botón". Una pequeña corriente en la
+        base controla el paso de una corriente mucho mayor entre emisor y
+        colector.
+      </li>
+    </ul>
+
+    <p>
+      Es como una <strong>válvula hidráulica</strong>: un pequeño esfuerzo en
+      la palanca permite controlar el paso de un caudal enorme.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La magia del transistor:</strong> no solo amplifica la
+        corriente, sino que puede accionarse millones de veces por segundo. Un
+        interruptor mecánico se desgasta con el uso (y solo puedes pulsarlo
+        unas 10 veces por segundo). Un transistor puede conmutar millones de
+        veces por segundo durante años sin desgastarse, porque no tiene partes
+        móviles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🧲 El relé: un puente entre dos mundos</h2>
+    <p>
+      Antes de que existieran los transistores, ya existía otro interruptor
+      automático: el <strong>relé</strong>. Es un componente
+      electromagnético que combina una bobina y un contacto mecánico.
+    </p>
+
+    <h3>🔍 ¿Cómo funciona?</h3>
+    <ol>
+      <li>
+        Una pequeña corriente pasa por una <strong>bobina</strong> y crea un
+        campo magnético.
+      </li>
+      <li>
+        Ese campo magnético <strong>atrae una pieza metálica móvil</strong>
+        (la armadura).
+      </li>
+      <li>
+        La armadura, al moverse, <strong>cierra o abre un contacto</strong>
+        eléctrico.
+      </li>
+      <li>
+        Cuando la corriente de la bobina desaparece, el campo magnético se
+        apaga y el contacto vuelve a su posición original.
+      </li>
+    </ol>
+
+    <h3>⚖️ Ventajas y desventajas del relé</h3>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Puede controlar corrientes muy altas (motores, luces de casa).</td>
+            <td>Es más lento que el transistor (milisegundos vs. nanosegundos).</td>
+          </tr>
+          <tr>
+            <td>Aísla eléctricamente el circuito de control del de potencia.</td>
+            <td>Tiene partes móviles y se desgasta con el uso.</td>
+          </tr>
+          <tr>
+            <td>Es muy robusto y confiable.</td>
+            <td>Produce un "clic" audible y ruido eléctrico al conmutar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 ¿Dónde se usa el relé?</strong> En los automóviles, en las
+        lavadoras, en los sistemas de riego automático, en los aires
+        acondicionados. Cada vez que un aparato necesita controlar una corriente
+        grande con una señal pequeña, hay un relé (o un componente similar)
+        haciendo el trabajo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>🛡️ El principio de seguridad: a prueba de fallos</h2>
+    <p>
+      Los interruptores que controlan sistemas críticos deben diseñarse
+      pensando en qué pasa <strong>si algo falla</strong>. A este principio de
+      diseño se le llama <strong>"a prueba de fallos"</strong>: si algo sale
+      mal, el sistema debe quedar en el estado <em>más seguro posible</em>.
+    </p>
+
+    <h3>⚠️ Los dos tipos de fallo</h3>
+    <p>
+      Cuando un sistema falla, hay dos maneras de fallar:
+    </p>
+    <ul>
+      <li>
+        <strong>Falla activa (peligrosa):</strong> el sistema se queda
+        <em>encendido</em> cuando debería apagarse. Por ejemplo, una máquina
+        que sigue funcionando aunque alguien abra la puerta de seguridad.
+      </li>
+      <li>
+        <strong>Falla inerte (segura):</strong> el sistema se <em>apaga</em>
+        cuando algo falla. Por ejemplo, un semáforo que se apaga del todo si
+        hay un corte de energía, en lugar de quedarse en verde.
+      </li>
+    </ul>
+
+    <p>
+      El principio a prueba de fallos busca que, ante cualquier fallo, el
+      sistema quede en el <strong>estado más seguro</strong>. Y "más seguro"
+      depende del contexto:
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Sistema</th>
+            <th>Estado seguro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Semáforo</strong></td>
+            <td>Apagado (mejor que quedarse en verde para siempre).</td>
+          </tr>
+          <tr>
+            <td><strong>Máquina industrial</strong></td>
+            <td>Detenida (mejor que seguir funcionando sin control).</td>
+          </tr>
+          <tr>
+            <td><strong>Marcapasos</strong></td>
+            <td>Modo de emergencia (nunca debe apagarse del todo).</td>
+          </tr>
+          <tr>
+            <td><strong>Reactor nuclear</strong></td>
+            <td>Barras de control insertadas (detener la reacción).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Aplicación práctica:</strong> los interruptores de
+        emergencia (como los de las máquinas industriales) suelen ser del tipo
+        <strong>normalmente cerrado (NC)</strong>. Así, si el cable se rompe o
+        el botón falla, el circuito se abre y la máquina se detiene. Si
+        usáramos uno normalmente abierto (NO), un cable roto dejaría la máquina
+        encendida sin control.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 5 -->
+  <section class="card">
+    <h2>🧠 Miles de millones de interruptores: los chips de IA</h2>
+    <p>
+      Un solo transistor es un interruptor microscópico. Si pones varios
+      juntos, puedes construir circuitos más complejos: compuertas lógicas,
+      contadores, memorias. Y si pones <strong>miles de millones</strong>,
+      puedes construir un procesador capaz de entrenar modelos de inteligencia
+      artificial.
+    </p>
+
+    <h3>📊 La escala del problema</h3>
+    <p>
+      Los números son difíciles de imaginar:
+    </p>
+    <ul>
+      <li>
+        Un procesador doméstico típico (como el de una laptop) contiene
+        <strong>miles de millones de transistores</strong> en un chip del
+        tamaño de una uña.
+      </li>
+      <li>
+        Una <strong>GPU</strong> de entrenamiento de IA contiene aún más: cada
+        generación multiplica el número. Algunos chips especializados para IA
+        superan los <strong>100.000 millones de transistores</strong>.
+      </li>
+      <li>
+        Cada uno de esos transistores <strong>se enciende y se apaga millones
+        de veces por segundo</strong>, de forma coordinada, para ejecutar los
+        cálculos del modelo.
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La conexión con la IA:</strong> cuando entrenas un modelo
+        de lenguaje como ChatGPT, se ejecutan <em>billones de operaciones
+        aritméticas</em>. Cada una de esas operaciones se realiza con
+        interruptores microscópicos que se encienden y se apagan. El
+        <strong>interruptor</strong> es el ladrillo más pequeño con el que se
+        construye la inteligencia artificial.
+      </p>
+    </div>
+
+    <h3>⚡ El costo físico de pensar</h3>
+    <p>
+      Cada vez que un transistor se enciende y se apaga, disipa una cantidad
+      minúscula de energía en forma de calor. Un solo transistor disipa
+      <strong>nanovatios</strong>. Pero multiplicado por miles de millones de
+      transistores, conmutando miles de millones de veces por segundo, el
+      calor acumulado es enorme.
+    </p>
+    <p>
+      Esa es la razón por la que los centros de datos que entrenan modelos
+      de IA necesitan <strong>sistemas de refrigeración industrial</strong>.
+      El calor generado por los transistores es, hoy, uno de los mayores
+      límites físicos de la inteligencia artificial.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 El reto del ingeniero moderno:</strong> ¿cómo hacer que los
+        transistores conmuten más rápido y consuman menos energía? Cada
+        mejora en la eficiencia de un transistor se multiplica por miles de
+        millones de veces, y se convierte en un ahorro gigantesco a escala de
+        centro de datos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: Análisis de un sistema a prueba de fallos</h2>
+    <p>
+      Vas a analizar cómo se diseñan los sistemas que deben ser seguros
+      incluso cuando fallan. El objetivo no es montar un circuito, sino
+      <strong>razonar sobre decisiones de diseño</strong>.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo
+        completamente como un análisis escrito (sin materiales), o complementarlo
+        montando un circuito si tienes acceso a un kit.
+      </p>
+    </div>
+
+    <h3>🧰 Materiales (opcionales)</h3>
+    <ul>
+      <li>Un pulsador NC (normalmente cerrado) si lo tienes.</li>
+      <li>Un LED y una resistencia de 330 Ω.</li>
+      <li>Una fuente de 5 V o 9 V.</li>
+      <li>Cables caimán.</li>
+      <li>Tu cuaderno de bitácora.</li>
+    </ul>
+
+    <h3>🧠 Caso 1: La alarma de puerta</h3>
+    <p>
+      Imagina que estás diseñando una alarma que debe sonar cuando alguien
+      <strong>abra</strong> la puerta de un almacén. ¿Qué tipo de interruptor
+      usarías?
+    </p>
+    <ul>
+      <li>Un interruptor <strong>NO</strong>, que cierra el circuito cuando lo
+          presionan.</li>
+      <li>Un interruptor <strong>NC</strong>, que abre el circuito cuando lo
+          presionan.</li>
+    </ul>
+    <p>
+      Piensa: cuando la puerta está cerrada, la alarma debe estar
+      <em>apagada</em>. Cuando la puerta se abre, la alarma debe <em>sonar</em>.
+    </p>
+    <p>
+      <strong>Reflexiona:</strong> ¿cuál de los dos tipos de interruptor usarías?
+      ¿Qué pasaría si alguien corta el cable de la alarma? ¿Con cuál tipo de
+      interruptor la alarma seguiría funcionando aunque corten el cable?
+    </p>
+
+    <h3>🧠 Caso 2: La máquina industrial</h3>
+    <p>
+      En una fábrica, hay una prensa que debe detenerse inmediatamente si
+      alguien abre la puerta de seguridad. El sistema debe ser
+      <strong>a prueba de fallos</strong>: si algo se rompe, la máquina debe
+      detenerse, no seguir funcionando.
+    </p>
+    <p>
+      <strong>Reflexiona:</strong>
+    </p>
+    <ul>
+      <li>
+        ¿Qué tipo de interruptor (NO o NC) usarías para conectar la puerta de
+        seguridad con el sistema de parada?
+      </li>
+      <li>
+        Si el cable que conecta el interruptor con la máquina se corta, ¿qué
+        debería pasar? ¿Con NO o con NC se logra eso?
+      </li>
+      <li>
+        ¿Qué pasa si el interruptor se queda "pegado" en la posición de
+        reposo?
+      </li>
+    </ul>
+
+    <h3>🧠 Caso 3: El marcapasos</h3>
+    <p>
+      Un marcapasos es un dispositivo que mantiene el corazón latiendo a un
+      ritmo constante. Si la batería se agota, el dispositivo no puede
+      detenerse del todo: debe seguir funcionando en un modo de emergencia.
+    </p>
+    <p>
+      <strong>Reflexiona:</strong>
+    </p>
+    <ul>
+      <li>
+        ¿Qué tipo de "fallo" es más seguro en un marcapasos: apagarse o seguir
+        funcionando en un modo mínimo?
+      </li>
+      <li>
+        ¿Cómo se relaciona esto con el principio de "a prueba de fallos"?
+      </li>
+      <li>
+        ¿En qué se diferencia este caso del semáforo o de la máquina
+        industrial? ¿Por qué el "estado seguro" es diferente en cada caso?
+      </li>
+    </ul>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Con quién hiciste el taller?</li>
+      <li>¿Qué aprendiste sobre el diseño de sistemas seguros?</li>
+      <li>¿Qué diferencia hay entre "falla segura" y "falla peligrosa"?</li>
+      <li>¿Por qué el "estado seguro" depende del contexto?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Un ingeniero dijo una vez: <em>"El buen diseño no se mide por cómo
+      funciona cuando todo va bien, sino por cómo falla cuando algo sale
+      mal"</em>. ¿Qué significa esta frase? ¿Cómo se relaciona con el
+      principio a prueba de fallos?
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> si montas circuitos, trabaja siempre con
+      3 V, 5 V o 9 V. Nunca uses voltajes de pared (110 V o 220 V).
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Los tres físicos que inventaron el interruptor sin dedos</h2>
+    <p>
+      En 1947, en los laboratorios de la empresa Bell Telephone, en Estados
+      Unidos, tres físicos estaban trabajando en un problema que parecía
+      imposible: encontrar una manera de controlar la corriente eléctrica sin
+      usar partes móviles. Los tubos de vacío de la época eran grandes,
+      frágiles, consumían mucha energía y se quemaban con frecuencia.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔬 John Bardeen, Walter Brattain y William Shockley
+    </h3>
+    <p>
+      <strong>John Bardeen</strong> (1908–1991) era el teórico del grupo.
+      <strong>Walter Brattain</strong> (1902–1987) era el experimentalista,
+      hábil con las manos. Y <strong>William Shockley</strong> (1910–1989) era
+      el líder del equipo, con una visión clara de lo que buscaban.
+    </p>
+    <p>
+      Después de meses de intentos fallidos, el 23 de diciembre de 1947
+      lograron hacer funcionar el primer transistor de la historia. Era
+      pequeño, rústico, y funcionaba de manera imperfecta. Pero funcionaba:
+      <strong>una pequeña corriente en un terminal controlaba el paso de una
+      corriente mayor entre los otros dos</strong>. Era el interruptor sin
+      dedos.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🏆 Un Nobel con consecuencias enormes
+    </h3>
+    <p>
+      En 1956, Bardeen, Brattain y Shockley recibieron el <strong>Premio Nobel
+      de Física</strong> por su invento. Pero el impacto del transistor fue
+      mucho más allá de un premio: transformó la electrónica para siempre.
+    </p>
+    <p>
+      Los tubos de vacío desaparecieron. Las radios, las computadoras y los
+      televisores se volvieron más pequeños, más confiables y más económicos.
+      Y décadas después, cuando se logró meter miles de millones de
+      transistores en un solo chip, nació la computación moderna, y con ella
+      la inteligencia artificial.
+    </p>
+    <p>
+      John Bardeen es la única persona en la historia que ha ganado
+      <strong>dos Premios Nobel de Física</strong>: el primero por el
+      transistor (1956), y el segundo por la teoría de la superconductividad
+      (1972).
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>los inventos más transformadores suelen empezar como
+      problemas pequeños</strong>. Bardeen, Brattain y Shockley no buscaban
+      cambiar el mundo; buscaban resolver un problema técnico concreto. Pero
+      su solución cambió la historia de la humanidad.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos del Premio Nobel de Física y biografías de Bell Telephone Laboratories.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado10.png"
+           alt="Infografía: El interruptor sin dedos. Muestra el transistor, el relé, el principio a prueba de fallos y la conexión con los chips de IA" />
+    </a>
+    <figcaption>
+      <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
+      esta infografía. Resume los temas que acabas de recorrer: el transistor,
+      el relé, el principio a prueba de fallos y los chips de IA. ¿Reconoces
+      cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 4
+      </span>
+      <h3>El interruptor sin dedos</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 7 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚡</span>
+        <span><strong>El límite humano:</strong> por qué no podemos pulsar botones a la velocidad que necesita un chip.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔌</span>
+        <span><strong>El transistor:</strong> una corriente que controla a otra.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧲</span>
+        <span><strong>El relé:</strong> el interruptor electromagnético que controla corrientes grandes.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🛡️</span>
+        <span><strong>A prueba de fallos:</strong> cómo diseñar sistemas que se apaguen de forma segura.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧠</span>
+        <span><strong>Los chips de IA:</strong> miles de millones de interruptores microscópicos pensando al mismo tiempo.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔬</span>
+        <span><strong>Bardeen, Brattain y Shockley:</strong> los tres físicos que inventaron el transistor en 1947.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu cuaderno a mano: hay conceptos que querrás anotar.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero de sistemas</h3>
+    <ul>
+      <li>¿Por qué el interruptor mecánico no es suficiente para la computación moderna?</li>
+      <li>¿Cómo funciona un transistor? ¿En qué se diferencia de un interruptor mecánico?</li>
+      <li>¿Qué es un relé y cuándo conviene usarlo en lugar de un transistor?</li>
+      <li>¿Qué significa "a prueba de fallos"? Da dos ejemplos de sistemas con ese principio.</li>
+      <li>¿Por qué el "estado seguro" depende del contexto? Compara un semáforo y un marcapasos.</li>
+      <li>¿Cuántos transistores hay en un chip moderno? ¿Por qué ese número es tan difícil de imaginar?</li>
+      <li>¿Cómo se relaciona el calor disipado por los transistores con el costo energético de la IA?</li>
+      <li>¿Qué aprendiste de la historia de Bardeen, Brattain y Shockley?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f0fdf4; border-left: 4px solid var(--c-g10); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>🔌 El interruptor más pequeño también es el más importante.</strong>
+      Ya analizaste el tuyo. Los otros tres enfoques te esperan.
+    </p>
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los números escondidos — Grado 8°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  
+  <script>
+    window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+        svg: { fontCache: 'global' }
+    };
+  </script>
+      <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado8.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+    <h1 style="margin-top: 0.6rem;">🟣 Los números escondidos</h1>
+    <div class="sub">
+      Por qué existen solo ciertos valores
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card purple">
+    <h2>🔢 ¿Por qué no existen todas las resistencias?</h2>
+    <p>
+      Imagina que necesitas una resistencia de exactamente <strong>9.847 Ω</strong>.
+      Vas a la tienda y pides una. El vendedor te mira con extrañeza:
+      <em>"Esa no existe. ¿No te sirve una de 10 kΩ?"</em>
+    </p>
+    <p>
+      ¿Por qué no existe? Si un fabricante pudiera hacer cualquier valor, ¿por qué
+      no los hace todos? La respuesta está en un principio estructural de la
+      ingeniería: <strong>los valores de los componentes no se inventan al azar,
+      siguen una progresión matemática</strong>.
+    </p>
+    <p>
+      A esa progresión se le llama <strong>serie estándar</strong>. Las más
+      comunes son las series <strong>E12</strong> y <strong>E24</strong>, y
+      definen qué valores se fabrican en todo el mundo.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Idea clave:</strong> fabricar resistencias de valores
+        arbitrarios sería un caos. Con solo <strong>12 o 24 valores por
+        década</strong>, la industria cubre todo el rango útil con suficiente
+        precisión. Es un principio de <em>economía estructural</em>: menos
+        variedad, más disponibilidad.
+      </p>
+    </div>
+
+    <h3>🔧 ¿Cómo se "calibra" una resistencia?</h3>
+    <p>
+      Pero antes de hablar de las series, hay una pregunta previa: ¿cómo logra
+      el fabricante que una resistencia valga <em>exactamente</em> 330 Ω y no
+      350 Ω ni 300 Ω?
+    </p>
+    <p>
+      La respuesta es sorprendente: no mezcla materiales al azar. El proceso es
+      el siguiente:
+    </p>
+    <ol>
+      <li>
+        Deposita una <strong>capa delgada de carbón o metal</strong> sobre un
+        cilindro de cerámica.
+      </li>
+      <li>
+        Hace un <strong>corte en espiral</strong> sobre esa capa. Ese corte
+        alarga el camino que debe recorrer la corriente dentro del material.
+      </li>
+      <li>
+        Cuanto más largo el corte en espiral, más largo el camino y
+        <strong>mayor la resistencia</strong>. Cuanto más corto, menor.
+      </li>
+      <li>
+        El fabricante <strong>mide mientras corta</strong>, y se detiene cuando
+        alcanza el valor deseado.
+      </li>
+      <li>
+        Solo entonces pinta las bandas de colores en el cuerpo del componente.
+      </li>
+    </ol>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/corte_espiral.png" target="_blank" rel="noopener">
+        <img src="img/corte_espiral.png"
+            alt="Corte transversal de un resistor mostrando el cilindro de cerámica, la capa de carbón y el corte en espiral" />
+    </a>
+    <figcaption>
+        Fig. 1: El corte en espiral en el interior de una resistencia. Cuanto más
+        largo el corte, más largo el camino de la corriente y mayor la resistencia.
+        <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Idea clave:</strong> el valor de una resistencia no es un
+        accidente: es el resultado de una operación mecánica precisa. El corte
+        en espiral es lo que permite "sintonizar" cada resistencia a un valor
+        específico.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>📊 Las series E12 y E24: la progresión</h2>
+    <p>
+      Las series estándar no son caprichosas: siguen una <strong>progresión
+      geométrica</strong>. Cada valor se obtiene multiplicando el anterior por
+      un factor constante. Ese factor es lo que garantiza que no haya "huecos"
+      grandes entre un valor y el siguiente.
+    </p>
+
+    <h3>🔢 El secreto matemático: el factor 1,212</h3>
+    <p>
+    En la serie E12, cada valor se obtiene multiplicando el anterior por
+    aproximadamente <strong>1,212</strong>. Ese número no es un capricho:
+    es la <strong>raíz doceava de 10</strong>, que en notación matemática
+    se escribe así:
+    </p>
+    <div class="formula">
+        $$\sqrt[12]{10} \approx 1{,}212$$
+    </div>
+    <p>
+    Su propiedad es notable: al multiplicar ese factor por sí mismo 12 veces,
+    se llega exactamente a 10. Es decir, con solo <strong>12 pasos</strong> se
+    cubre toda la década (de 10 a 100).
+    </p>
+    <div class="formula" style="font-size: 1.05em;">
+    1,212 × 1,212 × 1,212 × … (12 veces) ≈ <strong>10</strong>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+  <p>
+    <strong>💡 ¿Por qué 12 valores y no más?</strong> Porque 12 valores por
+    década generan una distancia promedio del <strong>21%</strong> entre un
+    valor y el siguiente. Esa distancia es la que permite una tolerancia
+    típica del <strong>±10%</strong> en la serie E12. Si hubiera menos
+    valores, la tolerancia tendría que ser más amplia; si hubiera más, la
+    tolerancia podría ser más estrecha.
+  </p>
+  <p style="margin-top: 0.8rem;">
+    Ese <strong>21%</strong> no es un número inventado: surge directamente del
+    factor. Si expresamos el incremento relativo en porcentaje:
+  </p>
+  <div class="formula">
+    $$\text{Incremento} = (1{,}212 - 1) \times 100\% = 21{,}2\%$$
+  </div>
+  <p style="margin-top: 0.6rem;">
+    De ahí surge el ~21%: cada valor de la serie E12 es aproximadamente un
+    <strong>21,2% más grande</strong> que el valor anterior. Y esa distancia
+    entre valores consecutivos es la que justifica una tolerancia típica del
+    ±10% (la mitad del incremento, para que los rangos de tolerancia de dos
+    valores vecinos no se solapen demasiado).
+  </p>
+</div>
+    <p>
+        Veamos cómo funcionan esos 12 pasos usando el factor 1,212. 
+        Comparativa entre la progresión matemática teórica (factor 1,212) y los
+        valores estandarizados por la norma industrial <strong>IEC 60063</strong>
+        para la serie E12:
+    </p>
+
+    <div class="tabla-scroll">
+    <table>
+        <thead>
+        <tr>
+            <th>Paso (n)</th>
+            <th>Cálculo teórico (10 × 1,212ⁿ)</th>
+            <th>Redondeo matemático</th>
+            <th>Serie E12 (IEC 60063)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>0</td><td>10 × 1,212⁰ = 10,000</td><td>10</td><td><strong>10</strong></td></tr>
+        <tr><td>1</td><td>10 × 1,212¹ = 12,120</td><td>12</td><td><strong>12</strong></td></tr>
+        <tr><td>2</td><td>10 × 1,212² ≈ 14,689</td><td>15</td><td><strong>15</strong></td></tr>
+        <tr><td>3</td><td>10 × 1,212³ ≈ 17,804</td><td>18</td><td><strong>18</strong></td></tr>
+        <tr><td>4</td><td>10 × 1,212⁴ ≈ 21,578</td><td>22</td><td><strong>22</strong></td></tr>
+        <tr><td>5</td><td>10 × 1,212⁵ ≈ 26,152</td><td>26</td><td><strong>27</strong></td></tr>
+        <tr><td>6</td><td>10 × 1,212⁶ ≈ 31,697</td><td>32</td><td><strong>33</strong></td></tr>
+        <tr><td>7</td><td>10 × 1,212⁷ ≈ 38,417</td><td>38</td><td><strong>39</strong></td></tr>
+        <tr><td>8</td><td>10 × 1,212⁸ ≈ 46,561</td><td>47</td><td><strong>47</strong></td></tr>
+        <tr><td>9</td><td>10 × 1,212⁹ ≈ 56,432</td><td>56</td><td><strong>56</strong></td></tr>
+        <tr><td>10</td><td>10 × 1,212¹⁰ ≈ 68,395</td><td>68</td><td><strong>68</strong></td></tr>
+        <tr><td>11</td><td>10 × 1,212¹¹ ≈ 82,895</td><td>83</td><td><strong>82</strong></td></tr>
+        <tr><td>12</td><td>10 × 1,212¹² ≈ 100,469</td><td>100</td><td>— (siguiente década)</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/escalera_e12.png" target="_blank" rel="noopener">
+            <img src="img/escalera_e12.png"
+                alt="Escalera ascendente con los 13 valores de la progresión E12, mostrando el factor 1,212 entre cada peldaño" />
+        </a>
+        <figcaption>
+            Fig. 2: La progresión geométrica de la serie E12. Cada valor es
+            aproximadamente un 21,15% más grande que el anterior, gracias al factor
+            constante 1,212.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+    <p>
+        <strong>📌 Importante:</strong> los redondeos matemáticos coinciden con la
+        serie E12 en la mayoría de los pasos, pero difieren en algunos
+        (26 → 27, 32 → 33, 38 → 39, 83 → 82). La razón es que la serie E12
+        <strong>no es el resultado exacto de redondear la progresión
+        geométrica</strong>, sino una <em>aproximación práctica</em> que los
+        fabricantes eligieron para tener números "bonitos", fáciles de recordar y
+        de pintar con bandas de colores. La norma IEC 60063 es la que define
+        oficialmente esos valores.
+    </p>
+    </div>
+
+    <p>
+    Los valores se redondean a números "bonitos" para que sea fácil
+    recordarlos y pintarlos con bandas de colores. Pero la <strong>estructura
+    matemática subyacente</strong> es la que garantiza que siempre haya un
+    valor estándar razonablemente cerca del valor que necesitas.
+    </p>
+
+    <h3>📊 Las series más comunes</h3>
+    <div class="tabla-scroll">
+    <table>
+        <thead>
+        <tr>
+            <th>Serie</th>
+            <th>Valores por década</th>
+            <th>Factor</th>
+            <th>Tolerancia típica</th>
+            <th>Uso principal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>E12</strong></td>
+            <td>12 valores</td>
+            <td>×1,212</td>
+            <td>±10%</td>
+            <td>Circuitos comunes (LEDs, botones)</td>
+        </tr>
+        <tr>
+            <td><strong>E24</strong></td>
+            <td>24 valores</td>
+            <td>×1,100</td>
+            <td>±5%</td>
+            <td>Circuitos con más precisión</td>
+        </tr>
+        <tr>
+            <td><strong>E96</strong></td>
+            <td>96 valores</td>
+            <td>×1,024</td>
+            <td>±1%</td>
+            <td>Instrumentos, audio de alta calidad</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+    <p>
+        <strong>🔢 La serie E24: el doble de precisión.</strong> La serie E24
+        tiene 24 valores por década en lugar de 12. Su factor constante es la
+        <strong>raíz veinticuatroava de diez</strong>:
+    </p>
+    <div class="formula">
+        $$\sqrt[24]{10} \approx 1{,}10$$
+    </div>
+    <p style="margin-top: 0.6rem;">
+        Ese factor corresponde a una tolerancia del <strong>±5%</strong>. Al
+        tener el doble de valores, la distancia entre uno y el siguiente se
+        reduce a la mitad (~10%), lo que permite una tolerancia más estrecha.
+    </p>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+    <p>
+        <strong>💡 Ejemplo práctico:</strong> cuando calculaste 330 Ω para
+        proteger un LED, ese valor no apareció por casualidad. Es uno de los
+        valores de la serie E12. Si el cálculo te hubiera dado 315 Ω, el
+        valor comercial más cercano <em>hacia arriba</em> sería 330 Ω.
+    </p>
+    </div>
+
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🎯 La tolerancia: cuando el valor no es exacto</h2>
+    <p>
+      Una resistencia de 330 Ω no vale exactamente 330 Ω. Vale
+      <strong>aproximadamente</strong> 330 Ω. La diferencia entre el valor
+      ideal y el valor real se llama <strong>tolerancia</strong>, y es una
+      propiedad estructural de todos los componentes.
+    </p>
+
+    <h3>📐 ¿Cómo se calcula la tolerancia?</h3>
+    <p>
+      La tolerancia es un porcentaje. Si una resistencia tiene un valor de
+      330 Ω con tolerancia ±5%, el valor real puede estar entre:
+    </p>
+    <div class="formula">
+      330 Ω − 5% = <strong>313,5 Ω</strong> &nbsp;&nbsp;|&nbsp;&nbsp;
+      330 Ω + 5% = <strong>346,5 Ω</strong>
+    </div>
+    <p>
+      Cualquier valor dentro de ese rango es aceptable. El fabricante
+      <strong>garantiza</strong> que la resistencia real estará dentro de ese
+      margen, ni más ni menos.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/tolerancia_rango.png" target="_blank" rel="noopener">
+            <img src="img/tolerancia_rango.png"
+                alt="Recta numérica que muestra el rango de tolerancia de una resistencia de 330 Ω ±5%, desde 313,5 Ω hasta 346,5 Ω" />
+        </a>
+        <figcaption>
+            Fig. 3: El rango de tolerancia de una resistencia de 330 Ω ±5%. Cualquier
+            valor entre 313,5 Ω y 346,5 Ω es aceptable para el fabricante.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 La tolerancia no es un defecto:</strong> es una
+        <em>promesa</em>. El fabricante no puede garantizar un valor exacto,
+        pero sí puede garantizar un rango. Y ese rango es suficiente para la
+        mayoría de circuitos.
+      </p>
+    </div>
+
+    <h3>🔗 Tolerancia y número de valores: van de la mano</h3>
+    <p>
+      Aquí viene la parte más interesante: la tolerancia <strong>no es un
+      valor arbitrario</strong>. Está directamente relacionada con la cantidad
+      de valores que tiene la serie.
+    </p>
+    <p>
+      Piénsalo: si dos valores consecutivos de una serie están muy cerca entre
+      sí, la tolerancia puede ser muy estrecha (porque siempre habrá un valor
+      estándar muy cerca del que necesitas). Si están lejos, la tolerancia
+      debe ser más amplia.
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Serie</th>
+            <th>Valores por década</th>
+            <th>Distancia entre valores</th>
+            <th>Tolerancia típica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>E12</strong></td>
+            <td>12 valores</td>
+            <td>~21%</td>
+            <td>±10%</td>
+          </tr>
+          <tr>
+            <td><strong>E24</strong></td>
+            <td>24 valores</td>
+            <td>~10%</td>
+            <td>±5%</td>
+          </tr>
+          <tr>
+            <td><strong>E96</strong></td>
+            <td>96 valores</td>
+            <td>~2,5%</td>
+            <td>±1%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Observa la relación: <strong>más valores en la serie → menor distancia
+      entre ellos → tolerancia más estrecha</strong>. Es un equilibrio entre
+      la <em>variedad de fabricación</em> (fabricar más valores distintos) y
+      la <em>precisión garantizada</em> (asegurar que cada valor esté dentro
+      de un rango estrecho).
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Regla de oro:</strong> la tolerancia <em>acompaña</em> a la
+        serie. Si eliges una resistencia de la serie E12, su tolerancia típica
+        será ±10%. Si necesitas ±1%, tendrás que elegir una resistencia de la
+        serie E96.
+      </p>
+    </div>
+
+    <h3>🎨 La banda de color que indica la tolerancia</h3>
+    <p>
+      En una resistencia de 4 bandas, la última banda (la que está más
+      separada) indica la tolerancia. Los colores más comunes son:
+    </p>
+    <ul>
+      <li><strong>Dorado</strong> → ±5%</li>
+      <li><strong>Plateado</strong> → ±10%</li>
+      <li><strong>Marrón</strong> → ±1%</li>
+      <li><strong>Rojo</strong> → ±2%</li>
+    </ul>
+    <p>
+      La ausencia de banda de tolerancia (en resistencias muy antiguas)
+      significa ±20%.
+    </p>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card">
+    <h2>💻 Resistencias SMD: el código que reemplazó los colores</h2>
+    <p>
+      Si abres un celular moderno y miras su placa, no verás resistencias con
+      bandas de colores. Verás <strong>rectángulos diminutos</strong>, casi
+      del tamaño de una miga de pan. Son resistencias <strong>SMD</strong>
+      (Surface Mount Device, o "dispositivo de montaje superficial").
+    </p>
+
+    <h3>🔍 ¿Qué cambió?</h3>
+    <p>
+      Las resistencias tradicionales (llamadas de perforación pasante, en inglés, "through-hole") tienen patas
+      que atraviesan la placa. Las SMD se <strong>soldan directamente sobre
+      la superficie</strong>, sin patas. Eso las hace mucho más pequeñas y
+      permite fabricar aparatos más compactos.
+    </p>
+    <p>
+      Pero como son tan pequeñas, no cabe pintarles cuatro bandas de colores.
+      En su lugar, llevan un <strong>código numérico de 3 o 4 dígitos</strong>
+      impreso en la superficie.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/smd_vs_perforacion.png" target="_blank" rel="noopener">
+            <img src="img/smd_vs_perforacion.png"
+                alt="Comparación entre una resistencia de perforación pasante (cilíndrica con patas) y una resistencia SMD (rectángulo diminuto sin patas, marcada con 331)" />
+        </a>
+        <figcaption>
+            Fig. 4: Dos generaciones de resistencias. A la izquierda, la tradicional
+            de perforación pasante. A la derecha, la SMD, que se suelda directamente
+            sobre la superficie.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <h3>📖 Cómo se lee un código SMD</h3>
+    <p>
+      El código SMD más común usa tres dígitos:
+    </p>
+    <ul>
+      <li>Los <strong>dos primeros</strong> son los dígitos significativos.</li>
+      <li>El <strong>tercero</strong> es el multiplicador (número de ceros).</li>
+    </ul>
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Ejemplo:</strong> una resistencia SMD marcada
+        <strong>"331"</strong> vale 33 × 10 = <strong>330 Ω</strong>. La
+        misma que leerías en una resistencia de colores como
+        naranja-naranja-marrón.
+      </p>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: #d97706; background: #fef3c7;">
+      <p>
+        <strong>⚠️ Ojo al código SMD con "R":</strong> cuando aparece una R
+        en el código, representa el punto decimal. Por ejemplo,
+        <strong>"4R7"</strong> significa <strong>4,7 Ω</strong>. Es una
+        convención para no confundir con otro número.
+      </p>
+    </div>
+
+    <h3>🌍 ¿Por qué SMD reemplazó al código de colores?</h3>
+    <p>
+      No fue una moda: fue una <strong>necesidad estructural</strong>. Los
+      aparatos modernos son cada vez más pequeños, y las resistencias
+      de perforación pasante ya no caben. Además, las máquinas de ensamblaje automático
+      colocan resistencias SMD a una velocidad imposible para un humano.
+    </p>
+    <p>
+      Aun así, el <strong>código de colores sigue vigente</strong> en kits
+      educativos, reparaciones y prototipos. Conocer ambos códigos te hace
+      un ingeniero más completo.
+    </p>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: El clasificador de resistencias</h2>
+    <p>
+      Vas a convertirte en un <strong>clasificador de resistencias</strong>.
+      Te darán un grupo de resistencias mezcladas, y tu misión es
+      <strong>leerlas, verificar su valor con el multímetro y clasificarlas
+      según su tolerancia</strong>. Este es el trabajo real de un ingeniero
+      de control de calidad.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en
+        el aula (con resistencias del kit del colegio y un multímetro) o
+        llevarlo a casa si tienes acceso a un multímetro. Si no lo tienes, el
+        taller se puede hacer solo con la lectura de colores.
+      </p>
+    </div>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Ocho resistencias de valores distintos (pueden ser de 4 o 5 bandas).</li>
+      <li>Una tarjeta con la tabla de colores.</li>
+      <li>Un multímetro en modo ohmios (Ω).</li>
+      <li>Tu cuaderno de bitácora.</li>
+      <li>Una calculadora (o el celular).</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Reúne las resistencias.</strong> Ponlas sobre la mesa, sin
+        ordenar.
+      </li>
+      <li>
+        <strong>Lee cada una</strong> con el código de colores. Anota el valor
+        leído y su tolerancia.
+      </li>
+      <li>
+        <strong>Calcula el rango de tolerancia.</strong> Si el valor leído es
+        330 Ω ±5%, el rango es 313,5 Ω a 346,5 Ω.
+      </li>
+      <li>
+        <strong>Mide con el multímetro.</strong> Coloca las puntas en los
+        extremos de la resistencia (sin tocarla con los dedos, porque el
+        cuerpo humano también tiene resistencia). Anota el valor medido.
+      </li>
+      <li>
+        <strong>Compara.</strong> ¿El valor medido está dentro del rango de
+        tolerancia? Si sí, la resistencia está dentro de especificación. Si
+        no, podría estar dañada o tener un valor distinto.
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Valor leído</th>
+                <th>Tolerancia</th>
+                <th>Rango aceptable</th>
+                <th>Valor medido</th>
+                <th>¿Dentro del rango?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>6</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>7</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+              <tr>
+                <td><strong>8</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐ Sí / ☐ No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Ordena las resistencias</strong> de menor a mayor valor.
+      </li>
+    </ol>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Qué resistencia tuvo el valor medido más alejado del valor leído? ¿Por qué crees que fue así?</li>
+      <li>¿Alguna resistencia quedó fuera del rango de tolerancia? ¿Qué podría explicarlo?</li>
+      <li>¿Qué te sorprendió más de comparar la lectura con la medición real?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Si una resistencia dice 330 Ω ±5%, y al medirla obtienes 335 Ω, ¿está
+      dentro de especificación? Justifica tu respuesta con el cálculo.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> En la industria, un lote de
+        resistencias que sale de la fábrica se <strong>audita</strong>
+        tomando una muestra al azar y verificando que todas estén dentro del
+        rango de tolerancia. Ese proceso se llama <em>control de calidad
+        estadístico</em>, y es exactamente lo que acabas de hacer tú.
+      </p>
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> nunca midas resistencias que estén
+      soldadas a una placa conectada a la corriente. Desconecta el aparato y/o
+      retira las pilas antes de manipularlo. Y recuerda: para medir
+      resistencia, las puntas del multímetro van sobre la resistencia
+      <em>suelta</em> o sobre la placa <em>sin energía</em>.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 El hombre que puso números al caos</h2>
+    <p>
+      Antes de que existieran las series E12 y E24, los fabricantes de
+      resistencias producían valores arbitrarios. Cada empresa inventaba su
+      propia lista. Comprar componentes era un caos: lo que funcionaba con
+      una marca no servía con otra.
+    </p>
+    <p>
+      La solución no vino de un ingeniero eléctrico, sino de un
+      <strong>ingeniero militar francés</strong> que estaba resolviendo un
+      problema completamente distinto: cómo estandarizar los cables de los
+      globos aerostáticos del ejército.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🎈 Charles Renard (1847–1905) — El padre de las series
+    </h3>
+    <p>
+      Charles Renard fue un ingeniero y oficial del ejército francés. En la
+      década de 1870, se enfrentó a un problema práctico: el ejército
+      necesitaba fabricar cables de distintos diámetros para sus globos
+      aerostáticos. Pero fabricar cada diámetro posible era imposible e
+      innecesario.
+    </p>
+    <p>
+      Renard propuso una idea revolucionaria: en lugar de fabricar cientos de
+      diámetros distintos, <strong>fabricar solo unos pocos, espaciados
+      matemáticamente</strong>. Cada nuevo diámetro sería un porcentaje fijo
+      más grande que el anterior. Así, con solo 5, 10 o 20 valores, se cubría
+      todo el rango útil.
+    </p>
+    <p>
+      Esa progresión se conoce hoy como <strong>serie de Renard</strong>, y
+      fue adoptada por la industria eléctrica para estandarizar los valores
+      de las resistencias. Nacieron así las series <strong>E6, E12, E24,
+      E48, E96 y E192</strong>, donde la "E" honra a la <em>Electricité</em>
+      (electricidad en francés).
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🌍 De los globos a los celulares
+    </h3>
+    <p>
+      Lo notable es que la progresión de Renard no era un invento arbitrario:
+      seguía un patrón matemático que garantizaba que cualquier valor
+      necesario estaría a menos de un pequeño porcentaje de distancia del
+      valor estándar más cercano. <strong>Esa es la verdadera elegancia de la
+      ingeniería estructural</strong>: resolver un problema con el menor
+      número de piezas posible.
+    </p>
+    <p>
+      Hoy, cuando pides una resistencia de 10 kΩ en cualquier tienda del
+      mundo, estás usando el sistema que Renard diseñó para los globos
+      aerostáticos hace más de 150 años.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>las soluciones buenas no vienen del capricho, sino
+      de la estructura matemática</strong>. Renard no eligió los valores de
+      las series al azar: los calculó. Y esa estructura sigue funcionando más
+      de un siglo después.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de la Comisión Electrotécnica Internacional (IEC) y biografías de Charles Renard.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado8.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado8.png"
+           alt="Infografía: Los números escondidos. Muestra las series E12/E24, el factor 1,212, la tolerancia, el código SMD y el proceso de verificación con multímetro" />
+    </a>
+    <figcaption>
+      <strong>Fig. 5:</strong> <strong>🗺️ Tu mapa completo:</strong> antes de
+      escuchar el podcast, mira esta infografía. Resume los temas que acabas de
+      recorrer: las series E12/E24, el factor 1,212, la tolerancia, el código
+      SMD y la verificación con multímetro. ¿Reconoces cada parte? ¿Cuál te
+      resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g8">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 3
+      </span>
+      <h3>Los números escondidos</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 6 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔧</span>
+        <span><strong>El corte en espiral:</strong> cómo se "calibra" una resistencia durante su fabricación.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔢</span>
+        <span><strong>El factor 1,212:</strong> por qué la serie E12 tiene 12 valores por década y no más ni menos.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔗</span>
+        <span><strong>La relación tolerancia-serie:</strong> más valores por década, tolerancia más estrecha.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">💻</span>
+        <span><strong>Resistencias SMD:</strong> el código numérico que reemplazó al código de colores.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🎈</span>
+        <span><strong>Charles Renard:</strong> el ingeniero que puso números al caos desde los globos aerostáticos.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado8.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchenlo en familia y comenten qué otros códigos usan números (por ejemplo: cédulas, placas, precios, contraseñas) para representar información, además del código de colores.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero estructural</h3>
+    <ul>
+      <li>¿Por qué no existen resistencias de 9.847 Ω? Explica la razón estructural.</li>
+      <li>¿Cómo se logra que una resistencia valga un valor específico durante su fabricación?</li>
+      <li>¿Por qué la serie E12 tiene exactamente 12 valores por década? ¿Qué papel juega el factor 1,212?</li>
+      <li>¿Cuál es la relación entre el número de valores de una serie y su tolerancia típica?</li>
+      <li>Si una resistencia dice 220 Ω ±5%, ¿cuál es su rango real de valores?</li>
+      <li>¿Qué significa que una resistencia esté "dentro de especificación"?</li>
+      <li>¿Por qué el código de colores fue reemplazado por códigos numéricos en las resistencias SMD?</li>
+      <li>¿Qué relación tiene Charles Renard con las resistencias que usas hoy?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+  <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f5f3ff; border-left: 4px solid var(--c-g8); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+    <strong>💡 ¿Te interesa cómo funciona algo por dentro?</strong> Ya viste
+    las series, la tolerancia y el corte en espiral. Si quieres ver el mismo
+    tema desde otras capas, explora las otras miradas: cada una responde una
+    pregunta distinta sobre el mismo componente.
+  </p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

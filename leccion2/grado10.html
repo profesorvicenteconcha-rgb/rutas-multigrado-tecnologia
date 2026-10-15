@@ -218,28 +218,28 @@
 
   <!-- Card 3 -->
   <section class="card slate">
-    <h2>📄 El datasheet: los límites del componente</h2>
+    <h2>📄 La Hoja de Datos (datasheet): los límites del componente</h2>
     <p>
       Cada componente electrónico viene acompañado de un documento llamado
-      <strong>datasheet</strong> (hoja de datos). Es el manual técnico del
+      <strong>hoja de datos</strong> (en inglés, <em>datasheet</em>). Es el manual técnico del
       componente y contiene los valores que <em>nunca</em> debes exceder.
     </p>
 
     <p>
-      En un datasheet típico encontrarás tres secciones críticas:
+      En una hoja de datos típica encontrarás tres secciones críticas:
     </p>
     <ul>
       <li>
-        <strong>Absolute Maximum Ratings:</strong> los valores máximos absolutos
+        <strong>Valores máximos absolutos <em>(Absolute Maximum Ratings</em>):</strong> los valores máximos absolutos
         (voltaje, corriente, temperatura). Superarlos destruye el componente.
       </li>
       <li>
-        <strong>Electrical Characteristics:</strong> las características normales
+        <strong>Características eléctricas <em>(Electrical Characteristics</em>):</strong> las características normales
         de funcionamiento: voltaje directo del LED, corriente recomendada,
         resistencia interna.
       </li>
       <li>
-        <strong>Thermal Characteristics:</strong> cómo se comporta el componente
+        <strong>Características térmicas <em>(Thermal Characteristics</em>):</strong> cómo se comporta el componente
         respecto al calor: temperatura máxima de operación, resistencia térmica,
         necesidad de disipadores.
       </li>
@@ -247,7 +247,7 @@
 
     <h3>📊 Cómo interpretar un datasheet de LED rojo</h3>
     <p>
-      Imagina que abres el datasheet de un LED rojo. Encuentras esta tabla:
+      Imagina que abres la hoja de datos de un LED rojo. Encuentras esta tabla:
     </p>
 
     <div class="tabla-scroll">
@@ -299,7 +299,7 @@
       </p>
     </div>
 
-    <h3>🔍 ¿Cómo encontrar un datasheet?</h3>
+    <h3>🔍 ¿Cómo encontrar una hoja de datos?</h3>
     <ol>
       <li>
         Identifica el <strong>número de parte</strong> del componente (por
@@ -325,13 +325,13 @@
     <p>
       En una red neuronal, la información viaja de una neurona a otra a través
       de conexiones con diferentes "fuerzas". A esas fuerzas se les llama
-      <strong>weights</strong> (pesos). Un weight decide cuánta señal pasa de una
+      <strong>pesos</strong> (en inglés, <em>weights)</em>. Un peso decide cuánta señal pasa de una
       neurona a otra.
     </p>
     <p>
-      ¿Te suena familiar? <strong>Un weight hace exactamente lo mismo que una
-      resistencia</strong>: controla cuánto flujo pasa. Un weight alto deja pasar
-      mucha señal; un weight bajo la bloquea casi por completo.
+      ¿Te suena familiar? <strong>Un peso hace exactamente lo mismo que una
+      resistencia</strong>: controla cuánto flujo pasa. Un peso alto deja pasar
+      mucha señal; un peso bajo la bloquea casi por completo.
     </p>
 
     <!-- ====== SVG B: Weights como resistencias ====== -->
@@ -339,9 +339,9 @@
       <svg viewBox="0 0 600 240"
            xmlns="http://www.w3.org/2000/svg"
            role="img"
-           aria-label="Esquema de tres neuronas conectadas por resistencias variables que representan los weights de una red neuronal"
+           aria-label="Esquema de tres neuronas conectadas por resistencias variables que representan los pesos de una red neuronal"
            style="width: 100%; height: auto; display: block;">
-        <title>Weights como resistencias</title>
+        <title>Pesos como resistencias</title>
 
         <rect x="0" y="0" width="600" height="240" fill="#f8fcff" rx="12" />
 
@@ -360,7 +360,7 @@
               fill="#ffffff" stroke="#4b5563" stroke-width="2" />
         <text x="190" y="100" text-anchor="middle"
               font-family="system-ui, sans-serif" font-size="12" font-weight="bold"
-              fill="#4b5563">weight alto</text>
+              fill="#4b5563">peso alto</text>
 
         <circle cx="300" cy="120" r="38"
                 fill="#dcfce7" stroke="#10b981" stroke-width="2.5" />
@@ -377,7 +377,7 @@
               fill="#ffffff" stroke="#4b5563" stroke-width="2" />
         <text x="400" y="100" text-anchor="middle"
               font-family="system-ui, sans-serif" font-size="12" font-weight="bold"
-              fill="#4b5563">weight bajo</text>
+              fill="#4b5563">peso bajo</text>
 
         <circle cx="510" cy="120" r="38"
                 fill="#dcfce7" stroke="#10b981" stroke-width="2.5" />
@@ -395,7 +395,7 @@
         </text>
       </svg>
       <figcaption>
-        Fig. 3: Los <em>weights</em> de una red neuronal funcionan como resistencias
+        Fig. 3: Los <em>pesos</em> de una red neuronal funcionan como resistencias
         virtuales. Controlan cuánta señal llega de una neurona a la siguiente.
       </figcaption>
     </figure>
@@ -403,7 +403,7 @@
     <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
       <p>
         <strong>🎯 La conexión:</strong> la ley de Ohm describe cómo se comporta
-        la electricidad en un cable. Los <em>weights</em> describen cómo se
+        la electricidad en un cable. Los pesos describen cómo se
         comporta la información en una red neuronal. Matemáticamente, las dos
         relaciones son muy parecidas: hay una entrada, un factor de control, y
         una salida.
@@ -412,7 +412,7 @@
 
     <p>
       Cuando un ingeniero de IA "entrena" un modelo, está ajustando millones
-      de <em>weights</em> hasta que la red responde correctamente. Es como si
+      de pesos hasta que la red responde correctamente. Es como si
       ajustara millones de resistencias virtuales al mismo tiempo.
     </p>
   </section>
@@ -422,7 +422,7 @@
     <h2>🔥 El costo energético de la inteligencia</h2>
     <p>
       Toda esta información viaja dentro de chips que consumen energía. Cuando
-      se entrena un modelo de IA grande, los procesadores (GPUs) trabajan a
+      se entrena un modelo de IA grande, Las unidades de procesamiento gráfico (GPU) trabajan a
       máxima capacidad durante semanas o meses. La potencia disipada es enorme,
       y la mayor parte se convierte en calor.
     </p>
@@ -880,13 +880,13 @@
   <figure class="figura-ruta figura-ruta--amplia">
     <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
       <img src="img/infografia_grado10.png"
-           alt="Infografía: El costo de la energía. Muestra la ley de Ohm como herramienta de diseño, la potencia P = I²R, el datasheet, los weights de la IA y el costo energético del entrenamiento" />
+           alt="Infografía: El costo de la energía. Muestra la ley de Ohm como herramienta de diseño, la potencia P = I²R, el datasheet, los pesos de la IA y el costo energético del entrenamiento" />
     </a>
     <figcaption>
       <strong>🗺️ Tu mapa completo:</strong> antes de escuchar el podcast, mira
       esta infografía. Resume los temas que acabas de recorrer: la ley de Ohm
       como herramienta, la potencia disipada, los límites del datasheet, los
-      weights de la IA y el costo energético. ¿Reconoces cada parte? ¿Cuál te
+      pesos de la IA y el costo energético. ¿Reconoces cada parte? ¿Cuál te
       resultó más útil?
       <em>(Toca la imagen para ampliarla)</em>
     </figcaption>
@@ -917,7 +917,8 @@
         <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔥</span>
         <span><strong>La fórmula del calor:</strong> por qué P = I²R explica el 90% de las fallas en electrónica.</span>
       </li>
-      <details class="math-breakdown">
+      <li>
+        <details class="math-breakdown">
         <summary><strong>📐 Ver la demostración matemática: ¿Por qué filamentos de ALTA resistencia?</strong></summary>
         
         <div class="math-content">
@@ -938,9 +939,10 @@
             </p>
         </div>
         </details>
+      </li>
       <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
         <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧠</span>
-        <span><strong>Los pesos de la IA:</strong> por qué los <em>weights</em> de una red neuronal son resistencias virtuales.</span>
+        <span><strong>Los pesos de la IA:</strong> por qué los <em>pesos</em> de una red neuronal son resistencias virtuales.</span>
       </li>
       <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
         <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌍</span>
@@ -981,7 +983,7 @@
       </li>
       <li>
         ¿Qué paralelo encuentras entre una resistencia en un circuito y un
-        <em>weight</em> en una red neuronal? ¿Por qué son tan importantes?
+        <em>peso</em> en una red neuronal? ¿Por qué son tan importantes?
       </li>
       <li>
         ¿Por qué el calor es el principal obstáculo técnico para entrenar modelos
@@ -1008,6 +1010,11 @@
   <!-- Navegación entre miradas -->
   <nav class="nav-estaciones">
     <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f0fdf4; border-left: 4px solid var(--c-g10); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>🔥 Controlar la energía tiene un precio, y ese precio se paga en calor.</strong>
+      Ya calculaste ese costo en tu página. Si quieres ver cómo lo traducen
+      otros, las demás páginas te lo muestran.
+    </p>
     <div class="nav-estaciones-links">
       <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
       <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El lenguaje de las rayitas — Grado 6°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado6.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g6);">Grado 6° • Mirada Curiosa</span>
+    <h1 style="margin-top: 0.6rem;">🟠 El lenguaje de las rayitas</h1>
+    <div class="sub">
+      Cómo leer una resistencia de 4 bandas
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card orange">
+    <h2>🎨 ¿Por qué las resistencias no tienen números?</h2>
+    <p>
+      Toma una resistencia y mírala con atención. Es un pequeño cilindro de
+      carbón, con dos patas metálicas a los lados. Y en su cuerpo, en lugar de
+      números, tiene <strong>rayitas de colores</strong>. ¿Por qué?
+    </p>
+    <p>
+      La respuesta es sencilla: las resistencias son <strong>demasiado
+      pequeñas</strong> como para imprimirles números legibles. Imagina intentar
+      escribir "330" en un cilindro que mide menos de un centímetro. Apenas
+      cabría, y con el tiempo se borraría.
+    </p>
+    <p>
+      Por eso los ingenieros inventaron un <strong>código de colores</strong>:
+      cada color representa un número. Y con solo cuatro rayitas, la resistencia
+      puede decir exactamente cuál es su valor.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Idea clave:</strong> el código de colores es un
+        <strong>lenguaje visual</strong>. Los ingenieros de todo el mundo lo
+        leen igual, sin importar el idioma que hablen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔍 Las cuatro bandas y qué significa cada una</h2>
+    <p>
+      Una resistencia típica tiene <strong>cuatro bandas de color</strong>. Cada
+      banda tiene una función específica. Vamos a conocerlas:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/resistencia_ejemplo.png" target="_blank" rel="noopener">
+        <img src="img/resistencia_ejemplo.png"
+             alt="Resistencia de 4 bandas con las etiquetas DIGITO 1, DIGITO 2, MULTIPLICADOR y TOLERANCIA" />
+      </a>
+      <figcaption>
+        Fig. 1: Las cuatro bandas de una resistencia y sus nombres. La banda
+        dorada (a la derecha) siempre indica la tolerancia.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li>
+        <strong>Banda 1 — Primer dígito.</strong> Es el primer número del valor.
+        Se lee de izquierda a derecha.
+      </li>
+      <li>
+        <strong>Banda 2 — Segundo dígito.</strong> Es el segundo número del valor.
+      </li>
+      <li>
+        <strong>Banda 3 — Multiplicador.</strong> Indica cuántos ceros hay que
+        agregar al final. Por ejemplo, si es marrón, se agrega un cero.
+      </li>
+      <li>
+        <strong>Banda 4 — Tolerancia.</strong> Es el margen de error del valor.
+        Si es dorada, el margen es de ±5%. Si es plateada, de ±10%.
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Truco para no equivocarte:</strong> la banda de la
+        <strong>tolerancia</strong> es la que está <em>más separada</em> de las
+        otras tres. Y suele ser dorada o plateada. Cuando dudes de qué lado
+        empezar a leer, busca la banda dorada o plateada: esa va a la derecha.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🌈 Los diez colores y sus valores</h2>
+    <p>
+      El código tiene <strong>diez colores para los dígitos</strong>, del 0 al 9 y <strong>dos colores para la tolerancia</strong>:
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Valor</th>
+            <th>Color</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="background-color: #000; color: white;">⚫ Negro</td>
+            <td>0</td>
+            <td style="background-color: #8B4513; color: white;">🟤 Marrón</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td style="background-color: #FF0000; color: white;">🔴 Rojo</td>
+            <td>2</td>
+            <td style="background-color: #FFA500;">🟠 Naranja</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td style="background-color: #FFFF00;">🟡 Amarillo</td>
+            <td>4</td>
+            <td style="background-color: #00CC00;">🟢 Verde</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td style="background-color: #0000FF; color: white;">🔵 Azul</td>
+            <td>6</td>
+            <td style="background-color: #800080; color: white;">🟣 Violeta</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td style="background-color: #808080; color: white;">⚪ Gris</td>
+            <td>8</td>
+            <td style="background-color: #FFFFFF; color: black; border: 1px solid #ccc;">⚪ Blanco</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td style="background-color: #FFD700;">🟡 Dorado</td>
+            <td>±5%</td>
+            <td style="background-color: #C0C0C0;">⚪ Plateado</td>
+            <td>±10%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🎭 ¿Cómo memorizar los colores?</h3>
+    <p>
+      Memorizar diez colores puede parecer difícil, pero hay trucos. Cada
+      color se puede asociar con algo cotidiano:
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/cuento_colores.png" target="_blank" rel="noopener">
+        <img src="img/cuento_colores.png"
+             alt="Tarjetas con cada color del código de resistencias, su número y una asociación visual" />
+      </a>
+      <figcaption>
+        Fig. 2: El cuento de los 10 colores. Cada color se asocia con una imagen
+        fácil de recordar.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li>⚫ <strong>Negro (0):</strong> oscuridad total, cero luz.</li>
+      <li>🟤 <strong>Marrón (1):</strong> un tronco de árbol solitario.</li>
+      <li>🔴 <strong>Rojo (2):</strong> los dos ojos de un monstruo.</li>
+      <li>🟠 <strong>Naranja (3):</strong> un triángulo (3 lados) naranja.</li>
+      <li>🟡 <strong>Amarillo (4):</strong> las 4 patas de una mesa amarilla.</li>
+      <li>🟢 <strong>Verde (5):</strong> los 5 dedos de una mano.</li>
+      <li>🔵 <strong>Azul (6):</strong> las 6 caras de un dado azul.</li>
+      <li>🟣 <strong>Violeta (7):</strong> los 7 colores del arcoíris.</li>
+      <li>⚪ <strong>Gris (8):</strong> los 8 tentáculos de un pulpo gris.</li>
+      <li>⚪ <strong>Blanco (9):</strong> las nubes blancas, arriba del todo.</li>
+    </ul>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card">
+    <h2>🧮 Cómo leer una resistencia paso a paso</h2>
+    <p>
+      Ahora que conoces los colores, vamos a leer una resistencia juntos. Como
+      ejemplo, usaremos una con estas bandas:
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g6); background: #fff8e1;">
+      <p style="text-align: center; font-size: 1.05em;">
+        🟠 Naranja — 🟠 Naranja — 🟤 Marrón — 🟡 Dorado
+      </p>
+    </div>
+
+    <p><strong>Paso 1 — Leer el primer dígito.</strong></p>
+    <p>
+      La primera banda es <strong>naranja</strong>. El naranja vale
+      <strong>3</strong>.
+    </p>
+
+    <p><strong>Paso 2 — Leer el segundo dígito.</strong></p>
+    <p>
+      La segunda banda también es <strong>naranja</strong>. Vale
+      <strong>3</strong>. Hasta ahora tenemos el número <strong>33</strong>.
+    </p>
+
+    <p><strong>Paso 3 — Leer el multiplicador.</strong></p>
+    <p>
+      La tercera banda es <strong>marrón</strong>. El marrón significa
+      <strong>×10</strong>, es decir, agregar un cero. Entonces:
+    </p>
+    <div class="formula">33 × 10 = <strong>330</strong></div>
+
+    <p><strong>Paso 4 — Leer la tolerancia.</strong></p>
+    <p>
+      La cuarta banda es <strong>dorada</strong>. El dorado significa
+      <strong>±5%</strong>. Esto quiere decir que la resistencia vale 330 Ω,
+      pero puede estar entre 313 y 346 Ω, y sigue siendo correcta.
+    </p>
+
+    <p><strong>Resultado final:</strong></p>
+    <div class="formula" style="font-size: 1.15em;">
+      <strong>330 Ω ±5%</strong>
+    </div>
+
+    <p>
+      Esa es la resistencia que probablemente usarás para proteger un LED.
+      ¡Ya sabes leerla!
+    </p>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🎨 Taller: El clasificador de resistencias</h2>
+    <p>
+      Vas a convertirte en un <strong>clasificador de resistencias</strong>. Te
+      darán un grupo de resistencias mezcladas, y tu misión es identificar el
+      valor de cada una y ordenarlas de menor a mayor.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en el
+        aula (con resistencias del kit del colegio) o llevarlo a casa para
+        hacerlo en familia. Tu docente te dirá cuál elegir.
+      </p>
+    </div>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Cinco resistencias de valores distintos.</li>
+      <li>Una tarjeta impresa con la tabla de colores (o el celular para consultarla).</li>
+      <li>Tu cuaderno de bitácora.</li>
+      <li>Una lupa (opcional, pero ayuda mucho).</li>
+      <li>Buena iluminación.</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Reúne las resistencias.</strong> Ponlas sobre la mesa, sin
+        ordenar.
+      </li>
+      <li>
+        <strong>Lee cada una</strong> con la tabla de colores. Recuerda empezar
+        por el lado opuesto a la banda dorada o plateada.
+      </li>
+      <li>
+        <strong>Dibuja esta tabla</strong> en tu bitácora y complétala:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Colores</th>
+                <th>Valor leído</th>
+                <th>Tolerancia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Ordena las resistencias</strong> de menor a mayor valor.
+      </li>
+    </ol>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Con quién hiciste el taller?</li>
+      <li>¿Cuál fue la resistencia más difícil de leer? ¿Por qué?</li>
+      <li>¿Descubriste algo que no sabías sobre las resistencias?</li>
+      <li>¿Qué te sorprendió más de todo el proceso?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Después de leer varias resistencias, ¿cuál crees que es la ventaja de
+      tener un código de colores en lugar de números impresos? ¿Y cuál podría
+      ser la desventaja?
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g6); background: #fff8e1;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> El código de colores funciona muy bien,
+        pero no es perfecto. ¿Qué pasa si alguien tiene daltonismo y confunde el
+        rojo con el verde? ¿O si la resistencia está sucia y las bandas se ven
+        mal? Por eso, en el trabajo profesional, los ingenieros <em>siempre
+        verifican con el multímetro</em>. El código ayuda, pero el instrumento
+        confirma.
+      </p>
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> nunca intentes leer resistencias que estén
+      soldadas a una placa conectada a la corriente. Si encuentras una
+      resistencia dentro de un aparato, primero desconecta el aparato y retira
+      las pilas. Solo lee resistencias sueltas o de aparatos sin energía.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 Los que pusieron orden al caos</h2>
+    <p>
+      El código de colores no lo inventó una sola persona. Fue un
+      <strong>acuerdo entre muchos</strong>. Y esa es una historia que vale la
+      pena conocer.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      📡 El problema de los años 20
+    </h3>
+    <p>
+      Hace casi cien años, la radio estaba en pleno auge. Los fabricantes
+      producían resistencias de todos los tamaños y valores. Pero había un
+      problema: <strong>cada fabricante las pintaba como quería</strong>. Un
+      ingeniero que compraba resistencias de tres marcas distintas no podía
+      compararlas. Todas se veían diferentes. ¡Era un caos!
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🤝 El acuerdo
+    </h3>
+    <p>
+      Entonces los fabricantes se reunieron en una asociación llamada
+      <strong>RMA</strong> (Radio Manufacturers Association). Y tomaron una
+      decisión: a partir de ese momento, todos usarían el mismo código. Cada
+      color tendría siempre el mismo valor, sin importar quién fabricara la
+      resistencia.
+    </p>
+    <p>
+      Ese acuerdo funcionó tan bien que todavía lo usamos. Y no solo en radios:
+      en computadoras, celulares, televisores, satélites. En todo el mundo.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🌍 Hoy: una norma internacional
+    </h3>
+    <p>
+      Actualmente, el código de colores está regulado por una organización
+      internacional llamada <strong>IEC</strong> (Comisión Electrotécnica
+      Internacional). Eso significa que una resistencia fabricada en Japón,
+      una en Alemania y una en Colombia <strong>se leen con el mismo
+      código</strong>.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>la normalización no la hace un genio, la hace un
+      acuerdo</strong>. Los ingenieros se pusieron de acuerdo para hacer la vida
+      más fácil a todos. Y ese acuerdo sigue funcionando, casi 100 años después.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de la RIA/RMA, la EIA y la norma IEC 60062.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado6.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado6.png"
+           alt="Infografía: El lenguaje de las rayitas. Muestra las cuatro bandas, los colores del código y un ejemplo paso a paso para leer 330 Ω" />
+    </a>
+    <figcaption>
+      <strong>Fig. 3:</strong> <strong>🗺️ Tu mapa completo:</strong> antes de
+      escuchar el podcast, mira esta infografía. Resume los temas que acabas
+      de recorrer: las cuatro bandas, los diez colores y un ejemplo resuelto.
+      ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g6">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 1
+      </span>
+      <h3>El lenguaje de las rayitas</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en menos de 5 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🎨</span>
+        <span><strong>¿Por qué colores?</strong> Por qué no podemos imprimir números en una resistencia tan pequeña.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔍</span>
+        <span><strong>Las cuatro bandas:</strong> qué significa cada una y cómo leerlas sin equivocarse.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🌍</span>
+        <span><strong>Un acuerdo mundial:</strong> por qué la misma resistencia se lee igual en Japón, Colombia y Alemania.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🛡️</span>
+        <span><strong>El guardián del código:</strong> por qué los profesionales siempre verifican con multímetro.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado6.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchenlo en familia y comenten qué código usan en su casa sin darse cuenta.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: ¿Qué descubriste hoy?</h3>
+    <ul>
+      <li>¿Por qué las resistencias usan colores en lugar de números?</li>
+      <li>¿Qué significa cada una de las cuatro bandas?</li>
+      <li>¿Cuál es el valor de una resistencia con bandas rojo-rojo-marrón-dorado? (Pista: rojo = 2, marrón = ×10)</li>
+      <li>¿Por qué la banda de tolerancia siempre va al final?</li>
+      <li>¿Qué pasa si alguien confunde un color al leer una resistencia? ¿Cómo se puede evitar?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #fff8e1; border-left: 4px solid var(--c-g6); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>💡 ¿Te quedaste con ganas de saber más?</strong> El mismo LED que
+      descubriste aquí tiene otras tres historias. Si te da curiosidad, explora
+      las otras miradas: cada una responde una pregunta distinta.
+    </p>
+    <div class="nav-estaciones-links">
+      <a href="grado7.html" class="btn-estacion">🚪 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

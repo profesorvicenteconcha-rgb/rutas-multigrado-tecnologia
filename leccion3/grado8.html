@@ -173,7 +173,7 @@
 
     <div class="highlight-box">
       <p>
-        <strong>⚡ ¿Y la corriente?</strong> El V<sub>f</sub> no es lo único que importa. El LED también necesita una <strong>corriente mínima</strong> para brillar con claridad. Por debajo de aproximadamente <strong>5 mA</strong>, el LED está encendido pero muy tenue, casi imperceptible. Y por encima de <strong>30 mA</strong>, el LED se sobrecalienta y puede quemarse. Los datasheets siempre indican un rango seguro: la corriente recomendada (típicamente 20 mA) y la corriente máxima (típicamente 30 mA). Los ingenieros diseñan siempre con un margen de seguridad.
+        <strong>⚡ ¿Y la corriente?</strong> El V<sub>f</sub> no es lo único que importa. El LED también necesita una <strong>corriente mínima</strong> para brillar con claridad. Por debajo de aproximadamente <strong>5 mA</strong>, el LED está encendido pero muy tenue, casi imperceptible. Y por encima de <strong>30 mA</strong>, el LED se sobrecalienta y puede quemarse. Las hojas de datos (en inglés, <em>datasheets</em>) siempre indican un rango seguro: la corriente recomendada (típicamente 20 mA) y la corriente máxima (típicamente 30 mA). Los ingenieros diseñan siempre con un margen de seguridad.
       </p>
     </div>
 
@@ -221,8 +221,7 @@
     <h2>🧮 Cómo calcular la resistencia con el V<sub>f</sub> conocido</h2>
     <p>
       Ahora que conocemos el V<sub>f</sub> de cada LED, podemos calcular la
-      resistencia que necesita para protegerse. El cálculo es el mismo que
-      vimos antes, pero ahora conocemos el V<sub>f</sub> exacto del LED.
+      resistencia que necesita para protegerse. El cálculo se basa en la ley de Ohm: primero se obtiene el voltaje que debe caer en la resistencia y luego se divide entre la corriente deseada.
     </p>
 
     <div class="reto-box" style="border-left-color: var(--c-g8);">
@@ -245,8 +244,7 @@
     </div>
 
     <p>
-      El valor comercial más cercano por encima es <strong>220 Ω</strong>. Con
-      esa resistencia, el LED brillará un poco menos pero estará protegido.
+      El valor comercial más cercano es <strong>150 Ω</strong> (si no lo encuentras, puedes usar <strong>180 Ω</strong>). Usar 220 Ω haría que el LED brille bastante menos, aunque sigue siendo seguro.
     </p>
 
     <div class="reto-box" style="border-left-color: var(--c-g8); margin-top: 1.5rem;">
@@ -283,12 +281,6 @@
         al calculado.
       </p>
     </div>
-
-    <div class="highlight-box">
-      <p>
-        <strong>⚠️ Una aclaración importante:</strong> el LED no es un componente óhmico. Es decir, no sigue la ley de Ohm como una resistencia común. Una resistencia de 100 Ω siempre tiene 100 Ω, sin importar el voltaje que le apliques. Pero el LED cambia su comportamiento según el voltaje: por debajo del V<sub>f</sub> casi no pasa corriente, y por encima del V<sub>f</sub> la corriente aumenta muy rápidamente. Por eso, cuando calculamos la resistencia de protección, no estamos calculando la resistencia del LED, sino la del componente externo que lo acompaña. El LED tiene su propio comportamiento, que se describe mejor con una curva característica que con un valor único de resistencia.
-      </p>
-    </div>
   </section>
 
   <!-- Card 5 -->
@@ -312,12 +304,12 @@
         <tbody>
           <tr>
             <td><strong>Vida útil</strong></td>
-            <td>50,000 – 100,000 horas</td>
-            <td>1,000 – 2,000 horas</td>
+            <td>50.000 – 100.000 horas</td>
+            <td>1.000 – 2.000 horas</td>
           </tr>
           <tr>
             <td><strong>Eficiencia (luz/energía)</strong></td>
-            <td>80 – 90%</td>
+            <td>40–60%</td>
             <td>5 – 10%</td>
           </tr>
           <tr>
@@ -336,7 +328,7 @@
 
     <p>
       Un LED dura <strong>hasta 100 veces más</strong> que una bombilla y
-      consume <strong>6 veces menos</strong> para dar la misma luz. Esa es la
+      consume <strong>8 veces menos</strong> para dar la misma luz. Esa es la
       razón por la que hoy todo funciona con LEDs: semáforos, pantallas,
       linternas, luces de las casas, y hasta las pantallas gigantes de los
       centros de datos.
@@ -412,18 +404,20 @@
         cátodo. Si el LED enciende débilmente y el multímetro muestra un valor
         entre 1.5 V y 3.5 V, esa es la dirección correcta.
       </li>
+      <li>
       <div class="highlight-box">
       <p>
-        <strong>💡Nota importante:</strong> el multímetro en modo diodo envía una corriente muy pequeña (del orden de 1 mA). A veces el LED no enciende visiblemente durante la medición, pero el multímetro igual muestra el V<sub>f</sub>. No te preocupes: eso es normal. Confía en el número que aparece en la pantalla, no en el brillo del LED.
+        <strong>💡 Nota importante:</strong> el multímetro en modo diodo envía una corriente muy pequeña (del orden de 1 mA). A veces el LED no enciende visiblemente durante la medición, pero el multímetro igual muestra el V<sub>f</sub>. No te preocupes: eso es normal. Confía en el número que aparece en la pantalla, no en el brillo del LED.
       </p>
     </div>
+    </li>
       <li>
         <strong>Anota el valor</strong> que muestra el multímetro en tu
         bitácora.
       </li>
       <li>
         <strong>Invierte las puntas.</strong> ¿Qué muestra el multímetro ahora?
-        (Debería mostrar cero o un valor muy alto, indicando que la corriente
+        (Debería mostrar un valor muy alto o ‘OL’, indicando que la corriente
         no puede pasar.)
       </li>
       <li>
@@ -623,7 +617,7 @@
       </li>
       <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
         <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🏆</span>
-        <span><strong>Los cuatro Nobel:</strong> la historia de Holonyak, Akasaki, Amano y Nakamura.</span>
+        <span><strong>Los pioneros del LED:</strong> la historia de Holonyak, Akasaki, Amano y Nakamura.</span>
       </li>
     </ul>
 
@@ -673,6 +667,11 @@
   <!-- Navegación entre miradas -->
   <nav class="nav-estaciones">
     <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f5f3ff; border-left: 4px solid var(--c-g8); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>⚛️ Una frontera invisible, cuatro formas de mirarla.</strong> Ya
+      usaste tu lente. Si quieres probar los demás, las otras páginas te los
+      prestan.
+    </p>
     <div class="nav-estaciones-links">
       <a href="grado6.html" class="btn-estacion">🔵 Mirada curiosa (Grado 6°)</a>
       <a href="grado7.html" class="btn-estacion">🚪 Mirada comparativa (Grado 7°)</a>

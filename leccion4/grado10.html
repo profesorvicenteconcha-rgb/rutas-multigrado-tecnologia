@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuando la máquina aprende a leer — Grado 10°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🟢 Cuando la máquina aprende a leer</h1>
+    <div class="sub">
+      Etiquetado de datos, visión por computadora y el reto de la precisión
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>👁️ ¿Cómo "ve" una máquina?</h2>
+    <p>
+      Un ingeniero humano mira una resistencia y, en menos de un segundo, lee
+      sus bandas de colores, calcula el valor y verifica la tolerancia. Para
+      una computadora, ese proceso es extraordinariamente complejo.
+    </p>
+    <p>
+      Para empezar, una computadora <strong>no ve una resistencia</strong>. Ve
+      una matriz de números. Cuando una cámara captura una imagen, la divide en
+      miles o millones de <strong>píxeles</strong>. Cada píxel tiene tres valores
+      numéricos <strong>entre 0 y 255</strong>: cuánto rojo, cuánto verde y
+      cuánto azul contiene. Eso es el famoso <strong>modelo RGB</strong>. Así, el
+      rojo puro se representa como <strong>(255, 0, 0)</strong>; el negro, como
+      <strong>(0, 0, 0)</strong>; y el blanco, como <strong>(255, 255, 255)</strong>.
+    </p>
+    <p>
+      Fíjate en el contraste: en el código de colores de las resistencias, cada
+      banda vale entre <strong>0 y 9</strong> (un solo dígito). En el modelo RGB,
+      cada color vale entre <strong>0 y 255</strong>. Cada sistema de codificación
+      elige su rango según lo que necesita representar.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/pixel_rgb.png" target="_blank" rel="noopener">
+            <img src="img/pixel_rgb.png"
+                alt="Un píxel ampliado mostrando sus tres sub-píxeles RGB (rojo, verde, azul) y una tabla con ejemplos de valores numéricos para rojo, negro y blanco" />
+        </a>
+        <figcaption>
+            Fig. 1: Un píxel no es un color: es una terna de tres números entre 0 y 255.
+            El rojo puro se escribe (255, 0, 0); el negro, (0, 0, 0).
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Idea clave:</strong> para la máquina, una resistencia no es
+        un objeto físico: es una <strong>matriz de números</strong>. El
+        trabajo de la visión por computadora es encontrar patrones en esa
+        matriz. El código de colores es justamente un patrón.
+      </p>
+    </div>
+
+    <h3>🎨 Del color al número: el puente que ya conoces</h3>
+    <p>
+      El código de colores <strong>convierte colores en valores numéricos</strong>.
+      Una máquina necesita hacer exactamente lo mismo, pero al revés: convertir
+      una imagen en valores numéricos.
+    </p>
+    <p>
+      El proceso es sorprendentemente similar al que hace un estudiante con
+      una tabla de colores:
+    </p>
+    <ol>
+      <li>
+        <strong>Captura:</strong> la cámara convierte la luz reflejada por la
+        resistencia en una matriz de números (RGB).
+      </li>
+      <li>
+        <strong>Detección:</strong> el sistema identifica la región de la
+        imagen donde está la resistencia (separándola del fondo).
+      </li>
+      <li>
+        <strong>Segmentación:</strong> localiza las bandas de color dentro de
+        esa región.
+      </li>
+      <li>
+        <strong>Clasificación:</strong> asigna cada banda a una categoría
+        (rojo, naranja, marrón…).
+      </li>
+      <li>
+        <strong>Cálculo:</strong> aplica la misma fórmula que usaría un
+        humano: dígitos × multiplicador ± tolerancia.
+      </li>
+    </ol>
+
+    <p>
+      Cada uno de esos pasos es un problema de ingeniería. Y todos ellos
+      dependen de un ingrediente fundamental: <strong>datos de
+      entrenamiento</strong>. Sin ejemplos previos, la máquina no sabe qué
+      es "rojo" ni qué es "una banda".
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/pipeline_vision.png" target="_blank" rel="noopener">
+            <img src="img/pipeline_vision.png"
+                alt="Diagrama de flujo con las cinco etapas del proceso de visión por computadora: captura, detección, segmentación, clasificación y cálculo" />
+        </a>
+        <figcaption>
+            Fig. 2: El proceso completo, paso a paso. Cada etapa es un problema de
+            ingeniería, y todas dependen de los datos de entrenamiento.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <h3>🧠 Dos formas de resolver el mismo problema</h3>
+    <p>
+      Antes de seguir, hay una distinción clave que conviene aclarar. Existen
+      dos maneras muy distintas de lograr que una máquina lea una resistencia:
+    </p>
+    <ul>
+      <li>
+        <strong>Reglas explícitas (enfoque tradicional):</strong> un ingeniero
+        escribe la regla directamente. <em>"Si la banda es roja, vale 2. Si
+        es marrón, vale 1. Si es dorada, la tolerancia es ±5%."</em> Es el
+        mismo enfoque que tú usas cuando consultas una tabla de colores.
+      </li>
+      <li>
+        <strong>Aprendizaje automático (IA):</strong> el modelo
+        <strong>descubre la regla por sí mismo</strong> a partir de miles de
+        ejemplos. No le decimos "el rojo vale 2". Le mostramos miles de
+        resistencias ya etiquetadas, y el modelo aprende solo qué colores
+        corresponden a qué valores.
+      </li>
+    </ul>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/reglas_vs_aprendizaje.png" target="_blank" rel="noopener">
+            <img src="img/reglas_vs_aprendizaje.png"
+                alt="Comparación visual entre el enfoque tradicional de reglas explícitas y el enfoque de aprendizaje automático" />
+        </a>
+        <figcaption>
+            Fig. 3: Dos caminos para resolver el mismo problema. A la izquierda, el
+            ingeniero escribe las reglas. A la derecha, el modelo las descubre a
+            partir de ejemplos.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La diferencia es enorme:</strong> con reglas explícitas,
+        tú (el ingeniero) escribes la lógica. Con aprendizaje automático, la
+        máquina <em>infiere</em> la lógica. La consecuencia práctica es que
+        el aprendizaje automático requiere <strong>muchos datos</strong> y
+        <strong>mucho entrenamiento</strong>, pero permite resolver problemas
+        que serían imposibles de programar con reglas fijas (como reconocer
+        un rostro o leer una señal de tránsito).
+      </p>
+    </div>
+
+    <h3>🔗 Una conexión directa</h3>
+    <p>
+      El código de colores es, en esencia, un <strong>sistema de etiquetado
+      creado por humanos</strong>. Los ingenieros asignaron un número a cada
+      color y acordaron usarlo en todo el mundo. Ahora le pedimos a la IA que
+      haga lo mismo: que aprenda a "etiquetar" colores con valores. Estás
+      viendo la misma idea, casi 100 años después.
+    </p>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🏷️ Etiquetado de datos: el arte de enseñar a una máquina</h2>
+    <p>
+      Antes de que una IA pueda leer resistencias, necesita aprender qué son.
+      Y para aprender, necesita ejemplos. Muchos ejemplos. Miles o millones.
+      Pero no basta con darle imágenes al azar: hay que <strong>etiquetarlas</strong>.
+    </p>
+    <p>
+      El <strong>etiquetado de datos</strong> (en inglés, <em>data labeling</em>)
+      es el proceso de asignar una etiqueta a cada elemento de un
+      <strong>conjunto de datos</strong> (en inglés, <em>dataset</em>). Es el
+      trabajo que permite que una máquina aprenda a reconocer patrones.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Ejemplo:</strong> si queremos entrenar una IA para leer
+        resistencias, necesitamos:
+      </p>
+      <ul style="margin-top: 0.6rem; margin-bottom: 0;">
+        <li>Miles de fotos de resistencias con distintas iluminaciones, ángulos, fondos y desgastes.</li>
+        <li>Cada foto etiquetada manualmente por un humano: <em>"Esta foto muestra una resistencia de 330 Ω ±5%"</em>.</li>
+        <li>Muchas fotos por cada valor y cada combinación de colores posible.</li>
+      </ul>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/etiquetado_proceso.png" target="_blank" rel="noopener">
+            <img src="img/etiquetado_proceso.png"
+                alt="Diagrama de flujo del proceso de etiquetado: captura de la foto, etiquetado por un humano, organización en un conjunto de datos" />
+        </a>
+        <figcaption>
+            Fig. 4: El proceso de etiquetado, paso a paso. Cada foto requiere una
+            etiqueta correcta para que la IA pueda aprender.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <h3>🎯 ¿Por qué la precisión de la etiqueta es tan importante?</h3>
+    <p>
+      Aquí hay un principio fundamental: <strong>la calidad de una IA depende
+      de la calidad de sus datos</strong>. Si las etiquetas están mal, la IA
+      aprenderá mal. Es el famoso principio de <em>"basura entra, basura
+      sale"</em>.
+    </p>
+    <p>
+      Imagina que etiquetas mal una foto: dices que muestra "330 Ω" cuando en
+      realidad muestra "33 Ω". La IA aprenderá que los patrones visuales de
+      esas dos resistencias son iguales. Y cuando le muestres una nueva foto,
+      se equivocará.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Comparación con el código de colores:</strong> cuando un
+        estudiante lee mal una banda (por ejemplo, confunde el rojo con el
+        marrón), obtiene un valor equivocado. Lo mismo le pasa a una IA cuando
+        su etiqueta está mal. La diferencia es que el estudiante puede darse
+        cuenta del error y corregirlo; la IA no.
+      </p>
+    </div>
+
+    <h3>⚖️ El sesgo: cuando los datos no representan la realidad</h3>
+    <p>
+      Hay un problema que aparece una y otra vez en el entrenamiento de IA, y
+      que conviene entender bien: el <strong>sesgo</strong> (en inglés,
+      <em>bias</em>). Un modelo sesgado es un modelo que funciona bien en
+      ciertas condiciones, pero falla en otras.
+    </p>
+    <p>
+      En el caso de las resistencias, el sesgo puede tomar varias formas:
+    </p>
+    <ul>
+      <li>
+        <strong>Sesgo de iluminación:</strong> si todas las fotos se tomaron
+        con luz blanca, la IA fallará cuando vea una resistencia bajo luz
+        amarilla.
+      </li>
+      <li>
+        <strong>Sesgo de estado:</strong> si todas las resistencias eran
+        nuevas y limpias, la IA no reconocerá las viejas y desgastadas.
+      </li>
+      <li>
+        <strong>Sesgo de marca:</strong> si todas las fotos eran del mismo
+        fabricante, la IA podría confundir variaciones de diseño con valores
+        distintos.
+      </li>
+    </ul>
+    <p>
+      En todos los casos, el problema es el mismo: <strong>la IA hereda los
+      sesgos de sus datos</strong>. Un conjunto de datos diverso produce un modelo
+      robusto; un conjunto de datos sesgado produce un modelo frágil.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/sesgo_diversidad.png" target="_blank" rel="noopener">
+            <img src="img/sesgo_diversidad.png"
+                alt="Comparación entre un conjunto de datos sesgado (todas las fotos iguales) y un conjunto de datos diverso (fotos con distintas condiciones)" />
+        </a>
+        <figcaption>
+            Fig. 5: Un conjunto sesgado produce un modelo frágil. Un conjunto diverso
+            produce un modelo robusto, capaz de reconocer la realidad en todas sus
+            variaciones.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Más allá de las resistencias:</strong> el sesgo es uno de
+        los problemas más importantes de la IA actual. Una IA médica entrenada
+        solo con datos de un grupo étnico puede fallar en otros. Una IA de
+        contratación entrenada con datos históricos sesgados puede perpetuar
+        discriminaciones. La <strong>diversidad de los datos</strong> no es un
+        detalle técnico: es una responsabilidad ética.
+      </p>
+    </div>
+
+    <h3>🌍 El trabajo invisible detrás de la IA</h3>
+    <p>
+      Detrás de cada modelo de visión por computadora hay miles de horas de
+      trabajo humano etiquetando datos. Personas que, foto por foto, dibujan
+      cajas sobre los objetos, asignan categorías y verifican resultados. Es
+      un trabajo silencioso pero fundamental.
+    </p>
+    <p>
+      Y ese trabajo también tiene un componente ético: quien etiqueta decide
+      qué es importante y qué no. Un sesgo en las etiquetas se convierte en un
+      sesgo en la IA.
+    </p>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>🔬 Visión por computadora: del píxel a la decisión</h2>
+    <p>
+      La <strong>visión por computadora</strong> es la rama de la inteligencia
+      artificial que permite a las máquinas "ver" e interpretar imágenes. Es
+      la tecnología que usan los carros autónomos, los sistemas de
+      reconocimiento facial y las cámaras de seguridad inteligentes.
+    </p>
+
+    <h3>🧠 ¿Cómo funciona?</h3>
+    <p>
+      Un modelo de visión por computadora se entrena con miles de imágenes
+      etiquetadas. A lo largo del entrenamiento, el modelo aprende a
+      <strong>extraer características</strong> de las imágenes: bordes,
+      formas, texturas, colores. Esas características se combinan en capas
+      cada vez más abstractas, hasta que el modelo puede reconocer objetos
+      completos.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Ejemplo concreto:</strong> una IA entrenada para leer
+        resistencias aprende, primero, a detectar <em>bordes</em> (los límites
+        de las bandas). Luego, a detectar <em>colores</em> (el rojo, el
+        naranja, el marrón). Finalmente, a detectar <em>patrones completos</em>
+        (una resistencia con banda dorada al final significa tolerancia ±5%).
+      </p>
+    </div>
+
+    <h3>📊 La IA no sabe, estima: confianza y probabilidad</h3>
+    <p>
+      Aquí hay una diferencia fundamental entre una máquina y un humano.
+      Cuando tú miras una resistencia y dices <em>"esto es 330 Ω"</em>, lo
+      dices con certeza. Pero cuando una IA analiza la misma resistencia, no
+      dice <em>"esto es 330 Ω"</em>: dice, por ejemplo, <em>"hay 92% de
+      probabilidad de que esto sea 330 Ω"</em>.
+    </p>
+    <p>
+      Esa probabilidad se llama <strong>confianza</strong> del modelo. Es un
+      número entre 0 y 1 (o entre 0% y 100%) que indica qué tan seguro está
+      el modelo de su respuesta.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+        <a href="img/confianza_modelo.png" target="_blank" rel="noopener">
+            <img src="img/confianza_modelo.png"
+                alt="Tres predicciones de la misma IA sobre una resistencia, con distintos niveles de confianza: 98%, 72% y 45%" />
+        </a>
+        <figcaption>
+            Fig. 6: La IA no dice "esto es 330 Ω". Dice "hay X% de probabilidad de
+            que esto sea 330 Ω". La confianza indica qué tan seguro está el modelo.
+            <em>(Toca la imagen para ampliarla)</em>
+        </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 ¿Por qué es importante?</strong> Porque un modelo
+        bien entrenado tiene <em>alta confianza cuando acierta</em> y
+        <em>baja confianza cuando duda</em>. Si un sistema de seguridad lee
+        "92% resistencias" pero "20% posibles explosivos", sabemos que necesita
+        más datos antes de actuar. La confianza permite tomar decisiones
+        informadas.
+      </p>
+    </div>
+
+    <h3>⚖️ Los retos de la visión artificial</h3>
+    <p>
+      A diferencia de un humano, una IA no "entiende" lo que ve. Solo
+      reconoce patrones. Eso la hace vulnerable a varios problemas:
+    </p>
+    <ul>
+      <li>
+        <strong>Iluminación:</strong> una resistencia fotografiada con luz
+        amarilla puede verse distinta que con luz blanca. La IA debe aprender
+        a ser invariante a la iluminación.
+      </li>
+      <li>
+        <strong>Ángulo:</strong> una resistencia fotografiada desde un ángulo
+        extraño puede confundir al modelo.
+      </li>
+      <li>
+        <strong>Desgaste:</strong> una resistencia vieja y sucia puede tener
+        los colores alterados. La IA debe aprender a reconocer el patrón
+        incluso con ruido.
+      </li>
+      <li>
+        <strong>Falsos positivos:</strong> la IA puede "ver" resistencias
+        donde no las hay, o confundir componentes similares.
+      </li>
+    </ul>
+
+    <p>
+      Por eso el entrenamiento con datos diversos es tan importante: la IA
+      debe ver la realidad en todas sus variaciones para poder reconocerla
+      cuando la encuentre.
+    </p>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>⚡ La precisión de la etiqueta: el nuevo código de colores</h2>
+    <p>
+      Una resistencia no vale exactamente 330 Ω: vale <em>aproximadamente</em>
+      330 Ω. La diferencia entre el valor ideal y el valor real se llama
+      <strong>tolerancia</strong>, y es un <strong>margen de error
+      aceptable</strong>. En inteligencia artificial existe un concepto paralelo:
+      la <strong>precisión de la etiqueta</strong>.
+    </p>
+    <p>
+      Así como una resistencia de 330 Ω ±5% puede valer entre 313,5 Ω y
+      346,5 Ω, una etiqueta también tiene un margen de error. Si el
+      etiquetador se equivoca en un 1% de las imágenes, la IA aprenderá con
+      ese 1% de ruido. El resultado no será perfecto, pero puede ser
+      aceptable.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Comparación:</strong> la tolerancia en resistencias y la
+        precisión en etiquetas siguen el mismo principio de ingeniería:
+        <em>no se busca la perfección absoluta, sino un margen de error
+        controlado</em>. En ambos casos, asumir que algo puede fallar es lo
+        que permite diseñar sistemas robustos.
+      </p>
+    </div>
+
+    <h3>🎯 Métricas de evaluación</h3>
+    <p>
+      Para medir qué tan bien funciona una IA, se usan varias métricas:
+    </p>
+    <ul>
+      <li>
+        <strong>Exactitud</strong> (en inglés, <em>accuracy</em>): el porcentaje
+        de aciertos sobre el total. Si la IA lee bien 950 de 1000 resistencias,
+        su exactitud es del 95%.
+      </li>
+      <li>
+        <strong>Precisión</strong> (en inglés, <em>precision</em>): de todas las
+        resistencias que la IA dijo que eran de 330 Ω, ¿cuántas realmente lo
+        eran?
+      </li>
+      <li>
+        <strong>Sensibilidad</strong> (en inglés, <em>recall</em>): de todas las
+        resistencias de 330 Ω que existían, ¿cuántas detectó la IA?
+      </li>
+    </ul>
+
+    <p>
+      Cada métrica captura un aspecto distinto del rendimiento. Un buen
+      ingeniero de IA no se fija solo en una: las combina para tener una
+      visión completa.
+    </p>
+
+    <h3>🌍 La dimensión ética</h3>
+    <p>
+      Cuando una IA se equivoca, las consecuencias dependen del contexto. Si
+      una IA de laboratorio lee mal una resistencia, el peor caso es un
+      circuito que no funciona. Pero si una IA médica se equivoca al leer una
+      radiografía, o una IA de tráfico no reconoce un peatón, las
+      consecuencias son graves.
+    </p>
+    <p>
+      Por eso la <strong>precisión de las etiquetas</strong> no es un detalle
+      técnico: es una responsabilidad. Quien entrena una IA debe asegurarse de
+      que los datos sean correctos, diversos y representativos de la realidad.
+    </p>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🏷️ Taller: Entrena a tu propia IA</h2>
+    <p>
+      Vas a experimentar el proceso de <strong>etiquetado de datos</strong>
+      desde dentro. La misión es crear un <strong>mini conjunto de datos</strong>
+      de resistencias que podría usarse para entrenar una IA.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en
+        el aula (con resistencias del kit y un celular para fotos) o
+        llevarlo a casa si tienes acceso a un dispositivo con cámara. Si no
+        tienes cámara, puedes hacer una versión simplificada dibujando las
+        resistencias.
+      </p>
+    </div>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Cinco resistencias de valores distintos.</li>
+      <li>Un celular con cámara (o un dispositivo con cámara).</li>
+      <li>Una hoja de papel blanco como fondo.</li>
+      <li>Una lámpara o fuente de luz (opcional, para variar la iluminación).</li>
+      <li>Tu cuaderno de bitácora.</li>
+    </ul>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Prepara el escenario.</strong> Coloca las resistencias sobre el
+        papel blanco, separadas entre sí.
+      </li>
+      <li>
+        <strong>Toma fotos.</strong> Captura al menos tres fotos de cada
+        resistencia:
+        <ul>
+          <li>Una con buena iluminación.</li>
+          <li>Una con luz tenue o lateral.</li>
+          <li>Una desde un ángulo distinto.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Etiqueta cada foto.</strong> En tu cuaderno, anota para cada
+        foto:
+        <ul>
+          <li>El número de foto (1, 2, 3…).</li>
+          <li>El valor de la resistencia que aparece.</li>
+          <li>Las condiciones de la foto (buena luz, luz tenue, ángulo).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Crea una tabla de etiquetas.</strong> Completa esta tabla en
+        tu bitácora:
+        <div class="tabla-scroll" style="margin-top: 0.6rem;">
+          <table>
+            <thead>
+              <tr>
+                <th># Foto</th>
+                <th>Resistencia</th>
+                <th>Valor</th>
+                <th>Tolerancia</th>
+                <th>Condiciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>1</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>2</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>3</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>4</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>5</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>6</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>7</strong></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td><strong>8</strong></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Reflexiona sobre la diversidad del conjunto de datos.</strong>
+        ¿Cuántas combinaciones distintas de colores y condiciones lograste? ¿Qué
+        variables podrían agregarse para hacer un conjunto de datos más completo?
+      </li>
+      <li>
+        <strong>Detecta los errores.</strong> Si tuvieras que pedirle a otra
+        persona que etiquetara las fotos por ti, ¿qué instrucciones le darías
+        para minimizar los errores? Escribe al menos tres reglas claras.
+      </li>
+      <li>
+        <strong>Analiza el sesgo.</strong> Revisa tu conjunto de datos: ¿todas
+        las fotos son de resistencias nuevas? ¿Todas se tomaron con la misma luz?
+        ¿Todas desde el mismo ángulo? Anota al menos un sesgo que tenga tu
+        conjunto de datos y cómo podrías corregirlo.
+      </li>
+    </ol>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Qué fue más difícil: tomar las fotos, etiquetarlas o encontrar la diversidad?</li>
+      <li>¿Qué foto crees que sería más difícil para una IA? ¿Por qué?</li>
+      <li>Si tuvieras que entrenar una IA con solo 10 fotos, ¿cuáles elegirías y por qué?</li>
+      <li>¿Qué sesgos tiene tu conjunto de datos y cómo podrías corregirlos?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Un conjunto de datos con 10,000 fotos de resistencias etiquetadas por humanos
+      puede entrenar una IA para leer resistencias. Pero ¿qué pasaría si
+      todas las fotos tuvieran la misma iluminación? ¿Qué pasaría si todas
+      fueran de la misma marca? ¿Qué problemas tendría esa IA en el mundo
+      real?
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 ¿Sabías que…?</strong> Algunos de los conjuntos de datos más grandes
+        de visión por computadora tienen más de 14 millones de imágenes
+        etiquetadas. Y cada una fue anotada por una persona. Detrás de cada
+        IA hay un trabajo humano enorme, a menudo invisible.
+      </p>
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> si usas un celular para tomar las fotos,
+      no expongas la pantalla a golpes ni la mojes. Y si usas resistencias
+      dentro de un aparato, primero desconecta el aparato y retira las pilas.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 La mujer que enseñó a las máquinas a ver</h2>
+    <p>
+      Durante décadas, la visión por computadora fue un campo pequeño y
+      frustrante. Los investigadores lograban avances, pero los modelos
+      fallaban en el mundo real. Nadie sabía por qué. Hasta que una
+      investigadora se dio cuenta de que el problema no era el algoritmo:
+      era la falta de datos.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      👩‍🔬 Fei-Fei Li (1976) — La madrina de la visión por computadora
+    </h3>
+    <p>
+      Fei-Fei Li nació en China y emigró a Estados Unidos a los 16 años.
+      Trabajó en empleos humildes mientras estudiaba, y llegó a ser profesora
+      de ciencias de la computación en Stanford. Cuando empezó a investigar
+      visión por computadora, el campo estaba estancado.
+    </p>
+    <p>
+      En 2007, Li tuvo una idea que muchos consideraron una locura: en lugar
+      de mejorar los algoritmos, <strong>recolectar un conjunto de datos gigantesco
+      de imágenes etiquetadas</strong>. Creó <strong>ImageNet</strong>, un
+      proyecto que reúne millones de fotos, cada una etiquetada por un
+      humano. Ella y su equipo no mejoraron el algoritmo: cambiaron los
+      datos.
+    </p>
+    <p>
+      El resultado fue transformador. En 2012, un modelo entrenado sobre
+      ImageNet (llamado <strong>AlexNet</strong>) arrasó en una competencia
+      internacional de reconocimiento de imágenes. La visión por computadora
+      dio un salto cuántico, y desde entonces todos los grandes avances de la
+      IA moderna han descansado sobre conjuntos de datos masivos.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🌍 De ImageNet a ChatGPT
+    </h3>
+    <p>
+      El principio que Fei-Fei Li demostró con ImageNet se aplica hoy a todos
+      los modelos de IA, incluidos los que generan texto o imágenes. La
+      calidad de un modelo depende de la calidad y la cantidad de sus datos
+      de entrenamiento. Los "modelos gigantes" como ChatGPT deben su poder,
+      en gran medida, a la enorme cantidad de texto con el que fueron
+      entrenados.
+    </p>
+    <p>
+      Y detrás de cada conjunto de datos hay miles de personas etiquetando, revisando y
+      corrigiendo. Es el trabajo silencioso que sostiene toda la inteligencia
+      artificial moderna.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>a veces la innovación no está en mejorar el
+      algoritmo, sino en cambiar los datos</strong>. Fei-Fei Li no resolvió
+      el problema de la visión por computadora con una fórmula mágica: lo
+      resolvió con millones de ejemplos etiquetados. Y eso cambió la historia
+      de la IA.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de ImageNet y biografías de la Universidad de Stanford.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado10.png"
+           alt="Infografía: Cuando la máquina aprende a leer. Muestra el proceso de etiquetado de datos, cómo una IA procesa una imagen de resistencia y los retos de la visión por computadora" />
+    </a>
+    <figcaption>
+        <strong>Fig. 7:</strong> <strong>🗺️ Tu mapa completo:</strong> antes de
+        escuchar el podcast, mira esta infografía. Resume los temas que acabas de
+        recorrer: cómo ve una máquina, el etiquetado de datos, la visión por
+        computadora y la precisión de las etiquetas. ¿Reconoces cada parte? ¿Cuál
+        te resultó más útil?
+        <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 4
+      </span>
+      <h3>Cuando la máquina aprende a leer</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 7 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">👁️</span>
+        <span><strong>Cómo ve una máquina:</strong> por qué una imagen es solo una matriz de números RGB.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🧠</span>
+        <span><strong>Reglas vs. aprendizaje:</strong> por qué la IA descubre la regla en lugar de recibirla escrita.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🏷️</span>
+        <span><strong>Etiquetado de datos:</strong> el arte de enseñar a una máquina con ejemplos etiquetados.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚖️</span>
+        <span><strong>El sesgo:</strong> cómo los datos sesgados producen modelos frágiles y poco confiables.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📊</span>
+        <span><strong>La IA no sabe, estima:</strong> confianza, probabilidad y verdad fundamental.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">👩‍🔬</span>
+        <span><strong>Fei-Fei Li e ImageNet:</strong> la mujer que cambió la IA al cambiar los datos.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Escúchenlo en familia y comenten qué otras tareas hacen las máquinas hoy que antes solo hacían los humanos.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero de IA</h3>
+    <ul>
+      <li>¿Por qué una computadora necesita "traducir" una imagen a números para poder procesarla?</li>
+      <li>¿Cuál es la diferencia entre un sistema de reglas explícitas y un modelo de aprendizaje automático?</li>
+      <li>¿Qué es el <strong>etiquetado de datos</strong> y por qué es fundamental para entrenar una IA?</li>
+      <li>¿Qué es el <strong>sesgo</strong> en un conjunto de datos y cómo puede afectar el rendimiento de una IA?</li>
+      <li>¿Por qué decimos que "la IA no sabe, estima"? Explica el concepto de <strong>confianza</strong>.</li>
+      <li>¿Qué pasaría si un conjunto de datos de resistencias tuviera todas las fotos con la misma iluminación?</li>
+      <li>¿Cómo se relaciona la tolerancia de una resistencia con la precisión de una etiqueta?</li>
+      <li>¿Por qué la calidad de los datos es tan importante como la calidad del algoritmo?</li>
+      <li>¿Qué responsabilidad tienen las personas que etiquetan datos para una IA?</li>
+      <li>¿Qué aprendiste de la historia de Fei-Fei Li y su trabajo con ImageNet?</li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f0fdf4; border-left: 4px solid var(--c-g10); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+        <strong>💡 Sugerencia:</strong> si te da curiosidad cómo abordan el mismo
+        tema tus compañeros de otros grados, visita al menos una de las otras
+        miradas. Cada una revela algo que las demás no.
+    </p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

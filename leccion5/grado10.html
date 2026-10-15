@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El reparto de la corriente — Grado 10°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado10.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g10);">Grado 10° • Mirada Analítica</span>
+    <h1 style="margin-top: 0.6rem;">🟢 El reparto de la corriente</h1>
+    <div class="sub">
+      Reparto, potencia y paralelismo en la IA moderna
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card green">
+    <h2>⚖️ El reparto de la corriente</h2>
+    <p>
+      En un circuito en paralelo, la corriente se reparte entre las ramas. Pero
+      no se reparte al azar: <strong>la corriente prefiere el camino de menor
+      resistencia</strong>. La rama con menos resistencia lleva más corriente.
+      La rama con más resistencia lleva menos.
+    </p>
+    <p>
+      Este fenómeno se conoce como <strong>divisor de corriente</strong>, y es
+      la contraparte del divisor de voltaje que se estudia en los circuitos en
+      serie.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Idea clave:</strong> en paralelo, el voltaje es el mismo
+        para todas las ramas, pero la corriente se reparte de forma
+        <em>inversamente proporcional</em> a la resistencia de cada rama.
+      </p>
+    </div>
+
+    <h3>📐 La fórmula del reparto</h3>
+    <p>
+      Si tienes dos resistencias en paralelo (R₁ y R₂) alimentadas por una
+      fuente de corriente total I, la corriente en cada rama se calcula así:
+    </p>
+    <div class="formula">
+      $$I_1 = I \times \frac{R_2}{R_1 + R_2} \qquad I_2 = I \times \frac{R_1}{R_1 + R_2}$$
+    </div>
+    <p>
+      Observa con cuidado: la corriente I₁ depende de R₂, no de R₁. Y
+      viceversa. Es un reparto cruzado: cuanto mayor sea la resistencia de la
+      <em>otra</em> rama, más corriente pasa por la mía.
+    </p>
+
+    <h3>🧠 ¿Por qué la corriente de una rama depende de la otra resistencia?</h3>
+    <p>
+      La fórmula del divisor de corriente parece extraña: la corriente que pasa
+      por R₁ depende de R₂, no de R₁. ¿Por qué?
+    </p>
+    <p>
+      Para entenderlo, partamos de dos hechos:
+    </p>
+    <ul>
+      <li>
+        <strong>En paralelo, el voltaje es el mismo en todas las ramas.</strong>
+        Ambas ramas están conectadas a los mismos dos puntos (positivo y
+        negativo de la fuente).
+      </li>
+      <li>
+        <strong>La ley de Ohm relaciona corriente, voltaje y resistencia:</strong>
+        la corriente es igual al voltaje dividido entre la resistencia
+        (I = V / R). Si el voltaje es el mismo, la corriente depende solo de la
+        resistencia.
+      </li>
+    </ul>
+    <p>
+      Entonces, si R₂ es muy grande, poca corriente se va por esa rama. Y como
+      la corriente total I es fija (la que entrega la fuente), casi toda la
+      corriente tiene que irse por la otra rama (R₁). Por eso I₁ aumenta cuando
+      R₂ aumenta: <em>cuanto más "difícil" es el otro camino, más corriente
+      elige el mío</em>.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Analogía del supermercado:</strong> imagina dos cajas
+        abiertas. Si una caja está lenta (mucha resistencia), los clientes
+        prefieren la otra caja (más corriente). La corriente total se reparte
+        en proporción inversa a la resistencia de cada rama.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>🔥 La potencia en cada rama</h2>
+    <p>
+      La corriente que circula por cada rama no solo transporta carga: también
+      <strong>transporta energía</strong>. Y esa energía se convierte en calor
+      en cada resistencia. La potencia disipada en cada rama depende de la
+      corriente que la atraviesa.
+    </p>
+
+    <h3>🔥 ¿Qué es la potencia?</h3>
+    <p>
+      Antes de las fórmulas, conviene aclarar qué mide la potencia. La
+      <strong>potencia</strong> es la <em>rapidez con la que se transforma la
+      energía</em>. Mide cuánta energía se convierte por unidad de tiempo.
+    </p>
+
+    <div class="formula" style="font-size: 1.15em;">
+      $$P = \frac{E}{t}$$
+    </div>
+
+    <p>
+      Donde <strong>P</strong> es la potencia, <strong>E</strong> es la
+      energía transformada y <strong>t</strong> es el tiempo. La potencia se
+      mide en <strong>vatios (W)</strong>, y un vatio equivale a un julio por
+      segundo (1 W = 1 J/s).
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Analogía del grifo:</strong> imagina dos grifos que llenan
+        el mismo balde de 10 litros. El grifo A tarda 10 segundos; el grifo B
+        tarda 2 segundos. Los dos entregan <em>la misma cantidad de agua</em>
+        (la misma energía), pero el grifo B lo hace <em>más rápido</em>. Por
+        eso decimos que el grifo B tiene más potencia.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        <strong>La potencia no mide cuánta energía se usa, sino qué tan rápido
+        se usa.</strong>
+      </p>
+    </div>
+
+    <h3>⚡ Diferencia entre energía y potencia</h3>
+    <p>
+      Estos dos conceptos se confunden con frecuencia, pero son distintos:
+    </p>
+
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>Qué mide</th>
+            <th>Unidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Energía</strong></td>
+            <td>Cuánta energía se transforma en total</td>
+            <td>julio (J) o kilovatio-hora (kWh)</td>
+          </tr>
+          <tr>
+            <td><strong>Potencia</strong></td>
+            <td>Qué tan rápido se transforma esa energía</td>
+            <td>vatio (W)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      La relación entre ambos es directa: <strong>energía = potencia × tiempo</strong>.
+      Por eso, la <strong>factura del servicio de energía eléctrica</strong> se mide
+      en <strong>kilovatios-hora (kWh)</strong>: es la energía total consumida por
+      todos los aparatos conectados a la red —motores, electrodomésticos,
+      iluminación y cualquier otro dispositivo—, que resulta de multiplicar la
+      potencia de cada uno por el tiempo que estuvo en funcionamiento.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Ejemplo cotidiano:</strong> una bombilla de 60 W encendida
+        durante 10 horas consume 600 Wh = 0,6 kWh. Una bombilla de 10 W
+        encendida durante 60 horas consume los mismos 600 Wh. Ambas consumen
+        la misma energía, pero la primera lo hace mucho más rápido (tiene más
+        potencia).
+      </p>
+    </div>
+
+    <h3>📐 Las tres fórmulas de la potencia</h3>
+    <p>
+      Existen tres formas equivalentes de calcular la potencia disipada en un
+      componente. Las tres dan el mismo resultado; solo cambia cuál es más
+      conveniente según los datos que tengas:
+    </p>
+    <div class="formula">
+      $$P = V \times I \qquad P = I^2 \times R \qquad P = \frac{V^2}{R}$$
+    </div>
+    <p>
+      La primera es la definición básica. La segunda se usa cuando conoces la
+      corriente pero no el voltaje. La tercera, <strong>P = V² / R</strong>, es
+      la más útil en circuitos en paralelo, porque el voltaje es el mismo en
+      todas las ramas.
+    </p>
+
+    <h3>🧠 ¿De dónde sale P = V² / R?</h3>
+    <p>
+      Es una combinación directa de las dos fórmulas anteriores. Partimos de
+      la definición de potencia y sustituimos la corriente con la ley de Ohm
+      (I = V / R):
+    </p>
+    <div class="formula">
+      $$P = V \times I = V \times \frac{V}{R} = \frac{V^2}{R}$$
+    </div>
+    <p>
+      Así que las tres fórmulas son la misma cosa escrita de tres maneras
+      distintas.
+    </p>
+
+    <h3>🔍 Ejemplo comparativo</h3>
+    <p>
+      Imagina un circuito en paralelo con dos resistencias: una de 330 Ω y otra
+      de 1 kΩ, ambas alimentadas con 5 V. Comparemos los resultados usando
+      distintas fórmulas.
+    </p>
+
+    <p><strong>Con P = V × I (calculando primero la corriente):</strong></p>
+    <ul>
+      <li>I<sub>330</sub> = 5 V / 330 Ω ≈ 15,15 mA → P<sub>330</sub> = 5 V × 0,01515 A ≈ 75,8 mW</li>
+      <li>I<sub>1k</sub> = 5 V / 1000 Ω = 5 mA → P<sub>1k</sub> = 5 V × 0,005 A = 25 mW</li>
+    </ul>
+
+    <p><strong>Con P = V² / R (directo, sin calcular la corriente):</strong></p>
+    <ul>
+      <li>P<sub>330</sub> = 5² / 330 = 25 / 330 ≈ 75,8 mW</li>
+      <li>P<sub>1k</sub> = 5² / 1000 = 25 / 1000 = 25 mW</li>
+    </ul>
+
+    <p>
+      Las dos fórmulas dan el mismo resultado. Pero en paralelo, la segunda es
+      más directa: no requiere calcular la corriente de cada rama por separado.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Regla práctica:</strong> usa <em>P = V × I</em> cuando
+        conoces la corriente; usa <em>P = V² / R</em> cuando conoces la
+        resistencia; usa <em>P = I² × R</em> cuando conoces la corriente pero
+        no el voltaje. Las tres son equivalentes.
+      </p>
+    </div>
+
+    <h3>⚡ Potencia total: la suma de las ramas</h3>
+    <p>
+      En un circuito en paralelo, la potencia total consumida es la
+      <strong>suma de las potencias disipadas en cada rama</strong>:
+    </p>
+    <div class="formula" style="font-size: 1.1em;">
+      $$P_{\text{total}} = P_1 + P_2 + P_3 + \dots$$
+    </div>
+    <p>
+      En el ejemplo anterior, la potencia total sería:
+    </p>
+    <div class="formula">
+      $$P_{\text{total}} = 75{,}8\ \text{mW} + 25\ \text{mW} = 100{,}8\ \text{mW}$$
+    </div>
+    <p>
+      Este principio es una consecuencia de la <strong>conservación de la
+      energía</strong>: la energía que entrega la fuente se reparte entre
+      todos los componentes, y la suma de las energías transformadas es igual
+      a la energía total entregada.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Implicación práctica:</strong> cuando conectas más ramas en
+        paralelo, la potencia total aumenta. Eso significa que la fuente debe
+        entregar más energía, y disipar más calor. El paralelismo tiene un
+        costo energético.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>💥 El costo de una mala configuración</h2>
+    <p>
+      En paralelo, cada rama debe tener su propia resistencia de protección.
+      Si intentas alimentar varios LEDs con una sola resistencia compartida,
+      ocurren dos problemas graves.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/paralelo_resistencia_compartida.png" target="_blank" rel="noopener">
+        <img src="img/paralelo_resistencia_compartida.png"
+             alt="Diagrama de una sola resistencia alimentando a varios LEDs en paralelo" />
+      </a>
+      <figcaption>
+        Fig. 1: El diseño riesgoso: una sola resistencia alimentando a varios
+        LEDs en paralelo. Esta configuración es un error común.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3>⚠️ Problema 1: efecto dominó</h3>
+    <p>
+      Como la corriente se reparte entre las ramas de forma desigual (por
+      pequeñas diferencias de fabricación), un LED puede recibir más corriente
+      que los otros. Ese LED se calienta, su resistencia baja, y entonces
+      atrae aún más corriente. En poco tiempo, se quema. Y al quemarse, los
+      demás LEDs reciben más corriente, se sobrecargan y también se queman en
+      cadena. Es el <strong>efecto dominó</strong>.
+    </p>
+
+    <h3>⚠️ Problema 2: sobrecarga de la resistencia única</h3>
+    <p>
+      Si los cinco LEDs consumen juntos, digamos, 100 mA, la resistencia única
+      debe disipar toda esa corriente. Si es una resistencia estándar de 1/4 W,
+      probablemente no aguante y se queme.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: #dc2626; background: #ffebee;">
+      <p>
+        <strong>💡 La solución profesional:</strong> dale a cada LED su propia
+        resistencia. Así, cada rama es independiente y no hay efecto dominó.
+      </p>
+    </div>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/cuello_botella.png" target="_blank" rel="noopener">
+        <img src="img/cuello_botella.png"
+             alt="Comparación entre un error común (una sola resistencia compartida) y la buena práctica (una resistencia por LED)" />
+      </a>
+      <figcaption>
+        Fig. 2: A la izquierda, el error común. A la derecha, la buena
+        práctica: una resistencia por LED.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>🧠 Paralelismo en la IA moderna</h2>
+    <p>
+      Hasta aquí hemos hablado de circuitos. Pero el paralelismo es un concepto
+      mucho más amplio. Es la estrategia de <strong>dividir un problema grande
+      en varios problemas pequeños y resolverlos al mismo tiempo</strong>.
+    </p>
+    <p>
+      En los circuitos, el paralelismo permite que la corriente se reparta. En
+      la computación, el paralelismo permite que las tareas se repartan entre
+      varios procesadores. Y en la inteligencia artificial, el paralelismo es
+      <strong>la clave del entrenamiento de modelos masivos</strong>.
+    </p>
+
+    <h3>🖥️ Las GPU: miles de procesadores en paralelo</h3>
+    <p>
+      Las <strong>GPU</strong> (unidades de procesamiento gráfico) son chips
+      con miles de núcleos pequeños que trabajan al mismo tiempo. Mientras un
+      procesador tradicional hace una tarea a la vez (serie), una GPU hace
+      miles de tareas a la vez (paralelo).
+    </p>
+    <p>
+      Entrenar un modelo de IA como los que usan ChatGPT requiere multiplicar
+      millones de matrices. Cada multiplicación se puede dividir en miles de
+      operaciones independientes. Y esas operaciones se ejecutan en paralelo
+      en los núcleos de la GPU.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La conexión:</strong> el paralelismo eléctrico de una
+        protoboard es la versión en miniatura del paralelismo computacional
+        que hace posible la IA. La misma idea: dividir el trabajo en varios
+        caminos independientes.
+      </p>
+    </div>
+
+    <h3>⚖️ El costo del paralelismo</h3>
+    <p>
+      El paralelismo es una herramienta poderosa. Pero no es gratis. Cada vez
+      que agregas una rama (eléctrica o computacional), agregas también:
+    </p>
+    <ul>
+      <li>
+        <strong>Más consumo total:</strong> la potencia total es la suma de
+        las potencias de cada rama. Añadir ramas aumenta el consumo energético.
+      </li>
+      <li>
+        <strong>Más calor disipado:</strong> cada rama disipa calor. Si no se
+        gestiona bien, el calor se acumula y puede dañar los componentes.
+      </li>
+      <li>
+        <strong>Más corriente que la fuente debe entregar:</strong> si la
+        fuente no puede entregar esa corriente, el circuito no funciona
+        correctamente.
+      </li>
+      <li>
+        <strong>Más complejidad de gestión:</strong> coordinar muchas ramas
+        paralelas requiere más lógica, más sincronización, más redundancia.
+      </li>
+    </ul>
+    <p>
+      Por eso los ingenieros de IA enfrentan un dilema: más paralelismo
+      significa más velocidad, pero también más consumo y más calor. La
+      eficiencia energética se ha convertido en uno de los mayores retos de la
+      industria.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 La frontera de la IA:</strong> los centros de datos
+        modernos consumen tanta electricidad como ciudades enteras, y la mayor
+        parte se convierte en calor que hay que evacuar. Mejorar la eficiencia
+        es tan importante como mejorar la velocidad.
+      </p>
+    </div>
+
+    <h3>📊 La eficiencia: hacer más con menos</h3>
+    <p>
+      La <strong>eficiencia</strong> mide qué fracción de la energía que
+      consume un sistema se convierte en trabajo útil (y qué fracción se
+      pierde como calor).
+    </p>
+    <div class="formula" style="font-size: 1.1em;">
+      $$\text{Eficiencia} = \frac{\text{Energía útil}}{\text{Energía total consumida}} \times 100\%$$
+    </div>
+    <p>
+      Por ejemplo:
+    </p>
+    <ul>
+      <li>
+        Un <strong>LED</strong> convierte aproximadamente un 40% de la energía
+        eléctrica en luz. El 60% restante se disipa como calor.
+      </li>
+      <li>
+        Una <strong>bombilla incandescente</strong> convierte solo un 5% en
+        luz. El 95% se pierde como calor.
+      </li>
+      <li>
+        Un <strong>centro de datos</strong> que entrena modelos de IA tiene una
+        eficiencia mucho menor: la mayor parte de la energía se disipa como
+        calor y hay que gastar aún más energía en enfriar los equipos.
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 El reto de la IA:</strong> hacer modelos más potentes sin
+        multiplicar el consumo eléctrico. Cada punto de eficiencia que se gana
+        se multiplica por millones de operaciones por segundo en un centro de
+        datos.
+      </p>
+    </div>
+
+    <h3>💧 El costo invisible: el agua de los centros de datos</h3>
+    <p>
+      Hay un costo del que casi nunca se habla: <strong>el agua</strong>. Los
+      centros de datos que entrenan modelos de IA generan enormes cantidades
+      de calor, y para enfriarlos se usa agua. Mucha agua.
+    </p>
+    <p>
+      Algunos datos para dimensionar el problema:
+    </p>
+    <ul>
+      <li>
+        Entrenar un modelo grande de IA puede consumir cientos de miles de
+        litros de agua solo para refrigeración.
+      </li>
+      <li>
+        Una conversación típica con un asistente de IA puede consumir el
+        equivalente a una botella de agua, contando el consumo directo de los
+        centros de datos y el consumo indirecto de las plantas eléctricas.
+      </li>
+      <li>
+        En regiones con estrés hídrico (donde el agua es escasa), los centros
+        de datos compiten directamente con las comunidades por el agua
+        disponible.
+      </li>
+    </ul>
+    <p>
+      Este es uno de los grandes debates éticos de la IA actual: <strong>¿vale
+      la pena el costo ambiental de entrenar modelos cada vez más grandes?</strong>
+      Y si lo vale, ¿quién debe pagarlo?
+    </p>
+
+    <div class="highlight-box" style="border-left-color: #0ea5e9; background: #e0f2fe;">
+      <p>
+        <strong>💡 La cara oculta del paralelismo:</strong> cada vez que
+        duplicas los procesadores de un centro de datos, duplicas también el
+        consumo de agua. La eficiencia energética y la eficiencia hídrica se
+        han convertido en dos de los mayores desafíos de la industria de la
+        IA.
+      </p>
+    </div>
+
+    <h3>🛡️ Redundancia: cuando el paralelo salva vidas</h3>
+    <p>
+      En sistemas críticos donde un fallo puede tener consecuencias graves, el
+      paralelismo se usa como estrategia de <strong>redundancia</strong>. La
+      idea es simple: si un componente falla, otro toma su lugar.
+    </p>
+    <p>
+      Algunos ejemplos concretos:
+    </p>
+    <ul>
+      <li>
+        <strong>Aviación:</strong> los aviones comerciales tienen tres
+        sistemas hidráulicos independientes. Si uno falla, los otros dos siguen
+        funcionando. La probabilidad de que los tres fallen al mismo tiempo es
+        casi cero.
+      </li>
+      <li>
+        <strong>Carros autónomos:</strong> tienen múltiples sensores (cámaras,
+        radares, lidar) que miden lo mismo desde ángulos distintos. Si un
+        sensor se obstruye, los otros siguen viendo el camino.
+      </li>
+      <li>
+        <strong>Centros de datos:</strong> los servidores que entrenan modelos
+        de IA tienen fuentes de alimentación redundantes. Si una fuente falla,
+        las demás siguen entregando energía sin interrupción.
+      </li>
+      <li>
+        <strong>Misión espacial:</strong> las naves espaciales llevan
+        computadoras redundantes que votan entre sí. Si una da un resultado
+        diferente a las otras dos, se descarta (porque probablemente esté
+        fallando).
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 El principio del paralelo redundante:</strong> no se trata
+        solo de hacer las cosas más rápidas, sino de hacerlas más seguras. En
+        sistemas críticos, la redundancia no es un lujo: es un requisito.
+      </p>
+    </div>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: Diseño y análisis de un circuito en paralelo</h2>
+    <p>
+      Vas a diseñar y analizar un circuito en paralelo con dos LEDs y dos
+      resistencias, calculando el reparto de corriente y la potencia disipada
+      en cada rama. Al final, verificarás tus predicciones con el multímetro.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en
+        el aula (con el kit y un multímetro) o resolverlo teóricamente con
+        cálculos. Si tienes acceso a un multímetro, puedes verificar tus
+        predicciones.
+      </p>
+    </div>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Dos LEDs (preferiblemente del mismo color).</li>
+      <li>Dos resistencias de 330 Ω.</li>
+      <li>Una fuente de 5 V.</li>
+      <li>Cables caimán.</li>
+      <li>Un multímetro en modo corriente (A=).</li>
+      <li>Tu cuaderno de bitácora y una calculadora.</li>
+    </ul>
+
+    <h3>📟 Antes de medir: el modo corriente del multímetro</h3>
+    <p>
+      Este taller es la primera vez que vas a medir <strong>corriente</strong>
+      con el multímetro. Esta función es distinta a las anteriores (voltaje y
+      resistencia) porque requiere una <strong>conexión en serie</strong>, no
+      en paralelo.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: #d97706; background: #fff8e1;">
+      <p>
+        <strong>⚠️ La regla más importante del modo corriente:</strong> el
+        multímetro debe conectarse <strong>en serie</strong> con el circuito,
+        no en paralelo.
+      </p>
+      <p style="margin-top: 0.6rem;">
+        Si por error lo conectas en paralelo (como si midieras voltaje), el
+        multímetro hará un <strong>cortocircuito</strong> y su fusible interno
+        se quemará. Es el error más común con esta función.
+      </p>
+    </div>
+
+    <h4>🔍 Cómo medir corriente paso a paso</h4>
+    <ol>
+      <li>
+        <strong>Apaga el circuito.</strong> Siempre trabaja con la fuente
+        desconectada mientras haces las conexiones.
+      </li>
+      <li>
+        <strong>Abre el circuito en el punto donde quieres medir.</strong> Por
+        ejemplo, desconecta el cable que va de la fuente a la rama 1.
+      </li>
+      <li>
+        <strong>Gira la perilla a la posición A=</strong> (corriente DC) y
+        elige un rango mayor que la corriente que esperas medir.
+      </li>
+      <li>
+        <strong>Conecta la punta roja en VΩmA</strong> (no en el 10A, a menos
+        que esperes corrientes mayores a 200 mA).
+      </li>
+      <li>
+        <strong>Inserta el multímetro en el camino del circuito:</strong>
+        conecta la punta roja al punto donde estaba el cable que quitaste, y
+        la punta negra al otro extremo. La corriente ahora fluirá
+        <em>a través</em> del multímetro.
+      </li>
+      <li>
+        <strong>Enciende el circuito.</strong> El valor que aparece en la
+        pantalla es la corriente que pasa por esa rama.
+      </li>
+      <li>
+        <strong>Repite para la otra rama</strong> (desconectando y volviendo
+        a conectar).
+      </li>
+    </ol>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g10); background: #f0fdf4;">
+      <p>
+        <strong>💡 Recuerda:</strong> para medir corriente, el multímetro se
+        convierte en parte del circuito. Es como instalar un contador de agua
+        en una tubería: el agua debe pasar <em>por dentro</em> del medidor.
+        Por eso debe estar en serie.
+      </p>
+    </div>
+
+    <h3>🛠️ Procedimiento</h3>
+    <ol>
+      <li>
+        <strong>Diseña el circuito.</strong> Dos LEDs en paralelo, cada uno
+        con su propia resistencia de 330 Ω, alimentados por 5 V.
+      </li>
+      <li>
+        <strong>Calcula la corriente en cada rama.</strong> Asumiendo que cada
+        LED consume aproximadamente 2 V, el voltaje sobre cada resistencia es
+        de 3 V. Usa la ley de Ohm:
+        <div class="formula" style="margin-top: 0.6rem;">
+          $$I = \frac{3\ \text{V}}{330\ \Omega} \approx 9{,}1\ \text{mA}$$
+        </div>
+      </li>
+      <li>
+        <strong>Calcula la potencia disipada</strong> en cada resistencia:
+        <div class="formula" style="margin-top: 0.6rem;">
+          $$P = 3\ \text{V} \times 0{,}0091\ \text{A} \approx 27{,}3\ \text{mW}$$
+        </div>
+      </li>
+      <li>
+        <strong>Calcula la corriente total</strong> que entrega la fuente:
+        <div class="formula" style="margin-top: 0.6rem;">
+          $$I_{\text{total}} = 9{,}1\ \text{mA} + 9{,}1\ \text{mA} = 18{,}2\ \text{mA}$$
+        </div>
+      </li>
+      <li>
+        <strong>Verifica con el multímetro</strong> (si lo tienes). Mide la
+        corriente en cada rama y la corriente total. Recuerda: el multímetro
+        va en <strong>serie</strong>.
+      </li>
+      <li>
+        <strong>Reflexiona:</strong> ¿por qué la corriente total es la suma de
+        las corrientes de las ramas? ¿Qué relación tiene esto con la ley de
+        Kirchhoff de corriente?
+      </li>
+      <li>
+        <strong>Cambia una resistencia</strong> por una de 1 kΩ y repite los
+        cálculos. ¿Cómo cambia el reparto de corriente?
+      </li>
+    </ol>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Con quién hiciste el taller?</li>
+      <li>¿Los cálculos coincidieron con las mediciones?</li>
+      <li>¿Qué pasó cuando cambiaste la resistencia a 1 kΩ?</li>
+      <li>¿Qué relación tiene este taller con el paralelismo en la IA?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Si las dos resistencias fueran de valores muy diferentes (por ejemplo,
+      330 Ω y 10 kΩ), ¿cómo se repartiría la corriente entre las dos ramas?
+      ¿Cuál recibiría más corriente? ¿Por qué?
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> trabaja siempre con 3 V o 5 V. Nunca uses
+      voltajes de pared (110 V o 220 V). Siempre usa resistencias de protección
+      con los LEDs, una por cada LED en paralelo.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 El hombre que soñó con máquinas paralelas</h2>
+    <p>
+      Durante décadas, las computadoras funcionaron <strong>en serie</strong>:
+      un solo procesador ejecutaba una tarea a la vez. Si querías que una
+      computadora fuera más rápida, solo podías hacer una cosa: aumentar la
+      velocidad del procesador. Hasta que alguien pensó: ¿y si en lugar de una
+      tarea rápida hacemos muchas tareas al mismo tiempo?
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🖥️ Danny Hillis y la Connection Machine
+    </h3>
+    <p>
+      En 1981, un joven estudiante del MIT llamado <strong>Danny Hillis</strong>
+      (1956) tuvo una idea revolucionaria: diseñar una computadora con
+      <strong>miles de procesadores trabajando en paralelo</strong>. En lugar
+      de un cerebro grande y rápido, propuso un ejército de cerebros pequeños
+      coordinados.
+    </p>
+    <p>
+      En 1983 fundó Thinking Machines Corporation y en 1986 lanzó la
+      <strong>Connection Machine CM-1</strong>: una computadora con
+      <strong>65.536 procesadores</strong> trabajando simultáneamente. Cada
+      procesador era diminuto y lento por sí solo, pero juntos podían resolver
+      problemas que ninguna computadora tradicional podía abordar.
+    </p>
+    <p>
+      Al principio, muchos ingenieros se rieron. Decían que el paralelismo era
+      demasiado complicado, que coordinar 65.536 procesadores era un caos. Pero
+      Hillis demostró que no solo era posible, sino que era el futuro.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🌍 El legado: del CM-1 a las GPU de IA
+    </h3>
+    <p>
+      La Connection Machine desapareció en los años 90, pero su idea sobrevivió.
+      Las <strong>GPU modernas</strong> (que hoy entrenan los modelos de IA)
+      son herederas directas de aquel sueño: miles o millones de núcleos
+      pequeños trabajando en paralelo.
+    </p>
+    <p>
+      Cuando OpenAI entrenó GPT-4, no usó una computadora rapidísima: usó
+      decenas de miles de GPU trabajando en paralelo durante meses. El
+      principio es el mismo que Hillis imaginó en 1981: <strong>dividir el
+      trabajo en muchos caminos independientes</strong>.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>a veces la solución no es ir más rápido, sino ir
+      varios a la vez</strong>. El paralelismo es una de las ideas más
+      poderosas de la ingeniería moderna, y ya estaba presente en los
+      circuitos que estudiaste hoy.
+    </p>
+
+    <span class="fuente">Fuentes: archivos históricos de Thinking Machines Corporation y biografías del MIT.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado10.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado10.png"
+           alt="Infografía: El reparto de la corriente. Muestra el divisor de corriente, el cálculo de potencia, el efecto dominó y el paralelismo en IA" />
+    </a>
+    <figcaption>
+      <strong>Fig. 3:</strong> <strong>🗺️ Tu mapa completo:</strong> antes de
+      escuchar el podcast, mira esta infografía. Resume los temas que acabas
+      de recorrer: el reparto de corriente, la potencia en cada rama, el efecto
+      dominó y el paralelismo en la IA. ¿Reconoces cada parte? ¿Cuál te
+      resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g10">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 4
+      </span>
+      <h3>El reparto de la corriente</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 7 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">⚖️</span>
+        <span><strong>El divisor de corriente:</strong> cómo se reparte la corriente entre las ramas.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔥</span>
+        <span><strong>La potencia:</strong> qué es, cómo se calcula y la diferencia con la energía.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">💥</span>
+        <span><strong>El efecto dominó:</strong> por qué no se debe compartir una resistencia entre varios LEDs.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🖥️</span>
+        <span><strong>El paralelismo en IA:</strong> cómo las GPU usan el mismo principio para entrenar modelos masivos.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">💧</span>
+        <span><strong>El costo del agua:</strong> cuánta agua consumen los centros de datos que entrenan la IA.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🖥️</span>
+        <span><strong>Danny Hillis:</strong> el hombre que soñó con máquinas paralelas en 1981.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado10.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu calculadora o tu cuaderno a mano: hay cálculos que querrás hacer tú mismo.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero de IA</h3>
+    <ul>
+      <li>¿Cómo se reparte la corriente en un circuito en paralelo? ¿De qué depende?</li>
+      <li>¿Qué es la potencia? ¿Cómo se diferencia de la energía?</li>
+      <li>¿Cómo se calcula la potencia disipada en cada rama de un paralelo?</li>
+      <li>¿Por qué no se debe compartir una sola resistencia entre varios LEDs en paralelo?</li>
+      <li>¿Qué es el efecto dominó y cómo se evita?</li>
+      <li>¿Cómo se relaciona el paralelismo eléctrico con el paralelismo computacional de las GPU?</li>
+      <li>¿Cuáles son los costos del paralelismo en la IA, tanto en energía como en agua?</li>
+      <li>¿Qué aprendiste de la historia de Danny Hillis y la Connection Machine?</li>
+      <li>
+        <strong>Mini-ejercicio de aplicación:</strong> tienes dos resistencias
+        en paralelo, una de 220 Ω y otra de 470 Ω, conectadas a una fuente de
+        12 V. Calcula:
+        <ul style="margin-top: 0.4rem;">
+          <li>a) La corriente que pasa por cada resistencia.</li>
+          <li>b) La corriente total que entrega la fuente.</li>
+          <li>c) La potencia disipada en cada resistencia.</li>
+          <li>d) La potencia total del circuito.</li>
+          <li>e) ¿Cuál de las dos resistencias se calienta más? ¿Por qué?</li>
+        </ul>
+      </li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f0fdf4; border-left: 4px solid var(--c-g10); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>🖥️ La corriente más poderosa es la que fluye en paralelo.</strong>
+      Ya analizaste el tuyo. Los otros tres enfoques te esperan.
+    </p>
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado8.html" class="btn-estacion">🟣 Mirada estructural (Grado 8°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La resistencia total — Grado 8°</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top-nav-bar">
+    <a href="index.html" class="btn-back">← Volver al portal</a>
+    <a href="pdf/grado8.pdf" download class="btn-download-top">📄 Guía PDF</a>
+  </nav>
+
+  <header class="header">
+    <span class="badge" style="background: var(--c-g8);">Grado 8° • Mirada Estructural</span>
+    <h1 style="margin-top: 0.6rem;">🟣 La resistencia total</h1>
+    <div class="sub">
+      Cómo se combinan las resistencias en serie y en paralelo
+    </div>
+  </header>
+
+  <!-- Card 1 -->
+  <section class="card purple">
+    <h2>🧮 ¿Por qué existe una "resistencia total"?</h2>
+    <p>
+      Cuando miras un circuito desde la fuente, no ves cada resistencia por
+      separado. Ves <strong>una sola resistencia equivalente</strong>: la que
+      tendría el mismo efecto que todas las demás juntas. A esa resistencia se
+      le llama <strong>resistencia total</strong> (R<sub>total</sub>).
+    </p>
+    <p>
+      La pregunta clave es: ¿cómo se calcula esa resistencia total? La
+      respuesta depende de la configuración: <strong>serie</strong> o
+      <strong>paralelo</strong>. Y en cada caso, la fórmula es distinta.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Idea clave:</strong> la resistencia total no es una
+        propiedad de un componente, sino una <em>propiedad del circuito</em>.
+        Cambia según cómo estén conectados los componentes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="card">
+    <h2>➕ Serie: las resistencias se suman</h2>
+
+    <p>
+      Antes de las fórmulas, conviene recordar una imagen. Si imaginas la
+      corriente como agua que corre por un río:
+    </p>
+    <ul>
+      <li>
+        <strong>En serie:</strong> es un <em>río de un solo cauce</em>. El
+        agua pasa por todos los tramos, uno tras otro. Cada tramo pone su
+        propio freno, y los frenos se acumulan.
+      </li>
+      <li>
+        <strong>En paralelo:</strong> es un <em>delta con varios brazos</em>.
+        El agua se reparte entre los brazos, y cada brazo lleva su propio
+        caudal.
+      </li>
+    </ul>
+    <p>
+      Con esa imagen en mente, las fórmulas de las siguientes secciones no son
+      arbitrarias: describen matemáticamente el comportamiento del agua en
+      cada configuración.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/circuito_serie.png" target="_blank" rel="noopener">
+        <img src="img/circuito_serie.png"
+             alt="Circuito en serie con dos LEDs conectados uno tras otro y una resistencia" />
+      </a>
+      <figcaption>
+        Fig. 1: En serie, todos los componentes comparten el mismo camino. Si
+        uno falla, el circuito se abre.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <p>
+      En un circuito en serie, la corriente pasa por todas las resistencias,
+      una tras otra. Cada una le pone su propio freno. El resultado es que los
+      frenos se acumulan: la resistencia total es la <strong>suma</strong> de
+      todas.
+    </p>
+
+    <div class="formula" style="font-size: 1.15em;">
+      $$R_{\text{total}} = R_1 + R_2 + R_3 + \dots$$
+    </div>
+
+    <h3>🔍 Ejemplo concreto</h3>
+    <p>
+      Si conectas en serie dos resistencias de 330 Ω y 220 Ω, la resistencia
+      total es:
+    </p>
+    <div class="formula">
+      $$R_{\text{total}} = 330\ \Omega + 220\ \Omega = 550\ \Omega$$
+    </div>
+    <p>
+      La fuente ahora ve 550 Ω, no dos resistencias separadas. Y como la
+      resistencia total es mayor que la de cada componente por separado, la
+      corriente que circula será menor.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Regla mental:</strong> en serie, más resistencia = menos
+        corriente. Sumar resistencias es como poner más piedras en el camino.
+      </p>
+    </div>
+
+    <h3>📐 Efecto en el voltaje</h3>
+    <p>
+      En serie, el voltaje de la fuente se reparte entre los componentes. Cada
+      resistencia se queda con una porción proporcional a su valor. Por eso la
+      suma de los voltajes individuales siempre es igual al voltaje total:
+    </p>
+    <div class="formula">
+      $$V_{\text{total}} = V_1 + V_2 + V_3 + \dots$$
+    </div>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="card slate">
+    <h2>➗ Paralelo: las resistencias se combinan</h2>
+    <p>
+      En un circuito en paralelo, la corriente se reparte entre varias ramas.
+      Cada rama tiene su propia resistencia. Pero cuando la fuente mira el
+      circuito completo, ve <strong>menos resistencia</strong> que la de
+      cualquier rama individual. ¿Por qué? Porque hay más caminos para pasar.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/circuito_paralelo.png" target="_blank" rel="noopener">
+        <img src="img/circuito_paralelo.png"
+             alt="Circuito en paralelo con dos LEDs, cada uno con su propia resistencia" />
+      </a>
+      <figcaption>
+        Fig. 2: En paralelo, cada rama tiene su propio camino. Si una falla,
+        las demás siguen funcionando.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="formula" style="font-size: 1.15em;">
+      $$\frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots$$
+    </div>
+
+    <h3>🧠 ¿Por qué la fórmula del paralelo tiene esa forma?</h3>
+    <p>
+      La fórmula de serie es intuitiva: si pones dos frenos uno tras otro, el
+      freno total es la suma. Pero la de paralelo parece al revés: <em>sumas
+      inversos</em>. ¿Por qué?
+    </p>
+    <p>
+      Imagina un río que se divide en dos brazos. El agua total que pasa por el
+      río es la suma del agua que pasa por cada brazo. Y cada brazo ofrece su
+      propia resistencia al paso del agua.
+    </p>
+    <p>
+      Cuanto más ancho sea un brazo, menos resistencia ofrece, y más agua
+      lleva. Si añades un tercer brazo, el río tiene más capacidad total de
+      llevar agua: la resistencia total del río <em>disminuye</em>.
+    </p>
+    <p>
+      La fórmula del paralelo captura exactamente eso: cada rama <em>aporta
+      conductancia</em> al circuito (la conductancia es lo contrario de la
+      resistencia). Al sumar las conductancias de todas las ramas, obtienes la
+      conductancia total. Y como la resistencia es lo opuesto, la fórmula se
+      escribe con inversos:
+    </p>
+    <div class="formula" style="font-size: 1.1em;">
+      $$G_{\text{total}} = G_1 + G_2 + \dots \qquad \text{donde} \qquad G = \frac{1}{R}$$
+    </div>
+    <p>
+      Por eso, en paralelo, <strong>cuanto más ramas, menos resistencia
+      total</strong>. Cada nueva rama es una "autopista adicional" para la
+      corriente.
+    </p>
+
+    <h3>🔍 Ejemplo concreto</h3>
+    <p>
+      Si conectas en paralelo dos resistencias de 330 Ω y 220 Ω, la resistencia
+      total es:
+    </p>
+    <div class="formula">
+      $$\frac{1}{R_{\text{total}}} = \frac{1}{330} + \frac{1}{220}$$
+    </div>
+    <p>
+      Para sumar fracciones, se busca el común denominador. Pero es más rápido
+      usar la fórmula del "producto sobre suma" que veremos en el siguiente
+      apartado:
+    </p>
+    <div class="formula">
+      $$R_{\text{total}} = \frac{330 \times 220}{330 + 220} = \frac{72.600}{550} \approx 132\ \Omega$$
+    </div>
+    <p>
+      ¡La resistencia total (132 Ω) es <strong>menor</strong> que la más pequeña
+      de las dos resistencias (220 Ω)! Eso es la paradoja del paralelo.
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 La paradoja explicada:</strong> cuando hay más caminos para
+        la corriente, es más fácil pasar. La fuente "ve" menos resistencia
+        porque tiene más opciones. Es como si agregaras una autopista paralela
+        a un camino congestionado: el tráfico fluye más.
+      </p>
+    </div>
+
+    <h3>📐 Efecto en la corriente</h3>
+    <p>
+      En paralelo, la corriente total es la suma de las corrientes de cada
+      rama:
+    </p>
+    <div class="formula">
+      $$I_{\text{total}} = I_1 + I_2 + I_3 + \dots$$
+    </div>
+    <p>
+      Cada rama tiene su propio caudal, proporcional a su resistencia. La rama
+      con menos resistencia lleva más corriente. La rama con más resistencia
+      lleva menos.
+    </p>
+  </section>
+
+  <!-- Card 4 -->
+  <section class="card green">
+    <h2>⚠️ El caso especial: dos resistencias en paralelo</h2>
+    <p>
+      Para dos resistencias en paralelo, existe una fórmula simplificada que
+      puedes usar:
+    </p>
+    <div class="formula" style="font-size: 1.15em;">
+      $$R_{\text{total}} = \frac{R_1 \times R_2}{R_1 + R_2}$$
+    </div>
+    <p>
+      Es el famoso "<strong>producto sobre suma</strong>". Por ejemplo, para dos
+      resistencias de 330 Ω y 220 Ω:
+    </p>
+    <div class="formula">
+      $$R_{\text{total}} = \frac{330 \times 220}{330 + 220} = \frac{72600}{550} \approx 132\ \Omega$$
+    </div>
+    <p>
+      Nuevamente, el resultado (132 Ω) es menor que la más pequeña de las dos
+      resistencias (220 Ω).
+    </p>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Atajo útil:</strong> para dos resistencias iguales en
+        paralelo, la resistencia total es la mitad de una de ellas. Por
+        ejemplo, dos de 330 Ω en paralelo dan 165 Ω.
+      </p>
+    </div>
+
+    <h3>🌍 ¿Para qué sirve calcular la resistencia total?</h3>
+    <p>
+      Calcular la resistencia total no es un ejercicio académico: es una
+      herramienta de diseño. Aquí van algunas aplicaciones reales:
+    </p>
+    <ul>
+      <li>
+        <strong>Verificar la corriente que circulará.</strong> Si sabes la
+        resistencia total y el voltaje de la fuente, puedes calcular la
+        corriente con la ley de Ohm. Eso te dice si un componente va a
+        soportar el paso de esa corriente o si se quemará.
+      </li>
+      <li>
+        <strong>Dimensionar la fuente de alimentación.</strong> Una fuente
+        tiene un límite de corriente que puede entregar. Si el circuito pide
+        más corriente de la que la fuente puede dar, la fuente se
+        sobrecalienta.
+      </li>
+      <li>
+        <strong>Diseñar divisores.</strong> Muchos circuitos necesitan dividir
+        un voltaje (por ejemplo, bajar 5 V a 3,3 V). El cálculo de
+        resistencias en serie es la base de esos divisores.
+      </li>
+      <li>
+        <strong>Detectar fallos.</strong> Si mides la resistencia total de un
+        circuito y no coincide con el cálculo teórico, algo está mal: puede
+        haber un componente dañado o una conexión floja.
+      </li>
+    </ul>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Regla mental:</strong> antes de conectar nada, calcula la
+        resistencia total. Si el resultado es muy bajo, la corriente será muy
+        alta y puedes quemar componentes. Si es muy alto, la corriente será
+        muy baja y los componentes no funcionarán.
+      </p>
+    </div>
+  </section>
+
+  <!-- Taller -->
+  <section class="taller-electroscopio">
+    <h2>🔬 Taller: Midamos la resistencia total</h2>
+    <p>
+      Vas a calcular primero la resistencia total de varias combinaciones, y
+      luego verificarla con el multímetro. Es el trabajo real de un ingeniero
+      de control de calidad: <strong>predecir y después verificar</strong>.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>💡 Dos formas de hacer este taller:</strong> puedes hacerlo en
+        el aula (con resistencias del kit y un multímetro) o llevarlo a casa
+        si tienes acceso a un multímetro. Si no lo tienes, puedes hacer los
+        cálculos teóricos y compararlos con los del compañero.
+      </p>
+    </div>
+
+    <h3>📟 Antes de medir: el modo resistencia del multímetro</h3>
+    <p>
+      Para este taller vas a usar el multímetro en <strong>modo resistencia</strong>
+      (Ω), que mide la oposición al paso de la corriente en un componente.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--media">
+      <a href="img/medicion_resistencia.png" target="_blank" rel="noopener">
+        <img src="img/medicion_resistencia.png"
+             alt="Multímetro midiendo la resistencia de un componente desconectado del circuito" />
+      </a>
+      <figcaption>
+        Fig. 3: Medición de RESISTENCIA. El componente debe estar
+        <strong>desconectado del circuito y sin energía</strong>.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 Cómo medir resistencia:</strong>
+      </p>
+      <ol style="margin-top: 0.6rem; margin-bottom: 0;">
+        <li>
+          Gira la perilla del multímetro a la posición <strong>Ω</strong>.
+          Elige un rango mayor que la resistencia que esperas medir (por
+          ejemplo, 2000 Ω si esperas medir cientos de ohmios).
+        </li>
+        <li>
+          <strong>Desconecta el componente</strong> del circuito y asegúrate
+          de que no tenga energía. Medir resistencia con el circuito
+          encendido da valores incorrectos y puede dañar el instrumento.
+        </li>
+        <li>
+          Conecta la <strong>punta roja</strong> a un extremo del componente
+          y la <strong>punta negra</strong> al otro extremo. No importa cuál
+          punta va a cada lado.
+        </li>
+        <li>
+          Lee el valor en la pantalla. Si aparece <strong>OL</strong>
+          (Over Limit), significa que el valor está fuera del rango: sube a
+          un rango mayor.
+        </li>
+      </ol>
+    </div>
+
+    <div class="highlight-box" style="border-left-color: #d97706; background: #fff8e1;">
+      <p>
+        <strong>⚠️ Regla de oro antes de medir:</strong> nunca midas
+        resistencia en un circuito que esté encendido. La energía del
+        circuito interfiere con la medición del instrumento. <em>Primero
+        apaga, luego mide</em>.
+      </p>
+    </div>
+
+    <p>
+      El multímetro en modo resistencia <strong>inyecta una pequeña corriente
+      propia</strong> y mide cuánto tarda en pasar por el componente. Por eso
+      el componente debe estar aislado: si el circuito aporta corriente, los
+      dos flujos se mezclan y la medición es incorrecta.
+    </p>
+
+    <h3>🧰 Materiales</h3>
+    <ul>
+      <li>Cuatro resistencias: dos de 330 Ω, una de 220 Ω y una de 1 kΩ.</li>
+      <li>Un multímetro en modo ohmios (Ω).</li>
+      <li>Una protoboard o cables para conectar las resistencias.</li>
+      <li>Tu cuaderno de bitácora y una calculadora.</li>
+    </ul>
+
+    <h3>🧠 Paso 1: Calcula antes de medir</h3>
+    <p>
+      Antes de tocar el multímetro, calcula teóricamente la resistencia total
+      de cada una de estas combinaciones. Usa las fórmulas de las secciones
+      anteriores.
+    </p>
+    <ol>
+      <li>330 Ω + 220 Ω <strong>en serie</strong></li>
+      <li>330 Ω + 330 Ω <strong>en serie</strong></li>
+      <li>330 Ω + 220 Ω <strong>en paralelo</strong></li>
+      <li>330 Ω + 330 Ω <strong>en paralelo</strong></li>
+    </ol>
+    <p>
+      Anota los resultados en la columna "R total calculada" de la tabla.
+    </p>
+
+    <h3>🔬 Paso 2: Mide y compara</h3>
+    <p>
+      Ahora conecta cada combinación en la protoboard o con cables, y mide
+      con el multímetro en modo Ω. Recuerda: <strong>sin energía</strong>,
+      solo las resistencias.
+    </p>
+
+    <h3>📊 Paso 3: Registra los resultados</h3>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Combinación</th>
+            <th>R total calculada</th>
+            <th>R total medida</th>
+            <th>Diferencia</th>
+            <th>¿Coincide?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>330 + 220 serie</td><td></td><td></td><td></td><td>☐ Sí / ☐ No</td></tr>
+          <tr><td>330 + 330 serie</td><td></td><td></td><td></td><td>☐ Sí / ☐ No</td></tr>
+          <tr><td>330 + 220 paralelo</td><td></td><td></td><td></td><td>☐ Sí / ☐ No</td></tr>
+          <tr><td>330 + 330 paralelo</td><td></td><td></td><td></td><td>☐ Sí / ☐ No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🤔 Paso 4: Analiza</h3>
+    <ul style="margin-top: 0.6rem;">
+      <li>¿Los valores medidos coinciden con los cálculos?</li>
+    </ul>
+      <div class="highlight-box" style="border-left-color: var(--c-g8); background: #f5f3ff;">
+      <p>
+        <strong>💡 ¿Por qué el valor medido no coincide exactamente con el calculado?</strong>
+      </p>
+      <p style="margin-top: 0.6rem;">
+        Cuando calculas una resistencia teóricamente, obtienes un número exacto.
+        Pero cuando la mides con el multímetro, obtienes un número ligeramente
+        diferente. Eso <strong>no es un error tuyo ni del instrumento</strong>: es
+        la <strong>tolerancia</strong>.
+      </p>
+      <p>
+        Cada resistencia que sale de fábrica tiene un valor real que se desvía
+        ligeramente del valor ideal. La banda dorada (o plateada) en el cuerpo del
+        componente indica cuánto puede desviarse:
+      </p>
+
+      <ul style="margin-top: 0.6rem;">
+        <li>Una resistencia de <strong>330 Ω ±5%</strong> puede valer entre 313,5 Ω y 346,5 Ω.</li>
+        <li>Una resistencia de <strong>220 Ω ±5%</strong> puede valer entre 209 Ω y 231 Ω.</li>
+      </ul>
+      <p>
+        Por eso, cuando dos resistencias del mismo valor se conectan en paralelo,
+        la resistencia total no será exactamente la mitad, sino un valor cercano.
+        Si la diferencia entre el valor calculado y el medido está dentro del
+        rango de tolerancia, <strong>todo está bien</strong>.
+      </p>
+    </div>
+
+    <li>
+      ¿Alguna de tus mediciones quedó <em>fuera</em> del rango de tolerancia?
+      Si es así, ¿qué podría explicarlo?
+    </li>
+      <li>
+        ¿En qué combinación la resistencia total es menor que la más pequeña
+        de las resistencias? ¿Por qué?
+      </li>
+    </ul>
+
+    <h3>📝 Mi nota sobre el taller</h3>
+    <p>
+      Cuando termines, escribe <strong>una nota breve</strong> al final de tu
+      hoja de registro. No es una tarea, es una reflexión. Puedes escribir
+      sobre:
+    </p>
+    <ul>
+      <li>¿Con quién hiciste el taller?</li>
+      <li>¿Los cálculos coincidieron con las mediciones? ¿Qué diferencias encontraste?</li>
+      <li>¿Qué combinación te resultó más contraintuitiva?</li>
+      <li>¿Por qué crees que la fórmula de paralelo es "1 sobre la suma de los inversos"?</li>
+    </ul>
+
+    <h3>❓ Pregunta guía</h3>
+    <p>
+      Si tienes dos resistencias de 330 Ω y 220 Ω, ¿en qué configuración la
+      resistencia total es mayor? ¿Por qué? ¿Cómo se relaciona eso con la
+      corriente que circula?
+    </p>
+
+    <p style="font-size: 0.88rem; color: var(--text-soft); margin-top: 1rem;">
+      <strong>⚠️ Seguridad:</strong> nunca midas resistencias que estén
+      soldadas a una placa conectada a la corriente. Desconecta el aparato y
+      retira las pilas antes de manipularlo.
+    </p>
+  </section>
+
+  <!-- Cápsula histórica -->
+  <section class="capsula-edison">
+    <h2>📜 El hombre que puso reglas a los caminos</h2>
+    <p>
+      A mediados del siglo XIX, un físico alemán llamado Gustav Kirchhoff
+      (1824–1887) estaba estudiando cómo se comportaban los circuitos
+      eléctricos. Tenía apenas veintiún años cuando formuló dos leyes que hoy
+      llevan su nombre y que son la base de todo lo que sabemos sobre serie y
+      paralelo.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔌 Primera ley: la conservación de la corriente
+    </h3>
+    <p>
+      Kirchhoff observó que en cualquier punto de un circuito (lo que hoy
+      llamamos "nodo"), <strong>la corriente que entra es igual a la corriente
+      que sale</strong>. Es decir: los electrones no se acumulan en un punto.
+      Esta ley es la que explica por qué la corriente se reparte en paralelo:
+      la corriente total que llega al nodo se divide entre las ramas, pero la
+      suma de las corrientes de las ramas es igual a la corriente total.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔁 Segunda ley: la conservación del voltaje
+    </h3>
+    <p>
+      Kirchhoff también observó que, si recorres un circuito cerrado y sumas
+      todos los voltajes, el total es cero. Esto se traduce en que <strong>el
+      voltaje que entrega la fuente se reparte exactamente entre los
+      componentes</strong>. Por eso, en serie, la suma de los voltajes de cada
+      resistencia es igual al voltaje de la fuente.
+    </p>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🔗 Conexión con las fórmulas que acabas de ver
+    </h3>
+    <p>
+      Las dos leyes de Kirchhoff explican <em>por qué</em> las fórmulas de
+      serie y paralelo funcionan:
+    </p>
+    <ul>
+      <li>
+        La <strong>ley de corriente</strong> explica por qué en paralelo las
+        corrientes se suman: la corriente total que llega al nodo es la suma
+        de las corrientes que salen por cada rama.
+      </li>
+      <li>
+        La <strong>ley de voltaje</strong> explica por qué en serie los
+        voltajes se suman y se reparten: el voltaje total es la suma de los
+        voltajes individuales de cada componente.
+      </li>
+    </ul>
+    <p>
+      Es decir, las fórmulas de resistencia total no son reglas inventadas:
+      son consecuencias directas de las leyes de conservación de la corriente
+      y del voltaje.
+    </p>
+
+    <figure class="figura-ruta figura-ruta--amplia">
+      <a href="img/leyes_kirchhoff.png" target="_blank" rel="noopener">
+        <img src="img/leyes_kirchhoff.png"
+            alt="Diagrama de las dos leyes de Kirchhoff: la ley de corriente (corriente que entra es igual a la que sale en un nodo) y la ley de voltaje (suma de voltajes en un lazo cerrado)" />
+      </a>
+      <figcaption>
+        Fig. 4: Las dos leyes de Kirchhoff. A la izquierda, la conservación de la
+        corriente en un nodo. A la derecha, la conservación del voltaje en un
+        lazo cerrado.
+        <em>(Toca la imagen para ampliarla)</em>
+      </figcaption>
+    </figure>
+
+    <h3 style="color: #92400e; font-size: 1rem; margin-top: 1.2rem;">
+      🏛️ El legado de Kirchhoff
+    </h3>
+    <p>
+      Kirchhoff no inventó la electricidad, pero le puso <strong>reglas
+      matemáticas</strong>. Sus dos leyes se siguen enseñando hoy en todas
+      las carreras de ingeniería, y son la herramienta que usan los ingenieros
+      para analizar circuitos complejos, desde un simple juego de luces hasta
+      un chip de computadora.
+    </p>
+
+    <p style="margin-top: 1.2rem; font-style: italic;">
+      La lección: <strong>a veces las reglas más simples explican los
+      fenómenos más complejos</strong>. Kirchhoff no necesitó fórmulas
+      complicadas: solo dos ideas fundamentales sobre cómo se conservan la
+      corriente y el voltaje.
+    </p>
+
+    <span class="fuente">Fuentes: biografías de la Universidad de Heidelberg y archivos históricos de la física del siglo XIX.</span>
+  </section>
+
+  <!-- Repaso visual: infografía -->
+  <h3 style="color: var(--text-dark); margin-top: 2rem; text-align: center;">
+    🗺️ Repaso visual
+  </h3>
+
+  <figure class="figura-ruta figura-ruta--amplia">
+    <a href="img/infografia_grado8.png" target="_blank" rel="noopener">
+      <img src="img/infografia_grado8.png"
+           alt="Infografía: La resistencia total. Muestra las fórmulas de serie y paralelo, la paradoja del paralelo y un ejemplo resuelto" />
+    </a>
+    <figcaption>
+      <strong>Fig. 5:</strong> <strong>🗺️ Tu mapa completo:</strong> antes de
+      escuchar el podcast, mira esta infografía. Resume los temas que acabas
+      de recorrer: las fórmulas de serie y paralelo, la paradoja del paralelo
+      y el ejemplo resuelto. ¿Reconoces cada parte? ¿Cuál te resultó más útil?
+      <em>(Toca la imagen para ampliarla)</em>
+    </figcaption>
+  </figure>
+
+  <!-- Podcast -->
+  <section class="podcast-section podcast-g8">
+
+    <div class="podcast-header">
+      <span style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 0.6rem; letter-spacing: 0.04em;">
+        🎧 Audio-Guía · Episodio 3
+      </span>
+      <h3>La resistencia total</h3>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.5; margin: 0.3rem 0 0.6rem; color: #fff;">
+      <strong>Dale play</strong> y en 6 minutos descubrirás:
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem;">
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">➕</span>
+        <span><strong>Serie:</strong> por qué las resistencias se suman.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">➗</span>
+        <span><strong>Paralelo:</strong> por qué la resistencia total es menor que la más pequeña.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📐</span>
+        <span><strong>Las fórmulas:</strong> cómo calcular la resistencia total en cada caso.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">📟</span>
+        <span><strong>El multímetro en modo resistencia:</strong> cómo medir la resistencia total de un circuito.</span>
+      </li>
+      <li style="display: flex; gap: 0.65rem; align-items: flex-start; background: rgba(255,255,255,0.15); padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.45; color: #fff;">
+        <span style="font-size: 1.3em; flex-shrink: 0; line-height: 1;">🔌</span>
+        <span><strong>Las leyes de Kirchhoff:</strong> el hombre que puso reglas matemáticas a los caminos.</span>
+      </li>
+    </ul>
+
+    <div class="podcast-player">
+      <audio controls preload="metadata">
+        <source src="audio/grado8.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.92); margin-top: 0.85rem; font-style: italic;">
+      💡 Ten tu calculadora o tu cuaderno a mano: hay cálculos que querrás hacer tú mismo.
+    </p>
+
+  </section>
+
+  <!-- Cierre metacognitivo -->
+  <section class="cierre-metacognitivo">
+    <h3>🧠 Cierre: pensar como ingeniero estructural</h3>
+    <ul>
+      <li>¿Qué es la resistencia total y por qué cambia según la configuración?</li>
+      <li>¿Cómo se calcula la resistencia total en serie? ¿Y en paralelo?</li>
+      <li>¿Por qué en paralelo la resistencia total siempre es menor que la más pequeña de las resistencias?</li>
+      <li>Si tienes tres resistencias en paralelo, ¿cómo se calcula la resistencia total?</li>
+      <li>¿Qué relación tienen las leyes de Kirchhoff con las fórmulas de serie y paralelo?</li>
+      <li>
+        <strong>Mini-ejercicio de aplicación:</strong> tienes tres resistencias
+        de 100 Ω, 220 Ω y 330 Ω. Calcula:
+        <ul style="margin-top: 0.4rem;">
+          <li>a) La resistencia total si las conectas todas en serie.</li>
+          <li>b) La resistencia total si las conectas todas en paralelo.</li>
+          <li>c) ¿En qué configuración la resistencia total es mayor? ¿Y menor?</li>
+        </ul>
+      </li>
+      <li>¿Qué parte de la infografía te resultó más útil como repaso? ¿Por qué?</li>
+    </ul>
+  </section>
+
+  <!-- Navegación entre miradas -->
+  <nav class="nav-estaciones">
+    <p style="margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f5f3ff; border-left: 4px solid var(--c-g8); border-radius: 0 8px 8px 0; font-size: 0.94rem; color: var(--text-mid);">
+      <strong>🧮 Los números también se dividen.</strong> Ya calculaste tu
+      resistencia total. Los otros tres enfoques te esperan.
+    </p>
+    <p><strong>🔗 Explora otras miradas del mismo fenómeno:</strong></p>
+    <div class="nav-estaciones-links">
+      <a href="grado6.html" class="btn-estacion">🟠 Mirada curiosa (Grado 6°)</a>
+      <a href="grado7.html" class="btn-estacion">🔵 Mirada comparativa (Grado 7°)</a>
+      <a href="grado10.html" class="btn-estacion">🟢 Mirada analítica (Grado 10°)</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <p>
+      I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
+      Tecnología e Informática • Prof. José Vicente Concha Escobar
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
