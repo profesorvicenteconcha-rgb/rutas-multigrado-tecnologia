@@ -761,3 +761,218 @@ table tbody tr:nth-child(even) {
   table th, table td { padding: 0.55rem 0.6rem; }
   .figura-ruta figcaption { font-size: 0.84rem; }
 }
+
+/* ==========================================================================
+   Portal raíz — Marco curricular y rutas
+   Clases exclusivas de la página de aterrizaje. NO afectan a las lecciones.
+   ========================================================================== */
+
+/* ---- Título de la sección de rutas ---- */
+.titulo-rutas {
+  color: var(--text-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ---- Colores específicos de cada ruta (borde izquierdo) ---- */
+/* Se aplican sobre .card, sobrescribiendo el borde por defecto. */
+.card.ruta-1 { border-left-color: #1e40af; }  /* Azul profundo — Energía y Corriente */
+.card.ruta-2 { border-left-color: #0284c7; }  /* Azul claro — Control del Flujo */
+.card.ruta-3 { border-left-color: #059669; }  /* Verde — Camino de un Solo Sentido */
+.card.ruta-4 { border-left-color: #d97706; }  /* Ámbar — Idioma de los Colores */
+.card.ruta-5 { border-left-color: #7c3aed; }  /* Púrpura — Uno o Muchos Caminos */
+
+/* ---- Badges con colores específicos por ruta ---- */
+.badge-ruta-1 { background: #1e40af; }
+.badge-ruta-2 { background: #0284c7; }
+.badge-ruta-3 { background: #059669; }
+.badge-ruta-4 { background: #d97706; }
+.badge-ruta-5 { background: #7c3aed; }
+
+/* ---- Botones de ingreso con colores específicos por ruta ---- */
+.btn-ruta-1 { background: #1e40af; }
+.btn-ruta-2 { background: #0284c7; }
+.btn-ruta-3 { background: #059669; }
+.btn-ruta-4 { background: #d97706; }
+.btn-ruta-5 { background: #7c3aed; }
+
+/* ---- Grid del marco curricular ---- */
+.grid-marco-curricular {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Tarjeta de documento del marco curricular ---- */
+.card-doc {
+  padding: 1.2rem;
+}
+.card-doc h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+.card-doc p {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  min-height: 4rem;
+}
+
+/* ---- Botón de descarga de documento ---- */
+.btn-doc {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.8rem;
+}
+
+/* ---- Contenedor de mini-botones (flex) ---- */
+.botones-grado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ---- Bloque "¿Por dónde empezar?" ---- */
+.bloque-empezar {
+  background: #f0f9ff;
+  border-left: 4px solid var(--c-portal);
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+  margin: 1rem 0 1.5rem;
+}
+.bloque-empezar strong {
+  display: block;
+  color: var(--c-portal);
+  margin-bottom: 0.5rem;
+}
+.bloque-empezar ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.bloque-empezar li {
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  margin-bottom: 0.35rem;
+}
+
+/* ---- Bloque de marco curricular (wrapper) ---- */
+.seccion-marco {
+  margin-top: 2.5rem;
+}
+.seccion-marco h2 {
+  color: var(--c-portal);
+  margin-bottom: 0.5rem;
+}
+.seccion-marco > p {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Portal raíz — Fase 3: clases complementarias
+   Estas clases se suman a las de la Fase 2. No modifican nada existente.
+   ========================================================================== */
+
+/* ---- Párrafo destacado dentro del panel de bienvenida ---- */
+.parrafo-destacado-panel {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ---- Nota "Bonus" al pie de la sección Cómo usar ---- */
+.nota-bonus {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+/* ---- Tarjetas de ruta: título y descripción ---- */
+.titulo-tarjeta-ruta {
+  margin-bottom: 0.4rem;
+}
+.descripcion-tarjeta-ruta {
+  font-size: 0.9rem;
+}
+
+/* ---- Tarjetas de documento del marco curricular (colores por tipo) ---- */
+.card-doc-plan-area      { border-left-color: var(--c-portal); }
+.card-doc-plan-estudios  { border-left-color: var(--c-g7); }
+.card-doc-planes-aula    { border-left-color: var(--c-g8); }
+.card-doc-anexo          { border-left-color: var(--c-g6); }
+
+/* Encabezados de cada tarjeta-doc (con color propio) */
+.card-doc-plan-area h3     { color: var(--c-portal); }
+.card-doc-plan-estudios h3 { color: var(--c-g7); }
+.card-doc-planes-aula h3   { color: var(--c-g8); }
+.card-doc-anexo h3         { color: var(--c-g6); }
+
+/* ---- Botones de descarga con color según el documento ---- */
+.btn-doc-plan-area     { background: var(--c-portal); }
+.btn-doc-plan-estudios { background: var(--c-g7); }
+.btn-doc-anexo         { background: var(--c-g6); }
+
+/* ---- Volver arriba ---- */
+.volver-arriba-wrapper {
+  text-align: center;
+  margin: 2.5rem 0 0.5rem;
+}
+.btn-volver-arriba {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-volver-arriba:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+}
+
+/* ---- Versión en el footer ---- */
+.version-footer {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-top: 0.8rem;
+}
+
+/* ==========================================================================
+   Mini-botones de descarga por grado
+   Reemplaza cualquier definición anterior de .btn-mini-doc o .btn-mini-grado
+   ========================================================================== */
+
+.btn-mini-doc {
+  display: inline-block;
+  color: #fff !important;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 46px;
+  text-align: center;
+}
+
+.btn-mini-doc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+}
+
+/* Colores por grado */
+.btn-mini-doc-grado6  { background: var(--c-g6);  }
+.btn-mini-doc-grado7  { background: var(--c-g7);  }
+.btn-mini-doc-grado8  { background: var(--c-g8);  }
+.btn-mini-doc-grado10 { background: var(--c-g10); }

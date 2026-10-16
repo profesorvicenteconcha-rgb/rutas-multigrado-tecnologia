@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rutas de aprendizaje de Tecnología e Informática para los grados 6°, 7°, 8° y 10°. I.E. Escuela Normal Superior Miguel de Cervantes Saavedra — Guacarí, Valle del Cauca." />
   <title>Rutas Multigrado — Tecnología e Informática</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body id="top">
 <div class="container">
+
   <header class="header">
     <h1 style="color: var(--c-portal);">📚 Rutas Multigrado</h1>
     <div class="sub">
@@ -16,33 +18,281 @@
     </div>
   </header>
 
+  <!-- ======================================================================
+       PANEL DE BIENVENIDA
+       ====================================================================== -->
   <div class="panel-bienvenida">
     <h2>👋 Bienvenidos</h2>
     <p>
-      Este espacio reúne rutas de aprendizaje que abordan un mismo fenómeno
-      desde <strong>cuatro miradas cognitivas</strong> distintas, adaptadas
-      a los grados 6°, 7°, 8° y 10°.
+      Este espacio reúne <strong>cinco rutas de aprendizaje</strong> que recorren,
+      paso a paso, el mundo de la electricidad y su control. Cada ruta aborda
+      un aspecto distinto del mismo dominio temático, y dentro de cada una
+      encontrarás <strong>cuatro miradas cognitivas</strong> adaptadas a los
+      grados 6°, 7°, 8° y 10°.
+    </p>
+    <p class="parrafo-destacado-panel">
+      <strong>🧠 ¿Y qué tiene que ver esto con la Inteligencia Artificial?</strong>
+      Cada una de las cinco rutas cierra con una conexión explícita a la
+      tecnología actual: desde el LED como <em>voz visual</em> de las máquinas,
+      hasta el costo energético e hídrico de entrenar modelos de IA.
     </p>
   </div>
 
-  <div class="grid-portal">
-    <div class="card blue">
-      <span class="badge-grado" style="background: var(--c-portal);">Ruta 1</span>
-      <h3 style="margin-bottom: 0.4rem;">⚡ La Energía y la Corriente</h3>
-      <p style="font-size: 0.9rem;">
-        Cuatro miradas al mismo fenómeno: curiosa, comparativa, estructural
-        y analítica.
-      </p>
-      <a href="leccion1/index.html" class="btn-ingresar" style="background: var(--c-portal);">Explorar ruta →</a>
-    </div>
+  <!-- ======================================================================
+       ¿POR DÓNDE EMPEZAR?
+       ====================================================================== -->
+  <div class="bloque-empezar">
+    <strong>🎯 ¿Por dónde empezar?</strong>
+    <ul>
+      <li>
+        <strong>Si eres estudiante</strong>, entra directamente a la mirada de tu grado (6°, 7°, 8° o 10°).
+      </li>
+      <li>
+        <strong>Si eres familia</strong>, revisa el <em>Anexo Pedagógico</em> en la sección "Marco Curricular" al final del portal.
+      </li>
+      <li>
+        <strong>Si eres docente o directivo</strong>, empieza por el <em>Plan de Área</em> y el <em>Plan de Estudios</em>.
+      </li>
+    </ul>
   </div>
+
+  <!-- ======================================================================
+       CÓMO USAR ESTE PORTAL
+       ====================================================================== -->
+  <section class="card slate">
+    <h2>🧭 ¿Cómo usar este portal?</h2>
+    <p>
+      El portal está diseñado para que cada estudiante, familia o docente
+      encuentre lo que necesita sin perderse. Tres pasos sencillos:
+    </p>
+    <ol>
+      <li>
+        <strong>Empieza por cualquier ruta.</strong> Cada ruta es independiente
+        y se sostiene por sí sola. Si eres estudiante, entra directamente a
+        la mirada de tu grado. Si eres docente o familia, puedes recorrer las
+        cuatro miradas de una misma ruta para ver cómo un mismo tema se gradúa
+        en profundidad.
+      </li>
+      <li>
+        <strong>Dentro de cada ruta, elige tu mirada.</strong> Cada ruta
+        contiene cuatro páginas —una por grado (6°, 7°, 8° y 10°)— desde
+        cuatro enfoques cognitivos distintos: curiosa, comparativa, estructural
+        y analítica. No hay un orden obligatorio de lectura.
+      </li>
+      <li>
+        <strong>Consulta el marco curricular al final.</strong> Si eres
+        familia, docente o directivo, al final del portal encontrarás los
+        documentos institucionales: Plan de Área, Plan de Estudios, Planes
+        de Aula por grado y el Anexo Pedagógico, todos descargables.
+      </li>
+    </ol>
+    <p class="nota-bonus">
+      <strong>📦 ¿Qué encontrarás en cada ruta?</strong> Guía PDF descargable,
+      audio-guía (podcast) para escuchar en familia o con amigos, e infografía
+      de repaso. Y en cada mirada, un taller práctico con materiales sencillos
+      y seguros.
+    </p>
+  </section>
+
+  <!-- ======================================================================
+       RUTAS DISPONIBLES
+       ====================================================================== -->
+  <h2 class="titulo-rutas">🛤️ Rutas disponibles</h2>
+
+  <div class="grid-portal">
+
+    <!-- RUTA 1 -->
+    <div class="card ruta-1">
+      <span class="badge-grado badge-ruta-1">Ruta 1</span>
+      <h3 class="titulo-tarjeta-ruta">⚡ La Energía y la Corriente</h3>
+      <p class="descripcion-tarjeta-ruta">
+        Cuatro miradas al mismo fenómeno: la electricidad como flujo invisible
+        que mueve al mundo. Desde el tubo de balines hasta el campo eléctrico
+        en los chips de IA.
+      </p>
+      <a href="leccion1/index.html" class="btn-ingresar btn-ruta-1">
+        Explorar ruta 1
+      </a>
+    </div>
+
+    <!-- RUTA 2 -->
+    <div class="card ruta-2">
+      <span class="badge-grado badge-ruta-2">Ruta 2</span>
+      <h3 class="titulo-tarjeta-ruta">💧 El Control del Flujo</h3>
+      <p class="descripcion-tarjeta-ruta">
+        La resistencia como freno regulable. Desde el pisón sobre la manguera
+        hasta la ley de Ohm y el efecto Joule en los centros de datos de IA.
+      </p>
+      <a href="leccion2/index.html" class="btn-ingresar btn-ruta-2">
+        Explorar ruta 2
+      </a>
+    </div>
+
+    <!-- RUTA 3 -->
+    <div class="card ruta-3">
+      <span class="badge-grado badge-ruta-3">Ruta 3</span>
+      <h3 class="titulo-tarjeta-ruta">💡 El Camino de un Solo Sentido</h3>
+      <p class="descripcion-tarjeta-ruta">
+        El LED y su direccionalidad. Desde la puerta de un solo sentido hasta
+        la fibra óptica y el lenguaje de la luz en la inteligencia artificial.
+      </p>
+      <a href="leccion3/index.html" class="btn-ingresar btn-ruta-3">
+        Explorar ruta 3
+      </a>
+    </div>
+
+    <!-- RUTA 4 -->
+    <div class="card ruta-4">
+      <span class="badge-grado badge-ruta-4">Ruta 4</span>
+      <h3 class="titulo-tarjeta-ruta">🎨 El Idioma de los Colores</h3>
+      <p class="descripcion-tarjeta-ruta">
+        El código de colores de las resistencias y los códigos visuales.
+        Desde las bandas de colores hasta la visión por computadora y el
+        etiquetado de datos para IA.
+      </p>
+      <a href="leccion4/index.html" class="btn-ingresar btn-ruta-4">
+        Explorar ruta 4
+      </a>
+    </div>
+
+    <!-- RUTA 5 -->
+    <div class="card ruta-5">
+      <span class="badge-grado badge-ruta-5">Ruta 5</span>
+      <h3 class="titulo-tarjeta-ruta">🛤️ Uno o Muchos Caminos</h3>
+      <p class="descripcion-tarjeta-ruta">
+        Circuitos en serie y en paralelo. Desde la fila india y la autopista
+        hasta el paralelismo computacional que entrena los modelos de IA.
+      </p>
+      <a href="leccion5/index.html" class="btn-ingresar btn-ruta-5">
+        Explorar ruta 5
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ======================================================================
+       MARCO CURRICULAR DEL ÁREA
+       ====================================================================== -->
+  <section class="card slate seccion-marco" id="marco-curricular">
+    <h2>📚 Marco Curricular del Área</h2>
+    <p>
+      Documentos institucionales de Tecnología e Informática del Tercer Periodo 2026,
+      disponibles para consulta y descarga de estudiantes, familias y docentes.
+    </p>
+
+    <div class="grid-marco-curricular">
+
+      <!-- Plan de Área -->
+      <div class="card card-doc card-doc-plan-area">
+        <h3>📘 Plan de Área</h3>
+        <p>
+          Marco general del área: objetivos, competencias, enfoque pedagógico
+          y criterios de evaluación.
+        </p>
+        <a href="docs/01_PlanArea_Tecnologia_IIIPeriodo_2026.pdf"
+           download
+           class="btn-ingresar btn-doc btn-doc-plan-area">
+          📥 Descargar PDF
+        </a>
+      </div>
+
+      <!-- Plan de Estudios -->
+      <div class="card card-doc card-doc-plan-estudios">
+        <h3>📗 Plan de Estudios</h3>
+        <p>
+          Contenidos, desempeños, secuencia semana a semana, proyectos e
+          indicadores de calidad.
+        </p>
+        <a href="docs/02_PlanEstudios_Tecnologia_IIIPeriodo_2026.pdf"
+           download
+           class="btn-ingresar btn-doc btn-doc-plan-estudios">
+          📥 Descargar PDF
+        </a>
+      </div>
+
+      <!-- Planes de Aula -->
+      <div class="card card-doc card-doc-planes-aula">
+        <h3>📙 Planes de Aula</h3>
+        <p>
+          Concreción por grado: DBA institucionales, evidencias, recursos
+          y evaluación.
+        </p>
+        <span class="label-descarga">Descargar por grado:</span>
+        <div class="botones-grado">
+          <a href="docs/03_PlanAula_Grado6_Tecnologia_IIIPeriodo_2026.pdf"
+            download
+            class="btn-mini-doc btn-mini-doc-grado6">
+            6°
+          </a>
+          <a href="docs/04_PlanAula_Grado7_Tecnologia_IIIPeriodo_2026.pdf"
+            download
+            class="btn-mini-doc btn-mini-doc-grado7">
+            7°
+          </a>
+          <a href="docs/05_PlanAula_Grado8_Tecnologia_IIIPeriodo_2026.pdf"
+            download
+            class="btn-mini-doc btn-mini-doc-grado8">
+            8°
+          </a>
+          <a href="docs/06_PlanAula_Grado10_Tecnologia_IIIPeriodo_2026.pdf"
+            download
+            class="btn-mini-doc btn-mini-doc-grado10">
+            10°
+          </a>
+        </div>
+      </div>
+
+      <!-- Anexo Pedagógico -->
+      <div class="card card-doc card-doc-anexo">
+        <h3>📎 Anexo Pedagógico</h3>
+        <p>
+          Fundamentación del acompañamiento familiar como conversación,
+          no como verificación.
+        </p>
+        <a href="docs/07_AnexoPedagogico_Tecnologia_IIIPeriodo_2026.pdf"
+           download
+           class="btn-ingresar btn-doc btn-doc-anexo">
+          📥 Descargar PDF
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bloque de alineación normativa -->
+    <div class="info-familia">
+      <h3>🏛️ Alineación Normativa</h3>
+      <p>
+        Estos documentos están alineados con los <strong>Lineamientos Curriculares
+        del MEN (2022)</strong>, la <strong>Ley 2626 de 2026 (Ley de Educación
+        Digital)</strong> y el <strong>Plan de Apoyo al Mejoramiento (PAM)
+        2024–2027</strong> de la Secretaría de Educación del Valle del Cauca.
+      </p>
+      <p>
+        <strong>💡 ¿Es familia o cuidador?</strong> Consulte el Anexo Pedagógico
+        para entender por qué los audios y actividades en casa <em>no llevan
+        formato de control ni exigen firma</em>. El acompañamiento familiar se
+        concibe como un espacio de conversación, no como una tarea punitiva.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       VOLVER ARRIBA
+       ====================================================================== -->
+  <p class="volver-arriba-wrapper">
+    <a href="#top" class="btn-volver-arriba">↑ Volver arriba</a>
+  </p>
 
   <footer class="footer">
     <p>
       I.E. Escuela Normal Superior Miguel de Cervantes Saavedra – Guacarí<br />
       Tecnología e Informática • Prof. José Vicente Concha Escobar
     </p>
+    <p class="version-footer">
+      Versión 1.0 — Octubre de 2026
+    </p>
   </footer>
+
 </div>
 </body>
 </html>

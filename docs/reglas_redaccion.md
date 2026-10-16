@@ -140,6 +140,33 @@ Preguntas abiertas de reflexión ("¿Con quién trabajé?", "¿Qué me sorprendi
 
 Espacio para la voz del estudiante, no para la validación del adulto.
 
+8.1. Fundamento de esta regla
+
+Esta decisión no es una omisión, sino una postura pedagógica intencional que se sostiene en cinco referentes convergentes:
+
+Referente	Aporte
+Vygotsky (ZDP)	La familia como mediadora cultural que ayuda a interiorizar el concepto.
+Deci y Ryan (Autodeterminación)	La verificación externa reduce la motivación intrínseca incluso cuando aumenta el cumplimiento a corto plazo.
+Bruner (Andamiaje)	El apoyo temporal del adulto sostiene el aprendizaje mientras el estudiante gana autonomía.
+Feuerstein (Mediación)	El aprendizaje mediado es distinto del aprendizaje directo; la familia cumple una función irremplazable.
+Epstein et al. (2019)	La corresponsabilidad familia-escuela se construye sobre la confianza y el diálogo, no sobre el control.
+8.2. Lo que se adopta en su lugar
+
+Práctica que se evita	Práctica que se adopta
+Exigir firma de los padres.	Invitar al estudiante a conversar con quien quiera.
+Calificar "si escuchó el podcast".	Valorar lo que el estudiante pensó sobre el contenido.
+Pedir "evidencia" del trabajo en casa.	Registrar la reflexión personal en la bitácora.
+Convertir el audio-guía en tarea.	Ofrecerlo como material de repaso y conversación.
+8.3. Instrumento de evaluación
+
+La voz del estudiante es la evidencia. Los instrumentos son:
+
+Bitácora del estudiante con preguntas abiertas: "¿Con quién hablé sobre lo que aprendí?", "¿Qué me sorprendió más?", "¿Qué le contaría a un amigo sobre esto?".
+
+Nota narrativa personal al final de cada taller.
+
+Participación espontánea en clase cuando comparte lo conversado en casa.
+
 Regla 9 — Las referencias internas al portal son válidas
 Las referencias a las otras miradas de la misma ruta son válidas, siempre que:
 
@@ -148,6 +175,85 @@ Apunten a páginas que ya existen.
 Usen el nombre del arquetipo ("la mirada estructural") y no un número ("la próxima mirada").
 
 Se presenten como opciones ("si te da curiosidad, explora…") y no como obligaciones.
+
+Regla 10 — Fomentar la búsqueda autónoma de ayuda
+Esta regla complementa la anterior y establece la postura del proyecto frente a las estrategias de nivelación y refuerzo.
+
+Prohibido:
+
+Asignar jornadas de refuerzo obligatorias sin consultar al estudiante.
+
+Tratar la búsqueda de ayuda como señal de debilidad o fracaso.
+
+Convertir la nivelación en una sanción.
+
+Correcto:
+
+Jornadas de nivelación y refuerzo activadas a petición del estudiante o de sus cuidadores.
+
+Reconocer la búsqueda de ayuda como una estrategia de aprendizaje autorregulado (Schunk & DiBenedetto, 2020).
+
+Promover la corresponsabilidad familia-escuela (Epstein et al., 2019) sin delegar la decisión al adulto.
+
+Fundamento
+
+La teoría social cognitiva (Schunk & DiBenedetto, 2020) sostiene que la búsqueda de ayuda es una de las estrategias metacognitivas más avanzadas: el estudiante monitorea su comprensión, reconoce sus dificultades y toma la iniciativa de solicitar apoyo. El diseño del proyecto no solo permite sino que fomenta esa iniciativa, en coherencia con la postura general del proyecto sobre la autonomía del estudiante.
+
+Fundamentos pedagógicos del proyecto
+Esta sección documenta los referentes teóricos que sustentan las decisiones de diseño y redacción del proyecto. Sirve como referencia interna para autores, revisores y docentes nuevos en el área.
+
+Vygotsky — Zona de Desarrollo Próximo
+"Toda función en el desarrollo cultural del niño aparece dos veces: primero en el plano social (entre personas) y luego en el plano psicológico (dentro del niño)."
+— Vygotsky, El desarrollo de los procesos psicológicos superiores (1978)
+
+Aplicación en el proyecto: la familia como mediadora cultural; la conversación familiar como espacio de interiorización conceptual.
+
+Deci y Ryan — Teoría de la Autodeterminación
+Las tres necesidades psicológicas básicas para la motivación intrínseca son autonomía, competencia y vínculo. Los sistemas de verificación externa reducen la motivación intrínseca.
+
+Aplicación en el proyecto: la decisión de no certificar el trabajo familiar (Regla 8); la libertad del estudiante para elegir con quién conversar y cuándo.
+
+Bruner — Andamiaje
+El apoyo temporal de un adulto o par sostiene el aprendizaje mientras el estudiante gana autonomía.
+
+Aplicación en el proyecto: los talleres progresivos; la estructura "hago contigo → hago solo → te enseño a otro".
+
+Feuerstein — Mediación del aprendizaje
+Distinción entre aprendizaje directo (estudiante frente al objeto) y aprendizaje mediado (estudiante frente a un mediador).
+
+Aplicación en el proyecto: la familia como mediadora irremplazable, más allá del control formal.
+
+Epstein et al. (2019) — Corresponsabilidad familia-escuela
+El modelo de esferas de influencia superpuestas sostiene que el desarrollo académico y social del estudiante se potencia cuando familia, escuela y comunidad colaboran.
+
+Aplicación en el proyecto: la familia como corresponsable del proceso, no como auditora de tareas; el Anexo Pedagógico como marco explícito de esta postura.
+
+Schunk & DiBenedetto (2020) — Búsqueda autorregulada de ayuda
+La búsqueda de ayuda es una estrategia de aprendizaje autorregulado de alto valor: el estudiante monitorea su comprensión y toma la iniciativa de solicitar apoyo.
+
+Aplicación en el proyecto: las jornadas de nivelación se activan a petición del estudiante o de sus cuidadores; la Regla 10 formaliza esta postura.
+
+Kolb — Aprendizaje experiencial
+Ciclo de cuatro etapas: experiencia concreta → observación reflexiva → conceptualización abstracta → experimentación activa.
+
+Aplicación en el proyecto: estructura interna de cada lección (analogía → desarrollo → taller → cierre metacognitivo).
+
+Referencias bibliográficas del proyecto
+Bruner, J. (1960, 1966). The Process of Education; Toward a Theory of Instruction.
+
+Deci, E., & Ryan, R. (1985). Intrinsic Motivation and Self-Determination in Human Behavior.
+
+Deci, E., & Ryan, R. (2000). The "What" and "Why" of Goal Pursuits.
+
+Epstein, J. L., et al. (2019). School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.
+
+Feuerstein, R. (1980). Instrumental Enrichment.
+
+Kolb, D. (1984). Experiential Learning.
+
+Schunk, D. H., & DiBenedetto, M. K. (2020). Motivation and social cognitive theory. Contemporary Educational Psychology, 60, 101832.
+
+Vygotsky, L. (1978). El desarrollo de los procesos psicológicos superiores.
 
 Checklist de revisión final
 Antes de dar por terminado un archivo HTML, buscar y eliminar:
@@ -162,10 +268,19 @@ Antes de dar por terminado un archivo HTML, buscar y eliminar:
 □ "En la próxima mirada…"
 □ "En una lección posterior…"
 □ "Lo veremos con detalle…"
-Si alguna de estas expresiones aparece, reformular el texto para que el concepto quede cerrado en la misma frase.
 
-Este documento es vivo: si en una ruta futura aparece un patrón nuevo que convenga prohibir o preferir, se añade a la lista.
+☐ ¿Alguna actividad familiar exige firma o certificación? → Eliminar.
+☐ ¿Alguna jornada de refuerzo se asigna sin consultar al estudiante? → Reemplazar por activación a petición.
+☐ ¿El lenguaje trata la búsqueda de ayuda como debilidad? → Reformular.
+☐ ¿Se usa algún mecanismo de verificación del trabajo en casa? → Sustituir por nota narrativa del estudiante.
+Si alguna de estas expresiones aparece, reformular el texto para que el concepto quede cerrado en la misma frase.
 
 Excepción — Numeración de Audio-Guías
 
 Los badges de los podcasts sí se numeran ("Episodio 1", "Episodio 2", etc.). Aunque cada página se sostiene por sí sola, la numeración se considera una convención editorial del curso y no una sugerencia de orden de lectura.
+
+Documento vivo
+Este documento es un documento vivo: si en una ruta futura aparece un patrón nuevo que convenga prohibir o preferir —sea de redacción, sea de diseño pedagógico—, se añade a la lista correspondiente.
+
+Última actualización: octubre 16 de 2026.
+Responsable: Prof. José Vicente Concha Escobar.
